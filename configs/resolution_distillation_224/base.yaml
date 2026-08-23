@@ -1,0 +1,15 @@
+extends: ../alignment_wave1/base_mobileclip2.yaml
+
+data:
+  image_size: 224
+
+provenance:
+  resolution_guard:
+    configured_image_size: 224
+    patch_size: 16
+    patch_tokens: 196
+    prefix_tokens: 5
+    total_transformer_tokens: 201
+    dataloader_must_match: true
+    report_must_match: true
+

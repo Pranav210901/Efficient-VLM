@@ -1,0 +1,30 @@
+extends: ../alignment_v3/base.yaml
+
+# Alignment v4 is a faithful, full-duration capture probe.  The only
+# teacher-specific settings live in base_mobileclip2.yaml/base_siglip2.yaml.
+data:
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  val_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  full_train_csv: data/splits/coco_train_all_captions.csv
+  num_workers: 10
+
+model:
+  vision_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+
+training:
+  batch_size: 512
+  epochs: 12
+  # Inherited capped-sqrt scaling from the single batch-128 LR=3e-4 gives
+  # 6e-4 at batch 512.  No teacher-specific LR override is permitted.
+  lr: 0.0003
+  lr_reference_batch_size: 128
+  lr_scale_rule: sqrt
+  max_lr_scale: 3.0
+  precision: bf16
+  allow_tf32: true
+
+distillation:
+  strength: 1.0
+

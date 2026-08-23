@@ -1,0 +1,24 @@
+extends: pipeline_a.yaml
+version: token-projection-training-c-1.0
+output_root: results/token_projection_training/C_transformer_block
+checkpoint_root: checkpoints/token_projection_training/C_transformer_block
+base_config: configs/token_projection_training/base_c.yaml
+wave1:
+  enabled: true
+  design: token_projection_training
+  question: Does a 128-d patch-token transformer improve transfer without measurable latency cost?
+  locked_recipe:
+    {loss_type: infonce_no_queue, captions_per_image: null, memory_queue_size: 0, batch_size: 1024, sweep_multiplier: 3.0, image_size: 224}
+teacher_extension:
+  arm_id: C_transformer_block
+  label: "224px MobileCLIP2-distilled 128-d patch-token transformer"
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  candidate: C
+  image_token_aggregation: transformer_128
+  pool_dim: 128
+  heads: 4
+  ff_dim: 256
+  register_tokens_included: false
+  expected_inference_trainable_parameters: 1710468
+  lr_tuned_for_aggregator: false

@@ -1,0 +1,15 @@
+extends: ../resolution_distillation_224/base.yaml
+
+training:
+  epochs: 24
+  disable_early_stopping: true
+  save_every_epoch: true
+
+provenance:
+  schedule_design:
+    type: single_cosine
+    total_epochs: 24
+    warmup_fraction_retained: true
+    early_stopping: false
+    old_epoch12_comparable: false
+

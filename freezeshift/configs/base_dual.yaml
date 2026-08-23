@@ -1,0 +1,15 @@
+extends: ../../configs/text_aggregation_study/base_m_t1.yaml
+recipe:
+  freezeshift_vision_lora: true
+  freezeshift_text_lora: true
+  freezeshift_lora_rank: 128
+  freezeshift_lora_alpha: 256
+  freezeshift_lora_dropout: 0.05
+  freezeshift_lora_final_layers: 4
+provenance:
+  study: freezeshift
+  encoder_status: frozen_base_weights_with_parameter_efficient_adaptation
+  parameter_contract:
+    params_trainable_inference: 4862469
+    params_trainable_training: 5255685
+    params_training_only: 393216

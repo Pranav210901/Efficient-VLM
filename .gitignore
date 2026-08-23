@@ -1,0 +1,26 @@
+# trained weights come from the Hugging Face Hub, not from git
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+
+# datasets are acquired locally under their own terms
+data/
+
+# run outputs
+artifacts/
+results/
+logs/
+*.out
+*.err
+
+# environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/

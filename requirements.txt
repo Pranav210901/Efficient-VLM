@@ -1,0 +1,17 @@
+torch>=2.2
+torchvision>=0.17
+timm>=1.0
+transformers>=4.41
+sentence-transformers>=3.0
+open_clip_torch>=2.24
+PyYAML>=6.0
+tqdm>=4.66
+numpy>=1.24
+pandas>=2.0
+pyarrow>=15.0
+Pillow>=10.0
+matplotlib>=3.8
+ipykernel>=6.29
+jupyter-client>=8.6
+pytest>=8.4
+tabulate>=0.9

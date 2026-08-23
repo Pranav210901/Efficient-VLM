@@ -1,0 +1,10 @@
+extends: ../token_aggregator_scale_training/base_c4.yaml
+recipe:
+  text_token_aggregation: learned_query_attention
+  text_pooler_dim: 128
+  text_pooler_heads: 4
+provenance:
+  parameter_contract:
+    params_trainable_inference: 2896389
+    params_trainable_training: 3289605
+    params_training_only: 393216

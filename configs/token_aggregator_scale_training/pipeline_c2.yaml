@@ -1,0 +1,27 @@
+extends: ../token_projection_training/pipeline_c.yaml
+version: token-aggregator-scale-c2-1.0
+output_root: results/token_aggregator_scale_training/C2_d256_h8_b1_ff512
+checkpoint_root: checkpoints/token_aggregator_scale_training/C2_d256_h8_b1_ff512
+log_root: logs/token_aggregator_scale_training
+base_config: configs/token_aggregator_scale_training/base_c2.yaml
+wave1:
+  enabled: true
+  design: token_aggregator_scale_training
+  question: What is the isolated effect of increasing token-aggregator width from 128 to 256?
+  locked_recipe: {loss_type: infonce_no_queue, captions_per_image: null, memory_queue_size: 0, batch_size: 1024, sweep_multiplier: 3.0, image_size: 224}
+teacher_extension:
+  arm_id: C2_d256_h8_b1_ff512
+  label: "224px MobileCLIP2-distilled 256-d one-block token transformer"
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  candidate: C2
+  image_token_aggregation: transformer_128
+  pool_dim: 256
+  heads: 8
+  blocks: 1
+  ff_dim: 512
+  native_width_identity: false
+  register_tokens_included: false
+  expected_inference_trainable_parameters: 2203524
+  lr_tuned_for_aggregator: false
+

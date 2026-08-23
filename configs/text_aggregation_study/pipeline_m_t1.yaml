@@ -1,0 +1,13 @@
+extends: ../token_aggregator_scale_training/pipeline_c4.yaml
+version: text-aggregation-m-t1-1.0
+name: text_aggregation_m_t1
+output_root: results/text_aggregation_study/training/M_T1
+checkpoint_root: checkpoints/text_aggregation_study/M_T1
+log_root: logs/text_aggregation_study
+base_config: configs/text_aggregation_study/base_m_t1.yaml
+teacher_extension:
+  arm_id: M_T1
+  label: MiniLM learned-query text aggregation 128d 4h
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  expected_inference_trainable_parameters: 2896389

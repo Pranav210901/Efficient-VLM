@@ -1,0 +1,25 @@
+extends: ../../configs/text_aggregation_study/pipeline_m_t1.yaml
+version: freezeshift-vision-r128-1.0
+name: freezeshift_vision
+output_root: freezeshift/results/vision
+checkpoint_root: freezeshift/checkpoints/vision
+log_root: freezeshift/logs
+base_config: freezeshift/configs/base_vision.yaml
+teacher_extension:
+  arm_id: vision
+  label: M_T1 plus vision-only LoRA r128 final four blocks
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+freezeshift:
+  arm: vision
+  expected_lora_parameters: 1179648
+  expected_inference_trainable_parameters: 4076037
+reporting:
+  peak_tie_break: earliest_epoch
+  tie_break_status: post_observation_reporting_amendment
+  tie_break_disclosure: >-
+    Exact validation ties select the earliest epoch. This deterministic
+    reporting rule was added after a tied maximum was observed for dual seed
+    43; it does not alter training, evaluation metrics, or the test seal.
+  baseline_to_beat:
+    flickr_validation_mean_R1: 0.5448717921972275
+    full_stack_latency_ms: 8.99804092478007

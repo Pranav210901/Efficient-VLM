@@ -1,0 +1,89 @@
+seed: 42
+deterministic: false
+device: auto
+
+data:
+  train_csv: data/splits/alignment_v3/coco_train_minus_dev.csv
+  val_csv: data/splits/alignment_v3/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  full_train_csv: data/splits/coco_train_all_captions.csv
+  image_root: .
+  image_size: 224
+  group_by_image: true
+  train_captions_per_image: 2
+  val_captions_per_image:
+  interpolation: bicubic
+  num_workers: 10
+  prefetch_factor: 4
+  pin_memory: true
+  persistent_workers: true
+
+model:
+  vision_encoder: dinov3_convnext_tiny
+  text_encoder: all_minilm_l6_v2
+  shared_dim: 384
+  projection_hidden_dim: 768
+  projection_dropout: 0.05
+  text_prefix:
+
+recipe:
+  adapter: false
+  distillation: false
+  lora: false
+  teacher_dim: 512
+  adapter_dim: 128
+  adapter_heads: 4
+  adapter_ff_dim: 256
+  adapter_dropout: 0.1
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_final_layers: 2
+
+training:
+  # Fallback used until the Blackwell profiler writes a common-batch result.
+  # The profiler explores up to 2048 images/step and the runner substitutes its
+  # throughput-efficient common result automatically.
+  batch_size: 768
+  drop_last: true
+  epochs: 12
+  lr: 0.0003
+  lr_reference_batch_size: 128
+  lr_scale_rule: sqrt
+  max_lr_scale: 3.0
+  betas: [0.9, 0.98]
+  weight_decay: 0.01
+  warmup_fraction: 0.05
+  memory_queue_size: 16384
+  gradient_clip_norm: 1.0
+  early_stopping_patience: 3
+  select_on_dev: true
+  precision: bf16
+  allow_tf32: true
+  contrastive_weight: 1.0
+  save_dir: checkpoints/alignment_v3/placeholder
+
+distillation:
+  cache_path: results/alignment_v3/teacher_cache/mobileclip2_s0_dfndr2b.pt
+  cache_version: mobileclip2-s0-v1
+  temperature: 2.0
+  image_cosine_weight: 0.25
+  text_cosine_weight: 0.25
+  kl_weight: 1.0
+  strength: 1.0
+
+budgets:
+  max_total_params: 80000000
+  max_trainable_params: 5000000
+  max_latency_ms: 4.169653
+
+evaluation:
+  k_values: [1, 5, 10]
+  rankings_top_k: 100
+  batch_size: 256
+
+benchmark:
+  warmup: 20
+  iterations: 100
+  image_batch_size: 1
+  text_batch_size: 1
