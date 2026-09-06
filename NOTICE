@@ -1,0 +1,36 @@
+Efficient Frozen Vision-Language Alignment
+==========================================
+
+The source code in this repository is MIT licensed (see LICENSE).
+
+The trained models this code produces are RESEARCH ARTIFACTS and are NOT
+licensed for commercial use. They incorporate the following third-party
+components:
+
+1. DINOv3 ViT-S/16 (vision encoder), Meta Platforms
+   Licensed under the DINOv3 License. A complete copy of the Agreement is
+   included as LICENSE-DINOv3.md and is distributed with the model weights.
+   The Agreement requires that any distribution of DINO Materials or
+   derivative works be made under its terms with a copy provided, that
+   research publications acknowledge the use of DINO Materials, and that use
+   comply with Trade Control Laws. It prohibits use for military or warfare
+   purposes, nuclear applications, espionage, and illegal weapons.
+
+2. all-MiniLM-L6-v2 (text encoder), sentence-transformers
+   Licensed under Apache License 2.0.
+
+3. MobileCLIP2-S0 (distillation teacher, TRAINING ONLY), Apple Inc.
+   Licensed under the Apple Machine Learning Research Model License, which
+   permits use exclusively for Research Purposes and excludes commercial
+   exploitation. MobileCLIP2-S0 weights are NOT redistributed here; the model
+   was used as a frozen teacher during training only. Apple's licence defines
+   Model Derivatives as artifacts created by modification, retraining, or
+   fine-tuning of the Apple model, which the students released here are not,
+   but it does not explicitly address distillation. The released models are
+   therefore treated as research-only.
+
+Datasets used in this study are NOT redistributed. COCO, Flickr30k, CC3M,
+CIFAR-100, Oxford-IIIT Pet, and EuroSAT must each be acquired under their own
+terms.
+
+If you use this work, please acknowledge DINOv3 as required by its Agreement.
