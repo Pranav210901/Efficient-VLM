@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE",
+  "description": "Model-assisted audit using a rubric frozen before visual inspection; not human ground truth.",
+  "blinding": "The ambiguity audit was completed without reading or joining audit_key.csv.",
+  "counts": {
+    "ambiguity": 100,
+    "failure": 50
+  },
+  "ambiguity_labels": {
+    "unique": 80,
+    "underspecified": 10,
+    "multiple_plausible": 5,
+    "no_match": 5
+  },
+  "failure_labels": {
+    "fine_grained_miss": 27,
+    "caption_underspecified": 3,
+    "label_defensible": 8,
+    "retrieved_also_correct": 10,
+    "positive_atypical": 2
+  },
+  "failure_rank_bands": {
+    "21-50": 21,
+    "51+": 19,
+    "11-20": 10
+  },
+  "confidence": {
+    "ambiguity": {
+      "high": 72,
+      "medium": 28
+    },
+    "failure": {
+      "medium": 16,
+      "high": 34
+    }
+  },
+  "source_sha256": {
+    "audit_sample_blinded.csv": "d93fe93cc84bbff18b6b9fb551b6340320ad840fa1ff1d606873c03459218ece",
+    "failure_sample.csv": "991ee92c44c7d7958cc2d1535ec5cc4ccf7fd7b281e1034d5497fe92c4847c50"
+  },
+  "outputs": {
+    "ambiguity": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/audit_sample_model_assisted_audit.csv",
+    "failure": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/failure_sample_model_assisted_audit.csv"
+  }
+}

@@ -1,0 +1,2 @@
+entry_id,label,flickr_mean_R1,full_stack_inference_parameters,latency_median_ms,latency_q1_ms,latency_q3_ms,parameter_pareto,latency_iqr_pareto,latency_raw_median_pareto
+historical_v4,"DINOv3 ViT-S/16 + MiniLM (v4 recipe, before correction)",0.17993333439032236,45778563.0,17.067321110516787,17.06136204302311,17.072056652978063,False,False,False

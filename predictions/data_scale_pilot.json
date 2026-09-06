@@ -1,0 +1,49 @@
+{
+  "wave": "data_scale_pilot",
+  "written_before_any_runs": true,
+  "primary_metric": "Flickr30k Karpathy VALIDATION mean bidirectional R@1",
+  "materiality_margin_pp": 1.0,
+  "unseen_predictions": [
+    {
+      "id": "practical_curve",
+      "target": "Flickr30k validation mean bidirectional R@1 at 25/50/75/100% nested COCO subsets, fixed 12-epoch schedule, seed 42",
+      "statement": "Monotonically increasing with data fraction, and the 100% cell exceeds the 25% cell by more than 1.0pp.",
+      "confidence": "medium",
+      "reasoning": "Both data volume and total optimizer updates increase together across this curve, so improvement is expected. The open question is magnitude, not direction.",
+      "if_wrong": "If the gain from 25% to 100% is under 1.0pp, COCO-scale alignment has saturated and additional data of the same distribution is unlikely to help. CC3M would not be justified on volume alone."
+    },
+    {
+      "id": "fixed_update_curve",
+      "target": "Flickr30k validation mean bidirectional R@1 at 25/50/75/100% nested subsets at matched optimizer-step budget equal to the 100%/12-epoch run, seed 42",
+      "statement": "The 100% cell exceeds the 25% cell by more than 1.0pp at matched compute.",
+      "confidence": "low",
+      "reasoning": "This isolates unique-pair coverage from optimization. I have no evidence on which dominates in this regime, and the projector is small enough that it may saturate on a fraction of COCO.",
+      "if_wrong": "If the fixed-update curve is flat within 1.0pp, the practical curve's gain is attributable to additional optimizer updates rather than unique data coverage. CC3M would not be justified. This is the decision-bearing prediction."
+    },
+    {
+      "id": "saturation_point",
+      "target": "Lowest data fraction whose fixed-update result is within 1.0pp of the 100% cell",
+      "statement": "No prior. I cannot say where saturation occurs.",
+      "confidence": "none",
+      "reasoning": "No prior evidence on projector capacity relative to COCO scale in this configuration.",
+      "if_wrong": "Not applicable - no prediction made."
+    },
+    {
+      "id": "overfitting_check",
+      "target": "Train/dev loss gap at the end of training, per fixed-update condition",
+      "statement": "The generalisation gap increases monotonically as data fraction decreases, with the 25% cell showing the largest gap.",
+      "confidence": "medium",
+      "reasoning": "The 25% fixed-update cell receives ~48 equivalent epochs over ~29k images. Repeated exposure at that ratio should produce visible overfitting.",
+      "if_wrong": "If the 25% cell does not overfit despite ~48 equivalent epochs, the projector is capacity-limited rather than data-limited, which would independently argue against CC3M."
+    }
+  ],
+  "decision_rule": {
+    "cc3m_justified": "fixed_update_curve shows the 100% cell exceeding the 25% cell by more than 1.0pp",
+    "cc3m_not_justified": "fixed_update difference is within 1.0pp, regardless of what the practical curve shows",
+    "inconclusive": "fixed-update results are non-monotonic across the four fractions, or any pair inverts by more than 1.0pp against the overall trend"
+  },
+  "exploratory_already_observed": [
+    "The student trails OpenCLIP by 2.9pp on COCO but 25.8pp on Flickr30k test, motivating this pilot. Flickr TEST numbers are already known and must not be used for any decision in this pilot.",
+    "The locked recipe's COCO dev three-seed mean is 37.32%."
+  ]
+}

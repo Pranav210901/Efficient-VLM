@@ -1,0 +1,15 @@
+extends: base.yaml
+
+recipe:
+  teacher_dim: 768
+
+distillation:
+  teacher_id: siglip2_vit_b32_256_webli
+  cache_path: results/alignment_wave1/siglip2/teacher_cache/siglip2_vit_b32_256_webli.pt
+  cache_version: alignment-wave1-siglip2-b32-corrected-recipe-v1
+
+provenance:
+  parameter_contract:
+    params_trainable_inference: 1478403
+    params_trainable_training: 2068227
+    params_training_only: 589824

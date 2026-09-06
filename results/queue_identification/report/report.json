@@ -1,0 +1,73 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "run_id": "b1024__age_16__both_fresh__seed_42",
+      "target_age_steps": 16,
+      "seed": 42,
+      "none_control": 0.3759716749191284,
+      "stale_queue": 0.13341465219855309,
+      "fresh_queue": 0.20979846268892288,
+      "staleness_attributable_pp": 7.63838104903698,
+      "residual_damage_pp": 16.617321223020554,
+      "fraction_of_damage_from_staleness": 0.3149107357669195
+    },
+    {
+      "run_id": "b1024__age_16__both_fresh__seed_43",
+      "target_age_steps": 16,
+      "seed": 43,
+      "none_control": 0.37063227593898773,
+      "stale_queue": 0.13159527629613876,
+      "fresh_queue": 0.20775870233774185,
+      "staleness_attributable_pp": 7.616342604160309,
+      "residual_damage_pp": 16.287357360124588,
+      "fraction_of_damage_from_staleness": 0.318626096191806
+    },
+    {
+      "run_id": "b1024__age_16__both_fresh__seed_44",
+      "target_age_steps": 16,
+      "seed": 44,
+      "none_control": 0.3730313777923584,
+      "stale_queue": 0.1355946585536003,
+      "fresh_queue": 0.20943836122751236,
+      "staleness_attributable_pp": 7.384370267391205,
+      "residual_damage_pp": 16.359301656484604,
+      "fraction_of_damage_from_staleness": 0.3110037188462724
+    },
+    {
+      "run_id": "b1024__age_64__both_fresh__seed_42",
+      "target_age_steps": 64,
+      "seed": 42,
+      "none_control": 0.3759716749191284,
+      "stale_queue": 0.10832036659121513,
+      "fresh_queue": 0.19406244158744812,
+      "staleness_attributable_pp": 8.574207499623299,
+      "residual_damage_pp": 18.19092333316803,
+      "fraction_of_damage_from_staleness": 0.32034991919854916
+    },
+    {
+      "run_id": "b1024__age_64__both_fresh__seed_43",
+      "target_age_steps": 64,
+      "seed": 43,
+      "none_control": 0.37063227593898773,
+      "stale_queue": 0.10817937180399895,
+      "fresh_queue": 0.19374267011880875,
+      "staleness_attributable_pp": 8.55632983148098,
+      "residual_damage_pp": 17.6889605820179,
+      "fraction_of_damage_from_staleness": 0.3260139132268911
+    },
+    {
+      "run_id": "b1024__age_64__both_fresh__seed_44",
+      "target_age_steps": 64,
+      "seed": 44,
+      "none_control": 0.3730313777923584,
+      "stale_queue": 0.10853960737586021,
+      "fresh_queue": 0.19226226210594177,
+      "staleness_attributable_pp": 8.372265473008156,
+      "residual_damage_pp": 18.076911568641663,
+      "fraction_of_damage_from_staleness": 0.31654162471007147
+    }
+  ],
+  "mean_fraction_of_damage_from_staleness": 0.3179076679900849,
+  "interpretation": "fraction near 1.0: staleness identified as the mechanism; near 0.0: the harm is the extra negatives, not their age; intermediate: both contribute and the chapter must say so."
+}

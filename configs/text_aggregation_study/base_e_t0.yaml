@@ -1,0 +1,3 @@
+extends: ../e5_c4_224/base.yaml
+recipe:
+  text_token_aggregation: masked_mean

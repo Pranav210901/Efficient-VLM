@@ -1,0 +1,13 @@
+artifact,exists,valid,row_count,configuration_count,task_count,checkpoint_fingerprint_status,schema_status,issues
+results/alignment_matrix_best_clean.csv,True,True,80,80,0,not_applicable,valid,
+results/seed_sweep_results.csv,True,True,20,4,0,not_applicable,valid,
+results/seed_sweep_summary.csv,True,True,4,0,0,not_applicable,valid,
+results/seed_sweep_paired_deltas.csv,True,True,2,0,0,not_applicable,valid,
+results/phase1_multitask,True,True,92,23,4,matched,valid,
+results/phase15/predictions,True,True,47,0,0,not_applicable,historical_mixed,
+results/phase15/complementarity,True,True,759,23,3,not_applicable,valid,
+results/phase15/oracle,True,True,6075,0,3,not_applicable,valid,
+results/phase15/cross_task,True,True,115,23,0,not_applicable,valid,
+results/phase15/efficiency,True,True,23,23,0,not_applicable,valid,
+results/phase15/hard_negatives,True,True,842343,3,0,not_applicable,valid,
+results/phase15/expert_selection,True,True,6,6,0,not_applicable,valid,

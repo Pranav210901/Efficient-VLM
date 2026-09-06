@@ -1,0 +1,46 @@
+{
+  "wave": "queue_factorial",
+  "written_before_any_new_runs": true,
+  "unseen_predictions": [
+    {
+      "id": "age_vs_count",
+      "target": "Row-wise comparison in the matched-age grid: dev mean R@1 at batch 512 vs batch 1024 at each matched age (0,1,2,4,8,16,32,64), three seeds",
+      "statement": "Age dominates. Cells at matched age will give similar R@1 across the two batch sizes despite differing in the number of queued entries.",
+      "confidence": "medium",
+      "reasoning": "The proposed mechanism is projector drift, which accumulates per optimizer step. If drift is the cause, staleness in steps should determine damage and entry count should be secondary.",
+      "if_wrong": "If the batch-512 column consistently outperforms at matched age, the quantity of stale negatives matters independently of their staleness, and the drift explanation is incomplete."
+    },
+    {
+      "id": "modality_asymmetry",
+      "target": "Text-only vs image-only queue at ages 4, 16, 64, batch 1024, three seeds",
+      "statement": "Image-only will reproduce more of the damage than text-only.",
+      "confidence": "low",
+      "reasoning": "At equal capacity the two queues turn over at different rates. Roughly five text rows enter per image, so at batch 1024 and capacity 16384 the image queue holds entries up to ~16 optimizer steps old while the text queue holds entries only ~3 steps old. If age drives the damage, as predicted in age_vs_count, the older image queue should be more harmful. This prediction deliberately contradicts the previously observed i2t > t2i asymmetry.",
+      "if_wrong": "If text-only is worse, the damage tracks the number of stale entries rather than their age, which would also undermine age_vs_count. In that case the i2t > t2i asymmetry is explained by entry count and the drift mechanism is incomplete.",
+      "note": "The bidirectional loss means i2t reads the text queue and t2i reads the image queue. Image-only should therefore degrade t2i more than i2t."
+    },
+    {
+      "id": "harm_threshold",
+      "target": "Lowest queue age at which dev mean R@1 falls materially below the age-0 baseline",
+      "statement": "No prior. I cannot say where harm begins.",
+      "confidence": "none",
+      "reasoning": "The existing curve shows 5.7pp of damage already present at the lowest tested capacity, but only one point exists in that region and it was not designed to locate a threshold.",
+      "if_wrong": "Not applicable - no prediction made."
+    },
+    {
+      "id": "seed_replication",
+      "target": "Ranking of conditions across seeds 42, 43, 44",
+      "statement": "The ordering of conditions by dev mean R@1 will be consistent across all three seeds.",
+      "confidence": "medium",
+      "reasoning": "Observed seed SD in comparable runs is 0.01-0.28pp, well below the effect sizes being measured.",
+      "if_wrong": "If the ordering varies by seed, effect sizes are closer to noise than the existing evidence suggests and more seeds are required."
+    }
+  ],
+  "exploratory_already_observed": [
+    "Queue capacity dose-response at batch 1024, seed 42: 0 -> 35.76%, 1024 -> 30.06%, 4096 -> 24.78%, 8192 -> 21.21%, 16384 -> 16.77%. Motivated this design; cannot be confirmed by it.",
+    "i2t degraded more than t2i (24.94 vs 16.31pp at batch 512; 23.48 vs 14.50pp at batch 1024). Observed before this design was written.",
+    "The batch effect is queue-conditional: +3.7/+4.6pp with the queue, -2.0/-2.2pp without it.",
+    "Pair ranking inverted on the text encoder while the vision ranking held."
+  ],
+  "written_at": "2026-07-27T21:26:51Z"
+}

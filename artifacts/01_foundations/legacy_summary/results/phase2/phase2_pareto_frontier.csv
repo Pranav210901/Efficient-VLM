@@ -1,0 +1,5 @@
+direction,candidate_depth,metric,latency_ms,task,method,split_role,performance,peak_memory_bytes,throughput_per_second,offline_index_cost,online_query_cost,pareto_optimal
+,64,additional_latency_ms,0.0850324725939167,eurosat_zeroshot,optional_path__convnext_tiny__e5_small_v2__baseline,development,0.8748148083686829,1435940352,11760.213122057794,reused_phase1_dual_encoder_cache,64 cross-attention pairs,True
+,64,additional_latency_ms,0.1147744956391829,eurosat_zeroshot,optional_path__swin_tiny__e5_small_v2__baseline,development,0.8911111354827881,1557580288,8712.737045203008,reused_phase1_dual_encoder_cache,64 cross-attention pairs,True
+,64,additional_latency_ms,0.2992225840779734,eurosat_zeroshot,layers_1,development,0.9113579988479614,809460736,3341.9937304579034,reused_phase1_dual_encoder_cache,64 cross-attention pairs,True
+,64,additional_latency_ms,0.3250953591900107,eurosat_zeroshot,random_negatives,development,0.924197554588318,809460736,3076.0205328416364,reused_phase1_dual_encoder_cache,64 cross-attention pairs,True

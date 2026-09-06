@@ -1,0 +1,42 @@
+schema_version: 1
+updated_at: "2026-08-07"
+canonical_root: artifacts
+legacy_path_policy: relative_symlink
+protected_subtrees:
+  - freezeshift
+  - graphify-out
+
+# Each completed artifact family is moved atomically on the same filesystem.
+# The old results/, checkpoints/, and logs/ paths become compatibility symlinks.
+families:
+  legacy_summary: 01_foundations/legacy_summary
+  alignment_v2: 01_foundations/alignment_v2
+  alignment_v3: 01_foundations/alignment_v3
+  alignment_v3_recovery: 01_foundations/alignment_v3_recovery
+  alignment_v4: 01_foundations/alignment_v4_capture_probe
+
+  alignment_v4_wave0: 02_recipe_and_queue/wave0_recipe_pair_rescreen
+  queue_factorial: 02_recipe_and_queue/queue_factorial
+
+  data_scale_pilot: 03_data_and_transfer/coco_scale_pilot
+  cc3m_scale: 03_data_and_transfer/cc3m_scale
+  mixed_data_training: 03_data_and_transfer/mixed_coco_cc3m
+
+  efficiency_frontier: 04_efficiency_and_distillation/frontier
+  alignment_wave1: 04_efficiency_and_distillation/distillation_wave1
+  resolution_arm: 04_efficiency_and_distillation/resolution/arm
+  resolution_distillation_224: 04_efficiency_and_distillation/resolution/distilled_224_12epoch
+  resolution_distillation_224_long: 04_efficiency_and_distillation/resolution/distilled_224_24epoch
+  teacher_extension_224: 04_efficiency_and_distillation/teacher_extension
+
+  e5_c4_224: 05_token_architecture/text/e5_baseline
+  token_projection_profile: 05_token_architecture/vision/profile_candidates
+  token_projection_training: 05_token_architecture/vision/train_candidates
+  token_aggregator_scale_profile: 05_token_architecture/vision/profile_scale
+  token_aggregator_scale_training: 05_token_architecture/vision/train_scale
+  text_aggregation_study: 05_token_architecture/text/minilm_aggregation
+  final_lr_study: 05_token_architecture/final_lr
+
+  probe1_error_decomposition: 06_diagnostics/probe1_error_decomposition
+  guarded_hard_negative_study: 06_diagnostics/guarded_hard_negatives
+

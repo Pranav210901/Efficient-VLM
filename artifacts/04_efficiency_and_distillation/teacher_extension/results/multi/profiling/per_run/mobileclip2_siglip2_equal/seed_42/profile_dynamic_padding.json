@@ -1,0 +1,74 @@
+{
+  "status": "COMPLETE",
+  "kind": "student",
+  "entry_id": "mobileclip2_siglip2_equal",
+  "label": "DINOv3 ViT-S/16 + MiniLM, MobileCLIP2 + SigLIP2 distilled, 224px",
+  "role": "teacher_extension_224",
+  "seed": 42,
+  "checkpoint_dir": "checkpoints/teacher_extension_224/multi/sensitivity/distill_strength_1p0__seed_42",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "full_stack_inference_parameters": 45778563,
+  "query_side_inference_parameters": 23452417,
+  "image_flops": 9397685376.0,
+  "caption_flops": 690685056.0,
+  "normalization_flops_added_per_embedding": 1152.0,
+  "multiply_add_flops": 2,
+  "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+  "flop_measurement_version": "operator_level_v2",
+  "native_image_resolution": 224,
+  "native_text_context_length": 512,
+  "padding_workload": "dynamic_batch",
+  "batch_size": 64,
+  "padded_sequence_length": 32,
+  "raw_token_length_mean": 15.546875,
+  "raw_token_length_median": 15.0,
+  "raw_token_length_p95": 22.0,
+  "raw_token_length_max": 32,
+  "mean_padding_tokens_per_caption": 16.453125,
+  "token_utilization_fraction": 0.48583984375,
+  "tokenizer_output_fixed_length": false,
+  "paired_batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "full_stack_neural_latency_ms": {
+    "median": 8.599087130278349,
+    "q1": 8.457977091893554,
+    "q3": 8.610006887465715,
+    "iqr": 0.15202979557216167
+  },
+  "image_neural_latency_ms": {
+    "median": 7.141552399843931,
+    "q1": 7.115070940926671,
+    "q3": 7.14712287299335,
+    "iqr": 0.032051932066679
+  },
+  "text_neural_latency_ms": {
+    "median": 1.493359450250864,
+    "q1": 1.4885722193866968,
+    "q3": 1.4977026730775833,
+    "iqr": 0.009130453690886497
+  },
+  "cpu_preprocessing_latency_ms": {
+    "median": 84.203090518713,
+    "q1": 84.02250148355961,
+    "q3": 84.43203661590815,
+    "iqr": 0.40953513234853745
+  },
+  "cpu_tokenization_latency_ms": {
+    "median": 1.6424953937530518,
+    "q1": 1.609106082469225,
+    "q3": 1.6722106374800205,
+    "iqr": 0.0631045550107956
+  },
+  "checkpoint_fingerprint": "c9fe3203dc852a500914b65c034e0818c56111c0949178cb378766a3617ec3c2",
+  "parameter_count_correction": {
+    "status": "CORRECTED",
+    "previous_value": 46761603,
+    "corrected_value": 45778563,
+    "excluded_training_only_parameters": 983040,
+    "reason": "The profiler loaded the training graph and labelled its total as inference parameters. The deployed inference export excludes all teacher heads.",
+    "inference_state_teacher_heads_excluded": true
+  }
+}

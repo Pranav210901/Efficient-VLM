@@ -1,0 +1,2 @@
+array_index,experiment_id,run_id,vision_encoder,text_encoder,seed,batch_size
+0,dinov3_vits16__all_minilm_l6_v2,dinov3_vits16__all_minilm_l6_v2__seed_42__b1024,dinov3_vits16,all_minilm_l6_v2,42,1024

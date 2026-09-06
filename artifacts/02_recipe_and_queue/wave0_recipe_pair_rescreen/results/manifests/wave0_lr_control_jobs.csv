@@ -1,0 +1,5 @@
+array_index,control_id,question,loss_type,captions_per_image,batch_size,sweep_multiplier,seed,memory_queue_size,experiment_id,run_id
+0,matched_lr,Does no-queue InfoNCE match or beat sigmoid once it gets the same LR treatment?,infonce_no_queue,,1024,3.0,42,0,infonce_no_queue__captions_all__b1024__lr_3p0,infonce_no_queue__captions_all__b1024__lr_3p0__seed_42
+1,matched_lr,Does no-queue InfoNCE match or beat sigmoid once it gets the same LR treatment?,infonce_no_queue,,1024,6.0,42,0,infonce_no_queue__captions_all__b1024__lr_6p0,infonce_no_queue__captions_all__b1024__lr_6p0__seed_42
+2,sigmoid_lr_boundary,Is the sigmoid/all/1024 optimum above the previous lr_scale=3 boundary?,sigmoid,,1024,6.0,42,0,sigmoid__captions_all__b1024__lr_6p0,sigmoid__captions_all__b1024__lr_6p0__seed_42
+3,sigmoid_lr_boundary,Is the sigmoid/all/1024 optimum above the previous lr_scale=3 boundary?,sigmoid,,1024,10.0,42,0,sigmoid__captions_all__b1024__lr_10p0,sigmoid__captions_all__b1024__lr_10p0__seed_42

@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "common_batch_size": 2048,
+  "per_pair_recommended": [
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048
+  ],
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu_memory_bytes": 102016548864
+}

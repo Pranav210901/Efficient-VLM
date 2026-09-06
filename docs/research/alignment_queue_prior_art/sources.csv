@@ -1,0 +1,34 @@
+id,year,short_name,category,source_type,verification_level,credibility,recency,bias,source_file
+1,2025,Freeze-Align,direct competitor,peer-reviewed primary,selected_fulltext_sections,5,5,2,sources/01_freeze_align.md
+2,2025,SAIL,direct competitor,peer-reviewed primary,full_text_and_supplement,5,5,2,sources/02_sail.md
+3,2026,ShareLock,direct competitor,peer-reviewed primary,primary_abstract,5,5,2,sources/03_sharelock.md
+4,2022,LiT,locked-tower precursor,peer-reviewed primary,primary_abstract,5,3,2,sources/04_lit.md
+5,2023,ASIF,training-free alignment,peer-reviewed primary,primary_abstract,5,4,2,sources/05_asif.md
+6,2024,dino.txt,frozen-DINO alignment,preprint primary,primary_abstract,3,4,2,sources/06_dinotxt.md
+7,2025,STRUCTURE,direct competitor,peer-reviewed primary,primary_abstract,5,5,2,sources/07_structure.md
+8,2024,Platonic Representation Hypothesis,representation theory,peer-reviewed primary,primary_abstract,5,4,2,sources/08_platonic.md
+9,2024,Do Vision and Language Encoders Represent Similarly,representation diagnostics,preprint primary,primary_abstract,3,4,2,sources/09_encoder_similarity.md
+10,2023,SigLIP,loss,peer-reviewed primary,primary_abstract,5,4,2,sources/10_siglip.md
+11,2024,FFF,loss and captions,peer-reviewed primary,selected_fulltext_sections,5,4,2,sources/11_fff.md
+12,2022,UniCL,multi-positive loss,peer-reviewed primary,selected_fulltext_sections,5,3,2,sources/12_unicl.md
+13,2020,Supervised Contrastive Learning,multi-positive loss,peer-reviewed primary,selected_fulltext_sections,5,2,2,sources/13_supcon.md
+14,2023,CLIP-Lite,negative efficiency,peer-reviewed primary,primary_abstract,5,4,2,sources/14_clip_lite.md
+15,2020,Cross-Batch Memory,queue and drift,peer-reviewed primary,full_text_and_supplement,5,2,2,sources/15_xbm.md
+16,2020,Momentum Contrast,queue consistency,peer-reviewed primary,primary_abstract,5,2,2,sources/16_moco.md
+17,2023,Adaptive Cross Batch Normalization,drift correction,preprint primary,full_text,3,4,2,sources/17_acbn.md
+18,2020,Hard Negative Mixing,negative scaling,peer-reviewed primary,primary_abstract,5,2,2,sources/18_hard_negative_mixing.md
+19,2023,TinyCLIP,distillation,peer-reviewed primary,selected_fulltext_sections,5,4,2,sources/19_tinyclip.md
+20,2024,CLIP-KD,distillation,peer-reviewed primary,selected_fulltext_sections,5,4,2,sources/20_clip_kd.md
+21,2023,DIME-FM,distillation,preprint primary,primary_abstract,3,4,2,sources/21_dime_fm.md
+22,2024,MobileCLIP,distillation and efficiency,peer-reviewed primary,primary_abstract,5,4,2,sources/22_mobileclip.md
+23,2025,MobileCLIP2,distillation and efficiency,preprint primary,primary_abstract,3,5,2,sources/23_mobileclip2.md
+24,2024,MCAD,retrieval distillation,peer-reviewed primary,primary_abstract,5,4,2,sources/24_mcad.md
+25,2023,Bi-Encoder Cascades,retrieval cascade,peer-reviewed workshop primary,primary_abstract,4,4,2,sources/25_biencoder_cascade.md
+26,2024,MoVA,multiple vision encoders,preprint primary,primary_abstract,3,4,2,sources/26_mova.md
+27,2025,MOVE,multiple vision encoders,preprint primary,primary_abstract,3,5,2,sources/27_move.md
+28,2024,MoDE CLIP,data experts and routing,peer-reviewed primary,selected_fulltext_sections,5,4,2,sources/28_mode_clip.md
+29,2025,SCOPE,instance-level encoder routing,OpenReview primary,primary_abstract,3,5,2,sources/29_scope.md
+30,2021,NeurIPS reproducibility programme,reproducibility,peer-reviewed primary,primary_abstract,5,3,1,sources/30_reproducibility.md
+31,2022,Sources of Irreproducibility,reproducibility review,scholarly review,primary_abstract,4,3,1,sources/31_irreproducibility.md
+32,2021,Preregistering NLP Research,pre-registration,peer-reviewed primary,selected_fulltext_sections,5,3,2,sources/32_preregistering_nlp.md
+33,2021,Underspecification,methodology,peer-reviewed primary,primary_abstract,5,3,2,sources/33_underspecification.md

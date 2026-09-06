@@ -1,0 +1,15 @@
+id,title,year,type,url,credibility,novelty_relevance
+S01,Harnessing Frozen Unimodal Encoders for Flexible Multimodal Alignment,2025,peer-reviewed,https://openaccess.thecvf.com/content/CVPR2025/html/Maniparambil_Harnessing_Frozen_Unimodal_Encoders_for_Flexible_Multimodal_Alignment_CVPR_2025_paper.html,high,direct-foundation
+S02,MADTP,2024,peer-reviewed,https://openaccess.thecvf.com/content/CVPR2024/html/Cao_MADTP_Multimodal_Alignment-Guided_Dynamic_Token_Pruning_for_Accelerating_Vision-Language_Transformer_CVPR_2024_paper.html,high,direct-conflict
+S03,Patch Ranking for Efficient CLIP,2025,peer-reviewed,https://openaccess.thecvf.com/content/WACV2025/html/Wu_Patch_Ranking_Token_Pruning_as_Ranking_Prediction_for_Efficient_CLIP_WACV_2025_paper.html,high,direct-conflict
+S04,Token Merging,2023,peer-reviewed,https://openreview.net/forum?id=JroZRaRw7Eu,high,baseline
+S05,DynamicViT,2021,peer-reviewed,https://proceedings.neurips.cc/paper/2021/hash/747d3443e319a22747fbb873e8b2f9f2-Abstract.html,high,baseline
+S06,MoPE-CLIP,2024,peer-reviewed,https://openaccess.thecvf.com/content/CVPR2024/html/Lin_MoPE-CLIP_Structured_Pruning_for_Efficient_Vision-Language_Models_with_Module-wise_Pruning_CVPR_2024_paper.html,high,direct-conflict
+S07,Bi-Encoder Cascades for Efficient Image Search,2023,peer-reviewed,https://openaccess.thecvf.com/content/ICCV2023W/RCV/papers/Honig_Bi-Encoder_Cascades_for_Efficient_Image_Search_ICCVW_2023_paper.pdf,high,direct-conflict
+S08,Matryoshka Representation Learning,2022,peer-reviewed,https://proceedings.neurips.cc/paper_files/paper/2022/hash/c32319f4868da7613d78af9993100e42-Abstract-Conference.html,high,baseline
+S09,Multiple-Exit Tuning,2024,preprint,https://arxiv.org/abs/2409.13999,medium,direct-conflict
+S10,ICAR Adaptive Early-Exit Image-Text Retrieval,2026,preprint,https://arxiv.org/abs/2512.15372,medium,direct-conflict
+S11,Attentive Mask CLIP,2023,peer-reviewed,https://openaccess.thecvf.com/content/ICCV2023/html/Yang_Attentive_Mask_CLIP_ICCV_2023_paper.html,high,direct-conflict
+S12,SaMer,2026,preprint,https://arxiv.org/abs/2607.04605,medium,close-recent-conflict
+S13,CLIP-KD,2024,peer-reviewed,https://openaccess.thecvf.com/content/CVPR2024/html/Yang_CLIP-KD_An_Empirical_Study_of_CLIP_Model_Distillation_CVPR_2024_paper.html,high,performance-baseline
+S14,DINOv3 official repository,2025,official,https://github.com/facebookresearch/dinov3,high,backbone-availability

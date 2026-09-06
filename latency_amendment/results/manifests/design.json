@@ -1,0 +1,93 @@
+{
+  "status": "READY",
+  "package_sha256": "22f2d1867e8c905c3c3c1eec5a46f677014bb23da74207ec66ce5bc7ace62a65",
+  "declared_after_observation": true,
+  "measurement_invalidity_rationale": "The cross-session OpenCLIP-derived ceiling disqualified the unchanged contemporaneous M_T1 baseline. Session variation therefore contaminated the original absolute pass/fail comparison.",
+  "original_verdict_preserved": "Under the original preregistered cross-session 9.480 ms ceiling, no FreezeShift arm qualified.",
+  "roster": [
+    "M_T1",
+    "vision",
+    "text",
+    "dual",
+    "openclip_vit_b32_quickgelu_openai"
+  ],
+  "independent_repetitions": 10,
+  "new_training_runs": 0,
+  "reference_registry": {
+    "id": "openclip_vit_b32_quickgelu_openai",
+    "model_name": "ViT-B-32-quickgelu",
+    "pretrained": "openai",
+    "open_clip_version": "3.3.0"
+  },
+  "original_rows": [
+    {
+      "arm": "M_T1",
+      "seed": 42,
+      "selected_epoch": 22,
+      "merged_lora_modules": 0,
+      "merge_max_abs_delta_bf16": 0.0,
+      "adaptation_parameters": 2896389,
+      "median_ms": 9.407143108546734,
+      "q1_ms": 9.385044686496258,
+      "q3_ms": 9.497033664956689,
+      "image_median_ms": 7.665987592190504,
+      "text_median_ms": 1.7644423060119152,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "vision",
+      "seed": 42,
+      "selected_epoch": 16,
+      "merged_lora_modules": 8,
+      "merge_max_abs_delta_bf16": 0.001361258327960968,
+      "adaptation_parameters": 4076037,
+      "median_ms": 9.473129641264677,
+      "q1_ms": 9.46546089835465,
+      "q3_ms": 9.482609340921044,
+      "image_median_ms": 7.72129837423563,
+      "text_median_ms": 1.762455329298973,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "text",
+      "seed": 42,
+      "selected_epoch": 24,
+      "merged_lora_modules": 8,
+      "merge_max_abs_delta_bf16": 0.001019403338432312,
+      "adaptation_parameters": 3682821,
+      "median_ms": 9.632979519665241,
+      "q1_ms": 9.623500285670161,
+      "q3_ms": 9.641082491725683,
+      "image_median_ms": 7.850395981222391,
+      "text_median_ms": 1.7710467800498009,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "dual",
+      "seed": 42,
+      "selected_epoch": 20,
+      "merged_lora_modules": 16,
+      "merge_max_abs_delta_bf16": 0.0013828687369823456,
+      "adaptation_parameters": 4862469,
+      "median_ms": 9.536361787468195,
+      "q1_ms": 9.52319079078734,
+      "q3_ms": 9.60508268326521,
+      "image_median_ms": 7.63108441606164,
+      "text_median_ms": 1.7598927952349186,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    }
+  ],
+  "flickr_test_sealed": true
+}

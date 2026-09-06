@@ -1,0 +1,28 @@
+{
+  "affected_observed_tie": {
+    "arm": "dual",
+    "epochs": [
+      23,
+      24
+    ],
+    "mean_R@1": 0.6313609480857849,
+    "seed": 43,
+    "selected_epoch": 23
+  },
+  "amended_package_sha256": "d707425af55181f6b768332673d4bc8b5e56dc8cc73f62ec32844f06f2cddcd9",
+  "baseline_correction": {
+    "matched_M_T1_flickr_validation_mean_R1": 0.5448717921972275,
+    "matched_M_T1_repeated_pooled_q3_ms": 8.99804092478007,
+    "stale_inherited_flickr_validation_mean_R1": 0.44714
+  },
+  "evaluation_artifacts_changed": false,
+  "flickr_test_remained_sealed": true,
+  "original_package_sha256": "613084e24aa468925506a6fd38f3e527da3155a7ce6cda4cc1b1a1669b192988",
+  "reason": "Dual-arm seed 43 tied exactly at Flickr-validation epochs 23 and 24; the original strict reporter stopped because no tie-break was registered.",
+  "scope": "reporting_only",
+  "status": "COMPLETE",
+  "tie_break": "earliest_epoch",
+  "tie_break_status": "post_observation_reporting_amendment",
+  "training_artifacts_changed": false,
+  "written_at": "2026-08-08T07:57:51.488889+00:00"
+}

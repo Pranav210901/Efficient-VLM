@@ -1,0 +1,163 @@
+{
+  "status": "COMPLETE",
+  "cc3m_decision": "CC3M_JUSTIFIED",
+  "cc3m_decision_source": "fixed_update_curve_only",
+  "fixed_update_100_minus_25_pp": 15.029585361480713,
+  "fixed_update_monotonic": true,
+  "materiality_margin_pp": 1.0,
+  "replication_scope": {
+    "pilot": "Single-seed diagnostic (seed 42).",
+    "interpretation": "The fixed-update result justifies broader data under the pre-registered rule but does not establish a scaling law.",
+    "deferred_replication": "Replication is deferred to the CC3M runs, which will use three seeds."
+  },
+  "flickr_test_evaluated": false,
+  "unique_runs": 7,
+  "practical_curve": [
+    {
+      "percentage": 25,
+      "schedule": "practical_12_epochs",
+      "memberships": [
+        "practical_scaling"
+      ],
+      "index": 1,
+      "seed": 42,
+      "run_id": "coco_025pct__practical_12_epochs__seed_42",
+      "coco_dev_mean_R1": 0.29182595759630203,
+      "flickr_validation_mean_R1": 0.35887573659420013,
+      "post_training_train_loss": 2.0308641493320465,
+      "post_training_dev_loss": 2.0860868453979493,
+      "post_training_dev_minus_train_loss": 0.0552226960659028,
+      "checkpoint_fingerprint": "6549963fe7997ff66520003983b0c07bb3e46d359d5415a744a7a7688e770e13"
+    },
+    {
+      "percentage": 50,
+      "schedule": "practical_12_epochs",
+      "memberships": [
+        "practical_scaling"
+      ],
+      "index": 3,
+      "seed": 42,
+      "run_id": "coco_050pct__practical_12_epochs__seed_42",
+      "coco_dev_mean_R1": 0.337557852268219,
+      "flickr_validation_mean_R1": 0.3886587768793106,
+      "post_training_train_loss": 1.7718744767563683,
+      "post_training_dev_loss": 1.8713648319244385,
+      "post_training_dev_minus_train_loss": 0.09949035516807014,
+      "checkpoint_fingerprint": "0f549d77cc24101fc1f0bd63982a6ec144435f11b2abe46c9f1e157d9c9943db"
+    },
+    {
+      "percentage": 75,
+      "schedule": "practical_12_epochs",
+      "memberships": [
+        "practical_scaling"
+      ],
+      "index": 5,
+      "seed": 42,
+      "run_id": "coco_075pct__practical_12_epochs__seed_42",
+      "coco_dev_mean_R1": 0.3566744029521942,
+      "flickr_validation_mean_R1": 0.41469427943229675,
+      "post_training_train_loss": 1.7356125417962132,
+      "post_training_dev_loss": 1.804891085624695,
+      "post_training_dev_minus_train_loss": 0.06927854382848175,
+      "checkpoint_fingerprint": "bef2b06181f9f62cc95ef487b30be4345cae62a3c541d84bf7f8af48c5d6144b"
+    },
+    {
+      "percentage": 100,
+      "schedule": "practical_12_epochs",
+      "memberships": [
+        "practical_scaling",
+        "fixed_update"
+      ],
+      "index": 6,
+      "seed": 42,
+      "run_id": "coco_100pct__practical_12_epochs__seed_42",
+      "coco_dev_mean_R1": 0.3736719340085983,
+      "flickr_validation_mean_R1": 0.4361932873725891,
+      "post_training_train_loss": 1.727440831897495,
+      "post_training_dev_loss": 1.7484635353088378,
+      "post_training_dev_minus_train_loss": 0.021022703411342825,
+      "checkpoint_fingerprint": "0eb31e3edf35a854b1b38da0463971d0b3e5cf4125c748cd1e34c56344fad819"
+    }
+  ],
+  "fixed_update_curve": [
+    {
+      "percentage": 25,
+      "schedule": "fixed_optimizer_steps",
+      "memberships": [
+        "fixed_update"
+      ],
+      "index": 0,
+      "seed": 42,
+      "run_id": "coco_025pct__fixed_optimizer_steps__seed_42",
+      "coco_dev_mean_R1": 0.25573334842920303,
+      "flickr_validation_mean_R1": 0.285897433757782,
+      "post_training_train_loss": 0.6049440566982541,
+      "post_training_dev_loss": 2.954067039489746,
+      "post_training_dev_minus_train_loss": 2.3491229827914917,
+      "checkpoint_fingerprint": "3b9b4e0b2b94ec2a97e996e94c954011c5c7007f15adb70a47d0785ae20daa3a"
+    },
+    {
+      "percentage": 50,
+      "schedule": "fixed_optimizer_steps",
+      "memberships": [
+        "fixed_update"
+      ],
+      "index": 2,
+      "seed": 42,
+      "run_id": "coco_050pct__fixed_optimizer_steps__seed_42",
+      "coco_dev_mean_R1": 0.318960964679718,
+      "flickr_validation_mean_R1": 0.3614398390054703,
+      "post_training_train_loss": 1.2543958319084985,
+      "post_training_dev_loss": 2.107872724533081,
+      "post_training_dev_minus_train_loss": 0.8534768926245826,
+      "checkpoint_fingerprint": "aa387e46a80612cebb30933bac8ce41b6d15b07fd38297f971be47cabef13afd"
+    },
+    {
+      "percentage": 75,
+      "schedule": "fixed_optimizer_steps",
+      "memberships": [
+        "fixed_update"
+      ],
+      "index": 4,
+      "seed": 42,
+      "run_id": "coco_075pct__fixed_optimizer_steps__seed_42",
+      "coco_dev_mean_R1": 0.35645516216754913,
+      "flickr_validation_mean_R1": 0.41193293035030365,
+      "post_training_train_loss": 1.569248108260603,
+      "post_training_dev_loss": 1.8477828979492188,
+      "post_training_dev_minus_train_loss": 0.2785347896886159,
+      "checkpoint_fingerprint": "9a6a4ec57854bf0316eaba7a85289d527c570584db69601e19ce374e91c3ade5"
+    },
+    {
+      "percentage": 100,
+      "schedule": "practical_12_epochs",
+      "memberships": [
+        "practical_scaling",
+        "fixed_update"
+      ],
+      "index": 6,
+      "seed": 42,
+      "run_id": "coco_100pct__practical_12_epochs__seed_42",
+      "coco_dev_mean_R1": 0.3736719340085983,
+      "flickr_validation_mean_R1": 0.4361932873725891,
+      "post_training_train_loss": 1.727440831897495,
+      "post_training_dev_loss": 1.7484635353088378,
+      "post_training_dev_minus_train_loss": 0.021022703411342825,
+      "checkpoint_fingerprint": "0eb31e3edf35a854b1b38da0463971d0b3e5cf4125c748cd1e34c56344fad819"
+    }
+  ],
+  "fallback_interpretations": [
+    {
+      "Both curves flatten": "reject CC3M and continue with Wave 1 and writing."
+    },
+    {
+      "Practical rises but fixed-update flattens": "optimization exposure, not unique data, is binding."
+    },
+    {
+      "Fixed-update rises": "unique data or coverage is plausibly binding and CC3M is justified for consideration."
+    },
+    {
+      "Curves are noisy or non-monotonic": "stop without a CC3M decision and request a replication design."
+    }
+  ]
+}

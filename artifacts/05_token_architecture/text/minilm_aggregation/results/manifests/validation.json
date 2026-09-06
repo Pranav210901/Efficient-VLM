@@ -1,0 +1,50 @@
+{
+  "status": "READY",
+  "preregistration_sha256": "ec5fe25a9b8d2b84015701931d29bc739243c3e009abd50f41203668d62081bf",
+  "profile_cells": 6,
+  "flickr_test_sealed": true,
+  "rows": [
+    {
+      "cell": "M_T0",
+      "config": "configs/token_aggregator_scale_training/base_c4.yaml",
+      "aggregation": "masked_mean",
+      "pool_dim": 128,
+      "heads": 4
+    },
+    {
+      "cell": "M_T1",
+      "config": "configs/text_aggregation_study/base_m_t1.yaml",
+      "aggregation": "learned_query_attention",
+      "pool_dim": 128,
+      "heads": 4
+    },
+    {
+      "cell": "M_T1_small",
+      "config": "configs/text_aggregation_study/base_m_t1_small.yaml",
+      "aggregation": "learned_query_attention",
+      "pool_dim": 96,
+      "heads": 3
+    },
+    {
+      "cell": "E_T0",
+      "config": "configs/text_aggregation_study/base_e_t0.yaml",
+      "aggregation": "masked_mean",
+      "pool_dim": 128,
+      "heads": 4
+    },
+    {
+      "cell": "E_T1",
+      "config": "configs/text_aggregation_study/base_e_t1.yaml",
+      "aggregation": "learned_query_attention",
+      "pool_dim": 128,
+      "heads": 4
+    },
+    {
+      "cell": "E_T1_small",
+      "config": "configs/text_aggregation_study/base_e_t1_small.yaml",
+      "aggregation": "learned_query_attention",
+      "pool_dim": 96,
+      "heads": 3
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+entry_id,label,flickr_mean_R1,full_stack_inference_parameters,latency_median_ms,latency_q1_ms,latency_q3_ms,parameter_pareto,latency_iqr_pareto,latency_raw_median_pareto
+locked_minilm,DINOv3 ViT-S/16 + MiniLM (locked recipe),0.42403333882490796,45778563.0,17.05688750371337,17.052136128768325,17.061153193935752,True,False,False
+locked_e5,DINOv3 ViT-S/16 + E5-Small-v2 (best available configuration),0.4479666550954183,56425347.0,24.518052581697702,24.511073483154178,24.52148264274001,True,False,False
+historical_v4,"DINOv3 ViT-S/16 + MiniLM (v4 recipe, before correction)",0.17993333439032236,45778563.0,17.067321110516787,17.06136204302311,17.072056652978063,False,False,False
+mobileclip2_s0_dfndr2b,MobileCLIP2-S0:dfndr2b,0.7824000120162964,74835073.0,20.931115839630365,20.929102785885334,20.940674701705575,True,False,False
+siglip2_vit_b32_256_webli,ViT-B-32-SigLIP2-256:webli,0.8058000206947327,376856066.0,11.382623575627804,11.344269383698702,11.635772185400128,True,True,True
+openclip_vit_b32_quickgelu_openai,ViT-B-32-quickgelu:openai,0.682200014591217,151277313.0,9.378342423588037,9.375267196446657,9.381349431350827,False,True,True

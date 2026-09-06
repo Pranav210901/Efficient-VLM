@@ -1,0 +1,56 @@
+study: freezeshift_latency_amendment
+status: frozen_before_corrective_measurement
+declared_after_observation: true
+observation_trigger:
+  original_external_ceiling_q3_ms: 9.480
+  contemporaneous_m_t1_q3_ms: 9.497033664956689
+  defect: >-
+    The cross-session OpenCLIP-derived ceiling disqualified the unchanged
+    contemporaneous M_T1 baseline. Session variation therefore contaminated
+    the original absolute pass/fail comparison.
+historical_result:
+  preserved: true
+  statement: >-
+    Under the original preregistered cross-session 9.480 ms ceiling, no
+    FreezeShift arm qualified.
+measurement_repair:
+  reference: openclip_vit_b32_quickgelu_openai
+  registry_tag: ViT-B-32-quickgelu:openai
+  open_clip_version: 3.3.0
+  roster:
+    - M_T1
+    - vision
+    - text
+    - dual
+    - openclip_vit_b32_quickgelu_openai
+  same_allocation: true
+  partial_run_policy: partial measurements cannot be combined across Slurm allocations
+  paired_by: independent_repetition
+  order: deterministically_randomized_within_repetition
+  independent_repetitions: 10
+  warmup_iterations_per_repetition: 20
+  timed_iterations_per_repetition: 100
+  batch_size: 64
+  workload: Flickr30k validation first 64 paired examples
+  input_policy: checkpoint_native_image_transform
+  text_policy: dynamic padding where supported; OpenCLIP fixed 77 by checkpoint design
+  precision: native_bf16
+  hardware: teaching RTX PRO 6000 Blackwell
+primary_decision:
+  metric: paired full-stack Q3 difference, candidate minus OpenCLIP
+  point_estimate_rule: candidate is latency-eligible when mean paired difference is <= 0 ms
+  uncertainty_classification:
+    faster: 95% bootstrap CI lies entirely below 0 ms
+    latency_equivalent: 95% bootstrap CI includes 0 ms
+    slower: 95% bootstrap CI lies entirely above 0 ms
+  note: >-
+    The point-estimate rule is the direct same-allocation replacement for the
+    original Q3 ceiling. The confidence classification is reported alongside
+    it and cannot be hidden.
+secondary_analysis:
+  metric: paired full-stack Q3 difference, FreezeShift arm minus M_T1
+  purpose: adaptation overhead only; M_T1 is not the efficiency reference
+stopping_rule: >-
+  Exactly ten complete repetitions are measured. No automatic retraining,
+  checkpoint reselection, latency-threshold tuning, or model promotion follows.
+flickr_test_sealed: true

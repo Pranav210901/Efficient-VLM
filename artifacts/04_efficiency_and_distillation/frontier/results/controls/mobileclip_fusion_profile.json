@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETE_PENDING_EQUIVALENCE_REVIEW",
+  "entry_id": "mobileclip2_s0_dfndr2b",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "paired_batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "image_resolution": 256,
+  "image_flops": 4770301440.0,
+  "caption_flops": 5959542272.0,
+  "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+  "flop_measurement_version": "operator_level_v2",
+  "architecture": "FastViT fastvit_mci0 convolutional/hybrid",
+  "before_reparameterization": {
+    "graph_state": {
+      "mobileone_blocks": 43,
+      "mobileone_fused": 0,
+      "large_kernel_blocks": 3,
+      "large_kernel_fused": 0
+    },
+    "flops": {
+      "image_flops": 4785309184.0,
+      "caption_flops": 5959542272.0,
+      "normalization_flops_added_per_embedding": 1536.0,
+      "multiply_add_flops": 2,
+      "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+      "flop_measurement_version": "operator_level_v2"
+    },
+    "image_latency_ms": {
+      "median": 17.98098301514983,
+      "q1": 17.971381545066833,
+      "q3": 17.99189136363566,
+      "iqr": 0.020509818568825722
+    },
+    "full_stack_latency_ms": {
+      "median": 21.078441757708788,
+      "q1": 20.78810124658048,
+      "q3": 21.082851104438305,
+      "iqr": 0.29474985785782337
+    }
+  },
+  "after_reparameterization": {
+    "graph_state": {
+      "mobileone_blocks": 7,
+      "mobileone_fused": 7,
+      "large_kernel_blocks": 3,
+      "large_kernel_fused": 3
+    },
+    "flops": {
+      "image_flops": 4770301440.0,
+      "caption_flops": 5959542272.0,
+      "normalization_flops_added_per_embedding": 1536.0,
+      "multiply_add_flops": 2,
+      "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+      "flop_measurement_version": "operator_level_v2"
+    },
+    "image_latency_ms": {
+      "median": 11.747871991246939,
+      "q1": 11.745478957891464,
+      "q3": 11.750417295843363,
+      "iqr": 0.004938337951898575
+    },
+    "full_stack_latency_ms": {
+      "median": 15.207950957119465,
+      "q1": 15.206859214231372,
+      "q3": 15.21213655360043,
+      "iqr": 0.005277339369058609
+    }
+  },
+  "numerical_equivalence": {
+    "max_absolute_embedding_difference": 0.013198330998420715,
+    "mean_absolute_embedding_difference": 0.0017060029786080122,
+    "minimum_cosine_similarity": 0.9976450800895691,
+    "mean_cosine_similarity": 0.9987269639968872,
+    "threshold_pre_registered": false,
+    "note": "Report measurements for review; do not silently promote the fused result."
+  },
+  "protocol_notes": [
+    "The paired before/after measurements use identical weights, inputs, hardware, precision and allocation.",
+    "OpenCLIP uses its native 224x224 resolution; MobileCLIP2 and the DINOv3 students use native/configured 256x256 inputs."
+  ]
+}

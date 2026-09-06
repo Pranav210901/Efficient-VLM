@@ -1,0 +1,6 @@
+pipeline: configs/efficiency_frontier/pipeline.yaml
+source_config: checkpoints/alignment_v4_wave0/wave0-screen/infonce_queue__captions_2__b512__seed_42/config.yaml
+seeds: [43, 44]
+protected_seed: 42
+output_stage: v4_missing_seeds
+resume: true

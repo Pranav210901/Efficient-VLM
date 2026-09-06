@@ -1,0 +1,10 @@
+extends: base.yaml
+
+recipe:
+  teacher_dim: 512
+
+distillation:
+  teacher_id: mobileclip2_s0_dfndr2b
+  cache_path: results/alignment_wave1/mobileclip2/teacher_cache/mobileclip2_s0_dfndr2b.pt
+  cache_version: alignment-wave1-mobileclip2-s0-corrected-recipe-v1
+

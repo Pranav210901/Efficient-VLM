@@ -1,0 +1,46 @@
+{
+  "status": "BRANCH_CLOSED_ACCEPTED_NEGATIVE_RESULT",
+  "closed_on": "2026-07-29",
+  "flickr30k_test_status": "SEALED_NOT_EVALUATED",
+  "frontier_inclusion": {
+    "matched_compute_arm": false,
+    "extended_training_arm": false
+  },
+  "matched_compute_result": {
+    "description": "1,320 optimizer updates over 1,351,680 unique CC3M-mirror pairs",
+    "three_seed_mean_flickr30k_validation_mean_bidirectional_R1_percent": 35.493096709251404,
+    "three_seed_sd_percent": 0.4832347588880073,
+    "coco_trained_locked_recipe_percent": 43.62,
+    "difference_vs_coco_pp": -8.126903290748594
+  },
+  "extended_training_result": {
+    "required_label": "extended-training arm, ceiling reached",
+    "three_seed_mean_flickr30k_validation_mean_bidirectional_R1_percent": 37.72518138090769,
+    "three_seed_sd_percent": 0.25741947361720585,
+    "difference_vs_coco_pp": -5.894818619092305,
+    "gain_over_matched_compute_pp": 2.232084671656286,
+    "early_stopping_fired": false,
+    "step_ceiling": 5280,
+    "passes_completed": 4,
+    "selected_pass_by_seed": {
+      "42": 4,
+      "43": 4,
+      "44": 3
+    },
+    "still_improving_at_ceiling_seeds": [
+      42,
+      43
+    ]
+  },
+  "narrow_claim": "Under a compute budget matched to the COCO control, and with an LR pinned from COCO and explicitly untuned for this CC3M mirror, the CC3M-mirror subset underperformed COCO-trained transfer by 8.13pp at matched compute and 5.89pp after four passes.",
+  "prominent_counterargument": "Seeds 42 and 43 were still improving at the 5,280-step ceiling, early stopping never fired, and the extended-training arm recovered 2.23pp over the matched-compute arm. The experiment does not establish that CC3M-mirror training cannot overtake COCO with more compute; it establishes that it did not do so within the pre-registered budget.",
+  "cross_distribution_result": "The prior pilot found that unique COCO coverage beat repeated COCO coverage by 15.03pp at 1,320 steps. At the same 1,320-step budget, 1,351,680 unique CC3M-mirror pairs underperformed the COCO-trained locked recipe by 8.13pp. Unique-pair coverage therefore helped within distribution and hurt across distribution at this scale. The result indicates that caption and distribution properties matter more than pair count alone under this budget; it does not isolate a caption-quality mechanism.",
+  "interpretive_limit": "Human-written, retrieval-shaped COCO captions and web alt-text differ in multiple coupled properties. Caption properties are a plausible explanation, not an identified causal mechanism.",
+  "prohibited_follow_up_without_new_preregistration": [
+    "CC3M learning-rate tuning",
+    "training beyond 5,280 optimizer steps",
+    "mixed-corpus training",
+    "evaluating either CC3M arm on Flickr30k test",
+    "adding either CC3M arm to the final efficiency frontier"
+  ]
+}

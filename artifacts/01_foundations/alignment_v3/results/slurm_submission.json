@@ -1,0 +1,28 @@
+{
+  "mode": "parallel",
+  "partition": "teaching",
+  "max_total_gpus": 8,
+  "dry_run": false,
+  "jobs": {
+    "validate": "2217814",
+    "prefetch": "2217815",
+    "reference": "2217816",
+    "batch_probe": "2217817",
+    "pair_train": "2217818",
+    "pair_eval": "2217819",
+    "pair_select": "2217820",
+    "teacher_cache": "2217821",
+    "sensitivity_train": "2217822",
+    "sensitivity_eval": "2217823",
+    "distillation_select": "2217824",
+    "component_smoke": "2217825",
+    "ablation_train": "2217826",
+    "ablation_eval": "2217827",
+    "recipe_select": "2217828",
+    "final_train": "2217829",
+    "final_eval": "2217830",
+    "transfer": "SKIPPED_OPTIONAL_MISSING",
+    "oracle": "2217831",
+    "report": "2217832"
+  }
+}

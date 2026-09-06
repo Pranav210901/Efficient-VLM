@@ -1,0 +1,180 @@
+{
+  "status": "COMPLETE",
+  "stage": "PROFILE_ONLY",
+  "automatic_training_decision": false,
+  "protocol": {
+    "batch_size": 64,
+    "warmup_per_independent_run": 20,
+    "timed_iterations_per_independent_run": 100,
+    "independent_runs_per_arm": 10,
+    "order_randomized_within_repetition": true,
+    "precision": "native_bf16",
+    "input_resolution": 224,
+    "latency_ceiling_q3_ms": 9.48
+  },
+  "rows": [
+    {
+      "arm": "no_merge",
+      "merge_after_block": null,
+      "independent_runs": 10,
+      "q3_mean_ms": 9.121637139469385,
+      "q3_median_ms": 9.046860854141414,
+      "q3_sd_ms": 0.1591239759579734,
+      "q3_min_ms": 9.041344746947289,
+      "q3_max_ms": 9.452566038817167,
+      "q3_mean_bootstrap_ci95_low_ms": 9.045522750820965,
+      "q3_mean_bootstrap_ci95_high_ms": 9.230870141182095,
+      "image_q3_mean_ms": 7.3565746657550335,
+      "median_repetition_q3_below_9p48": true,
+      "all_repetitions_q3_below_9p48": true
+    },
+    {
+      "arm": "merge_after_block_8",
+      "merge_after_block": 8,
+      "independent_runs": 10,
+      "q3_mean_ms": 8.137653162702918,
+      "q3_median_ms": 8.092346484772861,
+      "q3_sd_ms": 0.09153945404754535,
+      "q3_min_ms": 8.070338517427444,
+      "q3_max_ms": 8.335838560014963,
+      "q3_mean_bootstrap_ci95_low_ms": 8.088096098508686,
+      "q3_mean_bootstrap_ci95_high_ms": 8.19726217770949,
+      "image_q3_mean_ms": 6.25622090883553,
+      "median_repetition_q3_below_9p48": true,
+      "all_repetitions_q3_below_9p48": true,
+      "paired_q3_delta_mean_ms": -0.9839839767664671,
+      "paired_q3_delta_sd_ms": 0.08595075992415249,
+      "paired_q3_delta_ci95_low_ms": -1.036959543125704,
+      "paired_q3_delta_ci95_high_ms": -0.9358285460621119
+    },
+    {
+      "arm": "merge_after_block_6",
+      "merge_after_block": 6,
+      "independent_runs": 10,
+      "q3_mean_ms": 7.515261578373611,
+      "q3_median_ms": 7.475872989743948,
+      "q3_sd_ms": 0.07937342953346302,
+      "q3_min_ms": 7.45631312020123,
+      "q3_max_ms": 7.662884425371885,
+      "q3_mean_bootstrap_ci95_low_ms": 7.473331533255987,
+      "q3_mean_bootstrap_ci95_high_ms": 7.567428926704451,
+      "image_q3_mean_ms": 5.647106328979135,
+      "median_repetition_q3_below_9p48": true,
+      "all_repetitions_q3_below_9p48": true,
+      "paired_q3_delta_mean_ms": -1.6063755610957742,
+      "paired_q3_delta_sd_ms": 0.08661904364511634,
+      "paired_q3_delta_ci95_low_ms": -1.6618524299701676,
+      "paired_q3_delta_ci95_high_ms": -1.5614425303647295
+    }
+  ],
+  "paired_rows": [
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 0,
+      "q3_delta_vs_no_merge_ms": -1.1167274788022041
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 1,
+      "q3_delta_vs_no_merge_ms": -1.1425705160945654
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 2,
+      "q3_delta_vs_no_merge_ms": -0.8442341350018978
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 3,
+      "q3_delta_vs_no_merge_ms": -0.9679156355559826
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 4,
+      "q3_delta_vs_no_merge_ms": -0.9847905021160841
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 5,
+      "q3_delta_vs_no_merge_ms": -0.955736031755805
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 6,
+      "q3_delta_vs_no_merge_ms": -0.9518158622086048
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 7,
+      "q3_delta_vs_no_merge_ms": -0.9490943048149347
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 8,
+      "q3_delta_vs_no_merge_ms": -0.9591551497578621
+    },
+    {
+      "arm": "merge_after_block_8",
+      "repetition": 9,
+      "q3_delta_vs_no_merge_ms": -0.9678001515567303
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 0,
+      "q3_delta_vs_no_merge_ms": -1.789681613445282
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 1,
+      "q3_delta_vs_no_merge_ms": -1.735213678330183
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 2,
+      "q3_delta_vs_no_merge_ms": -1.506241038441658
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 3,
+      "q3_delta_vs_no_merge_ms": -1.5852800570428371
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 4,
+      "q3_delta_vs_no_merge_ms": -1.5831799246370792
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 5,
+      "q3_delta_vs_no_merge_ms": -1.5673828311264515
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 6,
+      "q3_delta_vs_no_merge_ms": -1.5731160528957844
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 7,
+      "q3_delta_vs_no_merge_ms": -1.5538616571575403
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 8,
+      "q3_delta_vs_no_merge_ms": -1.5869715716689825
+    },
+    {
+      "arm": "merge_after_block_6",
+      "repetition": 9,
+      "q3_delta_vs_no_merge_ms": -1.5828271862119436
+    }
+  ],
+  "hardware": {
+    "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "node": "aisurrey38.surrey.ac.uk",
+    "precision": "native_bf16",
+    "slurm_job_id": "2297006",
+    "absolute_raw_path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/tokenshift/results/profile/raw_runs.csv"
+  },
+  "flickr_test_used": false
+}

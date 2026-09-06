@@ -1,0 +1,10 @@
+{
+  "status": "STOPPED_AT_GATE",
+  "proceed": false,
+  "experiment_id": "dinov3_vits16__all_minilm_l6_v2",
+  "vision_encoder": "dinov3_vits16",
+  "text_encoder": "all_minilm_l6_v2",
+  "mean_R@1": 0.17016710340976715,
+  "gain_over_v2": 0.014167103409767151,
+  "equivalence_margin": 0.005
+}

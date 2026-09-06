@@ -1,0 +1,7 @@
+extends: coco_blf.yaml
+
+data:
+  num_workers: 8
+
+training:
+  batch_size: 64

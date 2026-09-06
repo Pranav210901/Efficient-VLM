@@ -1,0 +1,70 @@
+study: tokenshift_training
+status: frozen_before_training
+declared_after:
+  tokenshift_profile: complete
+  observed_latency_result:
+    merge_after_block_8_delta_ms: -0.983984
+    merge_after_block_6_delta_ms: -1.606376
+question: >-
+  Can fixed internal patch-token reduction retain useful retrieval accuracy,
+  and does dual-LoRA encoder adaptation compensate for any loss relative to a
+  strictly frozen-weight student?
+parents:
+  frozen:
+    architecture: M_T1/C4
+    encoder_weights_updated: false
+    existing_no_merge_checkpoints_reused: true
+    inference_trainable_parameters: 2896389
+  dual_lora:
+    architecture: FreezeShift dual LoRA r128 in the final four blocks of both towers
+    base_encoder_weights_updated: false
+    lora_parameters_trainable: true
+    existing_no_merge_checkpoints_reused: true
+    inference_trainable_parameters: 4862469
+intervention:
+  input_resolution: 224
+  patch_grid_before: [14, 14]
+  patch_tokens_before: 196
+  patch_grid_after: [7, 7]
+  patch_tokens_after: 49
+  prefix_tokens_preserved: {cls: 1, registers: 4}
+  operator: fixed_non_overlapping_2x2_spatial_average
+  added_parameters: 0
+  variants:
+    - {id: block8, merge_after_block: 8}
+    - {id: block6, merge_after_block: 6}
+training:
+  seeds: [42, 43, 44]
+  new_runs_per_parent: 6
+  total_new_runs: 12
+  epochs: 24
+  schedule: cosine
+  warmup_fraction: 0.05
+  early_stopping: false
+  immutable_epoch_snapshots: true
+  recipe: inherited unchanged from each no-merge parent
+  teacher: MobileCLIP2-S0
+reporting:
+  primary_dataset: Flickr30k Karpathy validation
+  coco_dev: reported_per_epoch
+  epoch_selection:
+    coco_dev: maximum mean bidirectional R@1
+    flickr_validation: maximum mean bidirectional R@1
+    exact_tie_break: earliest_epoch
+    tie_break_status: preregistered_before_training
+  automatic_promotion: false
+  comparisons:
+    - each TokenShift arm versus its existing no-merge parent
+    - dual LoRA versus frozen at each matched merge location
+    - block 8 versus block 6 within each parent
+  latency:
+    protocol: repeated and interleaved in one allocation
+    reference: OpenCLIP ViT-B/32 quickgelu openai
+    representative_seed: 42
+    independent_repetitions: 10
+guardrails:
+  - Existing TokenShift profile and FreezeShift artifacts are read-only.
+  - Resolved config and fingerprint distinguish parent, merge location and seed.
+  - No result threshold or winner is invented by this package.
+  - Flickr30k test remains sealed.
+

@@ -1,0 +1,12 @@
+extends: ../../configs/text_aggregation_study/base_m_t1.yaml
+recipe:
+  tokenshift_merge_after_block: 8
+provenance:
+  study: tokenshift_training
+  parent: frozen_m_t1
+  encoder_status: strictly_frozen_encoder_weights_with_parameter_free_token_reduction
+  parameter_contract:
+    params_trainable_inference: 2896389
+    params_trainable_training: 3289605
+    params_training_only: 393216
+

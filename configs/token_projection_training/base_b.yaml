@@ -1,0 +1,13 @@
+extends: ../resolution_distillation_224_long/base.yaml
+
+recipe:
+  image_token_aggregation: learned_query_attention
+  token_pooler_dim: 128
+  token_pooler_heads: 4
+
+provenance:
+  parameter_contract:
+    params_trainable_inference: 1644164
+    params_trainable_training: 2037380
+    params_training_only: 393216
+

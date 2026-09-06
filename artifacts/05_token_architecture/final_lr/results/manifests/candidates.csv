@@ -1,0 +1,6 @@
+factor,pipeline,resolved_lr,reused
+0.5,configs/final_lr_study/pipeline_lr_0p5.yaml,0.0012727922061357855,False
+0.75,configs/final_lr_study/pipeline_lr_0p75.yaml,0.0019091883092036783,False
+1.0,configs/text_aggregation_study/pipeline_m_t1.yaml,0.002545584412271571,True
+1.25,configs/final_lr_study/pipeline_lr_1p25.yaml,0.003181980515339464,False
+1.5,configs/final_lr_study/pipeline_lr_1p5.yaml,0.0038183766184073566,False

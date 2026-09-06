@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETE",
+  "arms": [
+    {
+      "arm": "cc3m_only",
+      "coco_selected_mean": 0.46554898222287494,
+      "flickr_selected_mean": 0.4720907360315323,
+      "flickr_selected_sd": 0.004455369695396855,
+      "flickr_selected_min": 0.4670611470937729,
+      "flickr_selected_max": 0.47554241120815277,
+      "seeds_peaking_at_pass24": 0,
+      "selection_gain_pp": 0.6541753808657347
+    },
+    {
+      "arm": "mixed_coco_cc3m",
+      "coco_selected_mean": 0.5255752752224604,
+      "flickr_selected_mean": 0.5313280820846558,
+      "flickr_selected_sd": 0.005634560896584857,
+      "flickr_selected_min": 0.524852067232132,
+      "flickr_selected_max": 0.5351084917783737,
+      "seeds_peaking_at_pass24": 0,
+      "selection_gain_pp": 0.575280686219537
+    }
+  ],
+  "latency_changed": false,
+  "architecture": "frozen C4",
+  "flickr_test_evaluated": false,
+  "cc3m_qualification": "pixparse/cc3m-wds revision 46f3d69f840e59d77d52e8decfe5baec97e94c7f"
+}

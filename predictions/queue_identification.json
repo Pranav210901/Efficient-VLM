@@ -1,0 +1,22 @@
+{
+  "wave": "queue_identification",
+  "written_before_any_new_runs": true,
+  "unseen_predictions": [
+    {
+      "id": "staleness_identification",
+      "target": "Dev mean R@1 of both_fresh against its matched both (stale) and none (queue-free) arms, batch 1024, ages 16 and 64, seeds 42/43/44",
+      "statement": "both_fresh will recover most but not all of the queue-free score. I expect the fraction of damage attributable to staleness to be high (>0.7) but strictly below 1.0.",
+      "confidence": "medium",
+      "reasoning": "The factorial showed harm beginning after a single optimizer step, which is the signature of staleness rather than of negative-set composition; but it also showed that conditions matched on measured drift differ in damage by up to 4.74pp, which means at least one non-staleness factor is active. A fraction strictly between 0.7 and 1.0 is the outcome consistent with both observations.",
+      "if_wrong": "If the fraction is near 1.0, staleness is the whole mechanism and the matched-drift dissociation must be re-explained as a measurement artefact of path-length drift. If it is near 0.0, the harm is the extra negatives themselves - most plausibly unlabelled cross-image semantic false negatives - and the drift framing of the chapter is wrong, not merely incomplete."
+    },
+    {
+      "id": "age_scaling_of_the_residual",
+      "target": "residual_damage_pp at age 16 versus age 64",
+      "statement": "The residual damage that survives fresh re-projection will not grow with age.",
+      "confidence": "low",
+      "reasoning": "Whatever is left after staleness is removed should be a property of the negative set, whose composition does not depend on how long entries sat in the queue. Capacity does grow with age here, so a growing residual would instead indicate an entry-count effect.",
+      "if_wrong": "A residual growing with age implicates queue capacity or false-negative accumulation rather than staleness, and would make the entry-count explanation primary."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "claim": "Across multiple cross-modality condition pairs and all four reported tolerances, matched cumulative drift does not imply equivalent degradation. Drift is not a sufficient explanation of queue damage in this regime.",
+  "claim_decision": "GENERAL",
+  "equivalence_margin_pp": 1.0,
+  "observed_cumulative_drift": {
+    "maximum": 0.3198131887019197,
+    "minimum": 0.002034704784167287,
+    "range": 0.31777848391775243
+  },
+  "support": "At 4 of 4 tolerances, at least two matched pairs independently exceeded the 1pp margin.",
+  "tolerance_summaries": [
+    {
+      "conclusion": "Every matched pair shows modality-dependent damage above 1pp.",
+      "matched_pair_count": 2,
+      "pairs_exceeding_1pp": 2,
+      "tolerance": 0.005,
+      "tolerance_as_percent_of_observed_range": 1.5734230770935713
+    },
+    {
+      "conclusion": "Every matched pair shows modality-dependent damage above 1pp.",
+      "matched_pair_count": 2,
+      "pairs_exceeding_1pp": 2,
+      "tolerance": 0.01,
+      "tolerance_as_percent_of_observed_range": 3.1468461541871426
+    },
+    {
+      "conclusion": "Every matched pair shows modality-dependent damage above 1pp.",
+      "matched_pair_count": 3,
+      "pairs_exceeding_1pp": 3,
+      "tolerance": 0.02,
+      "tolerance_as_percent_of_observed_range": 6.293692308374285
+    },
+    {
+      "conclusion": "Every matched pair shows modality-dependent damage above 1pp.",
+      "matched_pair_count": 3,
+      "pairs_exceeding_1pp": 3,
+      "tolerance": 0.05,
+      "tolerance_as_percent_of_observed_range": 15.734230770935714
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "study": "freezeshift",
+  "written_before_any_runs": true,
+  "primary_metric": "Flickr30k Karpathy validation mean bidirectional R@1",
+  "baseline": "M_T1 at 54.48717921972275% validation mean R@1",
+  "hypotheses": [
+    {
+      "id": "encoder_adaptation",
+      "statement": "At least one LoRA arm improves the three-seed validation mean over M_T1 by more than one pooled SD while remaining below 5M trainable inference parameters and the 9.480 ms Q3 latency ceiling.",
+      "confidence": "medium"
+    },
+    {
+      "id": "tower_localization",
+      "statement": "Vision-only and text-only arms will identify whether the remaining recoverable deficit is concentrated in one frozen tower; no directional winner is predicted.",
+      "confidence": "none"
+    },
+    {
+      "id": "openclip_challenge",
+      "statement": "No prior is assigned to exceeding the locally measured OpenCLIP Flickr-validation mean R@1 of 69.94082840236686%.",
+      "confidence": "none"
+    }
+  ],
+  "promotion_rule": "Among latency- and parameter-eligible arms, promote the highest validation mean only if its gain over M_T1 exceeds one pooled SD. This is a practical heuristic, not a significance test.",
+  "hard_stop": "No rank, layer-count, alpha, dropout, LR or target-module tuning is permitted after results are observed.",
+  "flickr_test_sealed": true
+}

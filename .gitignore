@@ -1,0 +1,51 @@
+# Local/recoverable material that must never be pushed.
+/quarantine/
+/.cache/
+/.venv/
+/.venv-*/
+/.pytest_cache/
+/graphify-out/
+
+# Datasets are acquired locally; keep only the repository guide.
+/data/*
+!/data/README.md
+!/data/flickr30k/
+/data/flickr30k/*
+!/data/flickr30k/validation.csv
+!/data/flickr30k/test.csv
+
+# Heavyweight/generated experiment products.
+**/checkpoints/
+**/logs/
+**/teacher_cache/
+**/feature_cache/
+**/embeddings/
+**/contact_sheets/
+*.ckpt
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+
+# Python/notebook/test by-products.
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.py[cod]
+.coverage
+htmlcov/
+
+# Cluster and editor noise.
+*.err
+*.out
+*.swp
+*~
+
+# Per-row experiment dumps: regenerable from checkpoints + eval scripts, and
+# ~150 MB in aggregate. Summary JSON and the small result tables stay tracked.
+**/*_predictions.csv
+**/projector_probe.csv
+**/per_query.csv
+**/naive_graph.csv
+**/guarded_graph.csv
+**/exclusion_diagnostics.csv

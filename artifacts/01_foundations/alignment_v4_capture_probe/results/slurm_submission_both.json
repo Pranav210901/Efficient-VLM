@@ -1,0 +1,27 @@
+{
+  "version": "alignment-v4-capture-probe-1.0",
+  "teacher": "both",
+  "mode": "parallel",
+  "max_total_gpus": 8,
+  "partition": "teaching",
+  "dry_run": false,
+  "resume_requested": false,
+  "resume_policy": "fingerprint-skip-complete; epoch-resume-from-latest",
+  "jobs": {
+    "mobileclip2_validate": "2219577",
+    "mobileclip2_prefetch": "2219578",
+    "mobileclip2_teacher_cache": "2219579",
+    "mobileclip2_train": "2219580",
+    "mobileclip2_eval": "2219581",
+    "mobileclip2_select": "2219582",
+    "mobileclip2_report": "2219583",
+    "siglip2_validate": "2219584",
+    "siglip2_prefetch": "2219585",
+    "siglip2_teacher_cache": "2219586",
+    "siglip2_train": "2219587",
+    "siglip2_eval": "2219588",
+    "siglip2_select": "2219589",
+    "siglip2_report": "2219590",
+    "combined_report": "2219591"
+  }
+}

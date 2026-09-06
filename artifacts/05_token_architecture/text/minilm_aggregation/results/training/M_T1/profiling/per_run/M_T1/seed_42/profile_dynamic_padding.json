@@ -1,0 +1,68 @@
+{
+  "status": "COMPLETE",
+  "kind": "student",
+  "entry_id": "M_T1",
+  "label": "MiniLM learned-query text aggregation 128d 4h",
+  "role": "teacher_extension_224",
+  "seed": 42,
+  "checkpoint_dir": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_42",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "full_stack_inference_parameters": 47196549,
+  "query_side_inference_parameters": 23452417,
+  "image_flops": null,
+  "caption_flops": null,
+  "normalization_flops_added_per_embedding": null,
+  "multiply_add_flops": 2,
+  "flop_source": null,
+  "flop_measurement_version": "operator_level_v2",
+  "flop_measurement_status": "UNAVAILABLE_PROFILER_INCOMPATIBILITY",
+  "flop_measurement_error": "AttributeError: 'NoneType' object has no attribute 'next_functions'",
+  "native_image_resolution": 224,
+  "native_text_context_length": 512,
+  "padding_workload": "dynamic_batch",
+  "batch_size": 64,
+  "padded_sequence_length": 32,
+  "raw_token_length_mean": 15.546875,
+  "raw_token_length_median": 15.0,
+  "raw_token_length_p95": 22.0,
+  "raw_token_length_max": 32,
+  "mean_padding_tokens_per_caption": 16.453125,
+  "token_utilization_fraction": 0.48583984375,
+  "tokenizer_output_fixed_length": false,
+  "paired_batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "full_stack_neural_latency_ms": {
+    "median": 9.5479441806674,
+    "q1": 9.537585312500596,
+    "q3": 9.555424097925425,
+    "iqr": 0.01783878542482853
+  },
+  "image_neural_latency_ms": {
+    "median": 7.835918106138706,
+    "q1": 7.830680813640356,
+    "q3": 7.8416080214083195,
+    "iqr": 0.01092720776796341
+  },
+  "text_neural_latency_ms": {
+    "median": 1.6996744088828564,
+    "q1": 1.693840604275465,
+    "q3": 1.7053971532732248,
+    "iqr": 0.011556548997759819
+  },
+  "cpu_preprocessing_latency_ms": {
+    "median": 87.59349584579468,
+    "q1": 86.30469092167914,
+    "q3": 89.49560369364917,
+    "iqr": 3.1909127719700336
+  },
+  "cpu_tokenization_latency_ms": {
+    "median": 1.6505420207977295,
+    "q1": 1.6063374932855368,
+    "q3": 1.7424512188881636,
+    "iqr": 0.1361137256026268
+  },
+  "checkpoint_fingerprint": "41f565332685997df5ec99356a431a863b892b7a6a131ec894c159bb86e68d92"
+}

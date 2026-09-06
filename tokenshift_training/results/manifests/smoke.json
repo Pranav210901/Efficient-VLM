@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "arm": "frozen_block8",
+      "embedding_shape": [
+        2,
+        384
+      ],
+      "merged_lora_modules": 0,
+      "merge_max_abs_delta_fp32": 0.0
+    },
+    {
+      "arm": "dual_block6",
+      "embedding_shape": [
+        2,
+        384
+      ],
+      "merged_lora_modules": 16,
+      "merge_max_abs_delta_fp32": 0.0
+    }
+  ]
+}

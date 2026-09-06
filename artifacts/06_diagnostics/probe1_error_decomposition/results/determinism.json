@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "tie_break": "similarity_descending_then_frozen_gallery_index_ascending",
+  "models": [
+    {
+      "id": "c4_seed_42",
+      "rows": 6084,
+      "rank_sha256": "ae985c3b345a7c967f894604f5d77645677d35e3536163cf19bc4967dbc32d98",
+      "repeat_identical": true
+    },
+    {
+      "id": "c4_seed_43",
+      "rows": 6084,
+      "rank_sha256": "8b04239b6d8f86e25c53078d19c7aa0eceb7c866b987d484d941b6205cefadfc",
+      "repeat_identical": true
+    },
+    {
+      "id": "c4_seed_44",
+      "rows": 6084,
+      "rank_sha256": "018e3dfaf3ed8015ed426061cb8688a2520dc0eb58b8596857f80336867f3619",
+      "repeat_identical": true
+    },
+    {
+      "id": "openclip",
+      "rows": 6084,
+      "rank_sha256": "bd3d2bff8f4d969658e12e2ee8930f14de0075952f6d8b7992f1f7acdb760d53",
+      "repeat_identical": true
+    }
+  ]
+}

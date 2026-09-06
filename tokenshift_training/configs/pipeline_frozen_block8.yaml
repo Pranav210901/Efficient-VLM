@@ -1,0 +1,20 @@
+extends: ../../configs/text_aggregation_study/pipeline_m_t1.yaml
+version: tokenshift-training-frozen-block8-1.0
+name: tokenshift_frozen_block8
+output_root: tokenshift_training/results/frozen_block8
+checkpoint_root: tokenshift_training/checkpoints/frozen_block8
+log_root: tokenshift_training/logs
+base_config: tokenshift_training/configs/base_frozen_block8.yaml
+teacher_extension:
+  arm_id: frozen_block8
+  label: Strictly frozen M_T1 with TokenShift after DINOv3 block 8
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+tokenshift_training:
+  parent: frozen
+  merge_after_block: 8
+  expected_inference_trainable_parameters: 2896389
+reporting:
+  peak_tie_break: earliest_epoch
+  tie_break_status: preregistered_before_training
+  tie_break_disclosure: Exact validation ties select the earliest epoch; this rule was frozen before training.
+

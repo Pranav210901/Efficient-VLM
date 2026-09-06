@@ -1,0 +1,4 @@
+array_index,kind,experiment_id,run_id,reference_id,seed,final_run_id
+0,reference,mobileclip2_s0_dfndr2b,flickr30k__mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,,
+1,final,final_winner,flickr30k__final_winner__seed_42,,42.0,final_winner__seed_42
+2,final,final_winner,flickr30k__final_winner__seed_43,,43.0,final_winner__seed_43

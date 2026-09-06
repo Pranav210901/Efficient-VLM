@@ -1,0 +1,14 @@
+{
+  "status": "READY",
+  "jobs": 15,
+  "capacity_jobs": 6,
+  "mechanism_jobs": 9,
+  "prediction_ids": [
+    "H1_fresh_capacity",
+    "H2_semantic_false_negatives",
+    "H3_denominator_mass"
+  ],
+  "semantic_cache_sha256": "cdcdd73354ad26cc7487bbe30ef1e5a8805a826a6bda24b37216a8f2e661a131",
+  "semantic_threshold": 0.222935,
+  "reused_controls": 9
+}

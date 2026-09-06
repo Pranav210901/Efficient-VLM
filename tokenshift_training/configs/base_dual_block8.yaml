@@ -1,0 +1,12 @@
+extends: ../../freezeshift/configs/base_dual.yaml
+recipe:
+  tokenshift_merge_after_block: 8
+provenance:
+  study: tokenshift_training
+  parent: dual_lora
+  encoder_status: frozen_base_weights_with_parameter_efficient_adaptation_and_parameter_free_token_reduction
+  parameter_contract:
+    params_trainable_inference: 4862469
+    params_trainable_training: 5255685
+    params_training_only: 393216
+

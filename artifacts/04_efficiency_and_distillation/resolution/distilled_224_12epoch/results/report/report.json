@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "selected_resolution": 224,
+  "teacher": "MobileCLIP2-S0:dfndr2b",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "flickr_validation_mean_R1": 0.4378698269526164,
+  "flickr_validation_sd_R1": 0.0119524847458048,
+  "flickr_validation_min_R1": 0.42633137106895447,
+  "flickr_validation_max_R1": 0.4501972496509552,
+  "matched_224_baseline_mean_R1": 0.4196252375841141,
+  "distillation_gain_pp": 1.8244589368502317,
+  "test_split_used": false,
+  "flickr_test_sealed": true
+}

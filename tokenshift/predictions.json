@@ -1,0 +1,20 @@
+{
+  "study": "tokenshift_profile",
+  "written_before_any_tokenshift_runs": true,
+  "input_resolution": 224,
+  "latency_ceiling_q3_ms": 9.48,
+  "primary_metric": "full-stack Q3 latency on teaching RTX PRO 6000 Blackwell",
+  "candidates": [
+    {
+      "id": "merge_after_block_8",
+      "statement": "Reducing 196 patch tokens to 49 after block 8 will reduce image-side and full-stack latency relative to the contemporaneous no-merge control."
+    },
+    {
+      "id": "merge_after_block_6",
+      "statement": "Reducing 196 patch tokens to 49 after block 6 will reduce latency at least as much as reducing them after block 8."
+    }
+  ],
+  "scope": "Latency profiling only. No accuracy claim and no automatic training decision are made by this stage.",
+  "flickr_test_sealed": true
+}
+

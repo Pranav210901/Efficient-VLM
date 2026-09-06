@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_BEFORE_VISUAL_INSPECTION",
+  "frozen_at": "2026-08-01T00:00:00Z",
+  "description": "Model-assisted visual audit; not a human audit and not ground truth.",
+  "ambiguity_audit": {
+    "labels": ["unique", "multiple_plausible", "underspecified", "no_match", "unsure"],
+    "decision_order": [
+      "If no candidate satisfies the full caption: no_match.",
+      "If exactly one candidate satisfies every stated element: unique.",
+      "If multiple candidates satisfy it because they are genuine near-duplicates despite a specific caption: multiple_plausible.",
+      "If multiple candidates satisfy it because the caption lacks discriminating information and would match many corpus images: underspecified.",
+      "If the evidence cannot resolve the decision without guessing: unsure."
+    ],
+    "blinding": "Only query_caption and candidate_A through candidate_F may be inspected. audit_key.csv must not be joined or opened during labelling."
+  },
+  "failure_audit": {
+    "labels": ["label_defensible", "retrieved_also_correct", "caption_underspecified", "fine_grained_miss", "positive_atypical", "unsure"],
+    "decision_order": [
+      "If any retrieved image satisfies the caption as fully as the positive: retrieved_also_correct.",
+      "Otherwise, if the caption would match many images generally: caption_underspecified.",
+      "Otherwise, if the positive is itself a poor match: positive_atypical.",
+      "Otherwise, if retrieved images match the scene or subject but miss one discriminating detail: fine_grained_miss.",
+      "Otherwise: label_defensible. Use unsure only when visual evidence is insufficient and add a note."
+    ],
+    "rank_bands": {"11-20": [11, 20], "21-50": [21, 50], "51+": [51, null]}
+  },
+  "required_output_fields": ["audit_label", "audit_rationale", "audit_confidence"],
+  "confidence_values": ["high", "medium", "low"],
+  "source_files_immutable": true
+}

@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE",
+  "configured_batch_size": 512,
+  "batches": 221,
+  "all_batches_have_512_unique_images": true,
+  "unique_images_per_batch_values": [
+    512
+  ],
+  "text_rows_per_batch_min": 2560,
+  "text_rows_per_batch_max": 2564,
+  "text_rows_varies": true,
+  "caption_count_distribution": {
+    "5": 112982,
+    "6": 303,
+    "7": 2
+  }
+}

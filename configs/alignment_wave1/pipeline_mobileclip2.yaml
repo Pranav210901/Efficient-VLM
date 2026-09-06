@@ -1,0 +1,57 @@
+version: alignment-wave1-mobileclip2-1.0
+output_root: results/alignment_wave1/mobileclip2
+checkpoint_root: checkpoints/alignment_wave1/mobileclip2
+log_root: logs/alignment_wave1/mobileclip2
+base_config: configs/alignment_wave1/base_mobileclip2.yaml
+
+experiment:
+  image_size: 256
+
+wave1:
+  enabled: true
+  question: Does MobileCLIP2-S0 distillation add retrieval accuracy over a fresh matched corrected-recipe baseline?
+  locked_recipe:
+    loss_type: infonce_no_queue
+    captions_per_image: null
+    memory_queue_size: 0
+    batch_size: 1024
+    sweep_multiplier: 3.0
+    image_size: 256
+
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+
+references: [mobileclip2_s0_dfndr2b]
+pair_matrix:
+  vision_encoders: [dinov3_vits16]
+  text_encoders: [all_minilm_l6_v2]
+  seeds: [42]
+  batch_sizes: [1024]
+batch_probe:
+  enabled: false
+  candidates: [1024]
+probe:
+  enabled: false
+  cache_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+selection: {}
+distillation_sensitivity:
+  strengths: [1.0]
+  seeds: [42, 43, 44]
+  include_matched_baseline: true
+ablations:
+  seeds: []
+  recipes: []
+final:
+  seeds: []
+  epochs: 12
+  retrain_on_full_coco_train: false
+optional_transfer:
+  flickr30k_csv: data/flickr30k/test.csv
+  required: false
+literature_context: []

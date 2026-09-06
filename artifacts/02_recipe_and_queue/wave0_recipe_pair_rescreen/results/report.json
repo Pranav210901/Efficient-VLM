@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "measured_rows": 39,
+  "prediction_rows": 3,
+  "recipe_control_status": "SELECTED_WAVE0_RECIPE",
+  "queue_audit_verdict": "NO_MECHANICAL_BUG_DESIGN_STALENESS_RISK",
+  "prior_v2_v3_v4_scope": "MEMORY_QUEUE_ENABLED"
+}

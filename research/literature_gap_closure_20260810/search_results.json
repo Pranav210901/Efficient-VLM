@@ -1,0 +1,61 @@
+{
+  "session": "dissertation_gap_closure_20260810",
+  "description": "Primary-source verification subset used for cross-search aggregation; raw free-index results are tracked separately by citation_tracker.",
+  "searches": [
+    {
+      "query": "frozen unimodal vision language alignment",
+      "sub_area": "frozen_alignment",
+      "papers": [
+        {"url": "https://openaccess.thecvf.com/content/CVPR2025/html/Maniparambil_Harnessing_Frozen_Unimodal_Encoders_for_Flexible_Multimodal_Alignment_CVPR_2025_paper.html", "title": "Harnessing Frozen Unimodal Encoders for Flexible Multimodal Alignment", "authors": ["Mayug Maniparambil", "Raiymbek Akshulakov"], "year": 2025, "citations": 0},
+        {"url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Assessing_and_Learning_Alignment_of_Unimodal_Vision_and_Language_Models_CVPR_2025_paper.html", "title": "Assessing and Learning Alignment of Unimodal Vision and Language Models", "authors": ["Le Zhang", "Qian Yang", "Aishwarya Agrawal"], "year": 2025, "citations": 0},
+        {"url": "https://openreview.net/forum?id=wqBHJNqeQJ", "title": "Better Language Models Exhibit Higher Visual Alignment", "authors": ["Jona Ruthardt", "Gertjan J. Burghouts", "Serge Belongie", "Yuki M. Asano"], "year": 2026, "citations": 0},
+        {"url": "https://papers.nips.cc/paper_files/paper/2025/hash/dee8f820d86aca28ab0328a9243020f9-Abstract-Conference.html", "title": "With Limited Data for Multimodal Alignment, Let the STRUCTURE Guide You", "authors": ["Fabian Groger", "Shuo Wen", "Huyen Le", "Maria Brbic"], "year": 2025, "citations": 0}
+      ]
+    },
+    {
+      "query": "compact vision language models distillation",
+      "sub_area": "compact_distillation",
+      "papers": [
+        {"url": "https://machinelearning.apple.com/research/mobileclip2", "title": "MobileCLIP2: Improving Multi-Modal Reinforced Training", "authors": ["Fartash Faghri", "Pavan Kumar Anasosalu Vasu", "Cem Koc"], "year": 2025, "citations": 0},
+        {"url": "https://openaccess.thecvf.com/content/CVPR2024/html/Yang_CLIP-KD_An_Empirical_Study_of_CLIP_Model_Distillation_CVPR_2024_paper.html", "title": "CLIP-KD: An Empirical Study of CLIP Model Distillation", "authors": ["Chuanguang Yang", "Zhulin An"], "year": 2024, "citations": 0},
+        {"url": "https://arxiv.org/abs/2304.14108", "title": "DataComp: In Search of the Next Generation of Multimodal Datasets", "authors": ["Samir Yitzhak Gadre", "Gabriel Ilharco"], "year": 2023, "citations": 0}
+      ]
+    },
+    {
+      "query": "cross batch memory stale embeddings modality",
+      "sub_area": "memory_queue",
+      "papers": [
+        {"url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_Cross-Batch_Memory_for_Embedding_Learning_CVPR_2020_paper.html", "title": "Cross-Batch Memory for Embedding Learning", "authors": ["Xun Wang", "Haozhi Zhang", "Weilin Huang", "Matthew R. Scott"], "year": 2020, "citations": 0},
+        {"url": "https://arxiv.org/abs/2303.17127", "title": "Adaptive Cross Batch Normalization for Metric Learning", "authors": ["Thalaiyasingam Ajanthan", "Matt Ma"], "year": 2023, "citations": 0},
+        {"url": "https://proceedings.mlr.press/v280/yaras25a.html", "title": "Explaining and Mitigating the Modality Gap in Contrastive Multimodal Learning", "authors": ["Can Yaras", "Siyi Chen", "Peng Wang", "Qing Qu"], "year": 2025, "citations": 0}
+      ]
+    },
+    {
+      "query": "learned token aggregation frozen encoders",
+      "sub_area": "aggregation",
+      "papers": [
+        {"url": "https://arxiv.org/abs/1810.00825", "title": "Set Transformer", "authors": ["Juho Lee", "Yoonho Lee"], "year": 2019, "citations": 0},
+        {"url": "https://openreview.net/pdf?id=PXo0gtT7Al", "title": "Attention, Please! Revisiting Attentive Probing", "authors": ["Bill Psomas", "Dionysis Christopoulos"], "year": 2026, "citations": 0},
+        {"url": "https://machinelearning.apple.com/research/mobileclip2", "title": "MobileCLIP2: Improving Multi-Modal Reinforced Training", "authors": ["Fartash Faghri", "Pavan Kumar Anasosalu Vasu", "Cem Koc"], "year": 2025, "citations": 0}
+      ]
+    },
+    {
+      "query": "parameter efficient vision language alignment LoRA",
+      "sub_area": "peft",
+      "papers": [
+        {"url": "https://ojs.aaai.org/index.php/AAAI/article/view/40056", "title": "HALoRA: Low-Rank Adaptation with Hierarchical Budget Allocation for Efficient Vision-Language Alignment", "authors": ["Letian Zhang", "GuangHao Meng", "Xudong Ren", "Jinpeng Wang"], "year": 2026, "citations": 0},
+        {"url": "https://openreview.net/forum?id=wqBHJNqeQJ", "title": "Better Language Models Exhibit Higher Visual Alignment", "authors": ["Jona Ruthardt", "Gertjan J. Burghouts", "Serge Belongie", "Yuki M. Asano"], "year": 2026, "citations": 0},
+        {"url": "https://openaccess.thecvf.com/content/CVPR2025/html/Maniparambil_Harnessing_Frozen_Unimodal_Encoders_for_Flexible_Multimodal_Alignment_CVPR_2025_paper.html", "title": "Harnessing Frozen Unimodal Encoders for Flexible Multimodal Alignment", "authors": ["Mayug Maniparambil", "Raiymbek Akshulakov"], "year": 2025, "citations": 0}
+      ]
+    },
+    {
+      "query": "token pruning merging false negatives efficient vision language",
+      "sub_area": "token_and_negatives",
+      "papers": [
+        {"url": "https://aclanthology.org/2023.acl-long.721/", "title": "PuMer: Pruning and Merging Tokens for Efficient Vision Language Models", "authors": ["Qingqing Cao", "Bhargavi Paranjape", "Hannaneh Hajishirzi"], "year": 2023, "citations": 0},
+        {"url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_FALCON_False-Negative_Aware_Learning_of_Contrastive_Negatives_in_Vision-Language_Alignment_CVPR_2026_paper.html", "title": "FALCON: False-Negative Aware Learning of Contrastive Negatives in Vision-Language Alignment", "authors": ["Myunsoo Kim", "Seongwoong Shim", "Byung-Jun Lee"], "year": 2026, "citations": 0},
+        {"url": "https://machinelearning.apple.com/research/mobileclip2", "title": "MobileCLIP2: Improving Multi-Modal Reinforced Training", "authors": ["Fartash Faghri", "Pavan Kumar Anasosalu Vasu", "Cem Koc"], "year": 2025, "citations": 0}
+      ]
+    }
+  ]
+}

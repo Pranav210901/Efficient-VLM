@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "historical_pending_found": 18,
+  "historical_pending_marked_superseded": 18,
+  "effective_unresolved_historical_pending": 0,
+  "supersession_records_appended_this_invocation": 0,
+  "ledger": "logs/run_ledger.jsonl",
+  "append_only": true
+}

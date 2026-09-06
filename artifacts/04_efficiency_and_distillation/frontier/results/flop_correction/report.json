@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "artifacts_checked": 23,
+  "artifacts_with_wrong_stored_flops": 23,
+  "all_operator_level_v2": true,
+  "corrections_csv": "results/efficiency_frontier/flop_correction/corrections.csv"
+}

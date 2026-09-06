@@ -1,0 +1,11 @@
+{
+  "cache_version": "reference-eval-v1",
+  "code_version": "b4b5730decb38a3c8471e63beb211a24ceb611feec01e5b583673f243b6e1ad1",
+  "config_hash": "662949bfa549e7c69c664cfb651bbbd8bcfada11a3b27baeb68ede5d9d22b0cb",
+  "dataset_split_hash": "0f15c94be4709d859c3c1885053301d17f05057869a683eea588b124ad1bfa50",
+  "digest": "2632d5da0dbadc68180a458a4ad1f9959d6d3600f6fc0f0104174f37b559ce34",
+  "model_checkpoint_id": "MobileCLIP2-S0:dfndr2b",
+  "preprocessing_hash": "b736b2d98b8e2db4d09e5b585a3ceff256b64f1fe5ff81ae990751609cfdb7bc",
+  "schema_version": 1,
+  "seed": null
+}

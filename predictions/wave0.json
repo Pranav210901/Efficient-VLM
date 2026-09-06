@@ -1,0 +1,31 @@
+{
+  "wave": "wave0",
+  "written_before_any_runs": true,
+  "written_at": "2026-07-25T12:05:22Z",
+  "predictions": [
+    {
+      "id": "replication_anchor",
+      "target": "infonce_queue / captions=2 / batch=2048, dev mean bidirectional R@1",
+      "statement": "Lands within 2pp of 17.02% but below it (15.02-17.02%).",
+      "confidence": "medium",
+      "reasoning": "Config diff found no substantive difference from the v3 job, but the diff is untested and I expect some small unlogged drift.",
+      "if_wrong": "If within 1pp: the diff was complete and batch-size support is stronger than I expect. If above 17.02%: unexplained upward drift. If outside 2pp: something differs that the diff did not capture — stop condition fires."
+    },
+    {
+      "id": "wave0_winner",
+      "target": "winning config by mean_3seed dev R@1",
+      "statement": "sigmoid / captions=all, at either batch=1024 or batch=2048. Counts as a hit if the winner is sigmoid / captions=all at either of those batch sizes.",
+      "confidence": "low",
+      "reasoning": "Sigmoid and the caption axis are both untested in this codebase; this is a guess that the incumbent recipe left performance unclaimed, not an evidenced expectation. I have no basis for choosing between 1024 and 2048, which is why 1024 was added to the grid.",
+      "if_wrong": "If an infonce arm wins, the v3/v4 recipe was already near-optimal on the loss axis and the ceiling is less likely to be a recipe artifact. If sigmoid wins at batch=512, the batch effect is weaker than the v3/v4 gap suggested."
+    },
+    {
+      "id": "batch_effect",
+      "target": "mean dev R@1 at batch=2048 minus batch=512, averaged across loss and caption arms",
+      "statement": "Positive, between 0 and 2pp.",
+      "confidence": "medium",
+      "reasoning": "The v3/v4 gap was 3.7pp at a single point. I expect the averaged effect to be real but smaller, which would leave part of that gap unexplained.",
+      "if_wrong": "If 2-4pp: batch fully explains the v3/v4 gap. If near zero or negative: batch was not the cause and the gap remains open."
+    }
+  ]
+}

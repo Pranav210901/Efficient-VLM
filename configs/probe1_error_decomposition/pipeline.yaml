@@ -1,0 +1,73 @@
+version: probe1-error-decomposition-1.0
+name: probe1_error_decomposition
+output_root: results/probe1_error_decomposition
+
+gallery:
+  csv: data/flickr30k/validation.csv
+  canonical_manifest: results/data_scale_pilot/manifests/flickr_validation.json
+  expected_csv_sha256: e91235461839ab4237f02cfc9c88fc7117615e503a0266d601df01bd2b8196ad
+  expected_images: 1014
+  expected_captions: 5070
+  captions_per_image: 5
+  sealed_test_csv: data/flickr30k/test.csv
+  sealed_test_dataset_id: flickr30k_karpathy_test
+
+c4:
+  label: C4_d256_h8_b2_ff512
+  checkpoint_root: checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity
+  selected_epochs:
+    42: 14
+    43: 22
+    44: 20
+
+openclip:
+  reference_id: openclip_vit_b32_quickgelu_openai
+  model_name: ViT-B-32-quickgelu
+  pretrained: openai
+  open_clip_version: 3.3.0
+  weight_sha256: e6d1bd7789aa45192b3bf90570a789b478bae1b74ebcce7eddd908e83a2b7c31
+
+ambiguity:
+  primary_metric: tfidf_word_unigram_bigram_cosine
+  robustness_metric: BAAI/bge-small-en-v1.5
+  robustness_revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  cross_image_primary: mean_top5
+  cross_image_secondary: maximum
+  bins: terciles
+
+ranking:
+  similarity: cosine_l2_normalized
+  dtype: float32_cpu
+  tie_break: similarity_descending_then_frozen_gallery_index_ascending
+  k_values: [1, 5, 10]
+
+bootstrap:
+  replicates: 1000
+  seed: 20260731
+  interval_percent: 95
+
+exports:
+  audit_seed: 20260731
+  failure_seed: 20260732
+  audit_size: 100
+  failure_size_per_direction: 50
+  display_seed: 42
+
+evaluation:
+  batch_size: 128
+  num_workers: 12
+  precision: bf16
+  repeat_for_determinism: true
+
+resources:
+  partition: teaching
+  gpu_type: NVIDIA RTX PRO 6000 Blackwell
+  cpus_per_gpu: 12
+  host_memory: 96G
+  wall_time: "04:00:00"
+  array_concurrency: 4
+
+limitations:
+  - BGE-Small and MiniLM were trained with related sentence-embedding objectives and potentially overlapping web/NLI sources; BGE is non-circular here but is not independent semantic ground truth.
+  - OpenCLIP uses its checkpoint-native fixed 77-token context while MiniLM dynamically pads each batch. This does not alter the common gallery, cosine ranking rule, or retrieval ordering protocol.
+  - Ambiguity association is not an absolute irrecoverable performance ceiling.

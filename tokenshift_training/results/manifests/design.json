@@ -1,0 +1,94 @@
+{
+  "status": "READY",
+  "package_sha256": "1545d26ffaa2ca6b8e9c516a2b38600e731e6cc347f7faa30b41ba65418a22b0",
+  "study": "tokenshift_training",
+  "new_training_runs": 12,
+  "training_array_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "pipelines": [
+    {
+      "pipeline_index": 0,
+      "pipeline": "tokenshift_training/configs/pipeline_frozen_block8.yaml",
+      "arm": "frozen_block8",
+      "parent": "frozen",
+      "merge_after_block": 8,
+      "new_training_runs": 3,
+      "lora_parameters": 0,
+      "inference_trainable_parameters": 2896389,
+      "patch_tokens_after": 49,
+      "base_encoder_weights_frozen": true
+    },
+    {
+      "pipeline_index": 1,
+      "pipeline": "tokenshift_training/configs/pipeline_frozen_block6.yaml",
+      "arm": "frozen_block6",
+      "parent": "frozen",
+      "merge_after_block": 6,
+      "new_training_runs": 3,
+      "lora_parameters": 0,
+      "inference_trainable_parameters": 2896389,
+      "patch_tokens_after": 49,
+      "base_encoder_weights_frozen": true
+    },
+    {
+      "pipeline_index": 2,
+      "pipeline": "tokenshift_training/configs/pipeline_dual_block8.yaml",
+      "arm": "dual_block8",
+      "parent": "dual_lora",
+      "merge_after_block": 8,
+      "new_training_runs": 3,
+      "lora_parameters": 1966080,
+      "inference_trainable_parameters": 4862469,
+      "patch_tokens_after": 49,
+      "base_encoder_weights_frozen": true
+    },
+    {
+      "pipeline_index": 3,
+      "pipeline": "tokenshift_training/configs/pipeline_dual_block6.yaml",
+      "arm": "dual_block6",
+      "parent": "dual_lora",
+      "merge_after_block": 6,
+      "new_training_runs": 3,
+      "lora_parameters": 1966080,
+      "inference_trainable_parameters": 4862469,
+      "patch_tokens_after": 49,
+      "base_encoder_weights_frozen": true
+    }
+  ],
+  "existing_no_merge_baselines": {
+    "frozen_no_merge": {
+      "pipeline": "configs/text_aggregation_study/pipeline_m_t1.yaml",
+      "validation_mean_R1": 0.5448717921972275,
+      "report": "results/text_aggregation_study/training/M_T1/report/report.json"
+    },
+    "dual_lora_no_merge": {
+      "pipeline": "freezeshift/configs/pipeline_dual.yaml",
+      "validation_mean_R1": 0.6341551641623179,
+      "report": "freezeshift/results/dual/report/report.json"
+    }
+  },
+  "tokenshift_profile": {
+    "path": "tokenshift/results/profile/report.json",
+    "block8_paired_delta_ms": -0.9839839767664671,
+    "block6_paired_delta_ms": -1.6063755610957742
+  },
+  "automatic_promotion": false,
+  "flickr_test_sealed": true
+}

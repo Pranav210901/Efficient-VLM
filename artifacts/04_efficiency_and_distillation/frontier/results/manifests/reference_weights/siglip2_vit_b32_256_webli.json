@@ -1,0 +1,15 @@
+{
+  "reference_id": "siglip2_vit_b32_256_webli",
+  "model_name": "ViT-B-32-SigLIP2-256",
+  "pretrained": "webli",
+  "open_clip_version": "3.3.0",
+  "upstream_revision_recorded_at_fetch": false,
+  "files": [
+    {
+      "path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/.cache/huggingface/models--timm--ViT-B-32-SigLIP2-256/snapshots/cd1efb47643f2794413dd79ef24397c175032780/open_clip_model.safetensors",
+      "bytes": 1507459216,
+      "sha256": "7cdccf256ee0e4a9908c365f8e1c88d5db171980a3350c214f5221d50f8d9927"
+    }
+  ],
+  "aggregate_sha256": "93811e0051f69855cd27e26f71115355377a08ad0e59e74212edbcbb35ff60f5"
+}

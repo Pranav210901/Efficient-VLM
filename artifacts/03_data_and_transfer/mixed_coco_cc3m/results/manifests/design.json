@@ -1,0 +1,34 @@
+{
+  "status": "READY",
+  "training_jobs": 6,
+  "evaluation_jobs": 144,
+  "teacher_cache_required": true,
+  "arms": [
+    {
+      "id": "mixed_coco_cc3m",
+      "sources": [
+        "coco",
+        "cc3m"
+      ],
+      "images_per_pass": 1464967,
+      "optimizer_steps_per_pass": 1431,
+      "total_optimizer_steps": 34344
+    },
+    {
+      "id": "cc3m_only",
+      "sources": [
+        "cc3m"
+      ],
+      "images_per_pass": 1351680,
+      "optimizer_steps_per_pass": 1320,
+      "total_optimizer_steps": 31680
+    }
+  ],
+  "caption_semantics": {
+    "pass_unit": "image",
+    "coco": "all available captions become positive text rows",
+    "cc3m": "one caption per image",
+    "source_weighting": "uniform per image, not per caption"
+  },
+  "flickr_test_sealed": true
+}

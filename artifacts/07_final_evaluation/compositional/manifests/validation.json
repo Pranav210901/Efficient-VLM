@@ -1,0 +1,40 @@
+{
+  "status": "READY",
+  "tasks": [
+    "sugarcrepe"
+  ],
+  "jobs": 9,
+  "student_checkpoints": [
+    {
+      "id": "mt1_strict_frozen",
+      "seed": 42,
+      "sha256": "398c716d2dc4172bc5d62dc07d929a1e38d3b01d10c7bca477c7a0af99cde3bb"
+    },
+    {
+      "id": "mt1_strict_frozen",
+      "seed": 43,
+      "sha256": "9573a616772c12877447726aec5e47309e283d2757ae409120d162a1f1a5a5f2"
+    },
+    {
+      "id": "mt1_strict_frozen",
+      "seed": 44,
+      "sha256": "d55761380cd60922d58e68b6eb596dabba968c0672a6fe5372505eb6b1c7fa1b"
+    },
+    {
+      "id": "mt1_dual_lora",
+      "seed": 42,
+      "sha256": "f5360dac89eb48b8dee8de13a4824aa3322a98145cf58b309cce98d3cff8384f"
+    },
+    {
+      "id": "mt1_dual_lora",
+      "seed": 43,
+      "sha256": "6fef8282604fbfa3ee4977568febdf594fe8271cd6991eb36187cf3186a6f131"
+    },
+    {
+      "id": "mt1_dual_lora",
+      "seed": 44,
+      "sha256": "e5f31aba9b124beedefc8ae9a18f4de9a2c3022c8a6fecd49453603b38a94d03"
+    }
+  ],
+  "no_optimizer_code_path": true
+}

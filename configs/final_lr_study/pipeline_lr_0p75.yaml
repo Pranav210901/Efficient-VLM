@@ -1,0 +1,12 @@
+extends: ../text_aggregation_study/pipeline_m_t1.yaml
+version: final-lr-study-0p75-1.0
+name: final_lr_study_0p75
+output_root: results/final_lr_study/lr_0p75
+checkpoint_root: checkpoints/final_lr_study/lr_0p75
+log_root: logs/final_lr_study
+wave1:
+  enabled: true
+  design: final_lr_study
+  question: Does LR tuning improve the frozen M_T1 architecture without changing inference cost?
+  locked_recipe: {loss_type: infonce_no_queue, captions_per_image: null, memory_queue_size: 0, batch_size: 1024, sweep_multiplier: 2.25, image_size: 224}
+lr_study: {factor_vs_current: 0.75, expected_resolved_lr: 0.0019091883092036783}

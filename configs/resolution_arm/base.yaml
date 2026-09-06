@@ -1,0 +1,5 @@
+extends: ../alignment_wave1/base.yaml
+
+distillation:
+  strength: 0.0
+

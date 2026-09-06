@@ -1,0 +1,138 @@
+{
+  "artifacts": [
+    {
+      "artifact": "results/alignment_matrix_best_clean.csv",
+      "exists": true,
+      "valid": true,
+      "row_count": 80,
+      "configuration_count": 80,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/seed_sweep_results.csv",
+      "exists": true,
+      "valid": true,
+      "row_count": 20,
+      "configuration_count": 4,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/seed_sweep_summary.csv",
+      "exists": true,
+      "valid": true,
+      "row_count": 4,
+      "configuration_count": 0,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/seed_sweep_paired_deltas.csv",
+      "exists": true,
+      "valid": true,
+      "row_count": 2,
+      "configuration_count": 0,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase1_multitask",
+      "exists": true,
+      "valid": true,
+      "row_count": 92,
+      "configuration_count": 23,
+      "task_count": 4,
+      "checkpoint_fingerprint_status": "matched",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/predictions",
+      "exists": true,
+      "valid": true,
+      "row_count": 47,
+      "configuration_count": 0,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "historical_mixed",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/complementarity",
+      "exists": true,
+      "valid": true,
+      "row_count": 759,
+      "configuration_count": 23,
+      "task_count": 3,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/oracle",
+      "exists": true,
+      "valid": true,
+      "row_count": 6075,
+      "configuration_count": 0,
+      "task_count": 3,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/cross_task",
+      "exists": true,
+      "valid": true,
+      "row_count": 115,
+      "configuration_count": 23,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/efficiency",
+      "exists": true,
+      "valid": true,
+      "row_count": 23,
+      "configuration_count": 23,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/hard_negatives",
+      "exists": true,
+      "valid": true,
+      "row_count": 842343,
+      "configuration_count": 3,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    },
+    {
+      "artifact": "results/phase15/expert_selection",
+      "exists": true,
+      "valid": true,
+      "row_count": 6,
+      "configuration_count": 6,
+      "task_count": 0,
+      "checkpoint_fingerprint_status": "not_applicable",
+      "schema_status": "valid",
+      "issues": ""
+    }
+  ],
+  "valid_count": 12,
+  "artifact_count": 12
+}

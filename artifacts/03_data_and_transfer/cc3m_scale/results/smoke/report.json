@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "kind": "cc3m_tar_gpu_smoke",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "batch_size": 1024,
+  "unique_canonical_ids": 1024,
+  "loss": 7.178963661193848,
+  "peak_memory_bytes": 3870704128,
+  "queue_enabled": false,
+  "flickr_test_evaluated": false
+}

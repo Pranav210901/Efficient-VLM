@@ -1,0 +1,30 @@
+base_config: configs/coco_blf_rtxpro.yaml
+checkpoint_root: checkpoints/seed_sweep
+results_path: results/seed_sweep_results.csv
+evaluation_config: configs/coco_eval_5captions.yaml
+
+# Five matched seeds give a basic uncertainty estimate without treating encoder aliases as independent runs.
+seeds: [42, 43, 44, 45, 46]
+
+config_overrides:
+  deterministic: true
+  training:
+    epochs: 5
+    batch_size: 64
+    early_stopping_patience: 2
+    keep_latest: false
+  data:
+    num_workers: 8
+
+comparisons:
+  # Corrected matrix leader: validate whether local BLF improves DINOv2 + MiniLM.
+  - name: dinov2_minilm_local
+    vision_encoder: dinov2_vits14
+    text_encoder: all_minilm_l6_v2
+    variants: [baseline, local]
+
+  # Recheck the dissertation's earlier local+global claim under matched seeds.
+  - name: convnextv2_minilm_local_global
+    vision_encoder: convnextv2_tiny
+    text_encoder: all_minilm_l6_v2
+    variants: [baseline, local_global]

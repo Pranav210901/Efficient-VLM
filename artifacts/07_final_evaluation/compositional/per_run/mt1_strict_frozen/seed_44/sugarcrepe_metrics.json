@@ -1,0 +1,13 @@
+{
+  "overall_accuracy": 0.7718013525009155,
+  "positive_score": 0.5565093309460936,
+  "negative_score": 0.5190559339466179,
+  "score_margin": 0.03745339699947569,
+  "accuracy/add_att": 0.6372832655906677,
+  "accuracy/add_obj": 0.7904946804046631,
+  "accuracy/replace_att": 0.796954333782196,
+  "accuracy/replace_obj": 0.9213075041770935,
+  "accuracy/replace_rel": 0.7325747013092041,
+  "accuracy/swap_att": 0.5930930972099304,
+  "accuracy/swap_obj": 0.6163265109062195
+}

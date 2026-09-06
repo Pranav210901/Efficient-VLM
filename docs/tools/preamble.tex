@@ -1,0 +1,237 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Efficient Alignment of Frozen Vision and Language Encoders
+%  Under Tight Adaptation and Latency Budgets
+%
+%  Pranav Pokhrel (pp01184) -- MSc dissertation, University of Surrey
+%  Supervised by Prof. Miroslaw Bober
+%
+%  Single-file build.  Formatting is the Surrey Dissertation_Template.tex
+%  preamble, unchanged.  The only departures from that file are recorded in
+%  the comments marked [TEMPLATE] below, and each is forced by a file that
+%  does not exist in this repository.
+%
+%  Build with:  pdflatex Dissertation.tex   (x3, for TOC and cross-references)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,oneside]{report}
+
+\usepackage{graphicx} % En­hanced sup­port for graph­ics
+\graphicspath{ {./images/} }
+
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.38in,rmargin=0.79in]{geometry} % Set margin size for document (same as Microsoft Normal margins)
+
+\usepackage{times} % Select Adobe Times Ro­man (or equiv­a­lent) as de­fault font
+\usepackage{epsfig} % In­clude En­cap­su­lated PostScript in LaTeX doc­u­ment
+\usepackage{fancyhdr} % Ex­ten­sive con­trol of page head­ers and foot­ers
+\usepackage{longtable} % Al­low ta­bles to flow over page bound­aries
+\usepackage{tabularx} % Tables with auto-sizing columns
+\usepackage{booktabs} % \toprule, \midrule, \bottomrule for tables
+\usepackage{subfig} % Ma­nip­u­la­tion and ref­er­ence of small subfigures
+\usepackage{color} % Colour con­trol
+\usepackage{amsmath} % Mathematical typsetting
+\usepackage{amssymb} % Provides an extended symbol collection
+\usepackage{bm} % Bold sym­bols in maths mode
+\usepackage{psfrag} % For proper math symbols in postscript plots
+\usepackage{url} % Allow for URL to be entered
+\usepackage[linktocpage]{hyperref} % Ex­ten­sive sup­port for hy­per­text
+
+\usepackage[square,numbers]{natbib} % Bibliography
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+
+
+\usepackage{setspace} % Allow for custom setting space be­tween lines
+
+\usepackage{multicol} % In­ter­mix sin­gle and mul­ti­ple columns
+\usepackage{paralist} % Enu­mer­ate and item­ize within para­graphs
+\usepackage{floatrow} % Mod­i­fy­ing the lay­out of floats
+
+%\setlength{\parindent}{0pt} % Remove paragraph indent
+\setlength{\parskip}{\baselineskip} % Force skip line between paragraphs
+\floatsetup[table]{capposition=top} % Position caption on top of tables
+
+% [TEMPLATE] Addition, not a change: the line above configures `table' only.
+% The literature-review synthesis table is a longtable (it runs over a page
+% boundary), and floatrow leaves longtable captions unconfigured, which sets
+% them one \textwidth too wide.  This gives longtable the same top-caption
+% setting the template asks for on tables.
+\floatsetup[longtable]{capposition=top}
+
+%%% Setting the Chapter and Section settings to Surrey requirements %%%
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+{\fontsize{12}{15}\bfseries}
+{\thechapter}
+{1em}
+{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{1pt}{0pt}[0pt]
+
+\titleformat{\section}[block]
+{\fontsize{12}{15}\bfseries}
+{\thesection}
+{1em}
+{}
+\titlespacing*{\section}{0pt}{0pt}{-12pt}[0pt]
+
+\titleformat{\subsection}[block]
+{\fontsize{12}{15}\bfseries}
+{\thesubsection}
+{1em}
+{}
+\titlespacing*{\subsection}{0pt}{0pt}{-12pt}[0pt]
+
+\titleformat{\subsubsection}[block]
+{\fontsize{12}{15}}
+{\thesubsubsection}
+{1em}
+{}
+\titlespacing*{\subsubsection}{0pt}{0pt}{-12pt}[0pt]
+%%%%%%
+
+\newcommand{\squeezeup}{\vspace{-2.5mm}} % Reduce spacing manually
+\clubpenalty = 10000 % eliminates orphans
+\widowpenalty = 10000 % eliminates orphans
+
+
+% [TEMPLATE] The template loads style/myfootnote, vmargin, style/epsf.sty and
+% parameters/param here.  None of those files exist in this repository, so
+% they are omitted; page geometry is already set by the geometry options
+% above.  Restore these four lines if the style/ and parameters/ directories
+% are recovered:
+%     \usepackage{style/myfootnote}
+%     \makesavenoteenv{longtable}
+%     \usepackage{vmargin}
+%     \input{./style/epsf.sty}
+%     \input{./parameters/param}
+
+% [TEMPLATE] Addition, not a change: `array' supplies the L{...} fixed-width
+% column type that the literature-review tables were already written against.
+\usepackage{array}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% The frozen-backbone endpoint model is named M_T1 throughout
+\newcommand{\MTone}{\ensuremath{M_{\mathrm{T1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\normalsize
+\rhead{\textcolor{ashgrey}{Pranav Pokhrel, MSc dissertation}}
+\renewcommand{\headrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%COVER PAGE%%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+\begin{center}
+{\LARGE {\vspace*{0.5cm}\Huge\bf Efficient Alignment of Frozen Vision and
+Language Encoders Under Tight Adaptation and Latency Budgets}}
+
+\vspace{3em}
+        {\Large \bf Pranav Pokhrel}\\
+        \vspace{2em}
+        {\Large\textit{Master of Science in PATHWAY}\\
+        from the\\
+        University of Surrey\\
+        \vspace{2em}
+        \centering
+        % [TEMPLATE] images/logo.png does not exist in this repository, so the
+        % crest is commented out to keep the file building.  Put the Surrey
+        % logo at images/logo.png and uncomment the next line.
+        % \includegraphics[width=0.6\textwidth]{logo.png}\\
+        \vspace{2em}
+        \textit{School of Computer Science and Electrical and Electronic Engineering}\\
+		 Faculty of Engineering and Physical Sciences\\
+		University of Surrey\\
+		Guildford, Surrey, GU2 7XH, UK\\
+        \vspace{2em}
+        September 2026\\
+       Supervised by: Prof. Miroslaw Bober\\
+        \vspace{\stretch{1}}}
+        \textcopyright Pranav Pokhrel 2026
+\end{center}
+\pagenumbering{roman}
+
+%%%%%%%%%%%%%%%%DEDICATION%%%%%%%%%%%%%%%%%%%%
+% Adding a dedication after the title page
+\clearpage
+\newpage
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Declaration of Originality}
+\chapter*{Declaration of Originality}
+
+% ---------------------------------------------------------------------------
+% TODO: replace the wording below with the exact Declaration of Originality
+% text issued by the University of Surrey for your programme and year, then
+% add your signature and date.  The paragraph here is a placeholder of the
+% usual form and is NOT the official Surrey wording.
+% ---------------------------------------------------------------------------
+I confirm that the submitted work is my own work and that I have clearly
+identified and fully acknowledged all material that is entitled to be
+attributed to others (whether published or unpublished) using the referencing
+system set out in the programme handbook. I agree that the University may
+submit my work to means of checking this, such as the plagiarism detection
+service Turnitin\textregistered{}. I confirm that I understand that assessed
+work that has been shown to have been plagiarised will be penalised.
+
+\vspace{3\baselineskip}
+\noindent Signed: \rule{6cm}{0.4pt}\hfill Date: \rule{4cm}{0.4pt}
+
+\vspace{\baselineskip}
+\noindent Pranav Pokhrel
+
+%%%%%%%%%%%%%%%%WORD COUNT%%%%%%%%%%%%%%%%%%%%
+% Adding a Word Count
+\clearpage
+\newpage
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Word Count}
+\chapter*{Word Count}
+
+% TODO: confirm against your programme's counting rules (these usually exclude
+% the title page, declaration, abstract, references and appendices).
+\begin{tabular}{ll}
+\toprule
+Main body (Chapters 1--8) & WORDCOUNTBODY words \\
+Excluding front matter, references and appendices & \\
+\bottomrule
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%ABSTRACT%%%%%%%%%%%%%%%%%%%
+% Include the Abstract/Summary
+\clearpage
+%\thispagestyle{plain}	\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+ABSTRACT_PLACEHOLDER
+
+%%%%%%%%%%%%%%%%%%%%TOC%%%%%%%%%%%%%%%%%%%%%
+% Add the table of contents
+\begin{spacing}{0.1}
+	\tableofcontents
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%%FIGURES%%%%%%%%%%%%%%%%%%%%%
+% [TEMPLATE] The template lists figures here.  This dissertation contains no
+% figures, so the list is left commented out; the list of tables below is
+% enabled in its place (the template ships that one commented out).  Swap the
+% two blocks back if you add figures.
+%\clearpage
+%\addcontentsline{toc}{chapter}{List of figures}
+%\begin{spacing}{1.4}
+%\listoffigures
+%\end{spacing}
+
+%%%%%%%%%%%%%%%%%TABLES%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\addcontentsline{toc}{chapter}{List of tables}
+\begin{spacing}{1.4}
+\listoftables
+\end{spacing}
+
+\newpage
+\pagenumbering{arabic}
+
+\pagestyle{fancyplain}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}

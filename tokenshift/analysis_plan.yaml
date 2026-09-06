@@ -1,0 +1,36 @@
+study: tokenshift
+status: frozen_before_profile
+parent_model:
+  source: freezeshift dual-tower LoRA
+  vision: DINOv3 ViT-S/16
+  text: all-MiniLM-L6-v2
+  image_resolution: 224
+  selected_validation_mean_R1: 0.6341551641623179
+intervention:
+  kind: fixed_2x2_spatial_average
+  candidates:
+    - {id: no_merge, merge_after_block: null, full_resolution_blocks: 12, reduced_resolution_blocks: 0}
+    - {id: merge_after_block_8, merge_after_block: 8, full_resolution_blocks: 8, reduced_resolution_blocks: 4}
+    - {id: merge_after_block_6, merge_after_block: 6, full_resolution_blocks: 6, reduced_resolution_blocks: 6}
+  patch_tokens: {before: 196, after: 49}
+  prefix_tokens_preserved: {cls: 1, registers: 4}
+  total_tokens: {before: 201, after: 54}
+  positional_semantics: DINOv3 RoPE is regenerated from 14x14 to 7x7 after merging.
+profile:
+  hardware: teaching RTX PRO 6000 Blackwell
+  precision: native_bf16
+  batch_size: 64
+  warmup_iterations_per_independent_run: 20
+  timed_iterations_per_independent_run: 100
+  independent_runs_per_candidate: 10
+  order: deterministically randomized within each repetition
+  ceiling_q3_ms: 9.480
+decision_boundary:
+  this_stage: descriptive_profile_only
+  note: No candidate is trained automatically. Profile results are reviewed before training is authorized.
+guardrails:
+  - Input pixels remain 224x224 for every arm.
+  - CLS and four DINOv3 register tokens are never merged.
+  - The intervention introduces zero parameters.
+  - Flickr30k test remains sealed.
+

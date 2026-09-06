@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETE",
+  "kind": "student",
+  "id": "mt1_dual_lora",
+  "label": "M_T1 C4 dual-LoRA PEFT",
+  "builder": "freezeshift",
+  "seed": 43,
+  "selected_epoch": 23,
+  "checkpoint": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_43/inference.pt",
+  "expected_inference_trainable_parameters": 4862469,
+  "node": "aisurrey38.surrey.ac.uk",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "precision": "native_bf16_autocast",
+  "torch_version": "2.8.0+cu128",
+  "checkpoint_sha256": "6fef8282604fbfa3ee4977568febdf594fe8271cd6991eb36187cf3186a6f131",
+  "checkpoint_fingerprint": "9464f26c1951ef3c8c203ccf15b6181a4af9c1912093c7701c121c3cdc16a32d",
+  "config_hash": "fb0c52c92ca1bb7adf4aaf70eb55c94b24ecd6f33fe28612bb1cddef30a8a735",
+  "inference_trainable_parameters": 4862469,
+  "full_stack_inference_parameters": 49162629,
+  "query_side_inference_parameters": 24238849,
+  "flickr30k_test": {
+    "i2t_R@1": 0.6940000057220459,
+    "i2t_R@5": 0.9160000085830688,
+    "i2t_R@10": 0.9520000219345093,
+    "mean_rank_i2t": 3.6059999465942383,
+    "median_rank_i2t": 1.0,
+    "t2i_R@1": 0.5429999828338623,
+    "t2i_R@5": 0.8119999766349792,
+    "t2i_R@10": 0.8845999836921692,
+    "mean_rank_t2i": 7.640600204467773,
+    "median_rank_t2i": 1.0,
+    "num_image_queries": 1000.0,
+    "num_text_queries": 5000.0,
+    "mean_R@1": 0.6184999942779541
+  },
+  "classification": {
+    "cifar100_zeroshot": {
+      "dataset_split_id": "cifar100_official_test_reserved",
+      "split": "reserved official test split",
+      "top1_accuracy": 0.37459999322891235,
+      "top5_accuracy": 0.6514000296592712,
+      "macro_f1": 0.35402624372331465,
+      "balanced_accuracy": 0.3746000000000001,
+      "mean_confidence": 0.6253085732460022,
+      "classification_margin": -0.018580544739961624,
+      "top1_margin": 0.4805576205253601
+    },
+    "pets_zeroshot": {
+      "dataset_split_id": "oxford_iiit_pet_official_test_reserved",
+      "split": "reserved official test split",
+      "top1_accuracy": 0.09730171412229538,
+      "top5_accuracy": 0.322976291179657,
+      "macro_f1": 0.06741134314408244,
+      "balanced_accuracy": 0.09703122939077995,
+      "mean_confidence": 0.4453170597553253,
+      "classification_margin": -0.33666345477104187,
+      "top1_margin": 0.2564401626586914
+    },
+    "eurosat_zeroshot": {
+      "dataset_split_id": "eurosat_deterministic_stratified_test_reserved",
+      "split": "stored deterministic stratified test partition",
+      "top1_accuracy": 0.24666666984558105,
+      "top5_accuracy": 0.6498765349388123,
+      "macro_f1": 0.2253468532173549,
+      "balanced_accuracy": 0.2508444444444445,
+      "mean_confidence": 0.5736568570137024,
+      "classification_margin": -0.2376326620578766,
+      "top1_margin": 0.3778049647808075
+    }
+  },
+  "no_training_performed": true
+}

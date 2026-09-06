@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE",
+  "arm_id": "vision",
+  "teacher_ids": [
+    "mobileclip2_s0_dfndr2b"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "schedule": {
+    "type": "single 24-epoch cosine",
+    "warmup_fraction": 0.05,
+    "early_stopping": false
+  },
+  "old_12epoch_complete_run_flickr_validation_mean_R1": 0.4378698269526164,
+  "new_24epoch_complete_run_comparable_to_old_complete_run": true,
+  "intermediate_epochs_comparable_between_schedules": false,
+  "comparability_boundary": "The complete 24-epoch run is comparable with the complete prior 12-epoch run. Epoch-number-matched intermediate checkpoints are not comparable because their learning rates differ.",
+  "flickr_mean_under_coco_dev_epoch_selection": 0.5776791622241338,
+  "flickr_mean_under_flickr_validation_epoch_selection": 0.580473373333613,
+  "flickr_validation_selected_sd": 0.004050584721341643,
+  "flickr_validation_selected_min": 0.5772189497947693,
+  "flickr_validation_selected_max": 0.5850098431110382,
+  "selection_gain_pp": 0.27942111094791944,
+  "double_selection_disclosure": "The 224px teacher-distilled configuration and checkpoint epochs were selected using Flickr30k validation. The validation figure is therefore optimistically influenced by configuration and checkpoint selection; the measured epoch-selection gain is reported explicitly.",
+  "seeds_with_coco_peak_at_epoch24": 2,
+  "seeds_with_flickr_peak_at_epoch24": 0,
+  "ceiling_reached_not_converged": true,
+  "flickr_test_used": false,
+  "per_seed": [
+    {
+      "seed": 42,
+      "coco_selected_epoch": 24,
+      "coco_peak_R1": 0.4778106212615967,
+      "flickr_at_coco_selected_epoch_R1": 0.5775147825479507,
+      "flickr_selected_epoch": 16,
+      "flickr_peak_R1": 0.5791913270950317,
+      "coco_at_flickr_selected_epoch_R1": 0.4711921811103821,
+      "epoch24_coco_dev_R1": 0.4778106212615967,
+      "epoch24_flickr_validation_R1": 0.5775147825479507,
+      "coco_peak_at_epoch24": true,
+      "flickr_peak_at_epoch24": false
+    },
+    {
+      "seed": 43,
+      "coco_selected_epoch": 24,
+      "coco_peak_R1": 0.4785909205675125,
+      "flickr_at_coco_selected_epoch_R1": 0.5749506950378418,
+      "flickr_selected_epoch": 18,
+      "flickr_peak_R1": 0.5772189497947693,
+      "coco_at_flickr_selected_epoch_R1": 0.4746515452861786,
+      "epoch24_coco_dev_R1": 0.4785909205675125,
+      "epoch24_flickr_validation_R1": 0.5749506950378418,
+      "coco_peak_at_epoch24": true,
+      "flickr_peak_at_epoch24": false
+    },
+    {
+      "seed": 44,
+      "coco_selected_epoch": 19,
+      "coco_peak_R1": 0.48073165118694305,
+      "flickr_at_coco_selected_epoch_R1": 0.5805720090866089,
+      "flickr_selected_epoch": 15,
+      "flickr_peak_R1": 0.5850098431110382,
+      "coco_at_flickr_selected_epoch_R1": 0.4729120433330536,
+      "epoch24_coco_dev_R1": 0.48059098422527313,
+      "epoch24_flickr_validation_R1": 0.5785009860992432,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    }
+  ],
+  "selection_tie_break": {
+    "rule": "earliest_epoch",
+    "status": "post_observation_reporting_amendment",
+    "disclosure": "Exact validation ties select the earliest epoch. This deterministic reporting rule was added after a tied maximum was observed for dual seed 43; it does not alter training, evaluation metrics, or the test seal.",
+    "events": []
+  },
+  "token_projection": {
+    "candidate": "C4",
+    "image_token_aggregation": "transformer_128",
+    "register_tokens_included": false,
+    "expected_inference_trainable_parameters": 2896389,
+    "lr_tuned_for_aggregator": false,
+    "pool_dim": 256,
+    "heads": 8,
+    "ff_dim": 512,
+    "blocks": 2,
+    "native_width_identity": false
+  },
+  "baseline_to_beat": {
+    "flickr_validation_mean_R1": 0.5448717921972275,
+    "full_stack_latency_ms": 8.99804092478007
+  },
+  "lr_disclosure": "The learning rate remains pinned from projection-only training and is untuned for token aggregators."
+}

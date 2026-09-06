@@ -1,0 +1,32 @@
+extends: ../alignment_v4_wave0/base.yaml
+
+recipe:
+  adapter: false
+  distillation: false
+  lora: false
+  loss_type: infonce_no_queue
+
+data:
+  train_captions_per_image: null
+  num_workers: 12
+  persistent_workers: true
+
+training:
+  batch_size: 1024
+  memory_queue_size: 0
+  queue_mode: none
+  precision: bf16
+  # Pinned batch-1024 locked LR: 3e-4 * sqrt(1024/128) * 3.
+  lr: 0.002545584412271571
+  lr_scale_rule: none
+  pinned_resolved_lr: 0.002545584412271571
+  counterfactual_sqrt_lr: 0.002545584412271571
+  early_stopping_patience: 13
+
+queue_diagnostics:
+  enabled: true
+  probe_seed: 20260727
+  probe_images: 512
+  drift_interval_steps: 10
+  exclude_warmup_from_primary: true
+  age_first_reuse: 1

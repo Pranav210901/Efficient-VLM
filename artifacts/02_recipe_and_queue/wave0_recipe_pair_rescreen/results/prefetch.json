@@ -1,0 +1,6 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "dinov3_vits16+all_minilm_l6_v2"
+  ]
+}

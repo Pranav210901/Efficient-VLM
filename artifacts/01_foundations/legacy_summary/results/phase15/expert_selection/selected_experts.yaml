@@ -1,0 +1,266 @@
+schema_version: 1
+research_scope:
+  tasks:
+  - retrieval
+  - classification
+  - compositional_if_available
+  pretrained_backbones_frozen: true
+selection_protocol:
+  created_at: '2026-07-21T14:28:33.813568+00:00'
+  development_protocol_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/configs/evaluation_protocol.yaml
+  selection_status: development_protocol_compliant
+  selection_weights:
+    multitask_performance: 0.25
+    unique_wins: 0.17
+    oracle_contribution: 0.13
+    cross_task_specialisation: 0.12
+    latency_efficiency: 0.1
+    memory_efficiency: 0.06
+    seed_reliability: 0.07
+    architectural_diversity: 0.05
+    token_interface_readiness: 0.05
+  diversity_constraints:
+    primary_vision_experts: 3
+    primary_text_experts: 3
+    cheap_fallback_vision_experts: 1
+    cheap_fallback_text_experts: 1
+    primary_pair_paths: 4
+    maximum_pair_paths: 6
+    maximum_paths_per_vision_encoder: 2
+    maximum_paths_per_text_encoder: 2
+    minimum_vision_architecture_families: 2
+    minimum_distinct_text_encoders: 2
+    require_low_cost_pair: true
+    require_unique_error_pair: true
+    prohibit_inconclusive_blf_duplicate: true
+  source_result_fingerprints:
+    results: dbf78b2cf42cd17d3d0b
+    retrieval_pairwise: 396bbef3abf28b1d2d7c
+    classification_pairwise: 157ae598e8c1fa6e0979
+    oracle_marginal: 2ff108266bf565033ded
+    specialisation: 50ad6b497179174ad2da
+    pair_efficiency: b9f0a870429754ab4072
+    vision_efficiency: dba6f36a0e7650304557
+    text_efficiency: ad45b50716472bc785c0
+    seed_results: c659326113d2a1a7bbc5
+vision_experts:
+- canonical_name: dinov2_vits14
+  role: strong semantic vision expert
+  architecture_family: plain_vit
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 6.096575781702995
+  peak_memory_mb: 231.05615234375
+  parameter_count: 22056576
+  reliability_status: inconclusive
+  reasons:
+  - selection score 0.6029
+  - best associated pair dinov2_vits14__all_minilm_l6_v2__local
+  - measured latency 6.097 ms
+- canonical_name: convnext_tiny
+  role: local/hierarchical vision expert
+  architecture_family: convnext_cnn
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 4.073608573526144
+  peak_memory_mb: 313.20556640625
+  parameter_count: 27820128
+  reliability_status: not_tested
+  reasons:
+  - selection score 0.5784
+  - best associated pair convnext_tiny__all_minilm_l6_v2__baseline
+  - measured latency 4.074 ms
+- canonical_name: efficientnet_b0
+  role: complementary vision expert
+  architecture_family: efficient_cnn
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 1.8992012366652489
+  peak_memory_mb: 213.72119140625
+  parameter_count: 4007548
+  reliability_status: not_tested
+  reasons:
+  - selection score 0.5708
+  - best associated pair efficientnet_b0__bge_small_en__baseline
+  - measured latency 1.899 ms
+text_experts:
+- canonical_name: all_minilm_l6_v2
+  role: strong general text expert
+  architecture_family: minilm_sentence_transformer
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 1.7044657841324806
+  peak_memory_mb: 214.18115234375
+  parameter_count: 22713216
+  reliability_status: inconclusive
+  reasons:
+  - selection score 0.6821
+  - best associated pair dinov2_vits14__all_minilm_l6_v2__local
+  - measured latency 1.704 ms
+- canonical_name: bge_small_en
+  role: complementary text expert
+  architecture_family: bge_embedding_model
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 2.474503591656685
+  peak_memory_mb: 253.67041015625
+  parameter_count: 33360000
+  reliability_status: not_tested
+  reasons:
+  - selection score 0.5842
+  - best associated pair dinov2_vits14__bge_small_en__baseline
+  - measured latency 2.475 ms
+- canonical_name: e5_small_v2
+  role: complementary text expert
+  architecture_family: e5_embedding_model
+  checkpoint_requirement: alignment checkpoint from a selected VE–TE path
+  token_interface_expected: true
+  latency_ms: 2.5195494294166565
+  peak_memory_mb: 255.515625
+  parameter_count: 33360000
+  reliability_status: not_tested
+  reasons:
+  - selection score 0.4693
+  - best associated pair dinov2_vits14__e5_small_v2__baseline
+  - measured latency 2.520 ms
+cheap_fallback:
+  vision_encoder: swin_tiny
+  text_encoder: distilbert
+  reasons:
+  - 'cheap vision expert: 4.637 ms'
+  - 'cheap text expert: 1.572 ms'
+phase2_pair_shortlist:
+- pair_id: dinov2_vits14__all_minilm_l6_v2__baseline
+  vision_encoder: dinov2_vits14
+  text_encoder: all_minilm_l6_v2
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/dinov2_vits14_all_minilm_l6_v2_baseline/best.pt
+  checkpoint_fingerprint: d5aa3bd95e83c3553bd4
+  selection_score: 0.7323913043478263
+  unique_win_contribution: 0.1111490763106101
+  oracle_contribution: 0.007953005904455133
+  measured_pair_latency_ms: 7.525923475623131
+  reliability_status: supported
+  intended_role: primary
+  reasons:
+  - multi-task score 0.7652
+  - efficiency score 0.6168
+  - unique-win contribution 0.111149
+- pair_id: dinov2_vits14__bge_small_en__baseline
+  vision_encoder: dinov2_vits14
+  text_encoder: bge_small_en
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/dinov2_vits14_bge_small_en_baseline/best.pt
+  checkpoint_fingerprint: 83e40ce255ff6bb984e2
+  selection_score: 0.725
+  unique_win_contribution: 0.1147805602319491
+  oracle_contribution: 0.008351395598496967
+  measured_pair_latency_ms: 8.34284983575344
+  reliability_status: not_tested
+  intended_role: primary
+  reasons:
+  - multi-task score 0.8348
+  - efficiency score 0.4531
+  - unique-win contribution 0.114781
+- pair_id: convnext_tiny__all_minilm_l6_v2__baseline
+  vision_encoder: convnext_tiny
+  text_encoder: all_minilm_l6_v2
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/convnext_tiny_all_minilm_l6_v2_baseline/best.pt
+  checkpoint_fingerprint: 3611124968eafef24000
+  selection_score: 0.6447826086956523
+  unique_win_contribution: 0.10684202349582783
+  oracle_contribution: 0.0057873501520844
+  measured_pair_latency_ms: 5.557092558592558
+  reliability_status: not_tested
+  intended_role: primary
+  reasons:
+  - multi-task score 0.6783
+  - efficiency score 0.7439
+  - unique-win contribution 0.106842
+- pair_id: efficientnet_b0__bge_small_en__baseline
+  vision_encoder: efficientnet_b0
+  text_encoder: bge_small_en
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/efficientnet_b0_bge_small_en_baseline/best.pt
+  checkpoint_fingerprint: f98c11e122be880f05d4
+  selection_score: 0.4984782608695652
+  unique_win_contribution: 0.07225190268221668
+  oracle_contribution: 0.005406915369475701
+  measured_pair_latency_ms: 4.756009951233864
+  reliability_status: not_tested
+  intended_role: primary
+  reasons:
+  - multi-task score 0.3087
+  - efficiency score 0.8770
+  - unique-win contribution 0.072252
+- pair_id: convnext_tiny__e5_small_v2__baseline
+  vision_encoder: convnext_tiny
+  text_encoder: e5_small_v2
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/convnext_tiny_e5_small_v2_baseline/best.pt
+  checkpoint_fingerprint: 33b8c61856f59693a281
+  selection_score: 0.5505434782608697
+  unique_win_contribution: 0.09971175706338747
+  oracle_contribution: 0.005450089461442033
+  measured_pair_latency_ms: 6.364455819129944
+  reliability_status: not_tested
+  intended_role: optional_ablation
+  reasons:
+  - multi-task score 0.5565
+  - efficiency score 0.4891
+  - unique-win contribution 0.099712
+- pair_id: swin_tiny__e5_small_v2__baseline
+  vision_encoder: swin_tiny
+  text_encoder: e5_small_v2
+  variant: baseline
+  checkpoint_path: /mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/checkpoints/swin_tiny_e5_small_v2_baseline/best.pt
+  checkpoint_fingerprint: ad8a64619ef2b4796cba
+  selection_score: 0.5156521739130435
+  unique_win_contribution: 0.08184975113453372
+  oracle_contribution: 0.008020119878332333
+  measured_pair_latency_ms: 6.913436017930508
+  reliability_status: not_tested
+  intended_role: optional_ablation
+  reasons:
+  - multi-task score 0.4522
+  - efficiency score 0.4219
+  - unique-win contribution 0.081850
+excluded_high_scoring_pairs:
+- pair_id: dinov2_vits14__all_minilm_l6_v2__local
+  exclusion_reason: local BLF is inconclusive; prefer baseline and prohibit a redundant
+    primary path
+- pair_id: dinov2_vits14__bge_small_en__local
+  exclusion_reason: local BLF is not_tested; prefer baseline and prohibit a redundant
+    primary path
+- pair_id: convnextv2_tiny__all_minilm_l6_v2__local_global
+  exclusion_reason: local_global BLF is inconclusive; prefer baseline and prohibit
+    a redundant primary path
+- pair_id: convnextv2_tiny__all_minilm_l6_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: convnext_tiny__bge_small_en__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: dinov2_vits14__e5_small_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: convnextv2_tiny__bge_small_en__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: dinov2_vits14__distilbert__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: swin_tiny__bge_small_en__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: swin_tiny__all_minilm_l6_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: convnextv2_tiny__e5_small_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: efficientnet_b0__all_minilm_l6_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: efficientnet_b0__e5_small_v2__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: efficientnet_b0__distilbert__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: convnext_tiny__distilbert__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: convnextv2_tiny__distilbert__baseline
+  exclusion_reason: lower score or diversity/cost constraint
+- pair_id: swin_tiny__distilbert__baseline
+  exclusion_reason: lower score or diversity/cost constraint

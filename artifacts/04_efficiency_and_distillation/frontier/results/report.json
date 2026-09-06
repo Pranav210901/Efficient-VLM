@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "primary_dataset": "Flickr30k Karpathy test",
+  "supplementary_dataset": "COCO validation (used for model selection in earlier project phases; not an independent test set)",
+  "untouched_coco_test_available": false,
+  "parameter_frontier": [
+    "locked_e5",
+    "locked_minilm",
+    "mobileclip2_s0_dfndr2b",
+    "siglip2_vit_b32_256_webli"
+  ],
+  "latency_iqr_frontier": [
+    "openclip_vit_b32_quickgelu_openai",
+    "siglip2_vit_b32_256_webli"
+  ],
+  "latency_raw_median_frontier": [
+    "openclip_vit_b32_quickgelu_openai",
+    "siglip2_vit_b32_256_webli"
+  ],
+  "latency_frontier_difference": [],
+  "flop_convention": "One multiply-add is two FLOPs. Projection and normalization are included. Caption FLOPs use each model's native context and are not directly comparable across differing context lengths.",
+  "limitations": [
+    "The project has no COCO test split that was never used by an earlier selection procedure.",
+    "Flickr30k is the only uncontaminated evaluation available for the frontier.",
+    "The Flickr fetch script did not pin the recorded upstream revision; structural agreement and prospective hashes are the available provenance.",
+    "Upstream reference-weight revisions were not recorded at fetch time; prospective local checksums are reported instead."
+  ]
+}

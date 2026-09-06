@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Direct frozen-alignment peers and their role in the comparison.}}{5}{table.caption.6}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Synthesis of the literature and the remaining research opportunity.}}{9}{table.2.2}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Best local encoder pairing by development task in the compatibility screen.}}{17}{table.caption.7}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Retrieval degradation as stale cross-batch memory capacity increases.}}{18}{table.caption.8}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Effect of vision-token aggregation strategy, measured against a matched baseline.}}{19}{table.caption.9}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Properties of \ensuremath {M_{\mathrm {T1}}}{}, the strongest fully frozen-backbone model.}}{20}{table.caption.10}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces FreezeShift low-rank adaptation arms against the frozen \ensuremath {M_{\mathrm {T1}}}{} baseline.}}{20}{table.caption.11}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Measured latency effect of fixed internal token merging.}}{21}{table.caption.12}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Accuracy and latency of token merging against matched no-merge parents.}}{21}{table.caption.13}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Final candidates against the compact reference, field anchor and alternative-objective reference. Protocol blocks differ: candidate rows use Flickr30k validation; the compact and SigLIP2 rows use Flickr30k test.}}{22}{table.caption.14}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Frozen-roster Flickr30k test results for the selected endpoints and fixed references.}}{23}{table.caption.15}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces Audit record for the search programme underlying this review.}}{35}{table.caption.17}%

@@ -1,0 +1,44 @@
+# Queue identification control.  Reuses the queue factorial's student, split,
+# LR pinning and hardware guard so the fresh arm is comparable to the already
+# completed stale arms cell for cell.  Only the queue mode differs.
+version: queue-identification-1.0
+name: queue_identification
+output_root: results/queue_identification
+factorial_output_root: results/queue_factorial   # matched stale/none arms, already complete
+checkpoint_root: checkpoints/queue_identification
+log_root: logs/queue_identification
+base_config: configs/queue_factorial/base.yaml
+predictions_path: predictions/queue_identification.json
+
+split:
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+
+student:
+  vision_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+  student_pair_changed: false
+
+identification:
+  batch_size: 1024
+  # The two ages carrying the largest measured damage in the factorial.
+  target_ages: [16, 64]
+  seeds: [42, 43, 44]
+
+# build_config reads these from the factorial spec; kept identical on purpose.
+factorial:
+  pinned_resolved_lr: 0.002545584412271571
+  counterfactual_sqrt_lrs:
+    512: 0.0018
+    1024: 0.002545584412271571
+
+resources:
+  partition: teaching
+  gpu_per_task: 1
+  cpus_per_task: 12
+  host_memory: 96G
+  wall_time: "2-23:59:00"
+  dataloader_workers: 12
+  precision: bf16
+  required_gpu_substrings: [RTX PRO 6000, Blackwell]

@@ -1,0 +1,2 @@
+array_index,kind,experiment_id,run_id,reference_id
+0,reference,siglip2_vit_b32_256_webli,flickr30k__siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli

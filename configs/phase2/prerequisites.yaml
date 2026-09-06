@@ -1,0 +1,10 @@
+stage: prerequisites
+resources: {partition: teaching, gpus: 0, cpus: 4, memory: 16G, wall_time: "00:30:00"}
+phase15_readiness: results/phase15/phase2_readiness/readiness_report.json
+selection: results/phase15/expert_selection/selected_experts.yaml
+output: results/phase2/prerequisites
+dataset_roots:
+  coco: data/coco
+  cifar100: data/multitask/cifar100
+  pets: data/multitask/oxford-iiit-pet
+  eurosat: data/multitask/eurosat

@@ -1,0 +1,137 @@
+{
+  "status": "COMPLETE",
+  "baseline_to_beat": {
+    "candidate": "C1",
+    "flickr_validation_mean_R1": 0.5162064383427302
+  },
+  "factorial_2x2": {
+    "width_effect_at_one_block_pp": 1.3510853052139282,
+    "width_effect_at_two_blocks_pp": 1.0420764485995049,
+    "mean_width_effect_pp": 1.1965808769067166,
+    "depth_effect_at_128d_pp": 1.2031570076942444,
+    "depth_effect_at_256d_pp": 0.894148151079821,
+    "mean_depth_effect_pp": 1.0486525793870327,
+    "larger_average_effect": "width",
+    "width_depth_interaction_pp": -0.30900885661442334,
+    "composition_description": "negative deviation from additivity"
+  },
+  "native_width_comparison": {
+    "comparison": "C5 minus C2",
+    "flickr_difference_pp": -0.34516801436741407,
+    "C5_beats_C2": false,
+    "parameter_difference_C5_minus_C2": 459520
+  },
+  "saturation_evidence": {
+    "C1": {
+      "flickr_peak_at_epoch24_seeds": 0,
+      "ceiling_reached_not_converged": true
+    },
+    "C2": {
+      "flickr_peak_at_epoch24_seeds": 1,
+      "ceiling_reached_not_converged": true
+    },
+    "C3": {
+      "flickr_peak_at_epoch24_seeds": 1,
+      "ceiling_reached_not_converged": true
+    },
+    "C4": {
+      "flickr_peak_at_epoch24_seeds": 0,
+      "ceiling_reached_not_converged": false
+    },
+    "C5": {
+      "flickr_peak_at_epoch24_seeds": 1,
+      "ceiling_reached_not_converged": true
+    }
+  },
+  "saturation_interpretation": "Epoch-24 peak counts diagnose schedule truncation per arm; architectural saturation is judged from the reported marginal width, depth, interaction, and native-width effects without an invented threshold.",
+  "latency_finding": "Before training, C4 added 1.252M parameters for 0.204 ms over same-session CLS. The frozen image tower dominated full-stack latency; within this tested range the declared binding constraint was the 5M adaptation budget rather than latency.",
+  "lr_disclosure": "The LR was pinned from projection-only training and untuned for all scaled token aggregators.",
+  "flickr_test_used": false,
+  "arms": [
+    {
+      "candidate": "C1",
+      "flickr_mean_coco_selected": 0.5132478624582291,
+      "flickr_mean_flickr_selected": 0.5162064383427302,
+      "selection_gain_pp": 0.29585758845011023,
+      "sd": 0.00640063368939891,
+      "min": 0.5102564096450806,
+      "max": 0.5229782909154892,
+      "seeds_peaking_at_epoch24": 0,
+      "inference_trainable_parameters": 1710468,
+      "reused": true,
+      "latency_measurement_session": "prior_C1_trained_profile",
+      "trained_latency_median_ms": 8.846658281981945,
+      "trained_latency_q1_ms": 8.836937369778752,
+      "trained_latency_q3_ms": 8.85497685521841,
+      "latency_q3_below_9p48": true
+    },
+    {
+      "candidate": "C2",
+      "flickr_mean_coco_selected": 0.5284352401892344,
+      "flickr_mean_flickr_selected": 0.5297172913948694,
+      "selection_gain_pp": 0.12820512056350708,
+      "sd": 0.0039278953614796915,
+      "min": 0.5263313502073288,
+      "max": 0.5340236723423004,
+      "seeds_peaking_at_epoch24": 1,
+      "inference_trainable_parameters": 2203524,
+      "reused": false,
+      "latency_measurement_session": "contemporaneous_C2_C3_C4_C5_and_CLS",
+      "trained_latency_median_ms": 8.934145793318748,
+      "trained_latency_q1_ms": 8.759602438658476,
+      "trained_latency_q3_ms": 8.943355642259121,
+      "latency_q3_below_9p48": true
+    },
+    {
+      "candidate": "C3",
+      "flickr_mean_coco_selected": 0.5248520771662394,
+      "flickr_mean_flickr_selected": 0.5282380084196726,
+      "selection_gain_pp": 0.33859312534332275,
+      "sd": 0.011348215541365482,
+      "min": 0.5166666805744171,
+      "max": 0.5393491089344025,
+      "seeds_peaking_at_epoch24": 1,
+      "inference_trainable_parameters": 1842948,
+      "reused": false,
+      "latency_measurement_session": "contemporaneous_C2_C3_C4_C5_and_CLS",
+      "trained_latency_median_ms": 8.765888400375843,
+      "trained_latency_q1_ms": 8.748835418373346,
+      "trained_latency_q3_ms": 8.934250334277749,
+      "latency_q3_below_9p48": true
+    },
+    {
+      "candidate": "C4",
+      "flickr_mean_coco_selected": 0.5360946655273438,
+      "flickr_mean_flickr_selected": 0.5386587729056677,
+      "selection_gain_pp": 0.256410737832391,
+      "sd": 0.003076241018621627,
+      "min": 0.5351084619760513,
+      "max": 0.5405325591564178,
+      "seeds_peaking_at_epoch24": 0,
+      "inference_trainable_parameters": 2730628,
+      "reused": false,
+      "latency_measurement_session": "contemporaneous_C2_C3_C4_C5_and_CLS",
+      "trained_latency_median_ms": 8.986582513898611,
+      "trained_latency_q1_ms": 8.977224817499518,
+      "trained_latency_q3_ms": 9.16695361956954,
+      "latency_q3_below_9p48": true
+    },
+    {
+      "candidate": "C5",
+      "flickr_mean_coco_selected": 0.5246877074241638,
+      "flickr_mean_flickr_selected": 0.5262656112511953,
+      "selection_gain_pp": 0.15779038270314905,
+      "sd": 0.004762751499625617,
+      "min": 0.5208086669445038,
+      "max": 0.5295857936143875,
+      "seeds_peaking_at_epoch24": 1,
+      "inference_trainable_parameters": 2663044,
+      "reused": false,
+      "latency_measurement_session": "contemporaneous_C2_C3_C4_C5_and_CLS",
+      "trained_latency_median_ms": 8.756460156291723,
+      "trained_latency_q1_ms": 8.750063367187977,
+      "trained_latency_q3_ms": 8.762671379372478,
+      "latency_q3_below_9p48": true
+    }
+  ]
+}

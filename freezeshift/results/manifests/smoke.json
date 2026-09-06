@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "arm": "vision",
+      "merged_modules": 8,
+      "image_max_abs_delta": 0.0,
+      "text_max_abs_delta": 0.0
+    },
+    {
+      "arm": "text",
+      "merged_modules": 8,
+      "image_max_abs_delta": 0.0,
+      "text_max_abs_delta": 0.0
+    },
+    {
+      "arm": "dual",
+      "merged_modules": 16,
+      "image_max_abs_delta": 0.0,
+      "text_max_abs_delta": 0.0
+    }
+  ]
+}

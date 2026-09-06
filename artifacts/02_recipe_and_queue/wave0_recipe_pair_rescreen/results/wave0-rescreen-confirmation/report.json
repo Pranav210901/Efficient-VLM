@@ -1,0 +1,67 @@
+{
+  "status": "CONFIRMATION_COMPLETE_PAIR_DECISION_RECORDED",
+  "wave1_unblocked": false,
+  "locked_student": "dinov3_vits16__all_minilm_l6_v2",
+  "student_pair_changed": false,
+  "student_pair_decision_permanent_for_study": true,
+  "adoption_status": "DECIDED_KEEP_MINILM",
+  "decision_rationale": [
+    "MiniLM anchors the queue study, 18-cell screen, dose-response curve, v4 teacher caches, and all 31 claim-bearing runs.",
+    "The E5 gain carries no headline claim and changes neither the queue mechanism nor the pair-ranking finding.",
+    "E5 demonstrates that the recipe correction generalises across text encoders, so the queue effect is not a MiniLM artifact."
+  ],
+  "ranking_replication": {
+    "e5_mean_percent": 38.883,
+    "e5_sd_pp": 0.012,
+    "bge_mean_percent": 38.262,
+    "bge_sd_pp": 0.094,
+    "minilm_mean_percent": 37.324,
+    "minilm_sd_pp": 0.282,
+    "ranking_replicated": true,
+    "interval_overlap_observed": false,
+    "queue_selected_pair_corrected_rank": 3,
+    "e5_minus_minilm_pp": 1.56
+  },
+  "stability_observation": "The lowest-performing pair, MiniLM, also has the largest seed standard deviation. It appears to be a less stable alignment target as well as a weaker one; this is an observation, not a mechanism claim.",
+  "deferred_best_available_configuration": {
+    "pair": "dinov3_vits16__e5_small_v2",
+    "purpose": "efficiency_frontier_plot_only",
+    "timing": "end_of_project",
+    "part_of_main_study": false,
+    "run_now": false
+  },
+  "observed_three_seed_ranking": [
+    "dinov3_vits16__e5_small_v2",
+    "dinov3_vits16__bge_small_en",
+    "dinov3_vits16__all_minilm_l6_v2"
+  ],
+  "results": [
+    {
+      "experiment_id": "dinov3_vits16__e5_small_v2",
+      "text_encoder": "e5_small_v2",
+      "mean_3seed": 0.3888300110896428,
+      "std_3seed": 0.00012195276859441149,
+      "minimum": 0.3887498825788498,
+      "maximum": 0.38897036015987396,
+      "rank": 1
+    },
+    {
+      "experiment_id": "dinov3_vits16__bge_small_en",
+      "text_encoder": "bge_small_en",
+      "mean_3seed": 0.38261669874191284,
+      "std_3seed": 0.0009449179764254532,
+      "minimum": 0.38159023225307465,
+      "maximum": 0.38345031440258026,
+      "rank": 2
+    },
+    {
+      "experiment_id": "dinov3_vits16__all_minilm_l6_v2",
+      "text_encoder": "all_minilm_l6_v2",
+      "mean_3seed": 0.37323838969071704,
+      "std_3seed": 0.002823647549911793,
+      "minimum": 0.3703323155641556,
+      "maximum": 0.3759716749191284,
+      "rank": 3
+    }
+  ]
+}

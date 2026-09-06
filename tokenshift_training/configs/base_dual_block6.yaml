@@ -1,0 +1,4 @@
+extends: base_dual_block8.yaml
+recipe:
+  tokenshift_merge_after_block: 6
+

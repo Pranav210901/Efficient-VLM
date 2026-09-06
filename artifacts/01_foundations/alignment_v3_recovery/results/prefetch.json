@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "openclip_vit_b32_quickgelu_openai",
+    "mobileclip2_s0_dfndr2b",
+    "siglip2_vit_b32_256_webli",
+    "dinov3_vits16+all_minilm_l6_v2"
+  ]
+}

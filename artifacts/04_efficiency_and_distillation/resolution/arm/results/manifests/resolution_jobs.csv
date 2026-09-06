@@ -1,0 +1,7 @@
+array_index,experiment_id,run_id,image_size,seed
+0,resolution_224,resolution_224__seed_42,224,42
+1,resolution_224,resolution_224__seed_43,224,43
+2,resolution_224,resolution_224__seed_44,224,44
+3,resolution_192,resolution_192__seed_42,192,42
+4,resolution_192,resolution_192__seed_43,192,43
+5,resolution_192,resolution_192__seed_44,192,44

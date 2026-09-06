@@ -1,0 +1,162 @@
+{
+  "status": "COMPLETE_PENDING_FRONTIER_PROMOTION",
+  "entry_id": "mobileclip2_s0_dfndr2b",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "deployment_graph": "official timm FastViT reparameterization",
+  "parameters_before_fusion": {
+    "full_stack_inference_parameters": 74835073,
+    "query_side_inference_parameters": 63428096
+  },
+  "parameters_after_fusion": {
+    "full_stack_inference_parameters": 74785601,
+    "query_side_inference_parameters": 63428096
+  },
+  "datasets": {
+    "flickr30k_karpathy_test": {
+      "dataset_id": "flickr30k_karpathy_test",
+      "dataset_role": "primary",
+      "dataset_sha256": "23fe04490cfd2fe43ad7b741440a6c4bc5381bfbecb523612971dc17ff8f34e7",
+      "unfused": {
+        "i2t_R@1": 0.875,
+        "i2t_R@5": 0.9700000286102295,
+        "i2t_R@10": 0.9869999885559082,
+        "mean_rank_i2t": 1.7200000286102295,
+        "median_rank_i2t": 1.0,
+        "t2i_R@1": 0.6898000240325928,
+        "t2i_R@5": 0.8916000127792358,
+        "t2i_R@10": 0.9368000030517578,
+        "mean_rank_t2i": 4.417600154876709,
+        "median_rank_t2i": 1.0,
+        "num_image_queries": 1000.0,
+        "num_text_queries": 5000.0,
+        "mean_R@1": 0.7824000120162964
+      },
+      "fused": {
+        "i2t_R@1": 0.875,
+        "i2t_R@5": 0.9710000157356262,
+        "i2t_R@10": 0.9879999756813049,
+        "mean_rank_i2t": 1.7359999418258667,
+        "median_rank_i2t": 1.0,
+        "t2i_R@1": 0.6862000226974487,
+        "t2i_R@5": 0.8889999985694885,
+        "t2i_R@10": 0.9376000165939331,
+        "mean_rank_t2i": 4.441999912261963,
+        "median_rank_t2i": 1.0,
+        "num_image_queries": 1000.0,
+        "num_text_queries": 5000.0,
+        "mean_R@1": 0.7806000113487244
+      },
+      "delta_pp": {
+        "i2t_R@1": 0.0,
+        "t2i_R@1": -0.3600001335144043,
+        "mean_R@1": -0.18000006675720215
+      }
+    },
+    "coco_validation_contaminated": {
+      "dataset_id": "coco_validation_contaminated",
+      "dataset_role": "supplementary",
+      "dataset_sha256": "b7ac13c58c4bb2fcc0285fa7373f6c5a3a01b68daeed998fe2fc93a4282ac3d0",
+      "unfused": {
+        "i2t_R@1": 0.6312000155448914,
+        "i2t_R@5": 0.847000002861023,
+        "i2t_R@10": 0.9114000201225281,
+        "mean_rank_i2t": 5.260000228881836,
+        "median_rank_i2t": 1.0,
+        "t2i_R@1": 0.42903974652290344,
+        "t2i_R@5": 0.6896138191223145,
+        "t2i_R@10": 0.7850803732872009,
+        "mean_rank_t2i": 14.29279613494873,
+        "median_rank_t2i": 2.0,
+        "num_image_queries": 5000.0,
+        "num_text_queries": 25014.0,
+        "mean_R@1": 0.5301198810338974
+      },
+      "fused": {
+        "i2t_R@1": 0.6338000297546387,
+        "i2t_R@5": 0.8478000164031982,
+        "i2t_R@10": 0.9132000207901001,
+        "mean_rank_i2t": 5.219600200653076,
+        "median_rank_i2t": 1.0,
+        "t2i_R@1": 0.4285600185394287,
+        "t2i_R@5": 0.6906132698059082,
+        "t2i_R@10": 0.7856799960136414,
+        "mean_rank_t2i": 14.27988338470459,
+        "median_rank_t2i": 2.0,
+        "num_image_queries": 5000.0,
+        "num_text_queries": 25014.0,
+        "mean_R@1": 0.5311800241470337
+      },
+      "delta_pp": {
+        "i2t_R@1": 0.26000142097473145,
+        "t2i_R@1": -0.047972798347473145,
+        "mean_R@1": 0.10601431131362915
+      }
+    }
+  },
+  "latency_control": {
+    "status": "COMPLETE_PENDING_EQUIVALENCE_REVIEW",
+    "entry_id": "mobileclip2_s0_dfndr2b",
+    "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "node": "aisurrey38.surrey.ac.uk",
+    "precision": "native_bf16",
+    "paired_batch_size": 64,
+    "warmup_iterations": 20,
+    "timed_repeats": 100,
+    "image_resolution": 256,
+    "architecture": "FastViT fastvit_mci0 convolutional/hybrid",
+    "before_reparameterization": {
+      "graph_state": {
+        "mobileone_blocks": 43,
+        "mobileone_fused": 0,
+        "large_kernel_blocks": 3,
+        "large_kernel_fused": 0
+      },
+      "image_latency_ms": {
+        "median": 18.331150989979506,
+        "q1": 18.325535813346505,
+        "q3": 18.33550725132227,
+        "iqr": 0.009971437975764275
+      },
+      "full_stack_latency_ms": {
+        "median": 21.993319503962994,
+        "q1": 21.98680303990841,
+        "q3": 21.999518387019634,
+        "iqr": 0.012715347111225128
+      }
+    },
+    "after_reparameterization": {
+      "graph_state": {
+        "mobileone_blocks": 7,
+        "mobileone_fused": 7,
+        "large_kernel_blocks": 3,
+        "large_kernel_fused": 3
+      },
+      "image_latency_ms": {
+        "median": 11.913402006030083,
+        "q1": 11.910631554201245,
+        "q3": 11.91553263925016,
+        "iqr": 0.004901085048913956
+      },
+      "full_stack_latency_ms": {
+        "median": 15.262419357895851,
+        "q1": 15.259791165590286,
+        "q3": 15.265093417838216,
+        "iqr": 0.005302252247929573
+      }
+    },
+    "numerical_equivalence": {
+      "max_absolute_embedding_difference": 0.013198330998420715,
+      "mean_absolute_embedding_difference": 0.0017060029786080122,
+      "minimum_cosine_similarity": 0.9976450800895691,
+      "mean_cosine_similarity": 0.9987269639968872,
+      "threshold_pre_registered": false,
+      "note": "Report measurements for review; do not silently promote the fused result."
+    },
+    "protocol_notes": [
+      "The paired before/after measurements use identical weights, inputs, hardware, precision and allocation.",
+      "OpenCLIP uses its native 224x224 resolution; MobileCLIP2 and the DINOv3 students use native/configured 256x256 inputs."
+    ]
+  }
+}

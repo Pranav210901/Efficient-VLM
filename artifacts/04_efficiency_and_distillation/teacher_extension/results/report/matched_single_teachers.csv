@@ -1,0 +1,4 @@
+arm,teacher_id,teacher_flickr_mean_R1,student_flickr_mean_under_coco_selection,student_flickr_mean_under_flickr_selection,selection_gain_pp,matched_protocol
+openclip,openclip_vit_b32_quickgelu_openai,0.6822,0.4362590362628301,0.43951346973578137,0.325443347295129,True
+mobileclip2,mobileclip2_s0_dfndr2b,0.7824,0.4408283978700638,0.44714004298051196,0.6311645110448183,True
+siglip2,siglip2_vit_b32_256_webli,0.8058,0.43596317867438,0.4437212298313777,0.7758051156997681,True

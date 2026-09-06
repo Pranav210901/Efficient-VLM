@@ -1,0 +1,102 @@
+primary_contrast: paired seed-level batch-512 minus batch-1024 dev mean R@1 at each matched image age
+age_aggregation:
+  primary: mean optimizer-step age
+  detailed: [p50, p95, max]
+  first_reuse_age: 1
+  primary_full_queue_only: true
+  ledger_weighting: equal_per_optimizer_step
+  warmup_reported_separately: true
+decision_rules:
+  equivalence_margin_pp: 1.0
+  age_dominates: at least 6 of 8 ages within +/-1.0pp
+  count_matters: batch 512 higher by more than 1.0pp at 3 or more ages
+  harm_threshold: first age more than 1.0pp below same-batch age-zero mean
+  seed_ordering_consistency: same ordering in all three seeds when three-seed means differ by more than 1.0pp
+uncertainty: report mean, SD, minimum and maximum; verdicts are descriptive
+lr_control:
+  pinned_resolved_lr: 0.002545584412271571
+  policy: identical for batch 512 and batch 1024
+  caveat: batch-512 absolute results are not directly comparable to Wave 0 batch-512 cells
+interpretation_guardrail: >-
+  If text-only proves worse, that undermines an age-only explanation but
+  does not uniquely establish entry count; per-modality drift magnitude,
+  gradient sensitivity, or representation geometry could also differ.
+pre_factorial_smoke_observations:
+  recorded_before_factorial_runs: true
+  prediction_json_changed: false
+  projector_drift_asymmetry:
+    observation: >-
+      At optimizer step 10, the text projector drifted approximately 1.6
+      times faster than the image projector at both batch sizes: 0.0227
+      versus 0.0138 at batch 1024, and 0.0052 versus 0.0032 at batch 512.
+    implication: >-
+      Effective staleness should be considered as queue age multiplied by
+      per-step projector drift rate, not as age in optimizer steps alone.
+      The faster text-projector drift partially offsets the approximately
+      fivefold lower text-entry age produced by the shared-capacity queue.
+    prediction_impact: >-
+      This weakens the reasoning behind the frozen modality_asymmetry
+      prediction, which assumed that age alone determines damage. The smoke
+      result was observed before the factorial ran; the prediction is
+      deliberately left unchanged.
+secondary_analysis:
+  cumulative_drift_at_eviction:
+    status: pre_registered_after_smoke_before_factorial
+    response: degradation from the matched queue-free baseline
+    predictor: measured cumulative projector drift at queue-entry eviction
+    method: regress degradation against cumulative drift at eviction, separately by modality and with the age-in-steps analysis retained as primary
+drift_saturation_risk:
+  observation: >-
+    Cosine distance from step 0 reached approximately 0.84 by optimizer step
+    80 during the partial-epoch smoke. If drift saturates near 1.0 early,
+    larger queue ages may cease to discriminate effective staleness.
+  timing_v2_scope: 80 optimizer steps
+  first_cell:
+    batch_size: 1024
+    memory_queue_size: 65536
+    queue_mode: both
+    seed: 42
+    rationale: highest queue capacity is the worst case for saturation risk
+  resolution: run this cell alone for 12 epochs and apply the pre-registered gate before allowing any remaining factorial cells to proceed
+  gate_quantity: mean projector drift from the previous measurement interval, evaluated independently for image and text
+  gate_reference: each modality's respective first-epoch mean drift from the previous measurement
+  gate_test:
+    image_ratio: final-epoch image mean divided by first-epoch image mean
+    text_ratio: final-epoch text mean divided by first-epoch text mean
+    combined_mean_prohibited: true
+  independent_modality_rationale: >-
+    The text projector already drifts approximately 1.6 times faster than the
+    image projector. Averaging could allow a fast-decaying image projector to
+    mask a still-moving text projector, which is precisely the asymmetry the
+    factorial is designed to test.
+  outcomes:
+    PASS:
+      rule: both image and text ratios are below 0.20
+      interpretation: age discriminates for both modalities; proceed
+    PARTIAL:
+      rule: exactly one modality ratio is below 0.20
+      interpretation: >-
+        Report the passing and failing modalities. The age axis is compromised
+        for the failing modality only. Grid 1 remains interpretable for the
+        passing modality; Grid 2 conclusions involving the failing modality's
+        queue require qualification. Stop and show the result before any
+        further cells run.
+    FAIL:
+      rule: both image and text ratios are at or above 0.20
+      interpretation: age is not discriminating; stop for redesign
+  required_check:
+    - report image and text distance-from-step-0 trajectories for all 12 epochs
+    - report previous-measurement drift so continuing motion is distinguishable from step-0 saturation
+    - flag the optimizer step and epoch at which either modality first reaches 0.95 cosine distance, or report that it never does
+    - report per-epoch mean image and text drift-from-previous
+    - report both modalities' first-epoch and final-epoch values and both ratios numerically in every outcome
+    - report queue-positive fraction in a window around every epoch boundary
+queue_positive_fraction_boundary_check:
+  expectation: >-
+    Queue-positive fraction is expected to become non-zero around epoch
+    boundaries once image identities can recur while prior-epoch entries
+    remain resident. Zero during the 80-step partial epoch is expected.
+  resolution: verify this in the first full-length factorial cell before allowing the remaining factorial cells to proceed
+  required_check:
+    - report the per-step fraction in a window spanning every epoch boundary
+    - confirm at least one non-zero value, or stop and audit ID matching and queue-positive instrumentation

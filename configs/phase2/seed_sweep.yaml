@@ -1,0 +1,8 @@
+extends: bridge_training.yaml
+stage: seed_sweep
+seeds: [17, 29, 43, 71, 101]
+methods: [best_bridge, dense_teacher]
+coco_csv: data/val_all_captions.csv
+dense_teacher: {strategy: task_and_input, hidden_dim: 64, path_dropout: 0.05, candidate_depth: 64, epochs: 30}
+resources: {partition: teaching, gpus: 1, cpus: 12, memory: 96G, wall_time: "2-23:59:00"}
+output: results/phase2/seed_sweep

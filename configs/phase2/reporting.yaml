@@ -1,0 +1,6 @@
+stage: reporting
+confidence_level: 0.95
+matched_seed_analysis: true
+pareto: {performance_higher_is_better: true, latency_lower_is_better: true, memory_lower_is_better: true}
+resources: {partition: teaching, gpus: 0, cpus: 8, memory: 32G, wall_time: "02:00:00"}
+output: results/phase2

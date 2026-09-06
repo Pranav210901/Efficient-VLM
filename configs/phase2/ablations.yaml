@@ -1,0 +1,13 @@
+extends: bridge_training.yaml
+stage: focused_ablation
+canonical_pair_from_selection: true
+one_factor_at_a_time: true
+optional_methods: [bidirectional, learned_query]
+candidate_depths: [64]
+token_batch_size: 64
+pair_batch_size: 128
+tasks: [coco_retrieval, cifar100_zeroshot, pets_zeroshot, eurosat_zeroshot]
+coco_csv: data/val_all_captions.csv
+write_dense_training_scores: false
+resources: {partition: teaching, gpus: 1, cpus: 12, memory: 96G, wall_time: "2-23:59:00"}
+output: results/phase2/ablations

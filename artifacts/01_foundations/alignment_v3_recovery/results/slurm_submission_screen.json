@@ -1,0 +1,20 @@
+{
+  "phase": "screen",
+  "mode": "parallel",
+  "max_total_gpus": 8,
+  "partition": "teaching",
+  "dry_run": false,
+  "resume_requested": false,
+  "resume_policy": "fingerprint-skip-complete; epoch-resume-from-latest",
+  "jobs": {
+    "validate": "2219279",
+    "prefetch": "2219280",
+    "reference": "2219281",
+    "batch_train": "2219282",
+    "batch_eval": "2219283",
+    "shortlist": "2219284",
+    "confirmation_train": "2219285",
+    "confirmation_eval": "2219286",
+    "pair_gate": "2219287"
+  }
+}

@@ -1,0 +1,13 @@
+extends: pipeline_mobileclip2.yaml
+
+version: alignment-wave1-openclip-1.0
+output_root: results/alignment_wave1/openclip
+checkpoint_root: checkpoints/alignment_wave1/openclip
+log_root: logs/alignment_wave1/openclip
+base_config: configs/alignment_wave1/base_openclip.yaml
+
+wave1:
+  question: Does OpenCLIP ViT-B/32 distillation add retrieval accuracy over a fresh matched corrected-recipe baseline?
+
+references: [openclip_vit_b32_quickgelu_openai]
+

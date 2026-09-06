@@ -1,0 +1,7 @@
+array_index,loss_type,captions_per_image,batch_size,memory_queue_size,sweep_multiplier,experiment_id,run_id,seed
+0,infonce_queue,,1024,16384,1.0,oom__infonce_queue__captions_all__b1024,oom__infonce_queue__captions_all__b1024,42
+1,infonce_queue,,2048,16384,1.0,oom__infonce_queue__captions_all__b2048,oom__infonce_queue__captions_all__b2048,42
+2,infonce_no_queue,,1024,0,1.0,oom__infonce_no_queue__captions_all__b1024,oom__infonce_no_queue__captions_all__b1024,42
+3,infonce_no_queue,,2048,0,1.0,oom__infonce_no_queue__captions_all__b2048,oom__infonce_no_queue__captions_all__b2048,42
+4,sigmoid,,1024,0,1.0,oom__sigmoid__captions_all__b1024,oom__sigmoid__captions_all__b1024,42
+5,sigmoid,,2048,0,1.0,oom__sigmoid__captions_all__b2048,oom__sigmoid__captions_all__b2048,42

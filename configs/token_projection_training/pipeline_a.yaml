@@ -1,0 +1,47 @@
+version: token-projection-training-a-1.0
+output_root: results/token_projection_training/A_cls_mean_concat
+checkpoint_root: checkpoints/token_projection_training/A_cls_mean_concat
+log_root: logs/token_projection_training
+base_config: configs/token_projection_training/base_a.yaml
+
+experiment: {image_size: 224}
+wave1:
+  enabled: true
+  design: token_projection_training
+  question: Does CLS plus mean-patch fusion improve transfer without measurable latency cost?
+  locked_recipe:
+    {loss_type: infonce_no_queue, captions_per_image: null, memory_queue_size: 0, batch_size: 1024, sweep_multiplier: 3.0, image_size: 224}
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+references: [mobileclip2_s0_dfndr2b]
+pair_matrix: {vision_encoders: [dinov3_vits16], text_encoders: [all_minilm_l6_v2], seeds: [42], batch_sizes: [1024]}
+batch_probe: {enabled: false, candidates: [1024]}
+probe: {enabled: false, cache_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv}
+selection: {}
+distillation_sensitivity: {strengths: [1.0], seeds: [42, 43, 44], include_matched_baseline: false}
+ablations: {seeds: [], recipes: []}
+final: {seeds: [], epochs: 24, retrain_on_full_coco_train: false}
+optional_transfer: {flickr30k_csv: data/flickr30k/validation.csv, required: true}
+literature_context: []
+trajectory:
+  epochs: 24
+  old_12epoch_flickr_validation_mean_R1: 0.4378698269526164
+  schedule: {type: cosine, defined_over_epochs: 24, warmup_fraction: 0.05, early_stopping: false}
+  reporting: {coco_dev_every_epoch: true, flickr_validation_every_epoch: true, flickr_test: prohibited}
+teacher_extension:
+  arm_id: A_cls_mean_concat
+  label: "224px MobileCLIP2-distilled CLS plus mean-patch fusion"
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  candidate: A
+  image_token_aggregation: cls_mean_concat
+  register_tokens_included: false
+  expected_inference_trainable_parameters: 1773699
+  lr_tuned_for_aggregator: false
+

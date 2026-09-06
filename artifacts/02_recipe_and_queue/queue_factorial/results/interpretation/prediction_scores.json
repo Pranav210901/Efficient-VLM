@@ -1,0 +1,22 @@
+[
+  {
+    "evidence": "Exactly 6/8 pre-registered matched-age contrasts were within \u00b11pp.",
+    "id": "age_vs_count",
+    "score": "PASS_AT_BOUNDARY"
+  },
+  {
+    "evidence": "Image-only was more harmful at age 4, but text-only was more harmful at ages 16 and 64.",
+    "id": "modality_asymmetry",
+    "score": "MISS"
+  },
+  {
+    "evidence": "Harm begins at age 1 for both batches.",
+    "id": "harm_threshold",
+    "score": "NO_PRIOR_OBSERVATION"
+  },
+  {
+    "evidence": "All condition pairs separated by >1pp retained their ordering in all three seeds.",
+    "id": "seed_replication",
+    "score": "HIT"
+  }
+]

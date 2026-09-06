@@ -1,0 +1,3 @@
+array_index,question,loss_type,captions_per_image,batch_size,sweep_multiplier,memory_queue_size,experiment_id,run_id,seed
+0,Does queue-free InfoNCE remain ahead of sigmoid across three matched seeds?,infonce_no_queue,,1024,3.0,0,infonce_no_queue__captions_all__b1024__lr_3p0,infonce_no_queue__captions_all__b1024__lr_3p0__seed_43,43
+1,Does queue-free InfoNCE remain ahead of sigmoid across three matched seeds?,infonce_no_queue,,1024,3.0,0,infonce_no_queue__captions_all__b1024__lr_3p0,infonce_no_queue__captions_all__b1024__lr_3p0__seed_44,44

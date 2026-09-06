@@ -1,0 +1,31 @@
+seed: 42
+device: auto
+
+data:
+  # OpenAI's ViT-B/32 checkpoint was trained with QuickGELU. This reference
+  # deliberately uses the matching architecture and preprocessing statistics.
+  train_csv: data/val_all_captions.csv
+  val_csv: data/val_all_captions.csv
+  image_root: .
+  image_size: 224
+  group_by_image: true
+  val_captions_per_image:
+  image_mean: [0.48145466, 0.4578275, 0.40821073]
+  image_std: [0.26862954, 0.26130258, 0.27577711]
+  interpolation: bicubic
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+
+training:
+  batch_size: 128
+
+evaluation:
+  k_values: [1, 5, 10]
+
+benchmark:
+  warmup: 10
+  iterations: 50
+  image_batch_size: 1
+  text_batch_size: 1
+

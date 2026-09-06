@@ -1,0 +1,26 @@
+{
+  "phase": "all",
+  "mode": "parallel",
+  "max_total_gpus": 8,
+  "partition": "teaching",
+  "dry_run": true,
+  "jobs": {
+    "validate": "940001",
+    "prefetch": "940002",
+    "reference": "940003",
+    "batch_train": "940004",
+    "batch_eval": "940005",
+    "shortlist": "940006",
+    "confirmation_train": "940007",
+    "confirmation_eval": "940008",
+    "pair_gate": "940009",
+    "teacher_cache": "940010",
+    "recipe_train": "940011",
+    "recipe_eval": "940012",
+    "recipe_gate": "940013",
+    "final_train": "940014",
+    "final_eval": "940015",
+    "oracle": "940016",
+    "report": "940017"
+  }
+}

@@ -1,0 +1,4 @@
+experiment_id,run_id,strength,distillation,seed,image_resolution,patch_size,patch_tokens,prefix_tokens,total_transformer_tokens,epochs,disable_early_stopping,save_every_epoch,resolved_lr,warmup_fraction,schedule_total_epochs
+distill_strength_1p0,distill_strength_1p0__seed_42,1.0,True,42,224,16,196,5,201,24,True,True,0.002545584412271571,0.05,24
+distill_strength_1p0,distill_strength_1p0__seed_43,1.0,True,43,224,16,196,5,201,24,True,True,0.002545584412271571,0.05,24
+distill_strength_1p0,distill_strength_1p0__seed_44,1.0,True,44,224,16,196,5,201,24,True,True,0.002545584412271571,0.05,24

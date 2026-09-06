@@ -1,0 +1,131 @@
+version: efficiency-frontier-1.0
+name: efficiency_frontier
+output_root: results/efficiency_frontier
+checkpoint_root: checkpoints/efficiency_frontier
+log_root: logs/efficiency_frontier
+
+datasets:
+  primary:
+    id: flickr30k_karpathy_test
+    csv: data/flickr30k/test.csv
+    expected_images: 1000
+    expected_captions: 5000
+    recorded_dataset: nlphuji/flickr30k
+    recorded_revision: 2b239befc81b6e3f035ce6bd52f5f4d60f5625f7
+    revision_cryptographically_verified: false
+  supplementary:
+    id: coco_validation_contaminated
+    csv: data/val_all_captions.csv
+    expected_images: 5000
+    expected_captions: 25014
+    semantic_hash: 2315b82c1336d6957cc25bc55c07975f28043151638ee53cb44631ccc8a4f70b
+    label: COCO validation (used for model selection in earlier project phases; not an independent test set)
+  selection_dev:
+    csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+
+references:
+  open_clip_version: 3.3.0
+  entries:
+    - id: mobileclip2_s0_dfndr2b
+      checkpoint_id: MobileCLIP2-S0:dfndr2b
+      model_name: MobileCLIP2-S0
+      pretrained: dfndr2b
+    - id: siglip2_vit_b32_256_webli
+      checkpoint_id: ViT-B-32-SigLIP2-256:webli
+      model_name: ViT-B-32-SigLIP2-256
+      pretrained: webli
+    - id: openclip_vit_b32_quickgelu_openai
+      checkpoint_id: ViT-B-32-quickgelu:openai
+      model_name: ViT-B-32-quickgelu
+      pretrained: openai
+
+students:
+  - id: locked_minilm
+    label: DINOv3 ViT-S/16 + MiniLM (locked recipe)
+    role: main_student
+    seeds:
+      42:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-lr-control/infonce_no_queue__captions_all__b1024__lr_3p0__seed_42
+      43:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-winner-confirmation/infonce_no_queue__captions_all__b1024__lr_3p0__seed_43
+      44:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-winner-confirmation/infonce_no_queue__captions_all__b1024__lr_3p0__seed_44
+  - id: locked_e5
+    label: DINOv3 ViT-S/16 + E5-Small-v2 (best available configuration)
+    role: best_available_configuration
+    seeds:
+      42:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-rescreen/dinov3_vits16__e5_small_v2__seed_42__hw_teaching_native_bf16
+      43:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-rescreen-confirmation/dinov3_vits16__e5_small_v2__seed_43__hw_teaching_native_bf16
+      44:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-rescreen-confirmation/dinov3_vits16__e5_small_v2__seed_44__hw_teaching_native_bf16
+  - id: historical_v4
+    label: DINOv3 ViT-S/16 + MiniLM (v4 recipe, before correction)
+    role: before_correction
+    seeds:
+      42:
+        checkpoint_dir: checkpoints/alignment_v4_wave0/wave0-screen/infonce_queue__captions_2__b512__seed_42
+      43:
+        checkpoint_dir: checkpoints/efficiency_frontier/v4_missing_seeds/historical_v4__seed_43
+      44:
+        checkpoint_dir: checkpoints/efficiency_frontier/v4_missing_seeds/historical_v4__seed_44
+
+historical_v4_completion:
+  source_seed_42_config: checkpoints/alignment_v4_wave0/wave0-screen/infonce_queue__captions_2__b512__seed_42/config.yaml
+  train_seeds: [43, 44]
+  protected_seed: 42
+  expected:
+    loss_type: infonce_queue
+    captions_per_image: 2
+    batch_size: 512
+    memory_queue_size: 16384
+    base_lr: 0.0003
+    sqrt_scale_factor: 2.0
+    sweep_multiplier: 1.0
+    resolved_lr: 0.0006
+    epochs: 12
+    early_stopping_patience: 3
+    precision: bf16
+
+evaluation:
+  batch_size: 256
+  k_values: [1, 5, 10]
+
+profiling:
+  paired_batch_size: 64
+  warmup_iterations: 20
+  timed_repeats: 100
+  precision: bf16
+  text_context_policy: native
+  multiply_add_flops: 2
+  include_projection: true
+  include_normalization: true
+  exclude_preprocessing_from_neural_latency: true
+  exclude_tokenization_from_neural_latency: true
+  representative_seed: 42
+  verification_seed: 43
+
+pareto:
+  primary_dataset: flickr30k_karpathy_test
+  performance: mean_R@1
+  parameter_cost: full_stack_inference_parameters
+  latency_cost: full_stack_neural_latency_median_ms
+  latency_iqr_aware: true
+  report_raw_median: true
+  descriptive_ratios: true
+
+resources:
+  partition: teaching
+  gpu_type: NVIDIA RTX PRO 6000 Blackwell
+  gpu_per_task: 1
+  cpus_per_task: 12
+  host_memory: 96G
+  wall_time: "08:00:00"
+  native_bf16_required: true
+
+limitations:
+  - The project has no COCO test split that was never used by an earlier selection procedure.
+  - Flickr30k is the only uncontaminated evaluation available for the frontier.
+  - The Flickr fetch script did not pin the recorded upstream revision; structural agreement and prospective hashes are the available provenance.
+  - Upstream reference-weight revisions were not recorded at fetch time; prospective local checksums are reported instead.

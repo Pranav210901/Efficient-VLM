@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "protocol_status": "frozen_before_phase2",
+  "fixed_seed": 42,
+  "datasets": [
+    {
+      "dataset": "coco",
+      "task": "retrieval",
+      "train_split": "train2017",
+      "development_split": "val2017",
+      "selection_split": "val2017",
+      "final_test_split": "flickr30k_external_if_available",
+      "used_for_checkpoint_selection": true,
+      "used_for_expert_selection": true,
+      "used_for_final_reporting": false,
+      "historical_result_status": "exploratory_development"
+    },
+    {
+      "dataset": "cifar100",
+      "task": "classification",
+      "train_split": "official_train_train_partition",
+      "development_split": "deterministic_official_train_development_partition",
+      "selection_split": "deterministic_official_train_development_partition",
+      "final_test_split": "official_test",
+      "used_for_checkpoint_selection": false,
+      "used_for_expert_selection": true,
+      "used_for_final_reporting": true,
+      "historical_result_status": "exploratory_development_test_used"
+    },
+    {
+      "dataset": "oxford_iiit_pet",
+      "task": "classification",
+      "train_split": "deterministic_trainval_train_partition",
+      "development_split": "deterministic_trainval_development_partition",
+      "selection_split": "deterministic_trainval_development_partition",
+      "final_test_split": "official_test",
+      "used_for_checkpoint_selection": false,
+      "used_for_expert_selection": true,
+      "used_for_final_reporting": true,
+      "historical_result_status": "exploratory_development_test_used"
+    },
+    {
+      "dataset": "eurosat",
+      "task": "classification",
+      "train_split": "deterministic_stratified_train",
+      "development_split": "deterministic_stratified_development",
+      "selection_split": "deterministic_stratified_development",
+      "final_test_split": "deterministic_stratified_test",
+      "used_for_checkpoint_selection": false,
+      "used_for_expert_selection": true,
+      "used_for_final_reporting": true,
+      "historical_result_status": "exploratory_development_complete_dataset_used"
+    },
+    {
+      "dataset": "winoground",
+      "task": "compositional",
+      "train_split": "unavailable",
+      "development_split": "unavailable",
+      "selection_split": "evaluation_only",
+      "final_test_split": "evaluation_only",
+      "used_for_checkpoint_selection": false,
+      "used_for_expert_selection": false,
+      "used_for_final_reporting": true,
+      "historical_result_status": "unavailable_or_evaluation_only"
+    },
+    {
+      "dataset": "sugarcrepe",
+      "task": "compositional",
+      "train_split": "unavailable",
+      "development_split": "unavailable",
+      "selection_split": "evaluation_only",
+      "final_test_split": "evaluation_only",
+      "used_for_checkpoint_selection": false,
+      "used_for_expert_selection": false,
+      "used_for_final_reporting": true,
+      "historical_result_status": "unavailable_or_evaluation_only"
+    }
+  ],
+  "split_policy": {
+    "cifar100_development_fraction": 0.2,
+    "pets_development_fraction": 0.2,
+    "eurosat_train_fraction": 0.7,
+    "eurosat_development_fraction": 0.15,
+    "eurosat_test_fraction": 0.15
+  },
+  "selection_weights": {
+    "multitask_performance": 0.25,
+    "unique_wins": 0.17,
+    "oracle_contribution": 0.13,
+    "cross_task_specialisation": 0.12,
+    "latency_efficiency": 0.1,
+    "memory_efficiency": 0.06,
+    "seed_reliability": 0.07,
+    "architectural_diversity": 0.05,
+    "token_interface_readiness": 0.05
+  },
+  "diversity_constraints": {
+    "primary_vision_experts": 3,
+    "primary_text_experts": 3,
+    "cheap_fallback_vision_experts": 1,
+    "cheap_fallback_text_experts": 1,
+    "primary_pair_paths": 4,
+    "maximum_pair_paths": 6,
+    "maximum_paths_per_vision_encoder": 2,
+    "maximum_paths_per_text_encoder": 2,
+    "minimum_vision_architecture_families": 2,
+    "minimum_distinct_text_encoders": 2,
+    "require_low_cost_pair": true,
+    "require_unique_error_pair": true,
+    "prohibit_inconclusive_blf_duplicate": true
+  },
+  "source": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/configs/evaluation_protocol.yaml",
+  "eurosat_split_manifest": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/splits/eurosat_split_manifest.csv"
+}

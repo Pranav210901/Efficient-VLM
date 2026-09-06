@@ -1,0 +1,11 @@
+{
+  "cache_version": "mobileclip2-s0-v1",
+  "code_version": "281a5ea63295af9f9966744930e84f26572c39ddb804a8ea197af7aa0b91c427",
+  "config_hash": "70fb4e9e2eb29c6ae2e5a217d0e6b94bad727b334a34bed0b82f1c47d258f857",
+  "dataset_split_hash": "4d3b716d143b748b70c9125d177552c298b1a6ccf617d5bc000792ef17fb18d8",
+  "digest": "9f70c792d373f49c4da3f4aa6c315a332406395f04fdcced4ab37eeb9b3bc071",
+  "model_checkpoint_id": "vit_small_patch16_dinov3.lvd1689m+sentence-transformers/all-MiniLM-L6-v2",
+  "preprocessing_hash": "57a4dd03145131e87359ad6a9b99339117241efb997e1ec1984a517bd4f9c681",
+  "schema_version": 1,
+  "seed": 42
+}

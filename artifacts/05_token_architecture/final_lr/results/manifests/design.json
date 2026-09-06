@@ -1,0 +1,60 @@
+{
+  "status": "READY",
+  "preregistration_sha256": "bfe004b8540fd45a966ad95a870b7c06e801a71b45b5c8d78361c8a5ad343777",
+  "new_screen_training_jobs": 4,
+  "new_confirmation_training_jobs_maximum": 2,
+  "current_seed42_reuse": {
+    "seed": 42,
+    "selected_epoch": 22,
+    "mean_R1": 0.5462524592876434,
+    "i2t_R1": 0.6262327432632446,
+    "t2i_R1": 0.46627217531204224,
+    "checkpoint_fingerprint": "41f565332685997df5ec99356a431a863b892b7a6a131ec894c159bb86e68d92",
+    "checkpoint_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_42/epoch_22.pt"
+  },
+  "frozen_signature": {
+    "vision": "dinov3_vits16",
+    "text": "all_minilm_l6_v2",
+    "teacher": "mobileclip2_s0_dfndr2b",
+    "image_size": 224,
+    "batch_size": 1024,
+    "epochs": 24,
+    "loss_type": "infonce_no_queue",
+    "queue": 0,
+    "image_aggregation": "transformer_128",
+    "text_aggregation": "learned_query_attention"
+  },
+  "rows": [
+    {
+      "factor": 0.5,
+      "pipeline": "configs/final_lr_study/pipeline_lr_0p5.yaml",
+      "resolved_lr": 0.0012727922061357855,
+      "reused": false
+    },
+    {
+      "factor": 0.75,
+      "pipeline": "configs/final_lr_study/pipeline_lr_0p75.yaml",
+      "resolved_lr": 0.0019091883092036783,
+      "reused": false
+    },
+    {
+      "factor": 1.0,
+      "pipeline": "configs/text_aggregation_study/pipeline_m_t1.yaml",
+      "resolved_lr": 0.002545584412271571,
+      "reused": true
+    },
+    {
+      "factor": 1.25,
+      "pipeline": "configs/final_lr_study/pipeline_lr_1p25.yaml",
+      "resolved_lr": 0.003181980515339464,
+      "reused": false
+    },
+    {
+      "factor": 1.5,
+      "pipeline": "configs/final_lr_study/pipeline_lr_1p5.yaml",
+      "resolved_lr": 0.0038183766184073566,
+      "reused": false
+    }
+  ],
+  "flickr_test_sealed": true
+}

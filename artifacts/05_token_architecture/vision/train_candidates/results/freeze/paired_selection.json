@@ -1,0 +1,42 @@
+{
+  "status": "SELECTED_PENDING_CONTROLLED_LATENCY",
+  "selected_arm": "B_learned_query_attention",
+  "rule": "Select B if C does not lead at all three paired seeds or if the mean paired difference is within one pooled SD.",
+  "rule_applied": "C did not lead at all three seeds; the pre-declared tie-break therefore selected B.",
+  "per_seed": [
+    {
+      "seed": 42,
+      "B_flickr_selected_R1": 0.5053254514932632,
+      "C_flickr_selected_R1": 0.5229782909154892,
+      "C_minus_B_pp": 1.7652839422225952,
+      "C_leads": true
+    },
+    {
+      "seed": 43,
+      "B_flickr_selected_R1": 0.5046350955963135,
+      "C_flickr_selected_R1": 0.5153846144676208,
+      "C_minus_B_pp": 1.0749518871307373,
+      "C_leads": true
+    },
+    {
+      "seed": 44,
+      "B_flickr_selected_R1": 0.513905331492424,
+      "C_flickr_selected_R1": 0.5102564096450806,
+      "C_minus_B_pp": -0.3648921847343445,
+      "C_leads": false
+    }
+  ],
+  "mean_C_minus_B_pp": 0.8251145482063293,
+  "pooled_sd_pp": 0.581547415227396,
+  "C_leads_every_seed": false,
+  "mean_within_one_pooled_sd": false,
+  "tie_break_triggered": true,
+  "tie_break_favors": {
+    "arm": "B_learned_query_attention",
+    "reason": "fewer parameters, simpler mechanism, and lower measured latency",
+    "added_parameters_B": 165761,
+    "added_parameters_C": 232065
+  },
+  "mechanistic_finding": "A, B, and C accessed the same 196 patch tokens. Uniform mean fusion recovered 1.328pp, while learned-query and transformer aggregation recovered 6.082pp and 6.907pp. Relative to those learned arms, approximately 78-81% of the gain beyond the baseline is associated with learned selection over patches rather than patch access alone. Parameter count and mechanism differ, so selection and capacity are not fully separated.",
+  "flickr_test_used": false
+}

@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN",
+  "frozen_at_utc": "2026-08-01T17:04:25Z",
+  "approved_by_user": true,
+  "git_sha": null,
+  "git_provenance_note": "The workspace is not a Git worktree; immutable file digests are the available code-independent freeze evidence.",
+  "files": {
+    "configs/guarded_hard_negative_study/preregistration.md": "99571a6437cb78da5ae61f96ec041c74c96bced5a06463f75e85e145a1a30923",
+    "configs/guarded_hard_negative_study/threshold_calibration.json": "338cf555a2a9c8189f61fb4945cd567db232d55fe75a432acb363b1f47411b0d"
+  },
+  "mining_allowed": true,
+  "training_allowed_only_after_mining_feasibility_pass": true,
+  "flickr_test_must_remain_sealed": true,
+  "absolute_stopping_rule": "After the nine preregistered runs, or after any preregistered feasibility or matching failure, no further training is permitted."
+}

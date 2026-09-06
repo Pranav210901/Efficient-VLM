@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "required_row_metadata": [
+    "usage",
+    "allowed_for_training",
+    "source_split",
+    "dataset",
+    "task",
+    "configuration_id",
+    "checkpoint_fingerprint"
+  ],
+  "usage": "phase2_training",
+  "allowed_for_training": true,
+  "protected_test_overlap": 0,
+  "mode": "full",
+  "retrieval_negatives_per_positive": 8,
+  "configurations": [
+    "dinov2_vits14__all_minilm_l6_v2__baseline",
+    "dinov2_vits14__bge_small_en__baseline",
+    "convnext_tiny__all_minilm_l6_v2__baseline",
+    "efficientnet_b0__bge_small_en__baseline"
+  ],
+  "retrieval_rows": 22721280,
+  "classification_rows": 247376,
+  "output_sha256": {
+    "retrieval": "44b7c71acaad98cac762e7e5dfe2f726ac2f8128d861dc53355e12011f6637c9",
+    "classification": "75be6a254111fa1e3d67b90163191fc1c8be70616b9b175693795342ebc115f2"
+  }
+}

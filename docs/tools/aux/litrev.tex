@@ -1,0 +1,524 @@
+\section{Introduction and review question}
+
+Contrastive vision--language models learn image and text representations that
+can be compared in a shared embedding space. CLIP demonstrated the broad
+transferability of this approach when both towers are jointly trained on
+web-scale paired data \cite{radford2021clip}. Later work improved the objective,
+data, distillation strategy, and deployment efficiency
+\cite{zhai2023siglip,vasu2024mobileclip,faghri2025mobileclip2}. These gains,
+however, are tied to substantial pretraining resources and tightly coupled
+vision--language optimisation.
+
+Independently pretrained unimodal encoders create a different opportunity. A
+self-supervised vision model and a language model may already contain useful
+semantic structure; if small trainable modules can align them, much of the cost
+of joint pretraining can be avoided. This leads to the review question:
+
+\begin{quote}
+\emph{How far can independently pretrained frozen vision and language encoders
+be aligned using a sub-five-million-parameter adaptation budget while
+approaching compact jointly pretrained vision--language models under a fixed
+inference budget?}
+\end{quote}
+
+The wording requires three distinct comparison groups. First, compact jointly
+pretrained models such as MobileCLIP2-S0 are the most direct performance and
+scale reference. Second, CLIP ViT-B/32 remains a useful field anchor because it
+is widely recognised, but it should not be described as compact. Third,
+Freeze-Align, SAIL, ShareLock, STRUCTURE, and SOTAlign form the methodological
+peer group because they explicitly align frozen unimodal models
+\cite{maniparambil2025freezealign,zhang2025sail,ruthardt2026sharelock,groger2025structure,roschmann2026sotalign}.
+Conflating these groups can produce favourable but scientifically misleading
+comparisons.
+
+\section{Review method and scope}
+
+This is a structured narrative review organised by technological decomposition:
+problem, solution families, evaluation, and limitations. The search programme
+was conducted in four rounds between 26 July and 10 August 2026. It combined a
+ranked local bibliography, targeted OpenAlex searches, citation-graph screening,
+and verification against primary paper or proceedings pages. The final refresh
+used 20 decomposed academic-index searches, logged 322 records, and produced 273
+globally unique records in its targeted export. It was considered alongside 54
+ranked local entries and a separate screen of 288 works citing the closest
+memory-bank papers.
+
+Sources were prioritised when they were direct methodological peers, established
+foundational work, or recent papers capable of changing the novelty boundary.
+Published claims and numerical comparisons were checked against primary papers
+or supplements before inclusion. Search summaries alone were not treated as
+evidence. The review is comprehensive for the dissertation's defined questions,
+but it is not a formal systematic review or meta-analysis: computer-science
+indexing is incomplete, protocols are heterogeneous, and absence from the
+screened corpus is not proof that no related work exists. The literature cut-off
+is 10 August 2026.
+
+\section{Jointly pretrained vision--language models}
+
+\subsection{CLIP and sigmoid-objective models}
+
+CLIP established the dominant dual-encoder formulation: an image encoder and a
+text encoder are jointly trained so that matched pairs have high similarity and
+other in-batch pairs act as negatives \cite{radford2021clip}. Its importance for
+this project is twofold. It supplies the field's common retrieval vocabulary,
+and OpenCLIP implementations make a recognisable ViT-B/32 reference available.
+Nevertheless, CLIP B/32 is a field anchor rather than the compact model named by
+the review question.
+
+SigLIP replaces globally normalised softmax contrast with a pairwise sigmoid
+loss, reducing dependence on a global similarity matrix and showing that gains
+from ever-larger batches saturate \cite{zhai2023siglip}. SigLIP2 broadens this
+recipe through captioning, self-supervised losses, online curation, multilingual
+data, localisation, and multiple resolutions \cite{tschannen2025siglip2}. It is
+therefore a useful alternative-objective reference, but its much larger B/32
+stack is not a compact peer.
+
+\subsection{Compact joint training and distillation}
+
+Compact VLM research shows that parameter count alone is an incomplete measure
+of difficulty. TinyCLIP combines affinity mimicking with weight inheritance
+\cite{wu2023tinyclip}, while CLIP-KD evaluates several ways to transfer CLIP
+knowledge into smaller models \cite{yang2024clipkd}. MobileCLIP introduces
+multi-modal reinforced training and dataset reinforcement to improve mobile
+image--text encoders \cite{vasu2024mobileclip}; MobileCLIP2 improves the same
+training strategy and provides several compact reference scales
+\cite{faghri2025mobileclip2}.
+
+This literature has an important consequence for comparison. MobileCLIP2-S0 is
+the primary compact jointly pretrained reference, not merely another teacher.
+When it also supplies distillation targets to a student, it should be described
+as both the teacher and an upper bound on what that selected teacher can
+transfer. A smaller frozen-alignment system may still be scientifically useful,
+but a claim of compact-model parity requires split-matched evaluation rather
+than division of a validation score by a published test score.
+
+\section{Frozen and locked alignment}
+
+LiT showed that locking a pretrained image tower while training a text tower can
+retain strong transfer performance \cite{zhai2022lit}. More recent work moves
+closer to the present problem by starting with two independently pretrained
+unimodal encoders. Freeze-Align learns lightweight mappings around frozen
+encoders and studies pair compatibility \cite{maniparambil2025freezealign}.
+SAIL also freezes the towers, but combines trainable alignment layers with a
+refined sigmoid loss, multiple captions per image, pre-encoded features, and
+very large effective batches \cite{zhang2025sail}. ShareLock emphasises the role
+of strong language representations and reusable frozen features
+\cite{ruthardt2026sharelock}. STRUCTURE adds geometry preservation when paired
+data are limited \cite{groger2025structure}, while SOTAlign uses limited paired
+data and larger unpaired collections through an optimal-transport objective
+\cite{roschmann2026sotalign}.
+
+These papers establish that frozen encoders plus small alignment heads are
+prior art. Projectors, contrastive learning, compatibility screening, and
+precomputed features are design choices rather than architectural
+contributions. The appropriate research question is instead which design and
+training conditions determine whether frozen alignment succeeds.
+Table~\ref{tab:peers} summarises how each peer relates to the present setting.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Direct frozen-alignment peers and their role in the comparison.}
+\label{tab:peers}
+\begin{tabularx}{\textwidth}{L{2.6cm}L{2.2cm}L{2.6cm}Y}
+\toprule
+\textbf{Work} & \textbf{Frozen components} & \textbf{Alignment regime} & \textbf{Relevance and limitation} \\
+\midrule
+Freeze-Align & Independently pretrained towers & Lightweight projectors; up to roughly 20M pairs & Direct compatibility and retrieval peer; larger encoders and data than the present constrained setting. \\
+SAIL & Vision and language towers & Refined sigmoid alignment; CC12M; very large effective batch & Strong direct peer showing the benefit of objective and batch design. \\
+ShareLock & Pretrained backbones & Lightweight alignment using precomputed features & Direct peer; published numbers depend on backbone and evaluation protocol. \\
+STRUCTURE & Unimodal encoders & Geometry-preserving limited-data alignment & Direct conceptual peer; no single final Flickr configuration is sufficiently commensurate for scalar ranking. \\
+SOTAlign & Unimodal encoders & Semi-supervised paired and unpaired alignment & Extends the data regime; recent forward-looking peer rather than a protocol-matched baseline. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Published Flickr30k retrieval figures illustrate the field but do not form a
+common leaderboard. Freeze-Align reports image-to-text/text-to-image R@1 of
+87.5/74.1 for its large final configuration
+\cite{maniparambil2025freezealign}. In the SAIL supplement's common
+DINOv2-B/CC12M comparison, SAIL-B reports 74.2/60.6 and ShareLock 68.1/49.3
+\cite{zhang2025sail}. These systems differ in encoders, paired-data volume,
+caption multiplicity, batch size, objectives, and split handling. Their numbers
+answer ``where does frozen alignment research currently sit?'', not ``which row
+wins under identical conditions?''
+
+\section{Objectives, negatives, and historical embeddings}
+
+\subsection{Why memory banks are attractive}
+
+The contrastive objective used throughout this literature descends from InfoNCE,
+which learns representations by discriminating a positive against a set of
+sampled negatives \cite{oord2018cpc}. Its behaviour therefore depends directly
+on how many negatives are available and how representative they are.
+
+Contrastive alignment benefits from diverse negatives, but batch size is limited
+by accelerator memory. Momentum Contrast introduced a queue-backed dictionary
+whose key encoder changes slowly, making stored embeddings more consistent
+\cite{he2020moco}. Cross-Batch Memory (XBM) generalised the use of historical
+embeddings in supervised metric learning and argued that feature drift is slow
+enough for recent stored representations to approximate current ones
+\cite{wang2020xbm}. The method includes memory-size, batch-size, and drift
+analyses, so neither queue-capacity curves nor the observation that embeddings
+become stale is new.
+
+Later work also demonstrates the limits of the slow-drift argument. Adaptive
+Cross Batch Normalization treats current--memory mismatch as a distribution
+alignment problem and reports conditions where memory performs worse than no
+memory \cite{ajanthan2023acbn}. In cross-modal video--text retrieval, Memory
+Enhanced Embedding Learning uses a momentum encoder precisely to prevent stored
+features from evolving too rapidly \cite{zhao2021meel}. These precedents show
+that stale memory can be harmful and that stabilisation mechanisms matter.
+
+\subsection{The unresolved cross-modal question}
+
+The closest prior work does not determine whether drift magnitude predicts
+retrieval damage separately for image-side and text-side memories. XBM is
+supervised and unimodal; its historical entries do not cross independently
+parameterised modality-specific projectors. Cross-modal memory approaches use
+memory as a component but generally evaluate final Recall@K rather than
+separating measured age, representation drift, and degradation by modality.
+
+Two works are the closest structural matches and were examined at full text.
+CODER maintains dual dynamic modality-specific dictionaries for image--text
+retrieval, so it possesses the apparatus required to ask the present question,
+but it reports Recall@K and component-level ablations without a per-modality
+bank ablation or any drift-versus-degradation analysis \cite{wang2022coder}.
+CSMCIR explicitly identifies memory-bank staleness with age and responds with an
+entropy-based dynamic bank, but it addresses composed image retrieval and again
+does not measure drift as a quantity separate from degradation
+\cite{qian2026csmcir}. Both therefore confirm that the ingredients are available
+and that the specific decomposition has not been performed.
+
+This yields the clearest gap in the reviewed corpus:
+
+\begin{quote}
+Prior work establishes that memory-bank embeddings drift and may become
+harmful, but does not test whether equal measured drift implies equal damage
+across the two towers of a frozen bidirectional image--text model.
+\end{quote}
+
+The distinction is important. ``Features move slowly'' is a statement about
+representation change; ``stored negatives remain safe'' is a statement about
+their effect on gradients and ranking. The first does not logically guarantee
+the second, especially when the modalities occupy different geometries and the
+alignment heads continue to learn.
+
+\subsection{False negatives}
+
+Image--caption relevance is many-to-many, while common benchmarks provide
+non-exhaustive annotations. PCME models cross-modal examples probabilistically
+and explicitly motivates its approach using ambiguity and incomplete relevance
+labels \cite{chun2021pcme}. FALCON more directly balances hardness against
+false-negative probability in vision--language contrastive learning
+\cite{kim2026falcon}. This literature prevents a simplistic conclusion that
+harder or more numerous negatives are always better.
+
+For queue analysis, two false-negative mechanisms must be separated. Repeated
+captions or images with a known shared image identity can be protected by a
+multi-positive mask. Semantically related examples carrying different image
+identifiers remain unlabelled and cannot be ruled out without semantic or human
+relevance judgements. Consequently, a queue experiment can establish a
+drift--damage dissociation without identifying a complete causal mechanism.
+
+\section{Representation compatibility and the modality gap}
+
+Frozen alignment assumes that independently trained encoders expose compatible
+semantic structure. The Platonic-representation hypothesis motivates this possibility by arguing
+that models trained on different data and objectives converge towards a shared
+statistical model of reality \cite{huh2024platonic},
+while frozen-alignment studies test it empirically through encoder-pair selection
+and geometry measures. Freeze-Align, for example, uses representational
+similarity to reason about pair quality \cite{maniparambil2025freezealign}.
+However, compatibility should not be treated as an intrinsic property of an
+encoder pair: rankings may also depend on the alignment objective, caption
+handling, batch construction, and optimisation recipe.
+
+The modality-gap literature provides a second constraint. Image and text
+embeddings can occupy separated regions or narrow cones even after contrastive
+training, with initialisation and optimisation contributing to the separation
+\cite{liang2022gap}. More recent work provides a gradient-flow account and
+shows that mismatched pairs and temperature can influence the gap
+\cite{yaras2025modalitygap}. Therefore equal cosine movement need not have equal
+meaning in the two towers.
+
+The properties of the frozen vision substrate are a third constraint, and they
+are fixed before alignment begins. Self-supervised families such as DINOv2 and
+DINOv3 are trained without language supervision and are the encoders that make
+frozen alignment attractive in the first place
+\cite{oquab2023dinov2,simeoni2025dinov3}. Because their weights are not updated,
+choices made during their pretraining---patch size, positional encoding
+mechanism, and training resolution---continue to govern what a downstream
+alignment head can read. An input resolution that departs from the encoder's
+pretraining regime can therefore change retrieval quality for reasons that have
+nothing to do with the alignment module, which makes resolution and
+preprocessing policy part of the experimental description rather than an
+implementation detail.
+
+This is a rival explanation, not a reason to abandon the queue question. A
+static difference in geometry predicts a baseline or scale difference; it does
+not by itself predict how retrieval degradation changes with queue age. A
+defensible analysis must therefore compare response rates over overlapping
+drift ranges and describe the result as modality-specific sensitivity, not as a
+fully identified new mechanism.
+
+\section{Reading information from frozen tokens}
+
+Global encoder outputs are convenient but may discard token-level information.
+Set Transformer introduced pooling by multi-head attention using learned seed
+vectors \cite{lee2019settransformer}. CoCa uses attentional poolers within a
+joint image--text model \cite{yu2022coca}; BLIP-2's Q-Former reads a frozen image
+encoder through learned queries \cite{li2023blip2}; and SigLIP2 uses MAP pooling
+\cite{tschannen2025siglip2}. Attentive probing examines lightweight attention
+readers over frozen image features explicitly as an accuracy--parameter trade-off
+\cite{psomas2026attention}.
+
+Learned-query aggregation is consequently an established primitive. A study
+that compares CLS or mean pooling against learned-query or transformer readers
+can still make a useful empirical contribution: it can establish whether useful
+information is present in frozen patch or word tokens and how much trainable
+capacity is required to expose it. It should not claim that a learned query, MAP
+head, or Q-Former-like reader is a new architecture.
+
+The distinction between access and selection is especially useful. If mean
+pooling produces little improvement but learned interaction produces a much
+larger gain, the evidence suggests that token-level information exists but must
+be selected or combined conditionally. That result concerns the behaviour of
+the frozen representation under a budget, not ownership of the pooling block.
+
+\section{Parameter-efficient adaptation}
+
+Strict freezing tests whether fixed representations already contain alignable
+information, but it may impose an avoidable ceiling. LoRA established the
+now-standard alternative: freeze the pretrained weights and train injected
+low-rank update matrices, which decouples adaptation capacity from the size of
+the host model \cite{hu2021lora}. VL-Adapter demonstrates adapter-based
+parameter-efficient transfer for vision--language tasks
+\cite{sung2022vladapter}. More recent work moves closer to the present dual-tower
+setting. HALoRA allocates low-rank budgets hierarchically while accounting for
+vision--language asymmetry \cite{zhang2026halora}. B-HFA combines shared adapters
+with hierarchical visual aggregation for retrieval, although it adapts an
+already pretrained VLM rather than aligning two independent unimodal towers
+\cite{xu2026bhfa}.
+
+Low-rank adaptation of one or both towers is therefore not algorithmically new.
+Its value in a constrained dissertation is as a controlled upper bound: a
+vision-only, text-only, and dual-tower factorial can quantify where strict
+freezing costs performance and whether mismatch is isolated to either modality.
+The strictly frozen endpoint and the low-rank endpoint must remain separate
+scientific categories, and trainable parameters must be reported separately
+from the total deployed stack.
+
+\section{Token reduction and deployment efficiency}
+
+Reducing vision-token count is a mature efficiency strategy. DynamicViT learns
+to prune tokens progressively \cite{rao2021dynamicvit}; ToMe merges similar
+tokens without retraining \cite{bolya2022tome}; Token Fusion combines pruning
+and merging according to model sensitivity \cite{kim2023tokenfusion}; and PuMer
+directly prunes and merges tokens in vision--language models
+\cite{cao2023pumer}. Recent parameter-free or saliency-driven work includes
+Dyna-ViT and SAD-TM \cite{rubab2026dynavit,xie2026sadtm}.
+
+This literature establishes two requirements for an efficiency claim. First,
+lower FLOPs or fewer tokens do not guarantee lower wall-clock latency because
+kernel shape, memory movement, padding, and batch scheduling also matter.
+Second, a faster model is not on a better efficiency frontier if retrieval
+accuracy falls disproportionately. Token reduction should therefore be measured
+end to end and compared with a matched no-reduction parent on both accuracy and
+latency.
+
+The present study supplies direct evidence for both requirements, reported in
+full in Sections 4.9, 4.10, and 5.6. A fixed $2\times2$ internal merge reduced
+third-quartile latency by 0.98--1.61\,ms, confirming that internal token count
+is latency-relevant, but a four-arm three-seed evaluation against matched
+no-merge parents cost between 5.69 and 15.95 percentage points of retrieval
+accuracy. The accuracy loss therefore dwarfs the latency gain at every merge
+depth and under both the strictly frozen and low-rank parents, and token
+reduction did not improve the measured accuracy--latency frontier. The fixed
+merge is accordingly a simple baseline against the adaptive literature rather
+than a new pruning method, and the adaptive-routing branch remains unrun.
+
+\section{Data scale, curation, and evaluation comparability}
+
+Reproducible scaling studies show power-law relationships among model size,
+paired data, and compute, while also showing that the training distribution
+changes those relationships \cite{cherti2023scaling}. DataComp demonstrates
+that curation strategies can substantially alter quality under controlled
+training and compute \cite{gadre2023datacomp}. DataComp-VLM extends the
+data-centric perspective to broader mixtures and downstream task suites
+\cite{farina2026datacompvlm}. A small alignment model trained on COCO
+\cite{lin2014coco} should not be expected to reproduce all capability acquired
+by a jointly trained web-scale model, and a remaining reference gap cannot be
+attributed solely to architecture.
+
+The evaluation surface is similarly narrow. Flickr30k \cite{young2014flickr30k}
+and COCO supply short descriptive captions, so bidirectional R@1 on these sets
+measures short-caption retrieval and nothing more. Zero-shot classification,
+compositional reasoning, and domain shift are distinct capabilities that a
+retrieval score does not certify, and results established on one should not be
+transferred to the others by implication. A study confined to retrieval is
+legitimate provided the resulting claims are stated at that scope.
+
+Evaluation protocol is equally consequential. At least five quantities must be
+kept distinct:
+
+\begin{enumerate}
+  \item validation performance used during model selection;
+  \item sealed or final-test performance;
+  \item published external results using different data and splits;
+  \item locally trainable inference parameters versus total deployed parameters;
+  \item latency measured in the same allocation versus historical timing from a
+        different session or software stack.
+\end{enumerate}
+
+A ratio between validation performance and an external test score is not a
+split-matched retention measure. Similarly, ``one third the parameters'' is
+meaningless unless the numerator and denominator count the same deployed
+components. Strong efficiency evidence reports hardware, precision, batch size,
+input and padding policy, warm-up, repetitions, measurement order, and paired
+uncertainty.
+
+\section{Data governance, inherited bias, and licensing}
+
+Efficiency framing can obscure a question that the reuse of pretrained
+components makes unavoidable: what is inherited along with the weights. A frozen
+encoder carries the representational consequences of its pretraining corpus, and
+because those weights are never updated, alignment cannot correct them. Any bias
+present in the vision or language tower is therefore transmitted into the shared
+space rather than diluted by it, and a small trained projector is a poor place to
+look for a remedy.
+
+The data-centric literature reinforces this. Curation decisions are shown to
+change downstream quality substantially \cite{gadre2023datacomp}, which is also
+to say that they determine what a model has and has not seen. Web-scale corpora
+are assembled by automated filtering rather than editorial review, so the
+resulting coverage is uneven in ways that a retrieval score will not surface.
+Reporting accuracy while remaining silent on provenance describes only half of
+what a system does.
+
+Three practical constraints follow for work of this kind. First, performance and
+safe deployment are separate claims: a favourable Recall@K supports the former
+and says nothing about the latter. Second, pretrained checkpoints and datasets
+arrive under licences that govern redistribution, so the defensible position is
+to reference upstream artefacts and release code and configurations rather than
+mirror weights or images. Third, an honest account distinguishes what was
+measured from what was merely not examined; this review does not constitute a
+demographic fairness audit, and no such audit should be inferred from the
+efficiency and retrieval evidence assembled here.
+
+\section{Synthesis: what is established and what remains open}
+
+Table~\ref{tab:synthesis} separates what the reviewed corpus already settles
+from the questions that remain open for this dissertation.
+
+\begin{longtable}{L{2.7cm}L{4.5cm}L{5.4cm}}
+\caption{Synthesis of the literature and the remaining research opportunity.}
+\label{tab:synthesis}\\
+\toprule
+\textbf{Area} & \textbf{Established by prior work} & \textbf{Status in this dissertation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Area} & \textbf{Established by prior work} & \textbf{Status in this dissertation} \\
+\midrule
+\endhead
+Frozen alignment & Frozen towers can be connected with lightweight projectors; compatibility and limited-data objectives matter. & Resolved (Sections 4.2, 4.7, 5.1): a strictly frozen endpoint was built and its recipe diagnosed under the stated budget. \\
+Historical memory & Queues enlarge the negative set; drift, distribution mismatch, and memory harm are known. & Resolved and central (Sections 4.3, 5.2): equal measured drift did not imply equal damage, and the two towers differed sharply in sensitivity. \\
+Modality geometry & Image and text embeddings can occupy different regions of the shared space. & Partly resolved (Sections 4.3, 5.2): an overlap-restricted slope comparison supports modality-specific sensitivity, but geometry-normalised drift remains future work and the mechanism is not identified. \\
+Token aggregation & Learned-query and attentive pooling are established. & Resolved (Sections 4.6, 5.3): the internal ablation quantifies what a small reader recovers; no architectural novelty is claimed. \\
+Distillation & Compact CLIP distillation is mature. & Resolved as a bounded result (Section 4.5): teacher choice was tested at fixed small-data alignment; tuned mixtures and ensembles were not searched. \\
+Low-rank adaptation & Adapters and LoRA are established for VLM transfer. & Resolved (Sections 4.8, 5.4): on the sealed test the bounded low-rank relaxation gains 9.30pp over the strictly frozen endpoint, quantifying the cost of strict freezing. \\
+Token reduction & Adaptive pruning and merging can improve efficiency. & Resolved negatively (Sections 4.9, 4.10, 5.6): merging saved 0.98--1.61\,ms but cost 5.69--15.95pp, so the frontier did not improve; adaptive routing remains unrun. \\
+Data and measurement & Scale, distribution, curation, and deployment protocol materially change outcomes. & Resolved (Sections 4.5, 4.11, 5.5): a sealed split-matched test and corrected same-allocation profiling now separate what survives from what does not. \\
+Task scope & Retrieval benchmarks use short descriptive captions and do not certify classification, compositional, or shifted-domain ability. & Open by disclosure (Section 6.2): zero-shot classification diagnostics exist but the evaluation package explicitly declines to treat them as confirmatory tests. \\
+Governance & Curation shapes coverage; frozen weights transmit inherited bias; licences constrain redistribution. & Open by design: no fairness audit, licence opinion, or deployment-readiness claim is made. \\
+\bottomrule
+\end{longtable}
+
+The most defensible unoccupied contribution is the memory-queue question. A
+generic statement that stale embeddings hurt would duplicate XBM and ACBN. The
+narrower contribution is to test the sufficiency of slow drift as a safety
+argument in a bidirectional frozen cross-modal regime: measure realised queue
+age, representation drift, and retrieval degradation independently, then test
+whether the relationship differs by modality. This is a falsifiable boundary
+condition on established memory-bank reasoning rather than a claim that all
+queues are harmful.
+
+The second contribution is empirical rather than architectural. Comparing
+global summaries, mean pooling, learned queries, and transformer aggregation
+under the same frozen towers can reveal whether alignment fails because
+information is absent or merely difficult to read. The relevant novelty is the
+controlled finding and its budgeted frontier, not the attention-pooling module.
+
+The remaining experiments---data coverage, distillation, low-rank adaptation,
+latency repair, and token reduction---complete the explanation by testing rival
+hypotheses and establishing boundaries. Their value lies in a coherent chain of
+evidence in which negative results constrain the final claim.
+
+\section{Position of the dissertation}
+
+The literature supports a methodological and empirical dissertation, not an
+architectural novelty claim. The project is relevant because it studies the
+space between two mature but imperfectly connected research lines: large-scale
+joint VLM pretraining and lightweight alignment of existing unimodal models.
+Its central question is practically important for researchers who cannot repeat
+web-scale pretraining, while its queue analysis addresses a more general
+scientific issue: whether a commonly monitored proxy, representation drift, is
+sufficient to certify the safety of historical negatives.
+
+The comparison hierarchy should remain explicit:
+
+\begin{enumerate}
+  \item \textbf{Primary compact reference:} MobileCLIP2-S0, also disclosed as
+        the distillation teacher.
+  \item \textbf{Field anchor:} OpenCLIP ViT-B/32, useful for recognisability and
+        local same-allocation comparisons but not labelled compact.
+  \item \textbf{Alternative objective:} SigLIP2 ViT-B/32.
+  \item \textbf{Methodological peers:} Freeze-Align, SAIL, ShareLock,
+        STRUCTURE, and SOTAlign.
+\end{enumerate}
+
+Within that hierarchy, a claim that a model is approximately one third the
+size is defensible only against OpenCLIP B/32 when both values count the full
+deployed stacks. It is not defensible against MobileCLIP2-S0. Likewise, an
+accuracy-retention ratio is defensible only for a split-matched local comparison.
+These restrictions make the resulting contribution more credible: the thesis
+does not claim that a small model beats CLIP, but explains how much alignment is
+recoverable, which interventions supply it, which efficiency shortcuts fail,
+and where the remaining gap comes from.
+
+\section{Limitations of the literature evidence}
+
+The evidence base has six limitations. First, frozen-alignment papers use
+different encoders, paired datasets, caption multiplicities, objectives, and
+evaluation splits, preventing a formal meta-analysis. Second, recent 2026 work
+may not yet be fully indexed. Third, computer-science proceedings are unevenly
+covered by citation indexes, so the absence of a matching experiment is a
+bounded corpus statement. Fourth, published parameter counts do not always
+separate trainable and total inference parameters. Fifth, accuracy, FLOPs,
+latency, training energy, and deployment memory are not interchangeable notions
+of efficiency. Sixth, the reviewed evidence is overwhelmingly retrieval-centred
+and reports little on inherited bias or licensing, so conclusions about
+deployment suitability cannot be drawn from it.
+
+These limitations lead to conservative language. The review can establish that
+frozen alignment and learned aggregation are prior art, that queue staleness is
+known, and that the per-modality drift--damage decomposition is not present in
+the screened corpus. It cannot prove universal novelty, compact-reference
+parity, or deployment readiness. The search should be refreshed immediately
+before final dissertation submission.
+
+\section{Conclusion}
+
+Efficient frozen vision--language alignment is relevant not because it replaces
+joint pretraining outright, but because it tests what can be recovered from
+existing unimodal representations under realistic adaptation constraints. The
+literature establishes the components---projectors, contrastive objectives,
+learned queries, distillation, LoRA, and token reduction---and therefore narrows
+the dissertation's contribution to how those components behave when controlled
+carefully. The strongest research gap concerns historical embeddings: prior work
+uses slow drift to justify memory, but does not show that equal drift produces
+equal consequences across modalities. A staged experimental study of that gap,
+followed by controlled aggregation, adaptation, data, and latency analyses,
+provides a coherent and appropriately bounded contribution to efficient
+vision--language learning.

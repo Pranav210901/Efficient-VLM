@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "configurations": 23,
+  "tasks": [
+    "cifar100_zeroshot",
+    "coco_retrieval",
+    "eurosat_zeroshot",
+    "pets_zeroshot"
+  ],
+  "coco_source": "historical COCO val2017 reused as frozen development evidence",
+  "classification_source": "deterministic train/trainval/EuroSAT development partitions",
+  "historical_classification_test_rows_reused": false,
+  "paths": {
+    "results_long": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development/task_results_long.csv",
+    "status": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development/task_status.csv",
+    "manifest": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development/evaluation_manifest.csv",
+    "results_wide": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development/task_results_wide.csv",
+    "summary": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development/configuration_summary.csv"
+  }
+}

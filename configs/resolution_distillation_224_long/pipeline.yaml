@@ -1,0 +1,71 @@
+version: resolution-distillation-224-long-1.0
+output_root: results/resolution_distillation_224_long
+checkpoint_root: checkpoints/resolution_distillation_224_long
+log_root: logs/resolution_distillation_224_long
+base_config: configs/resolution_distillation_224_long/base.yaml
+
+experiment:
+  image_size: 224
+
+wave1:
+  enabled: true
+  design: selected_resolution_distillation_only
+  question: Under a single 24-epoch cosine schedule, when do COCO-development and Flickr-validation transfer performance peak?
+  locked_recipe:
+    loss_type: infonce_no_queue
+    captions_per_image: null
+    memory_queue_size: 0
+    batch_size: 1024
+    sweep_multiplier: 3.0
+    image_size: 224
+
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+
+references: [mobileclip2_s0_dfndr2b]
+pair_matrix:
+  vision_encoders: [dinov3_vits16]
+  text_encoders: [all_minilm_l6_v2]
+  seeds: [42]
+  batch_sizes: [1024]
+batch_probe:
+  enabled: false
+  candidates: [1024]
+probe:
+  enabled: false
+  cache_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+selection: {}
+distillation_sensitivity:
+  strengths: [1.0]
+  seeds: [42, 43, 44]
+  include_matched_baseline: false
+ablations:
+  seeds: []
+  recipes: []
+final:
+  seeds: []
+  epochs: 24
+  retrain_on_full_coco_train: false
+optional_transfer:
+  flickr30k_csv: data/flickr30k/validation.csv
+  required: true
+literature_context: []
+
+trajectory:
+  epochs: 24
+  old_12epoch_flickr_validation_mean_R1: 0.4378698269526164
+  schedule:
+    type: cosine
+    defined_over_epochs: 24
+    warmup_fraction: 0.05
+    early_stopping: false
+  reporting:
+    coco_dev_every_epoch: true
+    flickr_validation_every_epoch: true
+    flickr_test: prohibited

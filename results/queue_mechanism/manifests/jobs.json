@@ -1,0 +1,257 @@
+[
+  {
+    "index": 0,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_1024__both_fresh__seed_42",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 1.0,
+    "memory_queue_size": 1024,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 1,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_1024__both_fresh__seed_43",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 1.0,
+    "memory_queue_size": 1024,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 2,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_1024__both_fresh__seed_44",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 1.0,
+    "memory_queue_size": 1024,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 3,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_4096__both_fresh__seed_42",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 4.0,
+    "memory_queue_size": 4096,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 4,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_4096__both_fresh__seed_43",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 4.0,
+    "memory_queue_size": 4096,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 5,
+    "stage": "capacity",
+    "arm": "fresh_capacity",
+    "run_id": "b1024__queue_4096__both_fresh__seed_44",
+    "experiment_id": "queue_mechanism_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 4.0,
+    "memory_queue_size": 4096,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "fresh_capacity_curve"
+    ]
+  },
+  {
+    "index": 6,
+    "stage": "mechanism",
+    "arm": "semantic_filter",
+    "run_id": "b1024__queue_16384__semantic_filter__seed_42",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "semantic",
+    "queue_weight_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 7,
+    "stage": "mechanism",
+    "arm": "semantic_filter",
+    "run_id": "b1024__queue_16384__semantic_filter__seed_43",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "semantic",
+    "queue_weight_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 8,
+    "stage": "mechanism",
+    "arm": "semantic_filter",
+    "run_id": "b1024__queue_16384__semantic_filter__seed_44",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "semantic",
+    "queue_weight_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 9,
+    "stage": "mechanism",
+    "arm": "matched_random_filter",
+    "run_id": "b1024__queue_16384__matched_random_filter__seed_42",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "matched_random",
+    "queue_weight_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 10,
+    "stage": "mechanism",
+    "arm": "matched_random_filter",
+    "run_id": "b1024__queue_16384__matched_random_filter__seed_43",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "matched_random",
+    "queue_weight_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 11,
+    "stage": "mechanism",
+    "arm": "matched_random_filter",
+    "run_id": "b1024__queue_16384__matched_random_filter__seed_44",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "matched_random",
+    "queue_weight_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 12,
+    "stage": "mechanism",
+    "arm": "mass_normalized",
+    "run_id": "b1024__queue_16384__mass_normalized__seed_42",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "match_inbatch",
+    "seed": 42,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 13,
+    "stage": "mechanism",
+    "arm": "mass_normalized",
+    "run_id": "b1024__queue_16384__mass_normalized__seed_43",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "match_inbatch",
+    "seed": 43,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  },
+  {
+    "index": 14,
+    "stage": "mechanism",
+    "arm": "mass_normalized",
+    "run_id": "b1024__queue_16384__mass_normalized__seed_44",
+    "experiment_id": "queue_mechanism_fixed_capacity",
+    "batch_size": 1024,
+    "target_age_steps": 16.0,
+    "memory_queue_size": 16384,
+    "queue_mode": "both_fresh",
+    "queue_filter_mode": "none",
+    "queue_weight_mode": "match_inbatch",
+    "seed": 44,
+    "memberships": [
+      "fixed_capacity_mechanism"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+stage: bridge_training
+model:
+  bridge_dim: 256
+  attention_heads: 4
+  layers: 1
+  feedforward_dim: 512
+  dropout: 0.1
+  pooling: masked_mean
+training:
+  image_size: 224
+  hard_negative_count: 8
+  batch_size: 16
+  gradient_accumulation: 4
+  max_samples_per_source: 250000
+  epochs: 12
+  early_stopping_patience: 3
+  checkpoint_interval: 2
+  learning_rate: 0.0002
+  weight_decay: 0.0001
+  rank_weight: 1.0
+  contrastive_weight: 0.05
+  ranking_margin: 0.2
+  amp: true
+  precision: fp16
+  num_workers: 8
+seed: 42
+resources: {partition: teaching, gpus: 1, cpus: 12, memory: 96G, wall_time: "2-23:59:00"}
+output: results/phase2/bridges

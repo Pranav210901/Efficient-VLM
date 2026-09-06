@@ -1,0 +1,81 @@
+{
+  "status": "COMPLETE",
+  "same_allocation": true,
+  "lora_merged_before_profiling": true,
+  "protocol": {
+    "batch": 64,
+    "warmup": 20,
+    "repeats": 100,
+    "native_bf16": true
+  },
+  "rows": [
+    {
+      "arm": "M_T1",
+      "seed": 42,
+      "selected_epoch": 22,
+      "merged_lora_modules": 0,
+      "merge_max_abs_delta_bf16": 0.0,
+      "adaptation_parameters": 2896389,
+      "median_ms": 9.407143108546734,
+      "q1_ms": 9.385044686496258,
+      "q3_ms": 9.497033664956689,
+      "image_median_ms": 7.665987592190504,
+      "text_median_ms": 1.7644423060119152,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "vision",
+      "seed": 42,
+      "selected_epoch": 16,
+      "merged_lora_modules": 8,
+      "merge_max_abs_delta_bf16": 0.001361258327960968,
+      "adaptation_parameters": 4076037,
+      "median_ms": 9.473129641264677,
+      "q1_ms": 9.46546089835465,
+      "q3_ms": 9.482609340921044,
+      "image_median_ms": 7.72129837423563,
+      "text_median_ms": 1.762455329298973,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "text",
+      "seed": 42,
+      "selected_epoch": 24,
+      "merged_lora_modules": 8,
+      "merge_max_abs_delta_bf16": 0.001019403338432312,
+      "adaptation_parameters": 3682821,
+      "median_ms": 9.632979519665241,
+      "q1_ms": 9.623500285670161,
+      "q3_ms": 9.641082491725683,
+      "image_median_ms": 7.850395981222391,
+      "text_median_ms": 1.7710467800498009,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    },
+    {
+      "arm": "dual",
+      "seed": 42,
+      "selected_epoch": 20,
+      "merged_lora_modules": 16,
+      "merge_max_abs_delta_bf16": 0.0013828687369823456,
+      "adaptation_parameters": 4862469,
+      "median_ms": 9.536361787468195,
+      "q1_ms": 9.52319079078734,
+      "q3_ms": 9.60508268326521,
+      "image_median_ms": 7.63108441606164,
+      "text_median_ms": 1.7598927952349186,
+      "q3_below_9p48": false,
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": "alignment-v4-wave0-1.0",
+  "dry_run": false,
+  "resume_requested": false,
+  "mode": "parallel",
+  "max_total_gpus": 8,
+  "prediction_gate": "PASS",
+  "code_snapshot": "created",
+  "jobs": {
+    "validate": "2222852",
+    "prefetch": "2222853",
+    "oom_smoke": "2222854",
+    "oom_summary": "2222855",
+    "lr_train": "2222862",
+    "lr_eval": "2222863",
+    "lr_select": "2222864",
+    "screen_ledger": "2222865",
+    "screen_train": "2222866",
+    "screen_eval": "2222867",
+    "finalists": "2222868",
+    "select_train": "2222869",
+    "select_eval": "2222870",
+    "lock": "2222871",
+    "report": "2222872"
+  }
+}

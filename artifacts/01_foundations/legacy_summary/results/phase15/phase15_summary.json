@@ -1,0 +1,136 @@
+{
+  "anchor_text": "all_minilm_l6_v2",
+  "anchor_vision": "dinov2_vits14",
+  "mode": "full",
+  "evaluation_root": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase1_multitask_development",
+  "strict_validation": true,
+  "prediction_files": 23,
+  "coverage_exports": 115,
+  "coverage_valid_exports": 115,
+  "config_ids": [
+    "convnext_tiny__all_minilm_l6_v2__baseline",
+    "convnext_tiny__bge_small_en__baseline",
+    "convnext_tiny__distilbert__baseline",
+    "convnext_tiny__e5_small_v2__baseline",
+    "convnextv2_tiny__all_minilm_l6_v2__baseline",
+    "convnextv2_tiny__all_minilm_l6_v2__local_global",
+    "convnextv2_tiny__bge_small_en__baseline",
+    "convnextv2_tiny__distilbert__baseline",
+    "convnextv2_tiny__e5_small_v2__baseline",
+    "dinov2_vits14__all_minilm_l6_v2__baseline",
+    "dinov2_vits14__all_minilm_l6_v2__local",
+    "dinov2_vits14__bge_small_en__baseline",
+    "dinov2_vits14__bge_small_en__local",
+    "dinov2_vits14__distilbert__baseline",
+    "dinov2_vits14__e5_small_v2__baseline",
+    "efficientnet_b0__all_minilm_l6_v2__baseline",
+    "efficientnet_b0__bge_small_en__baseline",
+    "efficientnet_b0__distilbert__baseline",
+    "efficientnet_b0__e5_small_v2__baseline",
+    "swin_tiny__all_minilm_l6_v2__baseline",
+    "swin_tiny__bge_small_en__baseline",
+    "swin_tiny__distilbert__baseline",
+    "swin_tiny__e5_small_v2__baseline"
+  ],
+  "classification_complementarity": {
+    "datasets": [
+      "cifar100_zeroshot",
+      "eurosat_zeroshot",
+      "pets_zeroshot"
+    ],
+    "configurations": 23,
+    "pair_rows": 759,
+    "per_class_rows": 37191,
+    "diagnostic_only": true,
+    "outputs": {
+      "pairwise": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/classification_pairwise.csv",
+      "per_class": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/classification_per_class.csv",
+      "unique_wins": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/classification_unique_wins.csv"
+    },
+    "heatmaps": [
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/cifar100_zeroshot__correct_set_jaccard.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/cifar100_zeroshot__only_a_fraction.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/cifar100_zeroshot__prediction_label_agreement.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/cifar100_zeroshot__margin_spearman.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/eurosat_zeroshot__correct_set_jaccard.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/eurosat_zeroshot__only_a_fraction.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/eurosat_zeroshot__prediction_label_agreement.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/eurosat_zeroshot__margin_spearman.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/pets_zeroshot__correct_set_jaccard.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/pets_zeroshot__only_a_fraction.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/pets_zeroshot__prediction_label_agreement.png",
+      "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/heatmaps/pets_zeroshot__margin_spearman.png"
+    ]
+  },
+  "classification_oracle": {
+    "datasets": [
+      "cifar100_zeroshot",
+      "eurosat_zeroshot",
+      "pets_zeroshot"
+    ],
+    "oracle_subsets": 6075,
+    "per_class_rows": 297675,
+    "marginal_rows": 17526,
+    "interpretation": "diagnostic upper bound \u2014 not deployable",
+    "outputs": {
+      "oracle": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/oracle/classification_oracle.csv",
+      "per_class": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/oracle/classification_oracle_per_class.csv",
+      "marginal": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/oracle/classification_marginal_contributions.csv"
+    }
+  },
+  "cross_task": {
+    "normalisation": "relative_to_task_best",
+    "raw_metrics_are_not_averaged": true,
+    "tasks": [
+      "coco_i2t",
+      "coco_t2i",
+      "cifar100",
+      "pets",
+      "eurosat"
+    ],
+    "configurations": 23,
+    "outputs": {
+      "raw": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_performance_matrix_raw.csv",
+      "normalised": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_performance_matrix_normalised.csv",
+      "configuration_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/configuration_rankings.csv",
+      "vision_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/vision_encoder_rankings.csv",
+      "text_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/text_encoder_rankings.csv",
+      "correlations": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_rank_correlations.csv",
+      "specialisation": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/expert_specialisation.csv"
+    }
+  },
+  "seed_reliability_rows": 4,
+  "methodology": {
+    "json": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/methodology/evaluation_protocol.json",
+    "data_usage": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/methodology/data_usage_table.csv",
+    "leakage_audit": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/methodology/leakage_audit.md",
+    "eurosat_manifest": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/splits/eurosat_split_manifest.csv"
+  },
+  "compositional_status": [
+    {
+      "task": "winoground",
+      "status": "missing",
+      "dataset_path": "",
+      "prediction_files": 0,
+      "allowed_for_training": false,
+      "usage": "evaluation_only",
+      "issues": "dataset is not installed; no automatic download attempted"
+    },
+    {
+      "task": "sugarcrepe",
+      "status": "missing",
+      "dataset_path": "",
+      "prediction_files": 0,
+      "allowed_for_training": false,
+      "usage": "evaluation_only",
+      "issues": "dataset is not installed; no automatic download attempted"
+    }
+  ],
+  "audit_rows_before": 12,
+  "oracle_is_non_deployable": true,
+  "historical_classification_status": "exploratory/development; not untouched final-test evidence",
+  "outputs": [
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/complementarity/retrieval_pairwise.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/oracle/retrieval_oracle.csv"
+  ]
+}

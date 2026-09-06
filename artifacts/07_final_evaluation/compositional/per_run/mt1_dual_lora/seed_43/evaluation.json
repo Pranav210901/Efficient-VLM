@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "kind": "student",
+  "id": "mt1_dual_lora",
+  "label": "M_T1 C4 dual-LoRA PEFT",
+  "builder": "freezeshift",
+  "seed": 43,
+  "selected_epoch": 23,
+  "checkpoint": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_43/inference.pt",
+  "expected_inference_trainable_parameters": 4862469,
+  "node": "aisurrey38.surrey.ac.uk",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "precision": "native_bf16_autocast",
+  "torch_version": "2.8.0+cu128",
+  "checkpoint_sha256": "6fef8282604fbfa3ee4977568febdf594fe8271cd6991eb36187cf3186a6f131",
+  "checkpoint_fingerprint": "9464f26c1951ef3c8c203ccf15b6181a4af9c1912093c7701c121c3cdc16a32d",
+  "config_hash": "fb0c52c92ca1bb7adf4aaf70eb55c94b24ecd6f33fe28612bb1cddef30a8a735",
+  "inference_trainable_parameters": 4862469,
+  "full_stack_inference_parameters": 49162629,
+  "query_side_inference_parameters": 24238849,
+  "metrics": {
+    "sugarcrepe": {
+      "overall_accuracy": 0.783384382724762,
+      "positive_score": 0.5753943769040779,
+      "negative_score": 0.532685193165119,
+      "score_margin": 0.042709183738958885,
+      "accuracy/add_att": 0.6170520186424255,
+      "accuracy/add_obj": 0.8026188015937805,
+      "accuracy/replace_att": 0.8299492597579956,
+      "accuracy/replace_obj": 0.9279661178588867,
+      "accuracy/replace_rel": 0.7254623174667358,
+      "accuracy/swap_att": 0.642642617225647,
+      "accuracy/swap_obj": 0.6816326379776001
+    }
+  },
+  "tasks": [
+    "sugarcrepe"
+  ],
+  "manifest_sha256": "9c60d66350a65f9f77ddb45e8f1b6993583bcd80eb8e451b2d6244b72f3aed02",
+  "validation_status": "READY",
+  "no_training_performed": true
+}

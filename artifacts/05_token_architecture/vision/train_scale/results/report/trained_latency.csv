@@ -1,0 +1,6 @@
+candidate,median_ms,q1_ms,q3_ms,iqr_ms,node,gpu_model,precision,delta_from_contemporaneous_cls_ms,q3_below_9p48,inference_trainable_parameters,teacher_heads_excluded
+cls_baseline,8.548598736524582,8.384337648749352,8.563221665099263,0.1788840163499117,aisurrey38.surrey.ac.uk,NVIDIA RTX PRO 6000 Blackwell Server Edition,native_bf16,0.0,True,,
+C2,8.934145793318748,8.759602438658476,8.943355642259121,0.18375320360064507,aisurrey38.surrey.ac.uk,NVIDIA RTX PRO 6000 Blackwell Server Edition,native_bf16,0.38554705679416656,True,2203524.0,True
+C3,8.765888400375843,8.748835418373346,8.934250334277749,0.18541491590440273,aisurrey38.surrey.ac.uk,NVIDIA RTX PRO 6000 Blackwell Server Edition,native_bf16,0.21728966385126114,True,1842948.0,True
+C4,8.986582513898611,8.977224817499518,9.16695361956954,0.18972880207002163,aisurrey38.surrey.ac.uk,NVIDIA RTX PRO 6000 Blackwell Server Edition,native_bf16,0.43798377737402916,True,2730628.0,True
+C5,8.756460156291723,8.750063367187977,8.762671379372478,0.012608012184500694,aisurrey38.surrey.ac.uk,NVIDIA RTX PRO 6000 Blackwell Server Edition,native_bf16,0.20786141976714134,True,2663044.0,True

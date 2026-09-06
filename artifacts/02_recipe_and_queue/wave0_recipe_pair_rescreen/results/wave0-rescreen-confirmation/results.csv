@@ -1,0 +1,10 @@
+experiment_id,text_encoder,seed,dev_R@1
+dinov3_vits16__all_minilm_l6_v2,all_minilm_l6_v2,42,0.3759716749191284
+dinov3_vits16__all_minilm_l6_v2,all_minilm_l6_v2,43,0.3703323155641556
+dinov3_vits16__all_minilm_l6_v2,all_minilm_l6_v2,44,0.3734111785888672
+dinov3_vits16__bge_small_en,bge_small_en,42,0.38159023225307465
+dinov3_vits16__bge_small_en,bge_small_en,43,0.3828095495700836
+dinov3_vits16__bge_small_en,bge_small_en,44,0.38345031440258026
+dinov3_vits16__e5_small_v2,e5_small_v2,42,0.38897036015987396
+dinov3_vits16__e5_small_v2,e5_small_v2,43,0.3887498825788498
+dinov3_vits16__e5_small_v2,e5_small_v2,44,0.3887697905302048

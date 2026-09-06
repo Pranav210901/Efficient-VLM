@@ -1,0 +1,53 @@
+{
+  "status": "PARTIAL",
+  "operating_point": {
+    "label": "M-T1 frozen-encoder endpoint",
+    "flickr_validation_mean_R1_percent": 54.487,
+    "prior_study_queue_free_mean_R1_percent": 37.321
+  },
+  "prior_study_staleness_share_percent": 31.79,
+  "rows": [
+    {
+      "target_age_steps": 16,
+      "seed": 42,
+      "none_control": 0.45515570044517517,
+      "stale_queue": 0.2302336022257805,
+      "fresh_queue": null
+    },
+    {
+      "target_age_steps": 16,
+      "seed": 43,
+      "none_control": 0.453015461564064,
+      "stale_queue": 0.23609300702810287,
+      "fresh_queue": null
+    },
+    {
+      "target_age_steps": 16,
+      "seed": 44,
+      "none_control": 0.45805637538433075,
+      "stale_queue": 0.22703475505113602,
+      "fresh_queue": null
+    },
+    {
+      "target_age_steps": 64,
+      "seed": 42,
+      "none_control": 0.45515570044517517,
+      "stale_queue": 0.21201704442501068,
+      "fresh_queue": null
+    },
+    {
+      "target_age_steps": 64,
+      "seed": 43,
+      "none_control": 0.453015461564064,
+      "stale_queue": 0.21133624762296677,
+      "fresh_queue": null
+    },
+    {
+      "target_age_steps": 64,
+      "seed": 44,
+      "none_control": 0.45805637538433075,
+      "stale_queue": 0.21141810715198517,
+      "fresh_queue": null
+    }
+  ]
+}

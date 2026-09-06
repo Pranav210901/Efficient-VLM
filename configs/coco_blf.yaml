@@ -1,0 +1,7 @@
+extends: experiment_blf.yaml
+
+data:
+  train_csv: data/train.csv
+  val_csv: data/val.csv
+  image_root: .
+

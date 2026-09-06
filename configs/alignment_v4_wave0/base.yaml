@@ -1,0 +1,14 @@
+extends: ../alignment_v4/base.yaml
+
+# Wave 0 changes training recipe axes only. Student, parameter budgets,
+# development split, image resolution, epoch count and evaluation remain frozen.
+recipe:
+  adapter: false
+  distillation: false
+  lora: false
+  loss_type: infonce_queue
+
+training:
+  batch_size: 512
+  memory_queue_size: 16384
+

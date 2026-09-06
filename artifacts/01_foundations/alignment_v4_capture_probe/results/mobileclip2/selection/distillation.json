@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "proceed": false,
+  "teacher_id": "mobileclip2_s0_dfndr2b",
+  "teacher_R@1": 0.5298200398683548,
+  "teacher_anchor_split": "sealed_coco_val_5000",
+  "probe_split": "coco_dev_5000",
+  "baseline_R@1": 0.1330356765538454,
+  "baseline_seed_values": [
+    0.13321583718061447,
+    0.13285551592707634
+  ],
+  "baseline_seed_std": 0.0002547856017824502,
+  "distilled_R@1": 0.22357820346951485,
+  "distilled_seed_values": [
+    0.2234780713915825,
+    0.2236783355474472
+  ],
+  "distilled_seed_std": 0.00014160814264054008,
+  "delta_R@1": 0.09054252691566944,
+  "capture_fraction": 0.22819076376732442,
+  "distillation_strength": 1.0,
+  "viable_threshold_R@1": 0.3,
+  "nonviable_threshold_R@1": 0.22,
+  "decision": "INCONCLUSIVE_MIDDLE",
+  "caveat": "Teacher anchor is measured on sealed COCO-val while the probe is evaluated on COCO-dev-5000."
+}

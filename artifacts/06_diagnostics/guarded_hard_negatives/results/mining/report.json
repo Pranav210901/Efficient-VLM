@@ -1,0 +1,43 @@
+{
+  "status": "INFEASIBLE_UNDER_PREREGISTERED_GUARD",
+  "training_authorized": false,
+  "owners": 113287,
+  "unique_captions": 566606,
+  "duplicate_caption_rows_removed": 136,
+  "candidate_depth": 64,
+  "negatives_per_owner": 8,
+  "queries_with_eight": 829,
+  "queries_without_eight": 112458,
+  "exclusion": {
+    "cross_modal_total": 7198646,
+    "caption_total": 7038382,
+    "union_total": 7224404,
+    "union_rate": 0.9964189403903361
+  },
+  "artifacts": {
+    "naive_graph": {
+      "path": "results/guarded_hard_negative_study/mining/naive_graph.csv",
+      "sha256": "51530d7d107b86fa565ff25a7c0501790ed454b8707430506e460f37e20c7c21"
+    },
+    "guarded_graph": {
+      "path": "results/guarded_hard_negative_study/mining/guarded_graph.csv",
+      "sha256": "ae1d4276dd26df15f936ad5a5e19888fa1da666fcff73d3a1aac3be84a156148"
+    },
+    "diagnostics": {
+      "path": "results/guarded_hard_negative_study/mining/exclusion_diagnostics.csv",
+      "sha256": "3ba50ec97a20d19110b40c4e65ee0f924bca6b4ad67166f1edf1c599be7568c5"
+    }
+  },
+  "validation_sha256": "dbb9c1fd3d5f4e81da6e13ac3f5876df6b08e2efbf70a81b86aa6afc1257663c",
+  "freeze_receipt_sha256": "19062d614e41866bf6411bc5e2e0d373948affecf3a59d55b6ecb91483a559ac",
+  "mining_identity": "f4f539284580d00be9ec921f272007256c101751adec65bb51e0ec4c9bf6666f",
+  "embedding_sha256": {
+    "42": "aaa2c419f7a7fc01966529035b6528ea97edc908aa35f57d3821c3ac74d9fa48",
+    "43": "a368c48242cf2e100b597cf191aa0cd07eb6e8ad38308ca3d296ab0c015dd92d",
+    "44": "09276579917762ba5e5a5f36161fc8acdaec8cab99e24e84ebfefa300aa25f8b"
+  },
+  "node": "aisurrey38.surrey.ac.uk",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "precision": "native_bf16",
+  "flickr_test_used": false
+}

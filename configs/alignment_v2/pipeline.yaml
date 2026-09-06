@@ -1,0 +1,42 @@
+output_root: results/alignment_v2
+
+references:
+  # Checkpoint-native OpenAI reference: the QuickGELU architecture matches the
+  # pretrained checkpoint exactly.
+  - id: openclip_vit_b32_quickgelu_openai
+    family: openclip
+    config: configs/alignment_v2/reference_openclip_vit_b32_quickgelu.yaml
+    model:
+      name: ViT-B-32-quickgelu
+      pretrained: openai
+
+unimodal_experiments:
+  # Canonical Alignment v2 experiments use a 12-epoch ceiling with early
+  # stopping.
+  - id: dinov2_minilm_residual_mp
+    base_config: configs/alignment_v2/unimodal_base.yaml
+    seeds: [42, 43, 44]
+    overrides:
+      model:
+        vision_encoder: dinov2_vits14
+        text_encoder: all_minilm_l6_v2
+
+  - id: convnext_minilm_residual_mp
+    base_config: configs/alignment_v2/unimodal_base.yaml
+    seeds: [42, 43, 44]
+    overrides:
+      model:
+        vision_encoder: convnext_tiny
+        text_encoder: all_minilm_l6_v2
+        shared_dim: 384
+
+  - id: efficientnet_bge_residual_mp
+    base_config: configs/alignment_v2/unimodal_base.yaml
+    seeds: [42, 43, 44]
+    overrides:
+      model:
+        vision_encoder: efficientnet_b0
+        text_encoder: bge_small_en
+        shared_dim: 384
+      training:
+        batch_size: 192

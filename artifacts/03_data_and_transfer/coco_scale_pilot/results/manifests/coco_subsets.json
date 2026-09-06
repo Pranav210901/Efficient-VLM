@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE",
+  "source_csv": "data/splits/alignment_v3_recovery/coco_train_minus_dev.csv",
+  "source_sha256": "fdcce36cd30229477c589325f871f11e438357010177dcd3da8700fee2960f9b",
+  "source_images": 113287,
+  "source_captions": 566742,
+  "subset_seed": 20260728,
+  "image_level_sampling": true,
+  "nested": true,
+  "subsets": [
+    {
+      "percentage": 25,
+      "csv": "data/splits/data_scale_pilot/coco_train_025pct.csv",
+      "csv_sha256": "06bc247d95556afc165cecd5347ed15592cb9ffff1de1181da7a032d4c57020c",
+      "images": 28321,
+      "captions": 141668,
+      "image_set_sha256": "01f98b17c7f21b67fcbc2886845d78b88864760144e0c54edadfce0f445eeb4b",
+      "contains_previous_subset": true
+    },
+    {
+      "percentage": 50,
+      "csv": "data/splits/data_scale_pilot/coco_train_050pct.csv",
+      "csv_sha256": "6e5fd584e32682f454eff6cb347f4957c7f53af6457d44cbadf7b8d1382596f3",
+      "images": 56643,
+      "captions": 283353,
+      "image_set_sha256": "602c558d0fc2025c56a268ba4bc803959dab9d3bed41c1daa358ef96230bdf4b",
+      "contains_previous_subset": true
+    },
+    {
+      "percentage": 75,
+      "csv": "data/splits/data_scale_pilot/coco_train_075pct.csv",
+      "csv_sha256": "9842e2c1f5d83e628cb18b0b24bcf5677569701a7b057ec0e2a7e70d9075fa10",
+      "images": 84965,
+      "captions": 425052,
+      "image_set_sha256": "bcc8263c8647c8f2203aba12a9dad200d38fc4ffda04da729ca4ea5c28396688",
+      "contains_previous_subset": true
+    },
+    {
+      "percentage": 100,
+      "csv": "data/splits/data_scale_pilot/coco_train_100pct.csv",
+      "csv_sha256": "4a3b7e5c7445db4364a6515565bbdc16bbaf0d7759d46183f64ce3f938b6b471",
+      "images": 113287,
+      "captions": 566742,
+      "image_set_sha256": "5ace19a458994dd5ddd0c58afcea1a02820536176d308022530f09eb7fe0471b",
+      "contains_previous_subset": true
+    }
+  ]
+}

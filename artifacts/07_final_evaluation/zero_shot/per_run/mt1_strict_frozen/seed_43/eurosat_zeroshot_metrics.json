@@ -1,0 +1,11 @@
+{
+  "dataset_split_id": "eurosat_deterministic_stratified_test_reserved",
+  "split": "stored deterministic stratified test partition",
+  "top1_accuracy": 0.2567901313304901,
+  "top5_accuracy": 0.6399999856948853,
+  "macro_f1": 0.19345187856911264,
+  "balanced_accuracy": 0.2595777777777778,
+  "mean_confidence": 0.5969653129577637,
+  "classification_margin": -0.24174168705940247,
+  "top1_margin": 0.4020302891731262
+}

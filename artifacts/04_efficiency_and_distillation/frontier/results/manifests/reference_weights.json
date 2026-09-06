@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE",
+  "open_clip_version": "3.3.0",
+  "upstream_revisions_recorded_at_fetch": false,
+  "entries": [
+    {
+      "reference_id": "mobileclip2_s0_dfndr2b",
+      "model_name": "MobileCLIP2-S0",
+      "pretrained": "dfndr2b",
+      "open_clip_version": "3.3.0",
+      "upstream_revision_recorded_at_fetch": false,
+      "files": [
+        {
+          "path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/.cache/huggingface/models--timm--MobileCLIP2-S0-OpenCLIP/snapshots/095906d28bf54d7584dc411e8ffe448f34289e05/open_clip_model.safetensors",
+          "bytes": 299663092,
+          "sha256": "ab91a1a0c4330d6b1913e24d5035dfdea15423316aaec649610c6b1c6ddd0e95"
+        }
+      ],
+      "aggregate_sha256": "0b40265ebbe2bf7720248d68ae4d573494de3bbb529c4164fdb0824310879df4"
+    },
+    {
+      "reference_id": "siglip2_vit_b32_256_webli",
+      "model_name": "ViT-B-32-SigLIP2-256",
+      "pretrained": "webli",
+      "open_clip_version": "3.3.0",
+      "upstream_revision_recorded_at_fetch": false,
+      "files": [
+        {
+          "path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/.cache/huggingface/models--timm--ViT-B-32-SigLIP2-256/snapshots/cd1efb47643f2794413dd79ef24397c175032780/open_clip_model.safetensors",
+          "bytes": 1507459216,
+          "sha256": "7cdccf256ee0e4a9908c365f8e1c88d5db171980a3350c214f5221d50f8d9927"
+        }
+      ],
+      "aggregate_sha256": "93811e0051f69855cd27e26f71115355377a08ad0e59e74212edbcbb35ff60f5"
+    },
+    {
+      "reference_id": "openclip_vit_b32_quickgelu_openai",
+      "model_name": "ViT-B-32-quickgelu",
+      "pretrained": "openai",
+      "open_clip_version": "3.3.0",
+      "upstream_revision_recorded_at_fetch": false,
+      "files": [
+        {
+          "path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/.cache/huggingface/models--timm--vit_base_patch32_clip_224.openai/snapshots/a6f597a30f7b82c51704746581f9a4e41421e878/open_clip_model.safetensors",
+          "bytes": 605143284,
+          "sha256": "e6d1bd7789aa45192b3bf90570a789b478bae1b74ebcce7eddd908e83a2b7c31"
+        }
+      ],
+      "aggregate_sha256": "0635e2cbc50884cdb46400ff0821a329225ca8fc94f050673bf1254c5fab408c"
+    }
+  ]
+}

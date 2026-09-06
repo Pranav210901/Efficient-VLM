@@ -1,0 +1,55 @@
+rank,tier,short_name,year,identifier,project_area,why_it_ranks_here,source_type,verification_level,credibility,recency,origin
+1,1,"Attention Please! Revisiting Attentive Probing",2025,arXiv:2506.10178,token aggregation,Same object and same accuracy-vs-parameter framing on frozen features; closest threat to the current contribution,preprint primary,abstract_fetched_verbatim,4,5,new_2026-08-06
+2,1,SigLIP 2 / MAP head,2025,arXiv:2502.14786,token aggregation,MAP head is a line-for-line match to LearnedQueryTextPool; both towers pooled this way,preprint primary + implementation,search_summary_plus_impl,4,5,new_2026-08-06
+3,1,SAIL / Harnessing Frozen Unimodal Encoders,2024,arXiv:2409.19425,frozen alignment,Direct competitor; frozen DINOv2 + text encoder with trained projectors,peer-reviewed primary,full_text_and_supplement,5,5,prior_corpus
+4,1,Freeze-Align,2025,see prior corpus 01,frozen alignment,Direct competitor establishing the frozen-tower alignment method,peer-reviewed primary,selected_fulltext_sections,5,5,prior_corpus
+5,1,ShareLock,2026,see prior corpus 03,frozen alignment,Direct competitor; most recent in the frozen-alignment line,peer-reviewed primary,primary_abstract,5,5,prior_corpus
+6,1,STRUCTURE,2025,see prior corpus 07,frozen alignment,Direct competitor,peer-reviewed primary,primary_abstract,5,5,prior_corpus
+7,1,CoCa attentional pooler,2022,arXiv:2205.01917,token aggregation,Establishes learned-query pooling inside a contrastive image-text model,peer-reviewed primary,search_summary,5,3,new_2026-08-06
+8,1,Set Transformer (PMA),2018,arXiv:1810.00825,token aggregation,Origin of pooling-by-learned-seed; k=1 is the project's exact config,peer-reviewed primary,search_summary,5,2,new_2026-08-06
+9,2,Sentence-BERT,2019,arXiv:1908.10084,text aggregation,Justifies the masked-mean T0 baseline and predicts a small text-side gain,peer-reviewed primary,search_summary,5,2,new_2026-08-06
+10,2,Flamingo (tanh gating),2022,arXiv:2204.14198,gated adaptation,Closest precedent for zero-init gating onto a frozen backbone,peer-reviewed primary,search_summary,5,3,new_2026-08-06
+11,2,LiT,2022,see prior corpus 04,frozen alignment,Locked-tower precursor,peer-reviewed primary,primary_abstract,5,3,prior_corpus
+12,2,Cross-Batch Memory (XBM),2020,see prior corpus 15,memory queue,Direct basis for CrossBatchMemory and the projector-drift concern,peer-reviewed primary,full_text_and_supplement,5,2,prior_corpus
+13,2,Reproducible scaling laws for CLIP,2022,arXiv:2212.07143,data scaling,Quantifies the data-scale explanation for the 26-38pp reference gap,peer-reviewed primary,search_summary,5,3,new_2026-08-06
+14,2,E5 text embeddings,2022,arXiv:2212.03533,text encoder,Provenance of the e5_small_v2 arm and its passage prefix,peer-reviewed primary,search_summary,5,3,new_2026-08-06
+15,2,UniCL,2022,see prior corpus 12,multi-positive loss,Basis for multi-positive contrastive keyed on image id,peer-reviewed primary,selected_fulltext_sections,5,3,prior_corpus
+16,2,Supervised Contrastive Learning,2020,see prior corpus 13,multi-positive loss,Multi-positive loss foundation,peer-reviewed primary,selected_fulltext_sections,5,2,prior_corpus
+17,2,SigLIP (loss),2023,see prior corpus 10,loss,Sigmoid loss variant implemented in the codebase,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+18,2,MoCo,2020,see prior corpus 16,memory queue,Queue consistency foundation,peer-reviewed primary,primary_abstract,5,2,prior_corpus
+19,2,CaiT / LayerScale,2021,arXiv:2103.17239,gated adaptation,Zero-init per-channel residual gating precedent,peer-reviewed primary,search_summary,5,2,new_2026-08-06
+20,RETRACTED,Attentive Multi-Layer Fusion for ViTs,2026,arXiv:2601.09322,cross-layer fusion (NOT token aggregation),RETRACTED 2026-08-06 - quotation was fabricated and source never fetched; paper concerns fusion across ViT layers not spatial pooling; low relevance to this project,preprint primary,RETRACTED_never_fetched,0,5,new_2026-08-06
+21,2,Benchmark Granularity / Robustness for ITR,2024,arXiv:2407.15239,error decomposition,Closest published analogue to probe1 failure taxonomy,preprint primary,search_summary,3,4,new_2026-08-06
+22,2,MobileCLIP2,2025,see prior corpus 23,distillation,The project's actual teacher,preprint primary,primary_abstract,3,5,prior_corpus
+23,3,MobileCLIP,2024,see prior corpus 22,distillation,Teacher lineage and efficiency reference,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+24,3,LLaMA-Adapter (zero-init attn),2023,arXiv:2303.16199,gated adaptation,Zero-init gating in adapter form,peer-reviewed primary,search_summary,5,4,new_2026-08-06
+25,3,ASIF,2023,see prior corpus 05,frozen alignment,Training-free alignment control,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+26,3,dino.txt,2024,see prior corpus 06,frozen alignment,Frozen-DINO alignment - closest vision-side analogue,preprint primary,primary_abstract,3,4,prior_corpus
+27,3,FFF,2024,see prior corpus 11,loss and captions,Loss and caption handling,peer-reviewed primary,selected_fulltext_sections,5,4,prior_corpus
+28,3,TinyCLIP,2023,see prior corpus 19,distillation,Distillation baseline,peer-reviewed primary,selected_fulltext_sections,5,4,prior_corpus
+29,3,CLIP-KD,2024,see prior corpus 20,distillation,Distillation baseline,peer-reviewed primary,selected_fulltext_sections,5,4,prior_corpus
+30,3,Platonic Representation Hypothesis,2024,see prior corpus 08,representation theory,Theoretical justification for aligning independently trained encoders,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+31,3,Do Vision and Language Encoders Represent Similarly,2024,see prior corpus 09,representation diagnostics,Supports encoder-pair selection,preprint primary,primary_abstract,3,4,prior_corpus
+32,3,Adaptive Cross Batch Normalization,2023,see prior corpus 17,queue drift,Drift correction for queues,preprint primary,full_text,3,4,prior_corpus
+33,3,Hard Negative Mixing,2020,see prior corpus 18,negative scaling,Basis for the guarded hard-negative study,peer-reviewed primary,primary_abstract,5,2,prior_corpus
+34,3,CLIP-Lite,2023,see prior corpus 14,negative efficiency,Negative efficiency,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+35,3,An Inverse Scaling Law for CLIP Training,2023,arXiv:2305.07017,data scaling / resolution,Larger encoders tolerate shorter sequences - relevant to resolution arms,preprint primary,search_summary,3,4,new_2026-08-06
+36,3,Dataset Growth,2024,arXiv:2405.18347,data scaling,Curation-over-volume evidence for the CC3M mixing decision,preprint primary,search_summary,3,4,new_2026-08-06
+37,3,Filter & Align,2023,arXiv:2312.06726,data scaling,Data curation,preprint primary,search_summary,3,4,new_2026-08-06
+38,3,VeCLIP,2023,arXiv:2310.07699,data scaling,Caption quality over volume,preprint primary,search_summary,3,4,new_2026-08-06
+39,3,Differential-informed Sample Selection,2025,arXiv:2507.12998,data scaling,Sample efficiency; curation beats raw volume,preprint primary,search_summary,3,5,new_2026-08-06
+40,3,MCAD,2024,see prior corpus 24,retrieval distillation,Retrieval-specific distillation,peer-reviewed primary,primary_abstract,5,4,prior_corpus
+41,3,Bi-Encoder Cascades,2023,see prior corpus 25,retrieval cascade,Systems baseline,peer-reviewed workshop,primary_abstract,4,4,prior_corpus
+42,3,Leaner and Faster two-stage compression,2022,arXiv:2204.13913,efficiency,Lightweight text-image retrieval compression baseline,preprint primary,search_summary,3,3,new_2026-08-06
+43,3,DIME-FM,2023,see prior corpus 21,distillation,Distillation,preprint primary,primary_abstract,3,4,prior_corpus
+44,4,MoVA,2024,see prior corpus 26,multi-encoder,Multiple vision encoders - context only,preprint primary,primary_abstract,3,4,prior_corpus
+45,4,MOVE,2025,see prior corpus 27,multi-encoder,Multiple vision encoders - context only,preprint primary,primary_abstract,3,5,prior_corpus
+46,4,MoDE CLIP,2024,see prior corpus 28,routing,Data experts and routing - relevant only if routing is resumed,peer-reviewed primary,selected_fulltext_sections,5,4,prior_corpus
+47,4,SCOPE,2025,see prior corpus 29,routing,Instance-level encoder routing - relevant only if routing is resumed,OpenReview primary,primary_abstract,3,5,prior_corpus
+48,4,Comparative Analysis of Pooling Mechanisms in LLMs,2024,arXiv:2411.14654,text aggregation,Systematic pooling comparison; supporting evidence,preprint primary,search_summary,3,4,new_2026-08-06
+49,4,Preregistering NLP Research,2021,see prior corpus 32,methodology,Direct precedent for the preregistration protocol,peer-reviewed primary,selected_fulltext_sections,5,3,prior_corpus
+50,4,Underspecification,2021,see prior corpus 33,methodology,Justifies multi-seed and sealed-test discipline,peer-reviewed primary,primary_abstract,5,3,prior_corpus
+51,4,Sources of Irreproducibility,2022,see prior corpus 31,reproducibility,Methodology framing,scholarly review,primary_abstract,4,3,prior_corpus
+52,4,NeurIPS reproducibility programme,2021,see prior corpus 30,reproducibility,Methodology framing,peer-reviewed primary,primary_abstract,5,3,prior_corpus
+53,4,EBind,2025,arXiv:2511.14229,frozen alignment,Frozen encoders + projectors for space binding; peripheral,preprint primary,search_summary,3,5,new_2026-08-06
+54,4,Composed Image Retrieval survey,2025,arXiv:2502.18495,diagnostics,Survey - framing only,preprint primary,search_summary,3,5,new_2026-08-06

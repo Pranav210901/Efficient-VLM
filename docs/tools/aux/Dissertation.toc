@@ -1,0 +1,74 @@
+\contentsline {chapter}{Declaration of Originality}{ii}{Doc-Start}%
+\contentsline {chapter}{Word Count}{iii}{chapter*.1}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.2}%
+\contentsline {chapter}{List of tables}{viii}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Research question}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Contributions}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Thesis claim}{2}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction and review question}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Review method and scope}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Jointly pretrained vision--language models}{3}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}CLIP and sigmoid-objective models}{3}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Compact joint training and distillation}{4}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Frozen and locked alignment}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Objectives, negatives, and historical embeddings}{5}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Why memory banks are attractive}{5}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}The unresolved cross-modal question}{5}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}False negatives}{6}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Representation compatibility and the modality gap}{6}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Reading information from frozen tokens}{7}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Parameter-efficient adaptation}{7}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Token reduction and deployment efficiency}{8}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Data scale, curation, and evaluation comparability}{8}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Data governance, inherited bias, and licensing}{9}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Synthesis: what is established and what remains open}{9}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Position of the dissertation}{11}{section.2.13}%
+\contentsline {section}{\numberline {2.14}Limitations of the literature evidence}{11}{section.2.14}%
+\contentsline {section}{\numberline {2.15}Conclusion}{11}{section.2.15}%
+\contentsline {chapter}{\numberline {3}Methodology}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Research design}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Models}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Formulation}{13}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Data and split policy}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Metrics and selection}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Queue factorial}{15}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Reproducibility and integrity}{16}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Results}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Foundations and the completed adaptive branch}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Recipe diagnosis}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Cross-batch memory damage}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Data coverage and transfer}{19}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Measurement corrections, resolution, and distillation}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Token aggregation}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Fully frozen-backbone endpoint}{20}{section.4.7}%
+\contentsline {section}{\numberline {4.8}FreezeShift upper bound}{20}{section.4.8}%
+\contentsline {section}{\numberline {4.9}TokenShift profile}{20}{section.4.9}%
+\contentsline {section}{\numberline {4.10}TokenShift accuracy closure}{21}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Reference and peer comparison}{21}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Where the residual gap lies}{22}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Sealed final evaluation}{22}{section.4.13}%
+\contentsline {chapter}{\numberline {5}Discussion}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Answer to the research question}{24}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Why the queue result matters}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}What token aggregation demonstrates}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Adaptation versus freezing}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Measurement as a research result}{25}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Why TokenShift did not move the frontier}{25}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Limitations and threats to validity}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Validation selection and the sealed test}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Scale and generality}{26}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Post-observation analyses}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Mechanism identification}{26}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Latency portability}{26}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Literature coverage}{27}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Efficiency and governance coverage}{27}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Reproducibility, ethics, and responsible reporting}{28}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusion}{29}{chapter.8}%
+\contentsline {chapter}{Bibliography}{30}{chapter.8}%
+\contentsline {chapter}{Appendices}{33}{chapter*.16}%
+\contentsline {chapter}{\numberline {A}Experiment inventory}{33}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Final evidence paths}{34}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Search and source audit}{35}{appendix.C}%

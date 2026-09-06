@@ -1,0 +1,36 @@
+{
+  "status": "COMPLETE",
+  "test_split_used": false,
+  "selected_resolution": 224,
+  "selection_rule_path": "configs/resolution_arm/selection.yaml",
+  "selection_applied_before_test_split_evaluation": true,
+  "scientific_attribution": "DINOv3's native dynamic-resolution rotary positional encoding was used without modifying or retraining the frozen backbone. Accuracy changes therefore measure reduced spatial detail without a learned absolute-position interpolation mismatch.",
+  "rows": [
+    {
+      "resolution": 224,
+      "patch_tokens": 196,
+      "total_transformer_tokens": 201,
+      "flickr_validation_mean_R1": 0.4196252375841141,
+      "flickr_validation_sd_R1": 0.007127248314757561,
+      "flickr_validation_min_R1": 0.41479289531707764,
+      "flickr_validation_max_R1": 0.4278106391429901,
+      "image_latency_median_ms": 7.146184332668781,
+      "full_stack_latency_median_ms": 8.546178694814444,
+      "image_flops": 9397685376.0,
+      "seed43_image_latency_median_ms": 7.146044168621302
+    },
+    {
+      "resolution": 192,
+      "patch_tokens": 144,
+      "total_transformer_tokens": 149,
+      "flickr_validation_mean_R1": 0.4024983545144399,
+      "flickr_validation_sd_R1": 0.004766835104497174,
+      "flickr_validation_min_R1": 0.3983234614133835,
+      "flickr_validation_max_R1": 0.4076923131942749,
+      "image_latency_median_ms": 5.670339800417423,
+      "full_stack_latency_median_ms": 7.087393663823605,
+      "image_flops": 6823251072.0,
+      "seed43_image_latency_median_ms": 5.674070678651333
+    }
+  ]
+}

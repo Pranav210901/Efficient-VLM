@@ -1,0 +1,4 @@
+id,statement,observed,outcome,if_wrong
+replication_anchor,Lands within 2pp of 17.02% but below it (15.02-17.02%).,0.17016710340976715,hit,
+wave0_winner,"sigmoid / captions=all, at either batch=1024 or batch=2048. Counts as a hit if the winner is sigmoid / captions=all at either of those batch sizes.",infonce_no_queue__captions_all__b1024__lr_3p0,miss,"If an infonce arm wins, the v3/v4 recipe was already near-optimal on the loss axis and the ceiling is less likely to be a recipe artifact. If sigmoid wins at batch=512, the batch effect is weaker than the v3/v4 gap suggested."
+batch_effect,"Positive, between 0 and 2pp.",0.008441619575023651,hit,

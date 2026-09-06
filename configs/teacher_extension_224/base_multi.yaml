@@ -1,0 +1,26 @@
+extends: base.yaml
+
+recipe:
+  # Independent projection paths avoid averaging incompatible 512-d and
+  # 768-d teacher embedding geometries.
+  teacher_dims:
+    mobileclip2: 512
+    siglip2: 768
+
+distillation:
+  weighting: equal_untuned_default
+  teachers:
+    - name: mobileclip2
+      teacher_id: mobileclip2_s0_dfndr2b
+      cache_path: results/alignment_wave1/mobileclip2/teacher_cache/mobileclip2_s0_dfndr2b.pt
+      weight: 0.5
+    - name: siglip2
+      teacher_id: siglip2_vit_b32_256_webli
+      cache_path: results/alignment_wave1/siglip2/teacher_cache/siglip2_vit_b32_256_webli.pt
+      weight: 0.5
+
+provenance:
+  parameter_contract:
+    params_trainable_inference: 1478403
+    params_trainable_training: 2461443
+    params_training_only: 983040

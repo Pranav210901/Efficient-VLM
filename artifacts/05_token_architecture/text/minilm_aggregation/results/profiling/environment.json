@@ -1,0 +1,7 @@
+{
+  "python": "3.9.25",
+  "torch": "2.8.0+cu128",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16"
+}

@@ -1,0 +1,21 @@
+{
+  "normalisation": "relative_to_task_best",
+  "raw_metrics_are_not_averaged": true,
+  "tasks": [
+    "coco_i2t",
+    "coco_t2i",
+    "cifar100",
+    "pets",
+    "eurosat"
+  ],
+  "configurations": 23,
+  "outputs": {
+    "raw": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_performance_matrix_raw.csv",
+    "normalised": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_performance_matrix_normalised.csv",
+    "configuration_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/configuration_rankings.csv",
+    "vision_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/vision_encoder_rankings.csv",
+    "text_rankings": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/text_encoder_rankings.csv",
+    "correlations": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/task_rank_correlations.csv",
+    "specialisation": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/phase15/cross_task/expert_specialisation.csv"
+  }
+}

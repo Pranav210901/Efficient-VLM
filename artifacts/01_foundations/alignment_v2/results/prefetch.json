@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETED",
+  "models": [
+    "openclip:ViT-B-32-quickgelu:openai",
+    "unimodal:dinov2_minilm_residual_mp",
+    "unimodal:convnext_minilm_residual_mp",
+    "unimodal:efficientnet_bge_residual_mp"
+  ],
+  "unique_models": 4
+}

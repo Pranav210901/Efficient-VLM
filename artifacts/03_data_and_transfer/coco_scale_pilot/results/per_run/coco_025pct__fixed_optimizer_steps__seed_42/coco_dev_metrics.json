@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "dataset_id": "coco_dev",
+  "dataset_sha256": "071af9ce5fdcedd1fd0b3b51cec0e1ebbcb3928589bc3309e40040a31dabf714",
+  "percentage": 25,
+  "schedule": "fixed_optimizer_steps",
+  "memberships": [
+    "fixed_update"
+  ],
+  "index": 0,
+  "seed": 42,
+  "run_id": "coco_025pct__fixed_optimizer_steps__seed_42",
+  "i2t_R@1": 0.2994000017642975,
+  "i2t_R@5": 0.5870000123977661,
+  "i2t_R@10": 0.7188000082969666,
+  "mean_rank_i2t": 16.666000366210938,
+  "median_rank_i2t": 4.0,
+  "t2i_R@1": 0.21206669509410858,
+  "t2i_R@5": 0.47547078132629395,
+  "t2i_R@10": 0.6098916530609131,
+  "mean_rank_t2i": 35.025428771972656,
+  "median_rank_t2i": 6.0,
+  "num_image_queries": 5000.0,
+  "num_text_queries": 25011.0,
+  "mean_R@1": 0.25573334842920303,
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "checkpoint_fingerprint": "3b9b4e0b2b94ec2a97e996e94c954011c5c7007f15adb70a47d0785ae20daa3a"
+}

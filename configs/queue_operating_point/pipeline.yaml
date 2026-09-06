@@ -1,0 +1,56 @@
+version: queue-operating-point-1.0
+name: queue_operating_point
+output_root: results/queue_operating_point
+checkpoint_root: checkpoints/queue_operating_point
+log_root: logs/queue_operating_point
+# No base_config: the training config is built by the project's own runner from
+# the M-T1 pipeline below, so the operating point cannot drift from the shipped
+# model by way of a second, restated base file.
+predictions_path: predictions/queue_operating_point.json
+
+split:
+  # Same split as the queue factorial and identification control.
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+
+student:
+  vision_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+  student_pair_changed: false
+
+operating_point:
+  # The shipped M-T1 pipeline. Its config is built by the project's own runner
+  # so that the operating point is the real one, not a restatement of it.
+  m_t1_pipeline: configs/text_aggregation_study/pipeline_m_t1.yaml
+  distillation_strength: 1.0
+  batch_size: 1024
+  target_ages: [16, 64]
+  seeds: [42, 43, 44]
+  # All three arms are trained here.  Unlike the identification control, no
+  # matched arm exists at this operating point to reuse.
+  queue_modes: [none, both, both_fresh]
+  reference_endpoint:
+    label: M-T1 frozen-encoder endpoint
+    flickr_validation_mean_R1_percent: 54.487
+    prior_study_queue_free_mean_R1_percent: 37.321
+
+queue_diagnostics:
+  # Identical instrumentation to configs/queue_factorial/base.yaml so measured
+  # drift and realised residence stay comparable across the queue studies.
+  enabled: true
+  probe_seed: 20260727
+  probe_images: 512
+  drift_interval_steps: 10
+  exclude_warmup_from_primary: true
+  age_first_reuse: 1
+
+resources:
+  partition: teaching
+  gpu_per_task: 1
+  cpus_per_task: 12
+  host_memory: 96G
+  wall_time: "2-23:59:00"
+  dataloader_workers: 12
+  precision: bf16
+  required_gpu_substrings: [RTX PRO 6000, Blackwell]

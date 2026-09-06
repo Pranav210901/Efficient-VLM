@@ -1,0 +1,666 @@
+{
+  "status": "COMPLETE",
+  "diagnostic_only": true,
+  "latency_ceiling_ms": 9.48,
+  "protocol": {
+    "batch_size": 64,
+    "warmup": 20,
+    "timed_repeats": 100,
+    "dynamic_padding": true
+  },
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "cells": [
+    {
+      "cell": "M_T0",
+      "config": "configs/token_aggregator_scale_training/base_c4.yaml",
+      "full_stack_neural_latency_ms": {
+        "median": 8.88258358463645,
+        "q1": 8.87686014175415,
+        "q3": 8.887022268027067,
+        "iqr": 0.010162126272916794
+      },
+      "cpu_tokenization_latency_ms": {
+        "median": 1.6025444492697716,
+        "q1": 1.5482697635889053,
+        "q3": 1.6948175616562366,
+        "iqr": 0.14654779806733131,
+        "percent_of_full_stack_q3": 19.07070231784722
+      },
+      "component_latency_ms": {
+        "vision_encoder": {
+          "median": 6.902668159455061,
+          "q1": 6.898292573168874,
+          "q3": 6.9103233981877565,
+          "iqr": 0.012030825018882751,
+          "percent_of_full_stack_q3": 77.7574668969729
+        },
+        "image_aggregation": {
+          "median": 0.6009289063513279,
+          "q1": 0.5982050206512213,
+          "q3": 0.61205611564219,
+          "iqr": 0.013851094990968704,
+          "percent_of_full_stack_q3": 6.887077551771088
+        },
+        "image_projection": {
+          "median": 0.06650667637586594,
+          "q1": 0.0662186648696661,
+          "q3": 0.06685452535748482,
+          "iqr": 0.000635860487818718,
+          "percent_of_full_stack_q3": 0.7522713833857269
+        },
+        "text_encoder": {
+          "median": 1.270486507564783,
+          "q1": 1.2662410736083984,
+          "q3": 1.275008311495185,
+          "iqr": 0.008767237886786461,
+          "percent_of_full_stack_q3": 14.346856270207576
+        },
+        "text_aggregation": {
+          "median": 0.028889626264572144,
+          "q1": 0.02877018414437771,
+          "q3": 0.029082875698804855,
+          "iqr": 0.0003126915544271469,
+          "percent_of_full_stack_q3": 0.3272510726504717
+        },
+        "text_projection": {
+          "median": 0.06245169788599014,
+          "q1": 0.06228592246770859,
+          "q3": 0.06271922029554844,
+          "iqr": 0.0004332978278398514,
+          "percent_of_full_stack_q3": 0.7057394299685062
+        }
+      },
+      "component_values_are_isolated_and_non_additive": true,
+      "tokenizer": {
+        "native_max_sequence_length": 512,
+        "padding_policy": "dynamic_batch_max",
+        "batch_size": 64,
+        "padded_sequence_length": 32,
+        "raw_token_length_mean": 15.546875,
+        "raw_token_length_median": 15.0,
+        "raw_token_length_p95": 22.0,
+        "raw_token_length_max": 32,
+        "mean_padding_tokens_per_caption": 16.453125,
+        "token_utilization_fraction": 0.48583984375,
+        "tokenizer_output_fixed_length": false
+      },
+      "precision_trace": [
+        {
+          "module": "embeddings",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.0",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.1",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.2",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.3",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.4",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.5",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_encoder_output",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "masked_mean_pool",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_projection",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "bfloat16"
+          ],
+          "bf16_output": true
+        }
+      ],
+      "parameter_counts": {
+        "full_stack_inference_parameters": 47030788,
+        "query_side_inference_parameters": 23452417
+      },
+      "non_bf16_boundaries": [
+        {
+          "module": "embeddings",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.0",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.1",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.2",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.3",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.4",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.5",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_encoder_output",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "masked_mean_pool",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        }
+      ]
+    },
+    {
+      "cell": "E_T0",
+      "config": "configs/text_aggregation_study/base_e_t0.yaml",
+      "full_stack_neural_latency_ms": {
+        "median": 10.093988850712776,
+        "q1": 10.086866561323404,
+        "q3": 10.105520254001021,
+        "iqr": 0.018653692677617073
+      },
+      "cpu_tokenization_latency_ms": {
+        "median": 1.6944264061748981,
+        "q1": 1.6387917567044497,
+        "q3": 1.7417941708117723,
+        "iqr": 0.10300241410732269,
+        "percent_of_full_stack_q3": 17.236066298735622
+      },
+      "component_latency_ms": {
+        "vision_encoder": {
+          "median": 6.97395671159029,
+          "q1": 6.970544345676899,
+          "q3": 6.9776049349457026,
+          "iqr": 0.0070605892688035965,
+          "percent_of_full_stack_q3": 69.04745881027846
+        },
+        "image_aggregation": {
+          "median": 0.5860473029315472,
+          "q1": 0.5847057327628136,
+          "q3": 0.5885160062462091,
+          "iqr": 0.0038102734833955765,
+          "percent_of_full_stack_q3": 5.82370814618081
+        },
+        "image_projection": {
+          "median": 0.06556045264005661,
+          "q1": 0.06517232395708561,
+          "q3": 0.06605405360460281,
+          "iqr": 0.0008817296475172043,
+          "percent_of_full_stack_q3": 0.6536432755992984
+        },
+        "text_encoder": {
+          "median": 2.402958460152149,
+          "q1": 2.3956429213285446,
+          "q3": 2.411102643236518,
+          "iqr": 0.01545972190797329,
+          "percent_of_full_stack_q3": 23.859262884381472
+        },
+        "text_aggregation": {
+          "median": 0.02903025597333908,
+          "q1": 0.0289171002805233,
+          "q3": 0.029207905754446983,
+          "iqr": 0.00029080547392368317,
+          "percent_of_full_stack_q3": 0.2890292139376284
+        },
+        "text_projection": {
+          "median": 0.061810482293367386,
+          "q1": 0.061125028878450394,
+          "q3": 0.0621182844042778,
+          "iqr": 0.0009932555258274078,
+          "percent_of_full_stack_q3": 0.6146965504292929
+        }
+      },
+      "component_values_are_isolated_and_non_additive": true,
+      "tokenizer": {
+        "native_max_sequence_length": 512,
+        "padding_policy": "dynamic_batch_max",
+        "batch_size": 64,
+        "padded_sequence_length": 34,
+        "raw_token_length_mean": 17.546875,
+        "raw_token_length_median": 17.0,
+        "raw_token_length_p95": 24.0,
+        "raw_token_length_max": 34,
+        "mean_padding_tokens_per_caption": 16.453125,
+        "token_utilization_fraction": 0.5160845588235294,
+        "tokenizer_output_fixed_length": false
+      },
+      "precision_trace": [
+        {
+          "module": "embeddings",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.0",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.1",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.2",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.3",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.4",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.5",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.6",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.7",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.8",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.9",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.10",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.11",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_encoder_output",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "masked_mean_pool",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_projection",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "bfloat16"
+          ],
+          "bf16_output": true
+        }
+      ],
+      "parameter_counts": {
+        "full_stack_inference_parameters": 57677572,
+        "query_side_inference_parameters": 34099201
+      },
+      "non_bf16_boundaries": [
+        {
+          "module": "embeddings",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.0",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.1",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.2",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.3",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.4",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.5",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.6",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.7",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.8",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.9",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.10",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "encoder.layer.11",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "text_encoder_output",
+          "input_dtypes": [],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        },
+        {
+          "module": "masked_mean_pool",
+          "input_dtypes": [
+            "float32"
+          ],
+          "output_dtypes": [
+            "float32"
+          ],
+          "bf16_output": false
+        }
+      ]
+    }
+  ]
+}

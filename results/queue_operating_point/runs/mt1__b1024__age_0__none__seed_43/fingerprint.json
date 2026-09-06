@@ -1,0 +1,11 @@
+{
+  "cache_version": "alignment-wave1-mobileclip2-s0-corrected-recipe-v1",
+  "code_version": "b83e15c598d52b1ffb32e2a924cd0f5b04ea0270983f9c0cc3bf7e0ff69aff80",
+  "config_hash": "55dd4d43576dc2a1a17fe5e7fd1154938d2ce7247b9adff2a7a10001065f279e",
+  "dataset_split_hash": "4d3b716d143b748b70c9125d177552c298b1a6ccf617d5bc000792ef17fb18d8",
+  "digest": "4fcf88fecfb8314c9979a7167c05b9bbc8d2dbf532fff5916ed1269c2827f2e7",
+  "model_checkpoint_id": "vit_small_patch16_dinov3.lvd1689m+sentence-transformers/all-MiniLM-L6-v2",
+  "preprocessing_hash": "79f0e926d8754f665e529a74b8223b241baa4f4e8951edbb5974bbfe84fc8405",
+  "schema_version": 1,
+  "seed": 43
+}

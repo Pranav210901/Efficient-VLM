@@ -1,0 +1,62 @@
+version: queue-mechanism-1.0
+name: queue_mechanism_closure
+output_root: results/queue_mechanism
+checkpoint_root: checkpoints/queue_mechanism
+log_root: logs/queue_mechanism
+base_config: configs/queue_factorial/base.yaml
+predictions_path: predictions/queue_mechanism.json
+
+split:
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+
+student:
+  vision_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+  student_pair_changed: false
+
+capacity:
+  batch_size: 1024
+  new_queue_sizes: [1024, 4096]
+  reused_queue_sizes: [0, 16384, 65536]
+  seeds: [42, 43, 44]
+
+mechanism:
+  batch_size: 1024
+  queue_size: 16384
+  seeds: [42, 43, 44]
+  minimum_practical_effect_pp: 2.0
+  arms:
+    - id: semantic_filter
+      queue_filter_mode: semantic
+      queue_weight_mode: none
+    - id: matched_random_filter
+      queue_filter_mode: matched_random
+      queue_weight_mode: none
+    - id: mass_normalized
+      queue_filter_mode: none
+      queue_weight_mode: match_inbatch
+  semantic_guard:
+    cache: quarantine/github_submission_cleanup_20260810/original_paths/artifacts/04_efficiency_and_distillation/distillation_wave1/results/mobileclip2/teacher_cache/mobileclip2_s0_dfndr2b.pt
+    cache_sha256: cdcdd73354ad26cc7487bbe30ef1e5a8805a826a6bda24b37216a8f2e661a131
+    calibration: configs/guarded_hard_negative_study/threshold_calibration.json
+    image_text_threshold: 0.222935
+
+# Required by the shared queue-factorial config builder.  These values are
+# deliberately identical to the completed queue-identification study.
+factorial:
+  pinned_resolved_lr: 0.002545584412271571
+  counterfactual_sqrt_lrs:
+    512: 0.0018
+    1024: 0.002545584412271571
+
+resources:
+  partition: teaching
+  gpu_per_task: 1
+  cpus_per_task: 12
+  host_memory: 96G
+  wall_time: "2-23:59:00"
+  dataloader_workers: 12
+  precision: bf16
+  required_gpu_substrings: [RTX PRO 6000, Blackwell]

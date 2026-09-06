@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE",
+  "matched_single_teacher_relationship": "non-monotonic",
+  "teacher_strength_conclusion": "The matched results rule out both a monotonic positive relationship and an inverse relationship between teacher Flickr30k performance and compact frozen-student transfer. Teacher selection is not reducible to teacher benchmark performance.",
+  "teacher_strength_unresolved_factors": [
+    "architecture family",
+    "embedding geometry",
+    "distillation heritage"
+  ],
+  "interpretation_limit": "Three matched teacher points describe the observed relationship but cannot establish causality, a general scaling law, or whether teacher strength itself is the operative variable.",
+  "historical_observation_scope": "MobileCLIP2 outperformed SigLIP2 as a teacher under the historical 256px/12-epoch protocol only. The teacher-strength question was open before this matched extension.",
+  "multi_teacher": {
+    "weighting": {
+      "mobileclip2": 0.5,
+      "siglip2": 0.5,
+      "status": "explicit_untuned_default"
+    },
+    "flickr_mean_under_coco_selection": 0.43734386066595715,
+    "flickr_mean_under_flickr_selection": 0.4431952585776647,
+    "selection_gain_pp": 0.5851397911707523,
+    "bounded_conclusion": "Combining MobileCLIP2 and SigLIP2 with the explicit untuned 0.5/0.5 weighting did not improve over MobileCLIP2 alone. This does not establish that teacher ensembling cannot help.",
+    "training_only_parameters": 983040
+  },
+  "selected_configuration": {
+    "teacher": "mobileclip2_s0_dfndr2b",
+    "image_resolution": 224,
+    "flickr_validation_mean_R1": 0.44714004298051196,
+    "full_stack_latency_ms": 8.55
+  },
+  "openclip_cache": {
+    "registry_tag": "ViT-B-32-quickgelu:openai",
+    "open_clip_version": "3.3.0",
+    "content_sha256": "2bfdfcb6217d745e01f1a5745433fa9d3fe9e37709c67ed0d2387fe0212dc541",
+    "file_sha256_verified": true
+  },
+  "flickr_test_used": false
+}

@@ -1,0 +1,12 @@
+extends: pipeline_e_t0.yaml
+version: text-aggregation-e-t1-small-1.0
+name: text_aggregation_e_t1_small
+output_root: results/text_aggregation_study/training/E_T1_small
+checkpoint_root: checkpoints/text_aggregation_study/E_T1_small
+base_config: configs/text_aggregation_study/base_e_t1_small.yaml
+teacher_extension:
+  arm_id: E_T1_small
+  label: E5 learned-query text aggregation 96d 3h
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  expected_inference_trainable_parameters: 2842949

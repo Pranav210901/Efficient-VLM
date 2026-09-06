@@ -1,0 +1,39 @@
+{
+  "study": "queue_mechanism_closure",
+  "written_before_new_runs": true,
+  "primary_metric": "Flickr30k-validation mean bidirectional R@1",
+  "replication": {"seeds": [42, 43, 44], "fixed_horizon": true},
+  "minimum_practical_effect_pp": 2.0,
+  "unseen_predictions": [
+    {
+      "id": "H1_fresh_capacity",
+      "statement": "Fresh-queue R@1 declines monotonically as capacity increases, with at least one practically material step.",
+      "if": "fresh reprojected queue capacity increases at fixed batch, data, optimizer and schedule",
+      "then": "mean bidirectional R@1 will decline monotonically from queue-free through 1,024, 4,096, 16,384 and 65,536 entries",
+      "because": "the residual damage is caused partly by the amount of current-space negative mass rather than staleness alone",
+      "failure": "a non-monotonic curve replicated across seeds, or differences below 2 percentage points"
+    },
+    {
+      "id": "H2_semantic_false_negatives",
+      "statement": "Semantic filtering beats matched-random filtering by at least 2 percentage points.",
+      "if": "queued negatives above the frozen MobileCLIP2-S0 cross-modal guard are removed",
+      "then": "R@1 will exceed the matched-random-removal arm by at least 2 percentage points",
+      "because": "semantically valid alternatives are being treated as negatives",
+      "failure": "semantic filtering fails to beat matched-random removal by 2 percentage points"
+    },
+    {
+      "id": "H3_denominator_mass",
+      "statement": "Mass normalization beats the unweighted fresh-queue control by at least 2 percentage points.",
+      "if": "the total nominal queue denominator mass is normalized to the in-batch gallery mass",
+      "then": "R@1 will exceed the unweighted fresh-queue control by at least 2 percentage points",
+      "because": "the queue otherwise overwhelms the gradient with many detached candidates",
+      "failure": "mass normalization fails to recover 2 percentage points"
+    }
+  ],
+  "stopping_rule": "Run the six capacity cells, then the nine fixed-capacity mechanism cells. Do not tune thresholds, weights, capacities or seeds after observing outcomes.",
+  "disclosures": [
+    "The MobileCLIP threshold was calibrated before this study on one million different-owner COCO-training pairs.",
+    "The semantic and matched-random arms remove exactly the same number of queued candidates per query.",
+    "The queue-free, 16,384-entry and 65,536-entry controls are reused; they are not retrained."
+  ]
+}

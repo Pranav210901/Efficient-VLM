@@ -1,0 +1,11 @@
+{
+  "dataset_split_id": "oxford_iiit_pet_official_test_reserved",
+  "split": "reserved official test split",
+  "top1_accuracy": 0.9285908937454224,
+  "top5_accuracy": 0.9967293739318848,
+  "macro_f1": 0.9283930390642421,
+  "balanced_accuracy": 0.92815235482724,
+  "mean_confidence": 0.030115582048892975,
+  "classification_margin": 0.0010106404079124331,
+  "top1_margin": 0.0010456155287101865
+}

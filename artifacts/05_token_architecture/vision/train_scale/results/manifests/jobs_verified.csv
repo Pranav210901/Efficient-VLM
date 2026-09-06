@@ -1,0 +1,5 @@
+candidate,pipeline,dim,heads,blocks,ff_dim,native_width_identity,inference_trainable_parameters,training_jobs,lr_tuned_for_aggregator,flickr_test_sealed
+C2,configs/token_aggregator_scale_training/pipeline_c2.yaml,256,8,1,512,False,2203524,3,False,True
+C3,configs/token_aggregator_scale_training/pipeline_c3.yaml,128,4,2,256,False,1842948,3,False,True
+C4,configs/token_aggregator_scale_training/pipeline_c4.yaml,256,8,2,512,False,2730628,3,False,True
+C5,configs/token_aggregator_scale_training/pipeline_c5.yaml,384,6,1,768,True,2663044,3,False,True

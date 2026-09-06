@@ -1,0 +1,20 @@
+extends: ../../freezeshift/configs/pipeline_dual.yaml
+version: tokenshift-training-dual-block8-1.0
+name: tokenshift_dual_block8
+output_root: tokenshift_training/results/dual_block8
+checkpoint_root: tokenshift_training/checkpoints/dual_block8
+log_root: tokenshift_training/logs
+base_config: tokenshift_training/configs/base_dual_block8.yaml
+teacher_extension:
+  arm_id: dual_block8
+  label: FreezeShift dual LoRA with TokenShift after DINOv3 block 8
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+tokenshift_training:
+  parent: dual_lora
+  merge_after_block: 8
+  expected_inference_trainable_parameters: 4862469
+reporting:
+  peak_tie_break: earliest_epoch
+  tie_break_status: preregistered_before_training
+  tie_break_disclosure: Exact validation ties select the earliest epoch; this rule was frozen before training.
+

@@ -1,0 +1,44 @@
+{
+  "status": "READY",
+  "pipeline": "configs/teacher_extension_224/pipeline_openclip.yaml",
+  "split": {
+    "status": "COMPLETE",
+    "seed": 3103,
+    "source_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/splits/coco_train_all_captions.csv",
+    "source_sha256": "40f96c08486517b3113478a1ea63040e28baaaf68a120b202cb8fd128802e432",
+    "train_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/splits/alignment_v3_recovery/coco_train_minus_dev.csv",
+    "dev_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/splits/alignment_v3_recovery/coco_dev_5000.csv",
+    "train_images": 113287,
+    "dev_images": 5000,
+    "train_captions": 566742,
+    "dev_captions": 25011,
+    "train_split_hash": "4d3b716d143b748b70c9125d177552c298b1a6ccf617d5bc000792ef17fb18d8",
+    "dev_split_hash": "c9a960f0e38a59645c159a50b8ec8beb0bd9add9a46641af8e1d345969c3d18a",
+    "final_images": 5000,
+    "final_split_hash": "2315b82c1336d6957cc25bc55c07975f28043151638ee53cb44631ccc8a4f70b",
+    "overlap_counts": {
+      "train_dev": 0,
+      "train_final": 0,
+      "dev_final": 0
+    }
+  },
+  "v2_lock_digest": "3a1a32d4017034a3fef7f60d1c5b1e93a1ec162179d5bfd5287f8267f0b05e79",
+  "job_counts": {
+    "reference": 1,
+    "pair": 1,
+    "sensitivity": 3,
+    "ablation": 0,
+    "final": 0,
+    "transfer": 1
+  },
+  "optional_missing": [],
+  "runtime_versions": {
+    "python": "3.11.13",
+    "platform": "Linux-4.18.0-553.117.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "torch": "2.8.0+cu126",
+    "timm": "1.0.27",
+    "transformers": "4.57.6",
+    "open_clip": "3.3.0"
+  },
+  "code_fingerprint": "f66e77e065d2023d5934989b90ee541a0c6cb7b4eb14d56c568b0127709a8ce5"
+}

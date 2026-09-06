@@ -1,0 +1,18 @@
+{
+  "status": "AWAITING_USER_APPROVAL",
+  "predictions": [
+    {
+      "id": "practical_scaling",
+      "statement": ""
+    },
+    {
+      "id": "fixed_update",
+      "statement": ""
+    }
+  ],
+  "notes": [
+    "No numerical CC3M go/no-go threshold is pre-registered.",
+    "Flickr30k Karpathy validation is decision-bearing.",
+    "Flickr30k Karpathy test remains sealed."
+  ]
+}

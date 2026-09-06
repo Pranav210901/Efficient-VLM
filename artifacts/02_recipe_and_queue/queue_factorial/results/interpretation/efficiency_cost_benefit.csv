@@ -1,0 +1,4 @@
+evidence,comparison,performance_effect_pp,throughput_images_per_second,peak_gpu_memory_gib,available_gpu_memory_gib,interpretation
+Original Wave-0 queue configuration,"queue 16,384 vs no queue",-18.99,,,,Approximately 19pp lower R@1
+Factorial maximum-capacity smoke,"batch 1024, queue 65,536",,1676.1507693252665,8.875463008880615,95.01031494140625,No required memory saving; 86.13 GiB headroom
+Factorial maximum-capacity smoke,"batch 512, queue 32,768",,1866.2039888680933,2.796048164367676,95.01031494140625,No post-fill throughput degradation

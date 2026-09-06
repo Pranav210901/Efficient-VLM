@@ -1,0 +1,15 @@
+extends: base.yaml
+
+recipe:
+  teacher_dim: 512
+
+distillation:
+  teacher_id: openclip_vit_b32_quickgelu_openai
+  cache_path: results/alignment_wave1/openclip/teacher_cache/openclip_vit_b32_quickgelu_openai.pt
+  cache_version: teacher-extension-openclip-vit-b32-openai-v1
+
+provenance:
+  parameter_contract:
+    params_trainable_inference: 1478403
+    params_trainable_training: 1871619
+    params_training_only: 393216

@@ -1,0 +1,42 @@
+{
+  "status": "READY",
+  "training_jobs": 9,
+  "epoch_evaluation_jobs": 216,
+  "trained_weight_profile_jobs": 3,
+  "flickr_test_sealed": true,
+  "profiling_interpretation": "All three aggregators add no measurable latency. The contemporaneous CLS baseline was 8.630 ms versus the historical 8.546 ms; roughly one-percent session variation exceeded every candidate delta, so no latency ordering is claimed.",
+  "image_tower_observation": "The image tower dominates full-stack latency sufficiently that downstream token aggregation was not measurable. The practical architectural headroom is therefore larger than the nominal 0.93 ms.",
+  "register_token_scope": "The four DINOv3 register tokens are deliberately excluded to isolate how the 196 patch tokens are treated. Including registers is an untested plausible extension.",
+  "rows": [
+    {
+      "candidate": "A",
+      "pipeline": "configs/token_projection_training/pipeline_a.yaml",
+      "aggregation": "cls_mean_concat",
+      "training_jobs": 3,
+      "inference_trainable_parameters": 1773699,
+      "lr": 0.002545584412271571,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    },
+    {
+      "candidate": "B",
+      "pipeline": "configs/token_projection_training/pipeline_b.yaml",
+      "aggregation": "learned_query_attention",
+      "training_jobs": 3,
+      "inference_trainable_parameters": 1644164,
+      "lr": 0.002545584412271571,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    },
+    {
+      "candidate": "C",
+      "pipeline": "configs/token_projection_training/pipeline_c.yaml",
+      "aggregation": "transformer_128",
+      "training_jobs": 3,
+      "inference_trainable_parameters": 1710468,
+      "lr": 0.002545584412271571,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    }
+  ]
+}

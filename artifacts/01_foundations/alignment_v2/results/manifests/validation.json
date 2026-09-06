@@ -1,0 +1,9 @@
+{
+  "status": "READY",
+  "pipeline": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/configs/alignment_v2/pipeline.yaml",
+  "reference_jobs": 1,
+  "unimodal_jobs": 9,
+  "reference_array": "0-0",
+  "unimodal_array": "0-8",
+  "frozen_unimodal_required": true
+}

@@ -1,0 +1,51 @@
+version: data-scale-pilot-1.0
+name: coco_data_scale_pilot
+output_root: results/data_scale_pilot
+checkpoint_root: checkpoints/data_scale_pilot
+log_root: logs/data_scale_pilot
+predictions_path: predictions/data_scale_pilot.json
+base_config: configs/data_scale_pilot/base_alignment_config.yaml
+
+split:
+  source_train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  coco_dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  subset_root: data/splits/data_scale_pilot
+  subset_seed: 20260728
+  percentages: [25, 50, 75, 100]
+  flickr_validation_csv: data/flickr30k/validation.csv
+  flickr_test_csv: data/flickr30k/test.csv
+  flickr_cache_glob: .cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/*/flickr30k-test-*.arrow
+  expected_flickr_validation_images: 1014
+  expected_flickr_validation_captions: 5070
+
+experiment:
+  seed: 42
+  practical_epochs: 12
+  batch_size: 1024
+  memberships:
+    - practical_scaling
+    - fixed_update
+  selection_dataset: flickr30k_karpathy_validation
+  sealed_dataset: flickr30k_karpathy_test
+  early_stopping: false
+
+resources:
+  partition: teaching
+  gpu_type: NVIDIA RTX PRO 6000 Blackwell
+  gpu_per_task: 1
+  cpus_per_task: 12
+  dataloader_workers: 12
+  host_memory: 96G
+  wall_time: "08:00:00"
+  native_bf16_required: true
+
+decision:
+  automatic_cc3m_gate: true
+  source: predictions/data_scale_pilot.json
+  decision_bearing_curve: fixed_update
+  materiality_margin_pp: 1.0
+  fallback_interpretations:
+    - Both curves flatten: reject CC3M and continue with Wave 1 and writing.
+    - Practical rises but fixed-update flattens: optimization exposure, not unique data, is binding.
+    - Fixed-update rises: unique data or coverage is plausibly binding and CC3M is justified for consideration.
+    - Curves are noisy or non-monotonic: stop without a CC3M decision and request a replication design.

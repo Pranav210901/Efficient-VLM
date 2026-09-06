@@ -1,0 +1,152 @@
+version: alignment-v4-wave0-1.0
+output_root: results/alignment_v4_wave0
+checkpoint_root: checkpoints/alignment_v4_wave0
+log_root: logs/alignment_v4_wave0
+base_config: configs/alignment_v4_wave0/base.yaml
+
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+
+references: []
+pair_matrix:
+  vision_encoders: [dinov3_vits16]
+  text_encoders: [all_minilm_l6_v2]
+  seeds: [42]
+  batch_sizes: [512]
+batch_probe:
+  enabled: false
+  candidates: [512]
+
+wave0:
+  enabled: true
+  predictions_path: predictions/wave0.json
+  finalist_seeds: [43, 44]
+  screening_recipes:
+    - {loss_type: infonce_queue, captions_per_image: 2, batch_size: 512}
+    - {loss_type: infonce_queue, captions_per_image: 2, batch_size: 1024}
+    - {loss_type: infonce_queue, captions_per_image: 2, batch_size: 2048}
+    - {loss_type: infonce_queue, captions_per_image: all, batch_size: 512}
+    - {loss_type: infonce_queue, captions_per_image: all, batch_size: 1024}
+    - {loss_type: infonce_queue, captions_per_image: all, batch_size: 2048}
+    - {loss_type: infonce_no_queue, captions_per_image: 2, batch_size: 512}
+    - {loss_type: infonce_no_queue, captions_per_image: 2, batch_size: 1024}
+    - {loss_type: infonce_no_queue, captions_per_image: 2, batch_size: 2048}
+    - {loss_type: infonce_no_queue, captions_per_image: all, batch_size: 512}
+    - {loss_type: infonce_no_queue, captions_per_image: all, batch_size: 1024}
+    - {loss_type: infonce_no_queue, captions_per_image: all, batch_size: 2048}
+    - {loss_type: sigmoid, captions_per_image: 2, batch_size: 512}
+    - {loss_type: sigmoid, captions_per_image: 2, batch_size: 1024}
+    - {loss_type: sigmoid, captions_per_image: 2, batch_size: 2048}
+    - {loss_type: sigmoid, captions_per_image: all, batch_size: 512}
+    - {loss_type: sigmoid, captions_per_image: all, batch_size: 1024}
+    - {loss_type: sigmoid, captions_per_image: all, batch_size: 2048}
+  sigmoid_lr_sweep:
+    - {batch_size: 512, sweep_multiplier: 0.3333333333333333}
+    - {batch_size: 512, sweep_multiplier: 3.0}
+    - {batch_size: 1024, sweep_multiplier: 0.3333333333333333}
+    - {batch_size: 1024, sweep_multiplier: 3.0}
+    - {batch_size: 2048, sweep_multiplier: 0.3333333333333333}
+    - {batch_size: 2048, sweep_multiplier: 3.0}
+  # Post-screen controls. These remain isolated from the original screen and
+  # finalist artifacts and do not authorize Wave 1.
+  lr_control_status: SELECTED_WAVE0_RECIPE
+  lr_controls:
+    - control_id: matched_lr
+      question: Does no-queue InfoNCE match or beat sigmoid once it gets the same LR treatment?
+      loss_type: infonce_no_queue
+      captions_per_image: all
+      batch_size: 1024
+      sweep_multiplier: 3.0
+      seed: 42
+    - control_id: matched_lr
+      question: Does no-queue InfoNCE match or beat sigmoid once it gets the same LR treatment?
+      loss_type: infonce_no_queue
+      captions_per_image: all
+      batch_size: 1024
+      sweep_multiplier: 6.0
+      seed: 42
+    - control_id: sigmoid_lr_boundary
+      question: Is the sigmoid/all/1024 optimum above the previous lr_scale=3 boundary?
+      loss_type: sigmoid
+      captions_per_image: all
+      batch_size: 1024
+      sweep_multiplier: 6.0
+      seed: 42
+    - control_id: sigmoid_lr_boundary
+      question: Is the sigmoid/all/1024 optimum above the previous lr_scale=3 boundary?
+      loss_type: sigmoid
+      captions_per_image: all
+      batch_size: 1024
+      sweep_multiplier: 10.0
+      seed: 42
+  queue_capacity_ablation:
+    question: How does retrieval change as stale cross-batch memory capacity increases?
+    loss_type: infonce_queue
+    captions_per_image: all
+    batch_size: 1024
+    sweep_multiplier: 1.0
+    seed: 42
+    memory_queue_sizes: [1024, 4096, 8192]
+  winner_confirmation:
+    question: Does queue-free InfoNCE remain ahead of sigmoid across three matched seeds?
+    loss_type: infonce_no_queue
+    captions_per_image: all
+    batch_size: 1024
+    sweep_multiplier: 3.0
+    seeds: [43, 44]
+  rescreen:
+    question: Does the v3 pair ranking hold under the corrected queue-free Wave 0 recipe?
+    loss_type: infonce_no_queue
+    captions_per_image: all
+    batch_size: 1024
+    sweep_multiplier: 3.0
+    seed: 42
+    vision_encoders: [dinov3_convnext_tiny, dinov3_vits16]
+    text_encoders: [all_minilm_l6_v2, e5_small_v2, bge_small_en]
+  rescreen_confirmation:
+    question: Which of the top three ViT-S/16 text encoders has the strongest three-seed mean under the locked recipe?
+    loss_type: infonce_no_queue
+    captions_per_image: all
+    batch_size: 1024
+    sweep_multiplier: 3.0
+    vision_encoder: dinov3_vits16
+    text_encoders: [e5_small_v2, bge_small_en, all_minilm_l6_v2]
+    seeds: [43, 44]
+    locked_student_text_encoder: all_minilm_l6_v2
+    adoption_status: DECIDED_KEEP_MINILM
+    student_pair_changed: false
+    student_pair_decision_permanent_for_study: true
+
+# Compatibility keys retained for the shared v3/v4 runner; Wave 0 does not use
+# these stages.
+selection:
+  practical_equivalence_margin: 0.005
+  pair_minimum_mean_r1: 0.20
+  pair_minimum_gain_over_v2: 0.03
+  v2_best_mean_r1: 0.1560
+  distillation_minimum_gain: 0.02
+  distillation_minimum_mean_r1: 0.30
+  recipe_minimum_gain_over_matched_baseline: 0.02
+  router_minimum_unique_oracle_gain: 0.02
+  router_minimum_openclip_fraction: 0.90
+distillation_sensitivity:
+  strengths: [1.0]
+  seeds: [42, 43]
+  include_matched_baseline: true
+ablations:
+  seeds: []
+  recipes: []
+final:
+  seeds: []
+  epochs: 12
+  retrain_on_full_coco_train: false
+optional_transfer:
+  flickr30k_csv: data/flickr30k/test.csv
+  required: false
+literature_context: []

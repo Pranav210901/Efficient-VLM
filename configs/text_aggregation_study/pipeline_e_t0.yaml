@@ -1,0 +1,11 @@
+extends: ../e5_c4_224/pipeline.yaml
+version: text-aggregation-e-t0-1.0
+name: text_aggregation_e_t0
+output_root: results/text_aggregation_study/training/E_T0
+checkpoint_root: checkpoints/text_aggregation_study/E_T0
+log_root: logs/text_aggregation_study
+base_config: configs/text_aggregation_study/base_e_t0.yaml
+teacher_extension:
+  arm_id: E_T0
+  label: E5 masked-mean text baseline
+  teacher_ids: [mobileclip2_s0_dfndr2b]

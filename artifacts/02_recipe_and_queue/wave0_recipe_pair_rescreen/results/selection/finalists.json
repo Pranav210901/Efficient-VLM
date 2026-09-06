@@ -1,0 +1,62 @@
+{
+  "artifact_scope": "HISTORICAL_PRE_CONTROL_SIGMOID_FINALIST_SELECTION",
+  "authoritative_for_locked_recipe": false,
+  "superseded_by": "selection/recipe.json",
+  "status": "FINALISTS_SELECTED",
+  "proceed": true,
+  "replication_anchor_R@1": 0.17016710340976715,
+  "replication_anchor_target_R@1": 0.1702,
+  "replication_anchor_margin": -3.289659023283931e-05,
+  "replication_anchor_absolute_margin": 3.289659023283931e-05,
+  "replication_support": "STRONG",
+  "screening_spread": {
+    "min": 0.13321583718061447,
+    "max": 0.3660529553890228,
+    "std": 0.09485667801988704
+  },
+  "batch_effect_2048_minus_512": 0.008441619575023651,
+  "finalists": [
+    {
+      "experiment_id": "sigmoid__captions_all__b1024",
+      "seed_42_R@1": 0.3660529553890228,
+      "recipe": {
+        "adapter": false,
+        "distillation": false,
+        "lora": false,
+        "loss_type": "sigmoid",
+        "captions_per_image": null,
+        "memory_queue_size": 0,
+        "batch_size": 1024,
+        "sweep_multiplier": 3.0
+      }
+    },
+    {
+      "experiment_id": "sigmoid__captions_all__b2048",
+      "seed_42_R@1": 0.36211368441581726,
+      "recipe": {
+        "adapter": false,
+        "distillation": false,
+        "lora": false,
+        "loss_type": "sigmoid",
+        "captions_per_image": null,
+        "memory_queue_size": 0,
+        "batch_size": 2048,
+        "sweep_multiplier": 3.0
+      }
+    },
+    {
+      "experiment_id": "sigmoid__captions_2__b2048",
+      "seed_42_R@1": 0.3620144724845886,
+      "recipe": {
+        "adapter": false,
+        "distillation": false,
+        "lora": false,
+        "loss_type": "sigmoid",
+        "captions_per_image": 2,
+        "memory_queue_size": 0,
+        "batch_size": 2048,
+        "sweep_multiplier": 3.0
+      }
+    }
+  ]
+}

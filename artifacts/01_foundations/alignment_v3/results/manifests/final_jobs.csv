@@ -1,0 +1,4 @@
+array_index,experiment_id,run_id,seed
+0,final_winner,final_winner__seed_42,42
+1,final_winner,final_winner__seed_43,43
+2,final_winner,final_winner__seed_44,44

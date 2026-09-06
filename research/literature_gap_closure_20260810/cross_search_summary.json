@@ -1,0 +1,15 @@
+{
+  "session": "dissertation_gap_closure_20260810",
+  "total_verification_searches": 6,
+  "unique_primary_papers": 15,
+  "repeat_hit_papers_threshold": 3,
+  "repeat_hit_papers": [
+    {
+      "title": "MobileCLIP2: Improving Multi-Modal Reinforced Training",
+      "url": "https://machinelearning.apple.com/research/mobileclip2",
+      "sub_areas": ["aggregation", "compact_distillation", "token_and_negatives"],
+      "sub_area_count": 3
+    }
+  ],
+  "interpretation": "MobileCLIP2 is the only primary record recurring across three verification sub-areas, supporting its use as the compact reference, distillation context, and efficiency anchor. Citation-per-year ranking was unavailable because the verified subset intentionally did not import unstable citation counts."
+}

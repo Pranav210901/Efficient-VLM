@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN",
+  "tasks": [
+    "sugarcrepe"
+  ],
+  "primary_task": "sugarcrepe",
+  "datasets": {
+    "sugarcrepe": {
+      "samples": 7511,
+      "categories": [
+        "add_att",
+        "add_obj",
+        "replace_att",
+        "replace_obj",
+        "replace_rel",
+        "swap_att",
+        "swap_obj"
+      ],
+      "annotation_sha256": {
+        "add_att.json": "012d88d729693d193760e6f3393b06a1cf874380a9db0062e937201199fe044d",
+        "add_obj.json": "1b9d76b93139a937b8dc1ada92a4f05ecc821bb3c291d752428bafadd4bb0682",
+        "replace_att.json": "9fe55fd4c0a9ad1f85d486d9f6d0215b41f867eb025026e7f7b5ce44352545ee",
+        "replace_obj.json": "9d299600639947e9d15281a9ded1382b376cf4ea088a8d08a1314bfe76e81898",
+        "replace_rel.json": "356bcc2fc4c6aed3f4d9fd50acc58489bb1fe70c28791f9368d4cbf9ea39cdc9",
+        "swap_att.json": "7a7ce04e5c4c80412b48c6f0c1347fb1a2f5d54c0be6aa429b64d390e442f8d0",
+        "swap_obj.json": "073cdb8e253d053614e80710834d9773b09dbc1dd0a412f6f9492262caa1dcad"
+      },
+      "semantic_sha256": "35cc52538a8ffa222bb1662d652af3075516444b7f517cbd534df79628f9a89e"
+    }
+  },
+  "roster_sha256": "fd6b1d04b4cad1f4ebe9ad7fa714b309e8ad880deedd8c7263f6394e1ae1e9bf",
+  "preregistration_sha256": "6d4a1526b5a66df5627bebbf2be232d73c63c0cbc857c598ccc7d306bdb85cb2",
+  "pipeline_sha256": "c03094222bc72eb842e36a37a3731bd418b22ededaffec64d93fde2ddef2406d",
+  "no_scores_observed": true
+}

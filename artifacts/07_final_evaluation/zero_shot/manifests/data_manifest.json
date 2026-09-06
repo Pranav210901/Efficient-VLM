@@ -1,0 +1,39 @@
+{
+  "status": "READY",
+  "download_permitted": false,
+  "datasets": {
+    "cifar100_zeroshot": {
+      "dataset_split_id": "cifar100_official_test_reserved",
+      "split": "reserved official test split",
+      "samples": 10000,
+      "classes": 100,
+      "semantic_sha256": "a1b0c85defc02dfabe1a4d70120a29743d654022eac3cd54c2123dba29a2f1ad"
+    },
+    "pets_zeroshot": {
+      "dataset_split_id": "oxford_iiit_pet_official_test_reserved",
+      "split": "reserved official test split",
+      "samples": 3669,
+      "classes": 37,
+      "semantic_sha256": "bf6e2276e42477f16294bb7c3a9bfe01c6896e95595301cbbdc66ee38518328b"
+    },
+    "eurosat_zeroshot": {
+      "dataset_split_id": "eurosat_deterministic_stratified_test_reserved",
+      "split": "stored deterministic stratified test partition",
+      "samples": 4050,
+      "classes": 10,
+      "semantic_sha256": "03b9f4d76d132ef43fe4d358d49bd2530a2a7fd17f72a40eb7921556bc7834d0"
+    },
+    "flickr30k_test": {
+      "dataset_split_id": "flickr30k_karpathy_test",
+      "source_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/data/flickr30k/test.csv",
+      "source_csv_sha256": "23fe04490cfd2fe43ad7b741440a6c4bc5381bfbecb523612971dc17ff8f34e7",
+      "resolved_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/artifacts/07_final_evaluation/zero_shot/manifests/resolved_flickr30k_test.csv",
+      "resolved_csv_sha256": "f4056d55b29a414921c097ba507bd78c0bfcdceccb6539edeebc59a0da07bf3d",
+      "samples": 1000,
+      "captions": 5000,
+      "image_path_manifest_sha256": "aa716afe859a76f8ddaf02e24ba405358ba34e6731d19bb8d443156728073a0d"
+    }
+  },
+  "frozen_roster_sha256": "fd6b1d04b4cad1f4ebe9ad7fa714b309e8ad880deedd8c7263f6394e1ae1e9bf",
+  "pipeline_sha256": "a0248ad47326112645fa5c5baafa74ba20dc1cc318be38a784cc33da032e0968"
+}

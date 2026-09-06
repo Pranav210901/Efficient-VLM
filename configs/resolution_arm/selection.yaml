@@ -1,0 +1,23 @@
+status: SELECTED_BEFORE_FLICKR_TEST
+written_at: 2026-07-29T14:24:18Z
+frozen_before_flickr_test: true
+selected_resolution: 224
+reference:
+  model: OpenCLIP ViT-B/32
+  full_stack_latency_ms: 9.48
+observed:
+  resolution_224:
+    full_stack_latency_ms: 8.69
+  resolution_192:
+    full_stack_latency_ms: 7.15
+    additional_speed_vs_224_ms: 1.54
+    additional_accuracy_loss_vs_224_pp: 1.71
+selection_rule: >-
+  Select the lowest-cost configuration that achieves full-stack latency below
+  OpenCLIP's 9.48 ms. 224px satisfies that condition. Although 192px provides
+  another 1.54 ms of speed, it costs another 1.71 percentage points of
+  Flickr30k-validation accuracy. Once latency dominance over the reference is
+  achieved, that additional latency reduction has no frontier value and is not
+  worth the accuracy trade.
+test_split_used_for_selection: false
+flickr_test_must_remain_sealed: true

@@ -1,0 +1,194 @@
+﻿\documentclass[11pt,a4paper,oneside]{report}
+
+\usepackage{graphicx} % En­hanced sup­port for graph­ics
+\graphicspath{ {./images/} }
+
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.38in,rmargin=0.79in]{geometry} % Set margin size for document (same as Microsoft Normal margins)
+
+\usepackage{times} % Select Adobe Times Ro­man (or equiv­a­lent) as de­fault font
+\usepackage{epsfig} % In­clude En­cap­su­lated PostScript in LaTeX doc­u­ment
+\usepackage{fancyhdr} % Ex­ten­sive con­trol of page head­ers and foot­ers
+\usepackage{longtable} % Al­low ta­bles to flow over page bound­aries
+\usepackage{tabularx} % Tables with auto-sizing columns
+\usepackage{booktabs} % \toprule, \midrule, \bottomrule for tables
+\usepackage{subfig} % Ma­nip­u­la­tion and ref­er­ence of small subfigures
+\usepackage{color} % Colour con­trol
+\usepackage{amsmath} % Mathematical typsetting
+\usepackage{amssymb} % Provides an extended symbol collection
+\usepackage{bm} % Bold sym­bols in maths mode
+\usepackage{psfrag} % For proper math symbols in postscript plots
+\usepackage{url} % Allow for URL to be entered
+\usepackage[linktocpage]{hyperref} % Ex­ten­sive sup­port for hy­per­text
+
+\usepackage[square,numbers]{natbib} % Bibliography
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+
+
+\usepackage{setspace} % Allow for custom setting space be­tween lines
+
+\usepackage{multicol} % In­ter­mix sin­gle and mul­ti­ple columns
+\usepackage{paralist} % Enu­mer­ate and item­ize within para­graphs
+\usepackage{floatrow} % Mod­i­fy­ing the lay­out of floats
+
+%\setlength{\parindent}{0pt} % Remove paragraph indent
+\setlength{\parskip}{\baselineskip} % Force skip line between paragraphs
+\floatsetup[table]{capposition=top} % Position caption on top of tables
+
+
+%%% Setting the Chapter and Section settings to Surrey requirements %%%
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+{\fontsize{12}{15}\bfseries}
+{\thechapter}
+{1em}
+{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{1pt}{0pt}[0pt]
+
+\titleformat{\section}[block]
+{\fontsize{12}{15}\bfseries}
+{\thesection}
+{1em}
+{}
+\titlespacing*{\section}{0pt}{0pt}{-12pt}[0pt]
+
+\titleformat{\subsection}[block]
+{\fontsize{12}{15}\bfseries}
+{\thesubsection}
+{1em}
+{}
+\titlespacing*{\subsection}{0pt}{0pt}{-12pt}[0pt]
+
+\titleformat{\subsubsection}[block]
+{\fontsize{12}{15}}
+{\thesubsubsection}
+{1em}
+{}
+\titlespacing*{\subsubsection}{0pt}{0pt}{-12pt}[0pt]
+%%%%%%
+
+\newcommand{\squeezeup}{\vspace{-2.5mm}} % Reduce spacing manually
+\clubpenalty = 10000 % eliminates orphans
+\widowpenalty = 10000 % eliminates orphans
+
+
+\usepackage{style/myfootnote} % footnote settings
+\makesavenoteenv{longtable}
+\usepackage{vmargin}
+\input{./style/epsf.sty}
+
+\input{./parameters/param}   %page settings, spacings, text/figure ratios
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\normalsize
+\rhead{\textcolor{ashgrey}{Author Name, MSc dissertation}}
+\renewcommand{\headrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%COVER PAGE%%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+\begin{center}
+{\LARGE {\vspace*{0.5cm}\Huge\bf What Comes After CLIP}}
+
+\vspace{3em}
+        {\Large \bf Pranav Pokhrel}\\
+        \vspace{2em}
+        {\Large\textit{Master of Science in PATHWAY}\\
+        from the\\
+        University of Surrey\\
+        \vspace{2em}
+        \centering
+        \includegraphics[width=0.6\textwidth]{logo.png}\\
+        \vspace{2em}
+        \textit{School of Computer Science and Electrical and Electronic Engineering}\\
+		 Faculty of Engineering and Physical Sciences\\
+		University of Surrey\\
+		Guildford, Surrey, GU2 7XH, UK\\
+        \vspace{2em}
+        September 2026\\
+       Supervised by: Prof. Miroslaw Bober\\
+        \vspace{\stretch{1}}}
+        \textcopyright Author Name 2026
+\end{center}
+\pagenumbering{roman}
+
+%%%%%%%%%%%%%%%%DEDICATION%%%%%%%%%%%%%%%%%%%%
+% Adding a dedication after the title page
+\clearpage
+\newpage
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Declaration of Originality}
+\input{chapters/declaration}
+%\clearpage\thispagestyle{empty}\mbox{}\clearpage
+
+%%%%%%%%%%%%%%%%WORD COUNT%%%%%%%%%%%%%%%%%%%%
+% Adding a Word Count
+\clearpage
+\newpage
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Word Count}
+\input{chapters/wordcount}
+%\clearpage\thispagestyle{empty}\mbox{}\clearpage
+
+%%%%%%%%%%%%%%%%%%ABSTRACT%%%%%%%%%%%%%%%%%%%
+% Include the Abstract/Summary
+\clearpage
+%\thispagestyle{plain}	\newpage
+\addcontentsline{toc}{chapter}{Abstract}
+\input{chapters/abstract}
+%\clearpage
+
+%%%%%%%%%%%%%%%%%%%%TOC%%%%%%%%%%%%%%%%%%%%%
+% Add the table of contents
+\begin{spacing}{0.1}
+	\tableofcontents
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%%FIGURES%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addcontentsline{toc}{chapter}{List of figures}
+\begin{spacing}{1.4}
+\listoffigures
+\end{spacing}
+
+%%%%%%%%%%%%%%%%%TABLES%%%%%%%%%%%%%%%%%%%%%%
+%\clearpage
+%\newpage
+%\addcontentsline{toc}{chapter}{List of tables}
+%\begin{spacing}{1.4}
+%\listoftables
+%\end{spacing}
+
+\newpage
+\pagenumbering{arabic}
+
+\pagestyle{fancyplain}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%%CHAPTERS%%%%%%%%%%%%%%%%%%%%%
+\include{./chapters/introduction}
+\include{./chapters/literature_review}
+\include{./chapters/theory}
+\include{./chapters/technical}
+\include{./chapters/technical2}
+\include{./chapters/conclusions}
+
+%%%%%%%%%%%%%%%%%%%ETC%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{./style/myabbrvnat}
+\bibliography{./references/thesisbib}
+
+
+%\addcontentsline{toc}{chapter}{List of Publications} % If you have published anything during your research
+%\include{./chapters/listofpapers}
+
+%\pagestyle{fancyplain}
+\clearpage
+\addcontentsline{toc}{chapter}{Appendix}
+\include{./appendices/appendix}
+
+
+
+\end{document}
+%\end{normalsize}

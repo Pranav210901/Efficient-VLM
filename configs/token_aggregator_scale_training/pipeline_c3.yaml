@@ -1,0 +1,26 @@
+extends: pipeline_c2.yaml
+version: token-aggregator-scale-c3-1.0
+output_root: results/token_aggregator_scale_training/C3_d128_h4_b2_ff256
+checkpoint_root: checkpoints/token_aggregator_scale_training/C3_d128_h4_b2_ff256
+base_config: configs/token_aggregator_scale_training/base_c3.yaml
+wave1:
+  enabled: true
+  design: token_aggregator_scale_training
+  question: What is the isolated effect of increasing token-aggregator depth from one to two blocks?
+  locked_recipe: {loss_type: infonce_no_queue, captions_per_image: null, memory_queue_size: 0, batch_size: 1024, sweep_multiplier: 3.0, image_size: 224}
+teacher_extension:
+  arm_id: C3_d128_h4_b2_ff256
+  label: "224px MobileCLIP2-distilled 128-d two-block token transformer"
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+token_projection:
+  candidate: C3
+  image_token_aggregation: transformer_128
+  pool_dim: 128
+  heads: 4
+  blocks: 2
+  ff_dim: 256
+  native_width_identity: false
+  register_tokens_included: false
+  expected_inference_trainable_parameters: 1842948
+  lr_tuned_for_aggregator: false
+

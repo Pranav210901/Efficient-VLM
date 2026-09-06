@@ -1,0 +1,129 @@
+{
+  "low_cost_latency_threshold_ms": 5.356821906752884,
+  "unique_error_threshold": 0.10690382757730281,
+  "warnings": [],
+  "primary_constraints_satisfied": true,
+  "selection_weights": {
+    "multitask_performance": 0.25,
+    "unique_wins": 0.17,
+    "oracle_contribution": 0.13,
+    "cross_task_specialisation": 0.12,
+    "latency_efficiency": 0.1,
+    "memory_efficiency": 0.06,
+    "seed_reliability": 0.07,
+    "architectural_diversity": 0.05,
+    "token_interface_readiness": 0.05
+  },
+  "diversity_constraints": {
+    "primary_vision_experts": 3,
+    "primary_text_experts": 3,
+    "cheap_fallback_vision_experts": 1,
+    "cheap_fallback_text_experts": 1,
+    "primary_pair_paths": 4,
+    "maximum_pair_paths": 6,
+    "maximum_paths_per_vision_encoder": 2,
+    "maximum_paths_per_text_encoder": 2,
+    "minimum_vision_architecture_families": 2,
+    "minimum_distinct_text_encoders": 2,
+    "require_low_cost_pair": true,
+    "require_unique_error_pair": true,
+    "prohibit_inconclusive_blf_duplicate": true
+  },
+  "constraint_results": {
+    "at_most_two_per_vision": true,
+    "at_most_two_per_text": true,
+    "vision_architecture_families": 3,
+    "distinct_text_encoders": 2,
+    "contains_low_cost_pair": true,
+    "contains_unique_error_pair": true,
+    "contains_inconclusive_blf_duplicate": false
+  },
+  "selection_data_status": "frozen development protocol",
+  "excluded_high_scoring_pairs": [
+    {
+      "config_id": "dinov2_vits14__all_minilm_l6_v2__local",
+      "selection_score": 0.7326086957,
+      "exclusion_reason": "local BLF is inconclusive; prefer baseline and prohibit a redundant primary path"
+    },
+    {
+      "config_id": "dinov2_vits14__bge_small_en__local",
+      "selection_score": 0.6733695652,
+      "exclusion_reason": "local BLF is not_tested; prefer baseline and prohibit a redundant primary path"
+    },
+    {
+      "config_id": "convnextv2_tiny__all_minilm_l6_v2__local_global",
+      "selection_score": 0.6639130435,
+      "exclusion_reason": "local_global BLF is inconclusive; prefer baseline and prohibit a redundant primary path"
+    },
+    {
+      "config_id": "convnextv2_tiny__all_minilm_l6_v2__baseline",
+      "selection_score": 0.6975,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "convnext_tiny__bge_small_en__baseline",
+      "selection_score": 0.5829347826,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "dinov2_vits14__e5_small_v2__baseline",
+      "selection_score": 0.5765217391,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "convnextv2_tiny__bge_small_en__baseline",
+      "selection_score": 0.5042391304,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "dinov2_vits14__distilbert__baseline",
+      "selection_score": 0.5031521739,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "swin_tiny__bge_small_en__baseline",
+      "selection_score": 0.4897826087,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "swin_tiny__all_minilm_l6_v2__baseline",
+      "selection_score": 0.4840217391,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "convnextv2_tiny__e5_small_v2__baseline",
+      "selection_score": 0.4779347826,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "efficientnet_b0__all_minilm_l6_v2__baseline",
+      "selection_score": 0.4281521739,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "efficientnet_b0__e5_small_v2__baseline",
+      "selection_score": 0.4243478261,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "efficientnet_b0__distilbert__baseline",
+      "selection_score": 0.3601086957,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "convnext_tiny__distilbert__baseline",
+      "selection_score": 0.3467391304,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "convnextv2_tiny__distilbert__baseline",
+      "selection_score": 0.3360869565,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    },
+    {
+      "config_id": "swin_tiny__distilbert__baseline",
+      "selection_score": 0.3042391304,
+      "exclusion_reason": "lower score or diversity/cost constraint"
+    }
+  ]
+}

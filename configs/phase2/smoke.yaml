@@ -1,0 +1,7 @@
+stage: cross_attention_smoke
+max_samples: 32
+max_batches: 2
+epochs: 1
+bridge_dim: 64
+attention_heads: 4
+resources: {partition: teaching, gpus: 1, cpus: 8, memory: 32G, wall_time: "02:00:00"}

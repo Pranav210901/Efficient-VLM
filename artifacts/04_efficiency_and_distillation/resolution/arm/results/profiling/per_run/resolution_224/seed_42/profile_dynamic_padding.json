@@ -1,0 +1,71 @@
+{
+  "status": "COMPLETE",
+  "kind": "student",
+  "entry_id": "resolution_224",
+  "label": "DINOv3 ViT-S/16 at 224px",
+  "role": "resolution_arm",
+  "seed": 42,
+  "checkpoint_dir": "checkpoints/resolution_arm/resolution/resolution_224__seed_42",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "full_stack_inference_parameters": 45778563,
+  "query_side_inference_parameters": 23452417,
+  "image_flops": 9397685376.0,
+  "caption_flops": 690685056.0,
+  "normalization_flops_added_per_embedding": 1152.0,
+  "multiply_add_flops": 2,
+  "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+  "flop_measurement_version": "operator_level_v2",
+  "native_image_resolution": 224,
+  "native_text_context_length": 512,
+  "padding_workload": "dynamic_batch",
+  "batch_size": 64,
+  "padded_sequence_length": 32,
+  "raw_token_length_mean": 15.546875,
+  "raw_token_length_median": 15.0,
+  "raw_token_length_p95": 22.0,
+  "raw_token_length_max": 32,
+  "mean_padding_tokens_per_caption": 16.453125,
+  "token_utilization_fraction": 0.48583984375,
+  "tokenizer_output_fixed_length": false,
+  "paired_batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "full_stack_neural_latency_ms": {
+    "median": 8.546178694814444,
+    "q1": 8.384123677387834,
+    "q3": 8.560986258089542,
+    "iqr": 0.1768625807017088
+  },
+  "image_neural_latency_ms": {
+    "median": 7.146184332668781,
+    "q1": 7.140506058931351,
+    "q3": 7.150501711294055,
+    "iqr": 0.009995652362704277
+  },
+  "text_neural_latency_ms": {
+    "median": 1.4328244142234325,
+    "q1": 1.4278083108365536,
+    "q3": 1.4381993096321821,
+    "iqr": 0.010390998795628548
+  },
+  "cpu_preprocessing_latency_ms": {
+    "median": 116.79733777418733,
+    "q1": 97.26196527481079,
+    "q3": 136.9067665655166,
+    "iqr": 39.6448012907058
+  },
+  "cpu_tokenization_latency_ms": {
+    "median": 1.867759507149458,
+    "q1": 1.7026565037667751,
+    "q3": 2.0327242091298103,
+    "iqr": 0.3300677053630352
+  },
+  "checkpoint_fingerprint": "8b623e29b7a179ec14a1a88ea6336e6ef5564600d6b3c9f8961e3e4e97ce3fbb",
+  "image_resolution": 224,
+  "patch_size": 16,
+  "patch_tokens": 196,
+  "prefix_tokens": 5,
+  "total_transformer_tokens": 201
+}

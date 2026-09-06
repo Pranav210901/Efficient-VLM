@@ -1,0 +1,213 @@
+{
+  "status": "SNAPSHOT_COMPLETE",
+  "artifacts": 23,
+  "rows": [
+    {
+      "path": "results/efficiency_frontier/controls/mobileclip_fusion_profile.json",
+      "entry_id": "mobileclip2_s0_dfndr2b",
+      "seed": null,
+      "resolution": 256,
+      "old_image_flops": null,
+      "old_caption_flops": null,
+      "old_flop_source": null
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/historical_v4/seed_42/profile.json",
+      "entry_id": "historical_v4",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/historical_v4/seed_42/profile_dynamic_padding.json",
+      "entry_id": "historical_v4",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/historical_v4/seed_43/profile.json",
+      "entry_id": "historical_v4",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/historical_v4/seed_43/profile_dynamic_padding.json",
+      "entry_id": "historical_v4",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_e5/seed_42/profile.json",
+      "entry_id": "locked_e5",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_e5/seed_42/profile_dynamic_padding.json",
+      "entry_id": "locked_e5",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_e5/seed_43/profile.json",
+      "entry_id": "locked_e5",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_e5/seed_43/profile_dynamic_padding.json",
+      "entry_id": "locked_e5",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_minilm/seed_42/profile.json",
+      "entry_id": "locked_minilm",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_minilm/seed_42/profile_dynamic_padding.json",
+      "entry_id": "locked_minilm",
+      "seed": 42,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_minilm/seed_43/profile.json",
+      "entry_id": "locked_minilm",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/locked_minilm/seed_43/profile_dynamic_padding.json",
+      "entry_id": "locked_minilm",
+      "seed": 43,
+      "resolution": 256,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/mobileclip2_s0_dfndr2b/reference/profile.json",
+      "entry_id": "mobileclip2_s0_dfndr2b",
+      "seed": null,
+      "resolution": 256,
+      "old_image_flops": 1536.0,
+      "old_caption_flops": 1536.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/mobileclip2_s0_dfndr2b/reference/profile_dynamic_padding.json",
+      "entry_id": "mobileclip2_s0_dfndr2b",
+      "seed": null,
+      "resolution": 256,
+      "old_image_flops": 1536.0,
+      "old_caption_flops": 1536.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/openclip_vit_b32_quickgelu_openai/reference/profile.json",
+      "entry_id": "openclip_vit_b32_quickgelu_openai",
+      "seed": null,
+      "resolution": 224,
+      "old_image_flops": 1536.0,
+      "old_caption_flops": 1536.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/openclip_vit_b32_quickgelu_openai/reference/profile_dynamic_padding.json",
+      "entry_id": "openclip_vit_b32_quickgelu_openai",
+      "seed": null,
+      "resolution": 224,
+      "old_image_flops": 1536.0,
+      "old_caption_flops": 1536.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/siglip2_vit_b32_256_webli/reference/profile.json",
+      "entry_id": "siglip2_vit_b32_256_webli",
+      "seed": null,
+      "resolution": 256,
+      "old_image_flops": 2304.0,
+      "old_caption_flops": 2304.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/efficiency_frontier/per_run/siglip2_vit_b32_256_webli/reference/profile_dynamic_padding.json",
+      "entry_id": "siglip2_vit_b32_256_webli",
+      "seed": null,
+      "resolution": 256,
+      "old_image_flops": 2304.0,
+      "old_caption_flops": 2304.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/resolution_arm/profiling/per_run/resolution_192/seed_42/profile_dynamic_padding.json",
+      "entry_id": "resolution_192",
+      "seed": 42,
+      "resolution": 192,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/resolution_arm/profiling/per_run/resolution_192/seed_43/profile_dynamic_padding.json",
+      "entry_id": "resolution_192",
+      "seed": 43,
+      "resolution": 192,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/resolution_arm/profiling/per_run/resolution_224/seed_42/profile_dynamic_padding.json",
+      "entry_id": "resolution_224",
+      "seed": 42,
+      "resolution": 224,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    },
+    {
+      "path": "results/resolution_arm/profiling/per_run/resolution_224/seed_43/profile_dynamic_padding.json",
+      "entry_id": "resolution_224",
+      "seed": 43,
+      "resolution": 224,
+      "old_image_flops": 1152.0,
+      "old_caption_flops": 1152.0,
+      "old_flop_source": "torch.profiler plus explicit L2-normalization accounting"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "cache_version": "reference-eval-v1",
+  "code_version": "c786fe100bb635a25f087a72f4af4b64285e8de9514f0db036e135ce6c1cc220",
+  "config_hash": "662949bfa549e7c69c664cfb651bbbd8bcfada11a3b27baeb68ede5d9d22b0cb",
+  "dataset_split_hash": "0f15c94be4709d859c3c1885053301d17f05057869a683eea588b124ad1bfa50",
+  "digest": "6aa3d9f391adf7c4c4873d8a07c499174fb6213b2afdba2c2a2d46138ed072a0",
+  "model_checkpoint_id": "ViT-B-32-SigLIP2-256:webli",
+  "preprocessing_hash": "80161dc0f6b61154c9fef37a8348785dc17dc1591545f2d9d1153da8dec1b584",
+  "schema_version": 1,
+  "seed": null
+}

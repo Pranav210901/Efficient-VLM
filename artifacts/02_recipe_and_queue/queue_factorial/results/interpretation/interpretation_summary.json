@@ -1,0 +1,17 @@
+{
+  "drift_curve_collapse": "DOES_NOT_COLLAPSE",
+  "frozen_predictions_path": "predictions/queue_factorial.json",
+  "frozen_predictions_sha256_unchanged_by_script": true,
+  "harm_threshold": {
+    "1024": 1,
+    "512": 1
+  },
+  "matched_drift_claim": "GENERAL",
+  "modality_asymmetry_score": "MISS",
+  "output_dir": "results/queue_factorial/interpretation",
+  "primary_equivalent_ages": 6,
+  "primary_total_ages": 8,
+  "secondary_queue_only_equivalent_ages": 6,
+  "secondary_queue_only_total_ages": 7,
+  "status": "COMPLETE"
+}

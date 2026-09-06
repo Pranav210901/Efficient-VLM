@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "openclip_vit_b32_quickgelu_openai",
+    "mobileclip2_s0_dfndr2b",
+    "siglip2_vit_b32_256_webli",
+    "dinov3_convnext_tiny+all_minilm_l6_v2",
+    "dinov3_convnext_tiny+e5_small_v2",
+    "dinov3_convnext_tiny+bge_small_en",
+    "dinov3_vits16+all_minilm_l6_v2",
+    "dinov3_vits16+e5_small_v2",
+    "dinov3_vits16+bge_small_en"
+  ]
+}

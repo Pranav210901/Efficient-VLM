@@ -1,0 +1,38 @@
+class_index,class,accuracy,samples
+0,abyssinian,0.0,98
+1,american bulldog,0.17000000178813934,100
+2,american pit bull terrier,0.6299999952316284,100
+3,basset hound,0.5600000023841858,100
+4,beagle,0.019999999552965164,100
+5,bengal,0.0,100
+6,birman,0.0,100
+7,bombay,0.0,88
+8,boxer,0.0,99
+9,british shorthair,0.029999999329447746,100
+10,chihuahua,0.46000000834465027,100
+11,egyptian mau,0.0,97
+12,english cocker spaniel,0.019999999552965164,100
+13,english setter,0.0,100
+14,german shorthaired,0.0,100
+15,great pyrenees,0.0,100
+16,havanese,0.0,100
+17,japanese chin,0.0,100
+18,keeshond,0.0,99
+19,leonberger,0.0,100
+20,maine coon,0.550000011920929,100
+21,miniature pinscher,0.0,100
+22,newfoundland,0.0,100
+23,persian,0.0,100
+24,pomeranian,0.6600000262260437,100
+25,pug,0.11999999731779099,100
+26,ragdoll,0.0,100
+27,russian blue,0.0,100
+28,saint bernard,0.0,100
+29,samoyed,0.0,100
+30,scottish terrier,0.12121212482452393,99
+31,shiba inu,0.0,100
+32,siamese,0.10999999940395355,100
+33,sphynx,0.0,100
+34,staffordshire bull terrier,0.08988764137029648,89
+35,wheaten terrier,0.07000000029802322,100
+36,yorkshire terrier,0.07999999821186066,100

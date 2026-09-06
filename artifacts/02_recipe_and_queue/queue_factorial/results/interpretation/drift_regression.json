@@ -1,0 +1,140 @@
+{
+  "collapse_assessment": {
+    "formal_threshold_preregistered": false,
+    "interpretation": "Cumulative projector drift alone does not provide one quantitative relationship shared by both modalities. The modality interaction remains substantial, so gradient sensitivity, representation geometry, false-negative structure, or another modality-specific factor is still required.",
+    "matched_example": {
+      "degradation_gap_pp_text_minus_image": 4.740234712759653,
+      "image_cumulative_drift": 0.08613135190384331,
+      "image_degradation_pp": 13.077714045842479,
+      "image_only_target_age": 16,
+      "text_cumulative_drift": 0.08606379772221016,
+      "text_degradation_pp": 17.81794875860213,
+      "text_only_target_age": 64
+    },
+    "reason": "Image-only age 16 and text-only age 64 have nearly identical measured cumulative drift, but materially different degradation.",
+    "verdict": "DOES_NOT_COLLAPSE"
+  },
+  "condition_means": [
+    {
+      "cumulative_drift": 0.019706088771239087,
+      "degradation_pp": 11.657523860534022,
+      "degradation_sd_pp": 0.3764909156743846,
+      "measured_eviction_age_steps": 4.0,
+      "modality": "image",
+      "queue_mode": "image_only",
+      "target_image_age_steps": 4
+    },
+    {
+      "cumulative_drift": 0.08613135190384331,
+      "degradation_pp": 13.077714045842479,
+      "degradation_sd_pp": 0.22889174296892936,
+      "measured_eviction_age_steps": 16.0,
+      "modality": "image",
+      "queue_mode": "image_only",
+      "target_image_age_steps": 16
+    },
+    {
+      "cumulative_drift": 0.3198131887019197,
+      "degradation_pp": 13.65356594324111,
+      "degradation_sd_pp": 0.2065200427427925,
+      "measured_eviction_age_steps": 64.0,
+      "modality": "image",
+      "queue_mode": "image_only",
+      "target_image_age_steps": 64
+    },
+    {
+      "cumulative_drift": 0.002034704784167287,
+      "degradation_pp": 4.936172068119042,
+      "degradation_sd_pp": 0.3854032529671499,
+      "measured_eviction_age_steps": 1.0,
+      "modality": "text",
+      "queue_mode": "text_only",
+      "target_image_age_steps": 4
+    },
+    {
+      "cumulative_drift": 0.02185724503047791,
+      "degradation_pp": 13.717356572548539,
+      "degradation_sd_pp": 0.42645384047262064,
+      "measured_eviction_age_steps": 4.0,
+      "modality": "text",
+      "queue_mode": "text_only",
+      "target_image_age_steps": 16
+    },
+    {
+      "cumulative_drift": 0.08606379772221016,
+      "degradation_pp": 17.81794875860213,
+      "degradation_sd_pp": 0.9326671789817554,
+      "measured_eviction_age_steps": 13.0,
+      "modality": "text",
+      "queue_mode": "text_only",
+      "target_image_age_steps": 64
+    }
+  ],
+  "estimator": "Mean sum of measured cosine distances from the previous probe over the preceding measured eviction-residence window; ten-step boundary intervals are prorated.",
+  "models": {
+    "cumulative_drift_with_modality_interaction": {
+      "coefficients": {
+        "drift_x_text": 125.88919773583304,
+        "is_text": -4.668880203381354,
+        "mean_cumulative_drift_at_eviction": 5.55259772931609
+      },
+      "intercept": 12.008445710485626,
+      "n": 18,
+      "predictors": [
+        "mean_cumulative_drift_at_eviction",
+        "is_text",
+        "drift_x_text"
+      ],
+      "r_squared": 0.764588767101213,
+      "rmse_pp": 1.882301394985466
+    },
+    "image_cumulative_drift": {
+      "coefficients": {
+        "mean_cumulative_drift_at_eviction": 5.552597729316088
+      },
+      "intercept": 12.008445710485631,
+      "n": 9,
+      "predictors": [
+        "mean_cumulative_drift_at_eviction"
+      ],
+      "r_squared": 0.675422255226025,
+      "rmse_pp": 0.4954431125987502
+    },
+    "pooled_age_only": {
+      "coefficients": {
+        "measured_eviction_age_steps": 0.052665209763157195
+      },
+      "intercept": 11.58140497550755,
+      "n": 18,
+      "predictors": [
+        "measured_eviction_age_steps"
+      ],
+      "r_squared": 0.08661524699487089,
+      "rmse_pp": 3.7076817736433894
+    },
+    "pooled_cumulative_drift_only": {
+      "coefficients": {
+        "mean_cumulative_drift_at_eviction": 12.6213381254632
+      },
+      "intercept": 11.350035343950537,
+      "n": 18,
+      "predictors": [
+        "mean_cumulative_drift_at_eviction"
+      ],
+      "r_squared": 0.1238085071730406,
+      "rmse_pp": 3.6314083619085165
+    },
+    "text_cumulative_drift": {
+      "coefficients": {
+        "mean_cumulative_drift_at_eviction": 131.44179546514908
+      },
+      "intercept": 7.339565507104265,
+      "n": 9,
+      "predictors": [
+        "mean_cumulative_drift_at_eviction"
+      ],
+      "r_squared": 0.7652529508941256,
+      "rmse_pp": 2.615464242788826
+    }
+  }
+}

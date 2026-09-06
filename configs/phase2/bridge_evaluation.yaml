@@ -1,0 +1,16 @@
+stage: bridge_evaluation
+model: {bridge_dim: 256, attention_heads: 4, layers: 1, feedforward_dim: 512, dropout: 0.1, pooling: masked_mean}
+candidate_depths: [16, 32, 64, 128]
+token_batch_size: 64
+pair_batch_size: 128
+# Preserve the strong dual-encoder signal instead of replacing it with the
+# bridge score. Both score vectors are standardised per query before fusion.
+dual_score_weight: 0.5
+tasks: [coco_retrieval, cifar100_zeroshot, pets_zeroshot, eurosat_zeroshot]
+coco_csv: data/val_all_captions.csv
+write_dense_training_scores: true
+dense_teacher_training_samples_per_source: 20000
+dense_teacher_classification_samples_per_task: 20000
+split_role: development
+resources: {partition: teaching, gpus: 1, cpus: 12, memory: 192G, wall_time: "2-23:59:00"}
+output: results/phase2/reranking

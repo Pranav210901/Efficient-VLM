@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE",
+  "corrected_artifacts": [
+    {
+      "path": "results/teacher_extension_224/siglip2/report/latency_profile.json",
+      "previous_value": 46368387,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 589824
+    },
+    {
+      "path": "results/teacher_extension_224/siglip2/profiling/per_run/siglip2_single/seed_42/profile_dynamic_padding.json",
+      "previous_value": 46368387,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 589824
+    },
+    {
+      "path": "results/teacher_extension_224/openclip/report/latency_profile.json",
+      "previous_value": 46171779,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 393216
+    },
+    {
+      "path": "results/teacher_extension_224/openclip/profiling/per_run/openclip_single/seed_42/profile_dynamic_padding.json",
+      "previous_value": 46171779,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 393216
+    },
+    {
+      "path": "results/teacher_extension_224/multi/report/latency_profile.json",
+      "previous_value": 46761603,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 983040
+    },
+    {
+      "path": "results/teacher_extension_224/multi/profiling/per_run/mobileclip2_siglip2_equal/seed_42/profile_dynamic_padding.json",
+      "previous_value": 46761603,
+      "corrected_value": 45778563,
+      "excluded_training_only_parameters": 983040
+    }
+  ],
+  "corrected_inference_parameters": 45778563,
+  "protocol_artifact_index": 6
+}

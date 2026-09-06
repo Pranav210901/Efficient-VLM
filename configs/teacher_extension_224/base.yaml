@@ -1,0 +1,12 @@
+extends: ../resolution_distillation_224_long/base.yaml
+
+# Matched teacher-extension protocol: only the training-only teacher signal
+# changes relative to the completed MobileCLIP2 224px/24-epoch trajectory.
+data:
+  image_size: 224
+
+training:
+  epochs: 24
+  disable_early_stopping: true
+  save_every_epoch: true
+

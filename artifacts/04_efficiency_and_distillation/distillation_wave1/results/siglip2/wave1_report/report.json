@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "question": "Does SigLIP2-B/32 distillation add retrieval accuracy over a fresh matched corrected-recipe baseline?",
+  "teacher_id": "siglip2_vit_b32_256_webli",
+  "matched_baseline_mean_R1": 0.3727652331193288,
+  "distilled_mean_R1": 0.3839164227247238,
+  "distillation_delta_pp": 1.1151189605395018,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "decision": "DESCRIPTIVE_RESULT_NO_POSTHOC_GATE",
+  "test_split_used": false
+}

@@ -1,0 +1,13 @@
+extends: pipeline_mobileclip2.yaml
+
+version: alignment-wave1-siglip2-1.0
+output_root: results/alignment_wave1/siglip2
+checkpoint_root: checkpoints/alignment_wave1/siglip2
+log_root: logs/alignment_wave1/siglip2
+base_config: configs/alignment_wave1/base_siglip2.yaml
+
+wave1:
+  question: Does SigLIP2-B/32 distillation add retrieval accuracy over a fresh matched corrected-recipe baseline?
+
+references: [siglip2_vit_b32_256_webli]
+

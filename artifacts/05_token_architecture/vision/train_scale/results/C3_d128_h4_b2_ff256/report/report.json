@@ -1,0 +1,90 @@
+{
+  "status": "COMPLETE",
+  "arm_id": "C3_d128_h4_b2_ff256",
+  "teacher_ids": [
+    "mobileclip2_s0_dfndr2b"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "schedule": {
+    "type": "single 24-epoch cosine",
+    "warmup_fraction": 0.05,
+    "early_stopping": false
+  },
+  "old_12epoch_complete_run_flickr_validation_mean_R1": 0.4378698269526164,
+  "new_24epoch_complete_run_comparable_to_old_complete_run": true,
+  "intermediate_epochs_comparable_between_schedules": false,
+  "comparability_boundary": "The complete 24-epoch run is comparable with the complete prior 12-epoch run. Epoch-number-matched intermediate checkpoints are not comparable because their learning rates differ.",
+  "flickr_mean_under_coco_dev_epoch_selection": 0.5248520771662394,
+  "flickr_mean_under_flickr_validation_epoch_selection": 0.5282380084196726,
+  "flickr_validation_selected_sd": 0.011348215541365482,
+  "flickr_validation_selected_min": 0.5166666805744171,
+  "flickr_validation_selected_max": 0.5393491089344025,
+  "selection_gain_pp": 0.33859312534332275,
+  "double_selection_disclosure": "The 224px teacher-distilled configuration and checkpoint epochs were selected using Flickr30k validation. The validation figure is therefore optimistically influenced by configuration and checkpoint selection; the measured epoch-selection gain is reported explicitly.",
+  "seeds_with_coco_peak_at_epoch24": 0,
+  "seeds_with_flickr_peak_at_epoch24": 1,
+  "ceiling_reached_not_converged": true,
+  "flickr_test_used": false,
+  "per_seed": [
+    {
+      "seed": 42,
+      "coco_selected_epoch": 23,
+      "coco_peak_R1": 0.434659019112587,
+      "flickr_at_coco_selected_epoch_R1": 0.536193311214447,
+      "flickr_selected_epoch": 18,
+      "flickr_peak_R1": 0.5393491089344025,
+      "coco_at_flickr_selected_epoch_R1": 0.4340795874595642,
+      "epoch24_coco_dev_R1": 0.43441906571388245,
+      "epoch24_flickr_validation_R1": 0.5363905280828476,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    },
+    {
+      "seed": 43,
+      "coco_selected_epoch": 19,
+      "coco_peak_R1": 0.43247950077056885,
+      "flickr_at_coco_selected_epoch_R1": 0.5220907330513,
+      "flickr_selected_epoch": 24,
+      "flickr_peak_R1": 0.5286982357501984,
+      "coco_at_flickr_selected_epoch_R1": 0.43143898248672485,
+      "epoch24_coco_dev_R1": 0.43143898248672485,
+      "epoch24_flickr_validation_R1": 0.5286982357501984,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": true
+    },
+    {
+      "seed": 44,
+      "coco_selected_epoch": 20,
+      "coco_peak_R1": 0.4367194324731827,
+      "flickr_at_coco_selected_epoch_R1": 0.5162721872329712,
+      "flickr_selected_epoch": 19,
+      "flickr_peak_R1": 0.5166666805744171,
+      "coco_at_flickr_selected_epoch_R1": 0.4340793043375015,
+      "epoch24_coco_dev_R1": 0.43469904363155365,
+      "epoch24_flickr_validation_R1": 0.5162722021341324,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    }
+  ],
+  "token_projection": {
+    "candidate": "C3",
+    "image_token_aggregation": "transformer_128",
+    "register_tokens_included": false,
+    "expected_inference_trainable_parameters": 1842948,
+    "lr_tuned_for_aggregator": false,
+    "pool_dim": 128,
+    "heads": 4,
+    "ff_dim": 256,
+    "blocks": 2,
+    "native_width_identity": false
+  },
+  "baseline_to_beat": {
+    "flickr_validation_mean_R1": 0.44714,
+    "full_stack_latency_ms": 8.546178694814444
+  },
+  "lr_disclosure": "The learning rate remains pinned from projection-only training and is untuned for token aggregators."
+}

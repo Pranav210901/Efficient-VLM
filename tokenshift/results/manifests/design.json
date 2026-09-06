@@ -1,0 +1,53 @@
+{
+  "status": "READY",
+  "package_sha256": "a29376fedff160cfbbcd55814377fb8f662218252e5ea4cbb18b6e90dc339cee",
+  "parent_pipeline": "freezeshift/configs/pipeline_dual.yaml",
+  "parent_signature": {
+    "image_size": 224,
+    "vision_encoder": "dinov3_vits16",
+    "text_encoder": "all_minilm_l6_v2",
+    "image_token_aggregation": "transformer_128",
+    "text_token_aggregation": "learned_query_attention"
+  },
+  "parent_validation_mean_R1": 0.6341551641623179,
+  "parent_inference_trainable_parameters": 4862469,
+  "latency_ceiling_q3_ms": 9.48,
+  "arms": [
+    {
+      "arm": "no_merge",
+      "merge_after_block": null,
+      "input_height": 224,
+      "input_width": 224,
+      "prefix_tokens": 5,
+      "patch_tokens_before": 196,
+      "patch_tokens_after": 196,
+      "total_tokens_before": 201,
+      "total_tokens_after": 201
+    },
+    {
+      "arm": "merge_after_block_8",
+      "merge_after_block": 8,
+      "input_height": 224,
+      "input_width": 224,
+      "prefix_tokens": 5,
+      "patch_tokens_before": 196,
+      "patch_tokens_after": 49,
+      "total_tokens_before": 201,
+      "total_tokens_after": 54
+    },
+    {
+      "arm": "merge_after_block_6",
+      "merge_after_block": 6,
+      "input_height": 224,
+      "input_width": 224,
+      "prefix_tokens": 5,
+      "patch_tokens_before": 196,
+      "patch_tokens_after": 49,
+      "total_tokens_before": 201,
+      "total_tokens_after": 54
+    }
+  ],
+  "parameter_delta": 0,
+  "new_training_runs": 0,
+  "flickr_test_sealed": true
+}

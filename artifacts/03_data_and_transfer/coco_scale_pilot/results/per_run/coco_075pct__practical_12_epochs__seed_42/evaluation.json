@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETE",
+  "percentage": 75,
+  "schedule": "practical_12_epochs",
+  "memberships": [
+    "practical_scaling"
+  ],
+  "index": 5,
+  "seed": 42,
+  "run_id": "coco_075pct__practical_12_epochs__seed_42",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "coco_dev": {
+    "i2t_R@1": 0.41519999504089355,
+    "i2t_R@5": 0.7156000137329102,
+    "i2t_R@10": 0.8263999819755554,
+    "mean_rank_i2t": 9.218999862670898,
+    "median_rank_i2t": 2.0,
+    "t2i_R@1": 0.2981488108634949,
+    "t2i_R@5": 0.5952980518341064,
+    "t2i_R@10": 0.721722424030304,
+    "mean_rank_t2i": 19.537084579467773,
+    "median_rank_t2i": 4.0,
+    "num_image_queries": 5000.0,
+    "num_text_queries": 25011.0,
+    "mean_R@1": 0.3566744029521942
+  },
+  "flickr30k_validation": {
+    "i2t_R@1": 0.47238659858703613,
+    "i2t_R@5": 0.7386587858200073,
+    "i2t_R@10": 0.8165680766105652,
+    "mean_rank_i2t": 11.528599739074707,
+    "median_rank_i2t": 2.0,
+    "t2i_R@1": 0.3570019602775574,
+    "t2i_R@5": 0.6384615302085876,
+    "t2i_R@10": 0.7408283948898315,
+    "mean_rank_t2i": 18.822879791259766,
+    "median_rank_t2i": 3.0,
+    "num_image_queries": 1014.0,
+    "num_text_queries": 5070.0,
+    "mean_R@1": 0.41469427943229675
+  },
+  "post_training_loss": {
+    "protocol": "final checkpoint, no queue, identical batch size on train and dev",
+    "batch_size": 1024,
+    "train": 1.7356125417962132,
+    "dev": 1.804891085624695,
+    "dev_minus_train": 0.06927854382848175
+  }
+}

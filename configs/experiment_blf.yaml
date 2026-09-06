@@ -1,0 +1,20 @@
+extends: base.yaml
+
+data:
+  train_csv: data/train.csv
+  val_csv: data/val.csv
+  image_root: .
+  num_workers: 4
+
+model:
+  vision_encoder: efficientnet_b0
+  text_encoder: minilm_l6
+  use_local_blf: true
+  use_global_blf: true
+  fusion_type: concat_mlp
+
+training:
+  batch_size: 32
+  epochs: 5
+  save_dir: checkpoints/efficientnet_b0_minilm_l6_blf
+

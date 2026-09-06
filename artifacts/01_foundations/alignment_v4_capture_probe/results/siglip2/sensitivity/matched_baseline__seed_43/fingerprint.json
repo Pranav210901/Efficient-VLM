@@ -1,0 +1,11 @@
+{
+  "cache_version": "alignment-v4-siglip2-b32-full-train-v1",
+  "code_version": "74f8225213b67107998e83c1750702667d44426a8fc0637541ba62d198c1bbf5",
+  "config_hash": "2d0d6660f5bab8218336922d19b49e64dd7ffdb19d02b3aed069ab13eeaaab55",
+  "dataset_split_hash": "4d3b716d143b748b70c9125d177552c298b1a6ccf617d5bc000792ef17fb18d8",
+  "digest": "723279812231cad20123a1fcf8effae24a474cce59d08e5559f4df8614db6b8e",
+  "model_checkpoint_id": "vit_small_patch16_dinov3.lvd1689m+sentence-transformers/all-MiniLM-L6-v2",
+  "preprocessing_hash": "57a4dd03145131e87359ad6a9b99339117241efb997e1ec1984a517bd4f9c681",
+  "schema_version": 1,
+  "seed": 43
+}

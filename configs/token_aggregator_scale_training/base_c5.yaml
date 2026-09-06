@@ -1,0 +1,14 @@
+extends: ../resolution_distillation_224_long/base.yaml
+recipe:
+  image_token_aggregation: transformer_128
+  token_pooler_dim: 384
+  token_pooler_heads: 6
+  token_pooler_blocks: 1
+  token_pooler_ff_dim: 768
+  token_pooler_native_width_identity: true
+provenance:
+  parameter_contract:
+    params_trainable_inference: 2663044
+    params_trainable_training: 3056260
+    params_training_only: 393216
+

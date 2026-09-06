@@ -1,0 +1,42 @@
+{
+  "wave": "queue_operating_point",
+  "written_before_any_new_runs": true,
+  "status": "PREREGISTERED",
+  "review_note": "Drafted by tooling from the completed Q04/Q05 results. These become the preregistered record and MUST be reviewed, edited or replaced by the author before the array is submitted. Set status to PREREGISTERED and written_before_any_new_runs true only once that review has happened and before any run starts.",
+  "unseen_predictions": [
+    {
+      "id": "staleness_share_replicates",
+      "target": "Mean fraction_of_damage_from_staleness over the six (age, seed) cells at the M-T1 operating point, against the 31.79% measured on the Wave 0 student.",
+      "statement": "The staleness share will remain a minority of total queue damage, in the range 0.20 to 0.45.",
+      "confidence": "medium",
+      "reasoning": "The residual mechanisms identified by the closure study - negative count, semantic composition and denominator mass - are properties of the queue's contents and of the loss denominator, not of the projector, so none of them should weaken when the projector gets stronger. Staleness itself should if anything shrink, because a better-trained projector on a longer schedule moves less per step late in training. A minority share is therefore predicted, with the interval wide enough to admit a moderate shift in either direction.",
+      "if_wrong": "A share above 0.7 would mean the Wave 0 study understated staleness because its weak projector confounded age with capacity, and the dissertation's central claim would need restating as operating-point-specific. A share near 0.0 would mean staleness is negligible once the projector is competent, strengthening the residual-mechanism reading but invalidating the 31.8% figure as a general estimate."
+    },
+    {
+      "id": "queue_still_harmful_at_the_operating_point",
+      "target": "total_damage_pp at both ages, M-T1 operating point.",
+      "statement": "Total queue damage will remain strictly positive at both ages, but smaller in percentage points than the 23.97pp and 26.49pp measured on the Wave 0 student.",
+      "confidence": "medium",
+      "reasoning": "Damage should persist because its identified mechanisms are unchanged, but the shipped model has more aggregation capacity and a distillation signal that supplies gradient independent of the contrastive denominator, both of which should buffer the loss. Predicting a smaller absolute figure is the falsifiable half of this statement.",
+      "if_wrong": "Damage at or above the Wave 0 magnitude would indicate the harm scales with model capability rather than being buffered by it. Damage near zero would bound the entire queue finding to weak projectors and would require the dissertation to say so explicitly."
+    },
+    {
+      "id": "residual_still_grows_with_age",
+      "target": "residual_damage_pp at age 16 versus age 64.",
+      "statement": "The residual will again grow with age, reproducing the direction of the Q04 miss rather than the original prediction.",
+      "confidence": "low",
+      "reasoning": "In this design capacity is tied to age, so a growing residual is the signature of the count effect that the closure study confirmed with a monotone fresh-capacity curve. Having been wrong in the same way once, the honest prediction is the observed direction and not the theoretically tidy one.",
+      "if_wrong": "A flat or shrinking residual would separate capacity from age in a way the Wave 0 design could not, and would make the count mechanism operating-point-dependent."
+    }
+  ],
+  "review_record": {
+    "tool_drafted": true,
+    "author_reviewed": true,
+    "author_reviewed_at": "2026-08-31T13:23:17+01:00",
+    "statements_unchanged_from_draft": true,
+    "first_result_written_at": "2026-08-31T14:28:06+01:00",
+    "outcome_information_available_at_review": false,
+    "prior_failed_array": "Job 26234 (13:07-13:11) failed every task on a missing MobileCLIP2 teacher cache and produced no metrics, so no outcome information existed before review.",
+    "original_draft_note_retained_below": true
+  }
+}

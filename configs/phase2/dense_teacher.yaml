@@ -1,0 +1,24 @@
+stage: dense_teacher
+strategy: task_and_input
+pair_combination_strategy: adaptive_normalised_path_weights
+task_sampling_weights: {retrieval_i2t: 0.35, retrieval_t2i: 0.35, classification: 0.30}
+task_vocabulary: [cifar100_zeroshot, eurosat_zeroshot, i2t, pets_zeroshot, t2i]
+strategies: [static, concat_mlp, task_only, input_conditioned, task_and_input, task_attention]
+candidate_depth: 64
+hidden_dim: 64
+path_dropout: 0.05
+balance_weight: 0.01
+entropy_weight: 0.001
+temperature_start: 1.5
+temperature_end: 0.7
+batch_size: 2048
+gradient_accumulation: 1
+epochs: 30
+learning_rate: 0.001
+weight_decay: 0.0001
+amp: true
+precision: fp16
+seed: 42
+ddp: {enabled: true, gpus: 4, backend: nccl}
+resources: {partition: teaching, gpus: 4, cpus: 32, memory: 192G, wall_time: "2-23:59:00"}
+output: results/phase2/dense_teacher

@@ -1,0 +1,38 @@
+{
+  "status": "RECORDED",
+  "count": 6,
+  "connecting_scope": "Reasonable-looking protocol choices interacting with implementation-specific semantics; the cases differ in scientific scope.",
+  "artifacts": [
+    {
+      "index": 1,
+      "id": "memory_queue",
+      "class": "training pathology"
+    },
+    {
+      "index": 2,
+      "id": "batch_lr_scaling",
+      "class": "confounded inference"
+    },
+    {
+      "index": 3,
+      "id": "native_context_padding",
+      "class": "measurement protocol"
+    },
+    {
+      "index": 4,
+      "id": "unfused_mobileclip2",
+      "class": "deployment-graph mismatch"
+    },
+    {
+      "index": 5,
+      "id": "cuda_flop_undercount",
+      "class": "profiler attribution failure"
+    },
+    {
+      "index": 6,
+      "id": "training_heads_counted_as_inference_parameters",
+      "class": "artifact labelling defect",
+      "affected_artifacts": 6
+    }
+  ]
+}

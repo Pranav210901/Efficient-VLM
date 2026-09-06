@@ -1,0 +1,65 @@
+version: queue-factorial-1.0
+name: queue_factorial
+output_root: results/queue_factorial
+checkpoint_root: checkpoints/queue_factorial
+log_root: logs/queue_factorial
+base_config: configs/queue_factorial/base.yaml
+predictions_path: predictions/queue_factorial.json
+
+split:
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+
+student:
+  vision_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+  student_pair_changed: false
+
+factorial:
+  seeds: [42, 43, 44]
+  batches: [512, 1024]
+  target_ages: [0, 1, 2, 4, 8, 16, 32, 64]
+  modality_ages: [4, 16, 64]
+  queue_modes: [none, image_only, text_only, both]
+  pinned_resolved_lr: 0.002545584412271571
+  counterfactual_sqrt_lrs:
+    512: 0.0018
+    1024: 0.002545584412271571
+  reuse:
+    stage: wave0-winner-confirmation
+    batch: 1024
+    target_age: 0
+    seeds: [42, 43, 44]
+    require_hardware: NVIDIA RTX PRO 6000 Blackwell
+    require_precision: native_bf16
+
+analysis:
+  equivalence_margin_pp: 1.0
+  age_dominates_minimum_ages: 6
+  count_matters_minimum_ages: 3
+  harm_threshold_pp: 1.0
+  seed_ordering_gap_pp: 1.0
+  uncertainty_summary: [mean, standard_deviation, minimum, maximum]
+  text_only_interpretation: >-
+    If text-only proves worse, that undermines an age-only explanation but
+    does not uniquely establish entry count; per-modality drift magnitude,
+    gradient sensitivity, or representation geometry could also differ.
+
+resources:
+  partition: teaching
+  gpu_per_task: 1
+  cpus_per_task: 12
+  host_memory: 96G
+  wall_time: "08:00:00"
+  dataloader_workers: 12
+  array_concurrency: discover_before_submission
+  precision: bf16
+  required_gpu_substrings: [RTX PRO 6000, Blackwell]
+
+smoke:
+  optimizer_steps: 80
+  cells:
+    - {batch_size: 512, memory_queue_size: 32768, target_age_steps: 64}
+    - {batch_size: 1024, memory_queue_size: 65536, target_age_steps: 64}
+

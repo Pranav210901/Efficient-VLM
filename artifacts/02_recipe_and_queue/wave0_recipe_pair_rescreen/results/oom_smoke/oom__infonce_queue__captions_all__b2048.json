@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "loss_type": "infonce_queue",
+  "batch_size": 2048,
+  "captions_per_image": "all",
+  "unique_images": 2048,
+  "text_rows": 10246,
+  "loss": 7.871471405029297,
+  "peak_gpu_memory_bytes": 9768116224,
+  "peak_gpu_reserved_bytes": 13220446208,
+  "gpu_total_memory_bytes": 102016548864,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+}

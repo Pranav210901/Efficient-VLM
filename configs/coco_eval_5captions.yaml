@@ -1,0 +1,5 @@
+extends: coco_blf_rtxpro.yaml
+
+data:
+  val_csv: data/val_all_captions.csv
+

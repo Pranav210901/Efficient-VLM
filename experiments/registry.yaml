@@ -1,0 +1,138 @@
+schema_version: 1
+updated_at: "2026-08-10"
+canonical_index: experiments/README.md
+physical_rename_policy: preserve_paths
+status_vocabulary:
+  - COMPLETE
+  - STOPPED_BY_GATE
+  - INCOMPLETE_ARCHIVED
+  - SUPERSEDED
+  - READY_NOT_RUN
+  - IN_PROGRESS
+
+tracks:
+  F: foundations
+  A: adaptive_reranking_and_routing
+  R: recipe_and_pair_selection
+  Q: queue_mechanism
+  D: data_and_transfer
+  E: efficiency_and_architecture
+  X: diagnostics_and_bounded_followups
+
+experiments:
+  - id: F00
+    headline: Legacy BLF and encoder-matrix foundation
+    status: COMPLETE
+    physical_paths: [results/legacy_summary, results/phase15, results/phase1_multitask, results/phase1_multitask_development]
+  - id: F01
+    headline: Alignment v2 — a locally measured strong paired reference
+    status: COMPLETE
+    physical_paths: [results/alignment_v2, configs/alignment_v2]
+  - id: F02
+    headline: Alignment v3 — compatibility screening did not clear its gate
+    status: INCOMPLETE_ARCHIVED
+    physical_paths: [results/alignment_v3, configs/alignment_v3]
+  - id: F03
+    headline: Batch-calibration recovery branch
+    status: SUPERSEDED
+    physical_paths: [results/alignment_v3_recovery, configs/alignment_v3_recovery]
+  - id: F04
+    headline: Alignment v4 — teacher-signal capture was measurable but limited
+    status: COMPLETE
+    physical_paths: [results/alignment_v4, configs/alignment_v4]
+  - id: A01
+    headline: Phase 2 — cross-attention bridges and adaptive routing completed with mixed results
+    status: COMPLETE
+    physical_paths: [results/phase2, configs/phase2, src/phase2]
+  - id: R01
+    headline: Wave 0 — the memory queue, not the loss family, explained the collapse
+    status: COMPLETE
+    physical_paths: [results/alignment_v4_wave0, configs/alignment_v4_wave0]
+  - id: R02
+    headline: Recipe-corrected pair re-screen — text ranking inverted
+    status: COMPLETE
+    physical_paths: [results/alignment_v4_wave0/wave0-rescreen, results/alignment_v4_wave0/selection]
+  - id: Q01
+    headline: Queue dose response — more stale negatives caused monotonic damage
+    status: COMPLETE
+    physical_paths: [results/alignment_v4_wave0/wave0-queue-ablation]
+  - id: Q02
+    headline: Queue factorial — there was no safe stale-negative threshold
+    status: COMPLETE
+    physical_paths: [results/queue_factorial, configs/queue_factorial]
+  - id: Q03
+    headline: Drift was necessary but not sufficient to explain queue damage
+    status: COMPLETE
+    physical_paths: [results/queue_factorial/interpretation]
+  - id: D01
+    headline: COCO scale pilot — unique in-distribution coverage mattered
+    status: COMPLETE
+    physical_paths: [results/data_scale_pilot, configs/data_scale_pilot]
+  - id: D02
+    headline: CC3M-mirror scaling — volume alone did not transfer within budget
+    status: COMPLETE
+    physical_paths: [results/cc3m_scale, configs/cc3m_scale]
+  - id: D03
+    headline: Mixed COCO plus CC3M recovered much of the transfer loss
+    status: COMPLETE
+    physical_paths: [results/mixed_data_training, configs/mixed_data_training]
+  - id: E01
+    headline: Initial efficiency frontier — protocol details changed the apparent frontier
+    status: COMPLETE
+    physical_paths: [results/efficiency_frontier, configs/efficiency_frontier]
+  - id: E02
+    headline: Wave 1 — distillation still helped after the recipe was repaired
+    status: COMPLETE
+    physical_paths: [results/alignment_wave1, configs/alignment_wave1]
+  - id: E03
+    headline: Resolution curve — 224 px closed the latency gap without positional mismatch
+    status: COMPLETE
+    physical_paths: [results/resolution_arm, results/resolution_distillation_224, configs/resolution_arm]
+  - id: E04
+    headline: Long 224-px distillation — training and transfer-epoch selection were measured
+    status: COMPLETE
+    physical_paths: [results/resolution_distillation_224_long, configs/resolution_distillation_224_long]
+  - id: E05
+    headline: Teacher benchmark strength did not predict student transfer
+    status: COMPLETE
+    physical_paths: [results/teacher_extension_224, configs/teacher_extension_224]
+  - id: E06
+    headline: Patch access helped; learned patch selection helped much more
+    status: COMPLETE
+    physical_paths: [results/token_projection_profile, results/token_projection_training, configs/token_projection_training]
+  - id: E07
+    headline: Vision-token scaling saturated below the 5M parameter budget
+    status: COMPLETE
+    physical_paths: [results/token_aggregator_scale_profile, results/token_aggregator_scale_training, configs/token_aggregator_scale_training]
+  - id: E08
+    headline: Text aggregation gave a small eligible gain; E5 missed the latency gate
+    status: COMPLETE
+    physical_paths: [results/text_aggregation_study, configs/text_aggregation_study, results/e5_c4_224]
+  - id: E09
+    headline: Final LR retuning did not improve the selected model
+    status: COMPLETE
+    physical_paths: [results/final_lr_study, configs/final_lr_study]
+  - id: X01
+    headline: Probe 1 — the dominant deficit was fine ranking, not gross retrieval
+    status: COMPLETE
+    physical_paths: [results/probe1_error_decomposition, configs/probe1_error_decomposition]
+  - id: X02
+    headline: Guarded hard-negative mining was infeasible under its frozen safety rules
+    status: STOPPED_BY_GATE
+    physical_paths: [results/guarded_hard_negative_study, configs/guarded_hard_negative_study]
+  - id: X03
+    headline: FreezeShift — bounded encoder-adaptation upper bound
+    status: COMPLETE
+    physical_paths: [freezeshift]
+  - id: X04
+    headline: TokenShift — internal token merging produced a measured latency reduction
+    status: COMPLETE
+    physical_paths: [tokenshift]
+  - id: X05
+    headline: FreezeShift same-allocation latency amendment repaired the invalid cross-session gate
+    status: COMPLETE
+    physical_paths: [latency_amendment]
+  - id: X06
+    headline: TokenShift accuracy study — frozen and dual-LoRA parents at two merge depths
+    status: COMPLETE
+    physical_paths: [tokenshift_training]

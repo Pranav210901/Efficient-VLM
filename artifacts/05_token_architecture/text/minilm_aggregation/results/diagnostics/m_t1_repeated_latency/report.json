@@ -1,0 +1,240 @@
+{
+  "status": "COMPLETE",
+  "diagnostic_only": true,
+  "automatic_gate_decision": false,
+  "latency_ceiling_ms_context_only": 9.48,
+  "slurm_job_id": "2288035",
+  "node": "aisurrey38.surrey.ac.uk",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "precision": "native_bf16",
+  "python": "3.9.25",
+  "torch": "2.8.0+cu128",
+  "protocol": {
+    "batch_size": 64,
+    "warmup_iterations_per_profile": 20,
+    "timed_iterations_per_profile": 100,
+    "independent_profiles_per_seed_per_arm": 10,
+    "total_independent_profiles": 60,
+    "order": "deterministically randomized within each seed/repetition pair",
+    "order_seed": 20260801,
+    "ci": "percentile bootstrap CI for mean Q3; 10000 replicates",
+    "bootstrap_seed": 20260802,
+    "same_allocation": true,
+    "dynamic_padding": true
+  },
+  "checkpoints": [
+    {
+      "arm": "M_T0",
+      "seed": 42,
+      "selected_epoch": 14,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_42/epoch_14.pt",
+      "checkpoint_sha256": "e65a7ed575f09582b95f26691692e59a04a840198dcd4c39d108289569282235",
+      "fingerprint": "06bb7f851e4a3389ead7b6b987112bf1de52a684326d7d40940e55260251b004",
+      "config_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_42/config.yaml"
+    },
+    {
+      "arm": "M_T0",
+      "seed": 43,
+      "selected_epoch": 22,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_43/epoch_22.pt",
+      "checkpoint_sha256": "508cbce6e2393c034580127a6a4cd21f390b8fc2af40086b99229c3aad244187",
+      "fingerprint": "520c6d2cdb3fda7272f37f75b7cab5ddfc012d5398c6f356fa7e7b803f55cc3d",
+      "config_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_43/config.yaml"
+    },
+    {
+      "arm": "M_T0",
+      "seed": 44,
+      "selected_epoch": 20,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_44/epoch_20.pt",
+      "checkpoint_sha256": "42b449db1497d55c6dca3c154c86cb64ce615093f556347379de21a463d2f19a",
+      "fingerprint": "1739107d6c4a5856b6c4b3321613acdb2100933ede5c390126127d93403e6c90",
+      "config_path": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_44/config.yaml"
+    },
+    {
+      "arm": "M_T1",
+      "seed": 42,
+      "selected_epoch": 22,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_42/epoch_22.pt",
+      "checkpoint_sha256": "15edf5155a034f474cf3be44c797e578a15af3d53463df96b0f19d96a689d4be",
+      "fingerprint": "41f565332685997df5ec99356a431a863b892b7a6a131ec894c159bb86e68d92",
+      "config_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_42/config.yaml"
+    },
+    {
+      "arm": "M_T1",
+      "seed": 43,
+      "selected_epoch": 22,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_43/epoch_22.pt",
+      "checkpoint_sha256": "a6b273972fb58e310dcd38ed24a648c7d0de568503090e480b9750190bd7bed2",
+      "fingerprint": "da0ec3367ef776e61eb15adbbe839e771e3b1f9ab86b50e3a86428600bd1c819",
+      "config_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_43/config.yaml"
+    },
+    {
+      "arm": "M_T1",
+      "seed": 44,
+      "selected_epoch": 20,
+      "selection_source": "Flickr30k validation, frozen before this diagnostic",
+      "checkpoint_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_44/epoch_20.pt",
+      "checkpoint_sha256": "b8872c31deaae3b0ecf71c0553f25d3cfbc29f894c30dbeb60e1c9c246a0fb0e",
+      "fingerprint": "22a40fedac1eb6dae760275db41fc254ecda50da8873ef936ee549ed822b7374",
+      "config_path": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_44/config.yaml"
+    }
+  ],
+  "summary": [
+    {
+      "comparison": "M_T0",
+      "seed": "42",
+      "n": 10,
+      "median_q3_ms": 8.746038656681776,
+      "mean_q3_ms": 8.780510583892465,
+      "sd_q3_ms": 0.11092268844089267,
+      "mean_q3_bootstrap_ci95_low_ms": 8.74453189666383,
+      "mean_q3_bootstrap_ci95_high_ms": 8.851063348120078,
+      "raw_q3_min_ms": 8.74233152717352,
+      "raw_q3_max_ms": 9.096152381971478
+    },
+    {
+      "comparison": "M_T0",
+      "seed": "43",
+      "n": 10,
+      "median_q3_ms": 8.748920634388924,
+      "mean_q3_ms": 8.748623868450522,
+      "sd_q3_ms": 0.0017700262776246974,
+      "mean_q3_bootstrap_ci95_low_ms": 8.74755154189188,
+      "mean_q3_bootstrap_ci95_high_ms": 8.749644259805791,
+      "raw_q3_min_ms": 8.745518047362566,
+      "raw_q3_max_ms": 8.751108311116695
+    },
+    {
+      "comparison": "M_T0",
+      "seed": "44",
+      "n": 10,
+      "median_q3_ms": 8.758653188124299,
+      "mean_q3_ms": 8.758730767294765,
+      "sd_q3_ms": 0.0012317521567162717,
+      "mean_q3_bootstrap_ci95_low_ms": 8.75803283881396,
+      "mean_q3_bootstrap_ci95_high_ms": 8.759481641463935,
+      "raw_q3_min_ms": 8.75689391978085,
+      "raw_q3_max_ms": 8.761387318372726
+    },
+    {
+      "comparison": "M_T0",
+      "seed": "pooled",
+      "n": 30,
+      "median_q3_ms": 8.74943460803479,
+      "mean_q3_ms": 8.76262173987925,
+      "sd_q3_ms": 0.06326935993184218,
+      "mean_q3_bootstrap_ci95_low_ms": 8.749576149857603,
+      "mean_q3_bootstrap_ci95_high_ms": 8.78677033217779,
+      "raw_q3_min_ms": 8.74233152717352,
+      "raw_q3_max_ms": 9.096152381971478
+    },
+    {
+      "comparison": "M_T1",
+      "seed": "42",
+      "n": 10,
+      "median_q3_ms": 8.995462907478213,
+      "mean_q3_ms": 9.011452225968242,
+      "sd_q3_ms": 0.05431194082699278,
+      "mean_q3_bootstrap_ci95_low_ms": 8.992871741065755,
+      "mean_q3_bootstrap_ci95_high_ms": 9.046452948823571,
+      "raw_q3_min_ms": 8.9885329362005,
+      "raw_q3_max_ms": 9.1657810844481
+    },
+    {
+      "comparison": "M_T1",
+      "seed": "43",
+      "n": 10,
+      "median_q3_ms": 9.000659920275211,
+      "mean_q3_ms": 9.000294585712254,
+      "sd_q3_ms": 0.0022205316613481962,
+      "mean_q3_bootstrap_ci95_low_ms": 8.998962209443562,
+      "mean_q3_bootstrap_ci95_high_ms": 9.001597358146682,
+      "raw_q3_min_ms": 8.996479446068406,
+      "raw_q3_max_ms": 9.003769140690565
+    },
+    {
+      "comparison": "M_T1",
+      "seed": "44",
+      "n": 10,
+      "median_q3_ms": 8.998147211968899,
+      "mean_q3_ms": 8.997938898392022,
+      "sd_q3_ms": 0.0019637710120323205,
+      "mean_q3_bootstrap_ci95_low_ms": 8.996766946511343,
+      "mean_q3_bootstrap_ci95_high_ms": 8.999088103882968,
+      "raw_q3_min_ms": 8.99424054659903,
+      "raw_q3_max_ms": 9.001415921375155
+    },
+    {
+      "comparison": "M_T1",
+      "seed": "pooled",
+      "n": 30,
+      "median_q3_ms": 8.99804092478007,
+      "mean_q3_ms": 9.003228570024172,
+      "sd_q3_ms": 0.030888755199030577,
+      "mean_q3_bootstrap_ci95_low_ms": 8.996712471513698,
+      "mean_q3_bootstrap_ci95_high_ms": 9.015173488102544,
+      "raw_q3_min_ms": 8.9885329362005,
+      "raw_q3_max_ms": 9.1657810844481
+    },
+    {
+      "comparison": "M_T1_minus_M_T0_paired",
+      "seed": "42",
+      "n": 10,
+      "median_q3_ms": 0.24956115521490574,
+      "mean_q3_ms": 0.23094164207577705,
+      "sd_q3_ms": 0.05674057873875135,
+      "mean_q3_bootstrap_ci95_low_ms": 0.19454586959909648,
+      "mean_q3_bootstrap_ci95_high_ms": 0.2500407717889175,
+      "raw_q3_min_ms": 0.06962870247662067,
+      "raw_q3_max_ms": 0.2521274145692587
+    },
+    {
+      "comparison": "M_T1_minus_M_T0_paired",
+      "seed": "43",
+      "n": 10,
+      "median_q3_ms": 0.2515302039682865,
+      "mean_q3_ms": 0.2516707172617316,
+      "sd_q3_ms": 0.0023679753081397425,
+      "mean_q3_bootstrap_ci95_low_ms": 0.2502159372670576,
+      "mean_q3_bootstrap_ci95_high_ms": 0.25301636836957186,
+      "raw_q3_min_ms": 0.24697091430425644,
+      "raw_q3_max_ms": 0.25508925318717957
+    },
+    {
+      "comparison": "M_T1_minus_M_T0_paired",
+      "seed": "44",
+      "n": 10,
+      "median_q3_ms": 0.23912359029054642,
+      "mean_q3_ms": 0.23920813109725714,
+      "sd_q3_ms": 0.0024891892025269372,
+      "mean_q3_bootstrap_ci95_low_ms": 0.23770428088027984,
+      "mean_q3_bootstrap_ci95_high_ms": 0.24060821684543043,
+      "raw_q3_min_ms": 0.23491517640650272,
+      "raw_q3_max_ms": 0.24277716875076294
+    },
+    {
+      "comparison": "M_T1_minus_M_T0_paired",
+      "seed": "pooled",
+      "n": 30,
+      "median_q3_ms": 0.24845043662935495,
+      "mean_q3_ms": 0.24060683014492193,
+      "sd_q3_ms": 0.0328315911709645,
+      "mean_q3_bootstrap_ci95_low_ms": 0.22767928564765802,
+      "mean_q3_bootstrap_ci95_high_ms": 0.24814786564093083,
+      "raw_q3_min_ms": 0.06962870247662067,
+      "raw_q3_max_ms": 0.25508925318717957
+    }
+  ],
+  "artifacts": {
+    "raw_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/text_aggregation_study/diagnostics/m_t1_repeated_latency/raw_profiles.csv",
+    "summary_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/text_aggregation_study/diagnostics/m_t1_repeated_latency/summary_statistics.csv",
+    "paired_csv": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/text_aggregation_study/diagnostics/m_t1_repeated_latency/paired_differences.csv",
+    "report_json": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/text_aggregation_study/diagnostics/m_t1_repeated_latency/report.json",
+    "report_md": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/text_aggregation_study/diagnostics/m_t1_repeated_latency/report.md"
+  }
+}

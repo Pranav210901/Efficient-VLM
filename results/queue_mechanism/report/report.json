@@ -1,0 +1,192 @@
+{
+  "status": "COMPLETE",
+  "capacity_complete": true,
+  "mechanism_complete": true,
+  "capacity_rows": [
+    {
+      "queue_size": 0,
+      "seed": 42,
+      "value": 0.3759716749191284,
+      "source": "reused_queue_free"
+    },
+    {
+      "queue_size": 0,
+      "seed": 43,
+      "value": 0.37063227593898773,
+      "source": "reused_queue_free"
+    },
+    {
+      "queue_size": 0,
+      "seed": 44,
+      "value": 0.3730313777923584,
+      "source": "reused_queue_free"
+    },
+    {
+      "queue_size": 1024,
+      "seed": 42,
+      "value": 0.31235867738723755,
+      "source": "new"
+    },
+    {
+      "queue_size": 1024,
+      "seed": 43,
+      "value": 0.30881838500499725,
+      "source": "new"
+    },
+    {
+      "queue_size": 1024,
+      "seed": 44,
+      "value": 0.3054194003343582,
+      "source": "new"
+    },
+    {
+      "queue_size": 4096,
+      "seed": 42,
+      "value": 0.2529097869992256,
+      "source": "new"
+    },
+    {
+      "queue_size": 4096,
+      "seed": 43,
+      "value": 0.25342950969934464,
+      "source": "new"
+    },
+    {
+      "queue_size": 4096,
+      "seed": 44,
+      "value": 0.2510298639535904,
+      "source": "new"
+    },
+    {
+      "queue_size": 16384,
+      "seed": 42,
+      "value": 0.20979846268892288,
+      "source": "reused_fresh_identification"
+    },
+    {
+      "queue_size": 16384,
+      "seed": 43,
+      "value": 0.20775870233774185,
+      "source": "reused_fresh_identification"
+    },
+    {
+      "queue_size": 16384,
+      "seed": 44,
+      "value": 0.20943836122751236,
+      "source": "reused_fresh_identification"
+    },
+    {
+      "queue_size": 65536,
+      "seed": 42,
+      "value": 0.19406244158744812,
+      "source": "reused_fresh_identification"
+    },
+    {
+      "queue_size": 65536,
+      "seed": 43,
+      "value": 0.19374267011880875,
+      "source": "reused_fresh_identification"
+    },
+    {
+      "queue_size": 65536,
+      "seed": 44,
+      "value": 0.19226226210594177,
+      "source": "reused_fresh_identification"
+    }
+  ],
+  "mechanism_rows": [
+    {
+      "arm": "unweighted_fresh_control",
+      "seed": 42,
+      "value": 0.20979846268892288,
+      "source": "reused"
+    },
+    {
+      "arm": "semantic_filter",
+      "seed": 42,
+      "value": 0.26506760716438293,
+      "source": "new"
+    },
+    {
+      "arm": "matched_random_filter",
+      "seed": 42,
+      "value": 0.20997846871614456,
+      "source": "new"
+    },
+    {
+      "arm": "mass_normalized",
+      "seed": 42,
+      "value": 0.2694082111120224,
+      "source": "new"
+    },
+    {
+      "arm": "unweighted_fresh_control",
+      "seed": 43,
+      "value": 0.20775870233774185,
+      "source": "reused"
+    },
+    {
+      "arm": "semantic_filter",
+      "seed": 43,
+      "value": 0.26000799238681793,
+      "source": "new"
+    },
+    {
+      "arm": "matched_random_filter",
+      "seed": 43,
+      "value": 0.20781859010457993,
+      "source": "new"
+    },
+    {
+      "arm": "mass_normalized",
+      "seed": 43,
+      "value": 0.2739687040448189,
+      "source": "new"
+    },
+    {
+      "arm": "unweighted_fresh_control",
+      "seed": 44,
+      "value": 0.20943836122751236,
+      "source": "reused"
+    },
+    {
+      "arm": "semantic_filter",
+      "seed": 44,
+      "value": 0.2608684003353119,
+      "source": "new"
+    },
+    {
+      "arm": "matched_random_filter",
+      "seed": 44,
+      "value": 0.2100181058049202,
+      "source": "new"
+    },
+    {
+      "arm": "mass_normalized",
+      "seed": 44,
+      "value": 0.26992814987897873,
+      "source": "new"
+    }
+  ],
+  "effects": {
+    "semantic_vs_matched_random": {
+      "n": 3,
+      "mean_pp": 5.270961175362269,
+      "sd_pp": 0.21667747599958784,
+      "clears_practical_threshold": true
+    },
+    "mass_normalized_vs_control": {
+      "n": 3,
+      "mean_pp": 6.210317959388097,
+      "sd_pp": 0.3583728310427993,
+      "clears_practical_threshold": true
+    },
+    "semantic_vs_control": {
+      "n": 3,
+      "mean_pp": 5.298282454411189,
+      "sd_pp": 0.2021938957425653,
+      "clears_practical_threshold": true
+    }
+  },
+  "minimum_practical_effect_pp": 2.0
+}

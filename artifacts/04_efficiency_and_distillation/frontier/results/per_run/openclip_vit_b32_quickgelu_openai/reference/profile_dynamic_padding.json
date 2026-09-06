@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE",
+  "kind": "reference",
+  "entry_id": "openclip_vit_b32_quickgelu_openai",
+  "label": "ViT-B-32-quickgelu:openai",
+  "role": "reference",
+  "seed": null,
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "precision": "native_bf16",
+  "full_stack_inference_parameters": 151277313,
+  "query_side_inference_parameters": 63428096,
+  "image_flops": 8817624576.0,
+  "caption_flops": 5959542272.0,
+  "normalization_flops_added_per_embedding": 1536.0,
+  "multiply_add_flops": 2,
+  "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+  "flop_measurement_version": "operator_level_v2",
+  "native_image_resolution": 224,
+  "native_text_context_length": 77,
+  "padding_workload": "dynamic_batch",
+  "batch_size": 64,
+  "padded_sequence_length": 77,
+  "raw_token_length_mean": 77.0,
+  "raw_token_length_median": 77.0,
+  "raw_token_length_p95": 77.0,
+  "raw_token_length_max": 77,
+  "mean_padding_tokens_per_caption": 0.0,
+  "token_utilization_fraction": 1.0,
+  "tokenizer_output_fixed_length": true,
+  "paired_batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "full_stack_neural_latency_ms": {
+    "median": 9.378501679748297,
+    "q1": 9.375541936606169,
+    "q3": 9.381030453369021,
+    "iqr": 0.005488516762852669
+  },
+  "image_neural_latency_ms": {
+    "median": 5.57998102158308,
+    "q1": 5.574122769758105,
+    "q3": 5.584109108895063,
+    "iqr": 0.009986339136958122
+  },
+  "text_neural_latency_ms": {
+    "median": 3.9711128920316696,
+    "q1": 3.9695887826383114,
+    "q3": 3.9766684640198946,
+    "iqr": 0.007079681381583214
+  },
+  "cpu_preprocessing_latency_ms": {
+    "median": 101.45085165277123,
+    "q1": 98.36841258220375,
+    "q3": 104.81221321970224,
+    "iqr": 6.443800637498498
+  },
+  "cpu_tokenization_latency_ms": {
+    "median": 2.305962610989809,
+    "q1": 2.3019257932901382,
+    "q3": 2.3101342376321554,
+    "iqr": 0.008208444342017174
+  },
+  "checkpoint_fingerprint": null
+}

@@ -1,0 +1,667 @@
+{
+  "status": "COMPLETE",
+  "verdict": "PASS",
+  "run_id": "b1024__age_64__both__seed_42",
+  "cell": {
+    "index": 57,
+    "run_id": "b1024__age_64__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  "threshold": 0.2,
+  "combined_mean_used": false,
+  "image": {
+    "first_epoch_mean_drift_from_previous": 0.1450138075107878,
+    "final_epoch_mean_drift_from_previous": 2.115118232640353e-06,
+    "ratio": 1.458563338862064e-05,
+    "passes": true,
+    "first_crossing_0p95": {
+      "optimizer_step": 160,
+      "epoch": 2,
+      "distance": 0.950038492679596
+    }
+  },
+  "text": {
+    "first_epoch_mean_drift_from_previous": 0.14651215956969696,
+    "final_epoch_mean_drift_from_previous": 7.711640432491023e-07,
+    "ratio": 5.263481512483294e-06,
+    "passes": true,
+    "first_crossing_0p95": {
+      "optimizer_step": 160,
+      "epoch": 2,
+      "distance": 0.9674674272537231
+    }
+  },
+  "passing_modalities": [
+    "image",
+    "text"
+  ],
+  "failing_modalities": [],
+  "per_epoch_drift": [
+    {
+      "epoch": 1,
+      "image_mean_drift_from_previous": 0.1450138075107878,
+      "text_mean_drift_from_previous": 0.14651215956969696,
+      "image_mean_drift_from_step0": 0.5967339957979593,
+      "text_mean_drift_from_step0": 0.6060288920998573,
+      "measurements": 11
+    },
+    {
+      "epoch": 2,
+      "image_mean_drift_from_previous": 0.14794025773351843,
+      "text_mean_drift_from_previous": 0.14124907485463403,
+      "image_mean_drift_from_step0": 0.7850381840359081,
+      "text_mean_drift_from_step0": 0.7676789489659396,
+      "measurements": 11
+    },
+    {
+      "epoch": 3,
+      "image_mean_drift_from_previous": 0.06078761477362026,
+      "text_mean_drift_from_previous": 0.059648183259097015,
+      "image_mean_drift_from_step0": 0.8599943789568815,
+      "text_mean_drift_from_step0": 0.8716942993077365,
+      "measurements": 11
+    },
+    {
+      "epoch": 4,
+      "image_mean_drift_from_previous": 0.0400429293513298,
+      "text_mean_drift_from_previous": 0.03952314213595607,
+      "image_mean_drift_from_step0": 0.793026095086878,
+      "text_mean_drift_from_step0": 0.768829426982186,
+      "measurements": 11
+    },
+    {
+      "epoch": 5,
+      "image_mean_drift_from_previous": 0.034715828570452606,
+      "text_mean_drift_from_previous": 0.03462574275379831,
+      "image_mean_drift_from_step0": 0.8905293995683844,
+      "text_mean_drift_from_step0": 0.9114675521850586,
+      "measurements": 11
+    },
+    {
+      "epoch": 6,
+      "image_mean_drift_from_previous": 0.03074203550138257,
+      "text_mean_drift_from_previous": 0.030237749726934868,
+      "image_mean_drift_from_step0": 0.8328226913105358,
+      "text_mean_drift_from_step0": 0.8093275969678705,
+      "measurements": 11
+    },
+    {
+      "epoch": 7,
+      "image_mean_drift_from_previous": 0.016377634622833946,
+      "text_mean_drift_from_previous": 0.01670441022989425,
+      "image_mean_drift_from_step0": 0.933485356244174,
+      "text_mean_drift_from_step0": 0.982660559090701,
+      "measurements": 11
+    },
+    {
+      "epoch": 8,
+      "image_mean_drift_from_previous": 0.006503589451313019,
+      "text_mean_drift_from_previous": 0.006593256193975156,
+      "image_mean_drift_from_step0": 0.8427869894287803,
+      "text_mean_drift_from_step0": 0.8237720890478655,
+      "measurements": 11
+    },
+    {
+      "epoch": 9,
+      "image_mean_drift_from_previous": 0.0035972895989702506,
+      "text_mean_drift_from_previous": 0.003598821328275583,
+      "image_mean_drift_from_step0": 0.7979196310043335,
+      "text_mean_drift_from_step0": 0.7518947503783486,
+      "measurements": 11
+    },
+    {
+      "epoch": 10,
+      "image_mean_drift_from_previous": 0.0028143417069011116,
+      "text_mean_drift_from_previous": 0.0027110834859988904,
+      "image_mean_drift_from_step0": 0.8475678996606306,
+      "text_mean_drift_from_step0": 0.8315655805847861,
+      "measurements": 11
+    },
+    {
+      "epoch": 11,
+      "image_mean_drift_from_previous": 0.0002388552741401575,
+      "text_mean_drift_from_previous": 0.00020540282573413359,
+      "image_mean_drift_from_step0": 0.8994472839615562,
+      "text_mean_drift_from_step0": 0.9051020037044178,
+      "measurements": 11
+    },
+    {
+      "epoch": 12,
+      "image_mean_drift_from_previous": 2.115118232640353e-06,
+      "text_mean_drift_from_previous": 7.711640432491023e-07,
+      "image_mean_drift_from_step0": 0.9094840884208679,
+      "text_mean_drift_from_step0": 0.9160844737833197,
+      "measurements": 11
+    }
+  ],
+  "queue_positive_fraction_nonzero_observed": true,
+  "epoch_boundary_windows": [
+    {
+      "after_epoch": 1,
+      "steps": [
+        {
+          "optimizer_step": 108,
+          "epoch": 1,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 109,
+          "epoch": 1,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 110,
+          "epoch": 1,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 111,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0089874267578125,
+          "text_queue_positive_fraction": 0.00946044921875
+        },
+        {
+          "optimizer_step": 112,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0091400146484375,
+          "text_queue_positive_fraction": 0.0081634521484375
+        },
+        {
+          "optimizer_step": 113,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0087738037109375,
+          "text_queue_positive_fraction": 0.0072479248046875
+        }
+      ]
+    },
+    {
+      "after_epoch": 2,
+      "steps": [
+        {
+          "optimizer_step": 218,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 219,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 220,
+          "epoch": 2,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 221,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0092926025390625,
+          "text_queue_positive_fraction": 0.0088653564453125
+        },
+        {
+          "optimizer_step": 222,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0088958740234375,
+          "text_queue_positive_fraction": 0.008544921875
+        },
+        {
+          "optimizer_step": 223,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.008636474609375,
+          "text_queue_positive_fraction": 0.008087158203125
+        }
+      ]
+    },
+    {
+      "after_epoch": 3,
+      "steps": [
+        {
+          "optimizer_step": 328,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 329,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 330,
+          "epoch": 3,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 331,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0087890625,
+          "text_queue_positive_fraction": 0.0087127685546875
+        },
+        {
+          "optimizer_step": 332,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.008575439453125,
+          "text_queue_positive_fraction": 0.0085601806640625
+        },
+        {
+          "optimizer_step": 333,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.00909423828125,
+          "text_queue_positive_fraction": 0.0084686279296875
+        }
+      ]
+    },
+    {
+      "after_epoch": 4,
+      "steps": [
+        {
+          "optimizer_step": 438,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 439,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 440,
+          "epoch": 4,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 441,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0091400146484375,
+          "text_queue_positive_fraction": 0.01007080078125
+        },
+        {
+          "optimizer_step": 442,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0086517333984375,
+          "text_queue_positive_fraction": 0.0078582763671875
+        },
+        {
+          "optimizer_step": 443,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0086212158203125,
+          "text_queue_positive_fraction": 0.0078582763671875
+        }
+      ]
+    },
+    {
+      "after_epoch": 5,
+      "steps": [
+        {
+          "optimizer_step": 548,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 549,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 550,
+          "epoch": 5,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 551,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0087127685546875,
+          "text_queue_positive_fraction": 0.0087127685546875
+        },
+        {
+          "optimizer_step": 552,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0086822509765625,
+          "text_queue_positive_fraction": 0.008331298828125
+        },
+        {
+          "optimizer_step": 553,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.009124755859375,
+          "text_queue_positive_fraction": 0.0078582763671875
+        }
+      ]
+    },
+    {
+      "after_epoch": 6,
+      "steps": [
+        {
+          "optimizer_step": 658,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 659,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 660,
+          "epoch": 6,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 661,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0088653564453125,
+          "text_queue_positive_fraction": 0.0095367431640625
+        },
+        {
+          "optimizer_step": 662,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0087432861328125,
+          "text_queue_positive_fraction": 0.00823974609375
+        },
+        {
+          "optimizer_step": 663,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0087432861328125,
+          "text_queue_positive_fraction": 0.007171630859375
+        }
+      ]
+    },
+    {
+      "after_epoch": 7,
+      "steps": [
+        {
+          "optimizer_step": 768,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 769,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 770,
+          "epoch": 7,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 771,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.00921630859375,
+          "text_queue_positive_fraction": 0.0095367431640625
+        },
+        {
+          "optimizer_step": 772,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.008941650390625,
+          "text_queue_positive_fraction": 0.009246826171875
+        },
+        {
+          "optimizer_step": 773,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0088043212890625,
+          "text_queue_positive_fraction": 0.0081634521484375
+        }
+      ]
+    },
+    {
+      "after_epoch": 8,
+      "steps": [
+        {
+          "optimizer_step": 878,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 879,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 880,
+          "epoch": 8,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 881,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.008514404296875,
+          "text_queue_positive_fraction": 0.008544921875
+        },
+        {
+          "optimizer_step": 882,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0086212158203125,
+          "text_queue_positive_fraction": 0.0089263916015625
+        },
+        {
+          "optimizer_step": 883,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0085296630859375,
+          "text_queue_positive_fraction": 0.0067901611328125
+        }
+      ]
+    },
+    {
+      "after_epoch": 9,
+      "steps": [
+        {
+          "optimizer_step": 988,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 989,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 990,
+          "epoch": 9,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 991,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.00872802734375,
+          "text_queue_positive_fraction": 0.009613037109375
+        },
+        {
+          "optimizer_step": 992,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.008636474609375,
+          "text_queue_positive_fraction": 0.006805419921875
+        },
+        {
+          "optimizer_step": 993,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.0089874267578125,
+          "text_queue_positive_fraction": 0.0083160400390625
+        }
+      ]
+    },
+    {
+      "after_epoch": 10,
+      "steps": [
+        {
+          "optimizer_step": 1098,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1099,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1100,
+          "epoch": 10,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1101,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.009033203125,
+          "text_queue_positive_fraction": 0.008392333984375
+        },
+        {
+          "optimizer_step": 1102,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.00872802734375,
+          "text_queue_positive_fraction": 0.007476806640625
+        },
+        {
+          "optimizer_step": 1103,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.00885009765625,
+          "text_queue_positive_fraction": 0.0086212158203125
+        }
+      ]
+    },
+    {
+      "after_epoch": 11,
+      "steps": [
+        {
+          "optimizer_step": 1208,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 108,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1209,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 109,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1210,
+          "epoch": 11,
+          "optimizer_step_in_epoch": 110,
+          "image_queue_positive_fraction": 0.0,
+          "text_queue_positive_fraction": 0.0
+        },
+        {
+          "optimizer_step": 1211,
+          "epoch": 12,
+          "optimizer_step_in_epoch": 1,
+          "image_queue_positive_fraction": 0.0088348388671875,
+          "text_queue_positive_fraction": 0.009033203125
+        },
+        {
+          "optimizer_step": 1212,
+          "epoch": 12,
+          "optimizer_step_in_epoch": 2,
+          "image_queue_positive_fraction": 0.0086212158203125,
+          "text_queue_positive_fraction": 0.00762939453125
+        },
+        {
+          "optimizer_step": 1213,
+          "epoch": 12,
+          "optimizer_step_in_epoch": 3,
+          "image_queue_positive_fraction": 0.008636474609375,
+          "text_queue_positive_fraction": 0.0079345703125
+        }
+      ]
+    }
+  ],
+  "remaining_cells_unblocked": true
+}

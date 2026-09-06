@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "dinov3_convnext_tiny__all_minilm_l6_v2__seed_42",
+    "dinov3_convnext_tiny__e5_small_v2__seed_42",
+    "dinov3_convnext_tiny__bge_small_en__seed_42",
+    "dinov3_vits16__all_minilm_l6_v2__seed_42",
+    "dinov3_vits16__e5_small_v2__seed_42",
+    "dinov3_vits16__bge_small_en__seed_42"
+  ],
+  "individual_bidirectional_R@1": [
+    0.15264402329921722,
+    0.1319182962179184,
+    0.13495051860809326,
+    0.15640932321548462,
+    0.14561326801776886,
+    0.15214420855045319
+  ],
+  "oracle_bidirectional_R@1": 0.3520708978176117,
+  "unique_oracle_gain": 0.19566157460212708,
+  "final_openclip_fraction": NaN,
+  "router_recommended": false,
+  "note": "Ground-truth oracle upper bound on the development split; not a deployable router result."
+}

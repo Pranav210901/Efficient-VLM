@@ -1,0 +1,7 @@
+array_index,kind,experiment_id,run_id,reference_id,seed,final_run_id
+0,reference,openclip_vit_b32_quickgelu_openai,flickr30k__openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,,
+1,reference,mobileclip2_s0_dfndr2b,flickr30k__mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,,
+2,reference,siglip2_vit_b32_256_webli,flickr30k__siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,,
+3,final,final_winner,flickr30k__final_winner__seed_42,,42.0,final_winner__seed_42
+4,final,final_winner,flickr30k__final_winner__seed_43,,43.0,final_winner__seed_43
+5,final,final_winner,flickr30k__final_winner__seed_44,,44.0,final_winner__seed_44

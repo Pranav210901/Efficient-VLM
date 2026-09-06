@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "question": "Does MobileCLIP2-S0 distillation add retrieval accuracy over a fresh matched corrected-recipe baseline?",
+  "teacher_id": "mobileclip2_s0_dfndr2b",
+  "matched_baseline_mean_R1": 0.3727652331193288,
+  "distilled_mean_R1": 0.3886953145265579,
+  "distillation_delta_pp": 1.5930081407229124,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "decision": "DESCRIPTIVE_RESULT_NO_POSTHOC_GATE",
+  "test_split_used": false
+}

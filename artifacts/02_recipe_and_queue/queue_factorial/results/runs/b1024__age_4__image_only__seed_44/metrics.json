@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE",
+  "index": 38,
+  "run_id": "b1024__age_4__image_only__seed_44",
+  "experiment_id": "queue_factorial",
+  "batch_size": 1024,
+  "target_age_steps": 4,
+  "memory_queue_size": 4096,
+  "queue_mode": "image_only",
+  "seed": 44,
+  "memberships": [
+    "grid2_modality"
+  ],
+  "i2t_R@1": 0.2840000092983246,
+  "i2t_R@5": 0.5807999968528748,
+  "i2t_R@10": 0.7116000056266785,
+  "mean_rank_i2t": 14.791199684143066,
+  "median_rank_i2t": 4.0,
+  "t2i_R@1": 0.2288193255662918,
+  "t2i_R@5": 0.5042181611061096,
+  "t2i_R@10": 0.6349206566810608,
+  "mean_rank_t2i": 26.872936248779297,
+  "median_rank_t2i": 5.0,
+  "num_image_queries": 5000.0,
+  "num_text_queries": 25011.0,
+  "mean_R@1": 0.2564096674323082,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "compute_capability": "12.0",
+  "precision": "native_bf16",
+  "pinned_resolved_lr": 0.002545584412271571,
+  "counterfactual_sqrt_lr": 0.002545584412271571,
+  "fingerprint_digest": "748375e121cb2225d09785ca4b49d7d8dac1db6f306ff390a0205d98dab8811c"
+}

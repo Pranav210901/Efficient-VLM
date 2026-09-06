@@ -1,0 +1,53 @@
+{
+  "status": "COMPLETE",
+  "kind": "reference",
+  "id": "siglip2_vit_b32_256_webli",
+  "label": "siglip2_vit_b32_256_webli",
+  "builder": "open_clip",
+  "seed": null,
+  "selected_epoch": null,
+  "checkpoint": null,
+  "node": "aisurrey38.surrey.ac.uk",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "precision": "native_bf16_autocast",
+  "torch_version": "2.8.0+cu128",
+  "full_stack_inference_parameters": 376856066,
+  "query_side_inference_parameters": 282303744,
+  "inference_trainable_parameters": 0,
+  "reference_weights": {
+    "reference_id": "siglip2_vit_b32_256_webli",
+    "model_name": "ViT-B-32-SigLIP2-256",
+    "pretrained": "webli",
+    "open_clip_version": "3.3.0",
+    "upstream_revision_recorded_at_fetch": false,
+    "files": [
+      {
+        "path": "/mnt/fast/nobackup/users/pp01184/.cache/huggingface/hub/models--timm--ViT-B-32-SigLIP2-256/snapshots/cd1efb47643f2794413dd79ef24397c175032780/open_clip_model.safetensors",
+        "bytes": 1507459216,
+        "sha256": "7cdccf256ee0e4a9908c365f8e1c88d5db171980a3350c214f5221d50f8d9927"
+      }
+    ],
+    "aggregate_sha256": "958cad47b3e9ec3881daa0eba92c7a4841e8fe18eb22d1268afea54de070d04c"
+  },
+  "metrics": {
+    "sugarcrepe": {
+      "overall_accuracy": 0.8503528237342834,
+      "positive_score": 0.1441819581580478,
+      "negative_score": 0.12231905029243723,
+      "score_margin": 0.021862907865610567,
+      "accuracy/add_att": 0.8265895843505859,
+      "accuracy/add_obj": 0.9010668992996216,
+      "accuracy/replace_att": 0.8604061007499695,
+      "accuracy/replace_obj": 0.9521791934967041,
+      "accuracy/replace_rel": 0.7375533580780029,
+      "accuracy/swap_att": 0.7657657861709595,
+      "accuracy/swap_obj": 0.6489796042442322
+    }
+  },
+  "tasks": [
+    "sugarcrepe"
+  ],
+  "manifest_sha256": "9c60d66350a65f9f77ddb45e8f1b6993583bcd80eb8e451b2d6244b72f3aed02",
+  "validation_status": "READY",
+  "no_training_performed": true
+}

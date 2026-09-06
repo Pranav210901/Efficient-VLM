@@ -1,0 +1,122 @@
+version: cc3m-scale-1.0
+name: cc3m_scale
+root: data/cc3m_v1_1
+output_root: results/cc3m_scale
+checkpoint_root: checkpoints/cc3m_scale
+log_root: logs/cc3m_scale
+base_config: checkpoints/alignment_v4_wave0/wave0-lr-control/infonce_no_queue__captions_all__b1024__lr_3p0__seed_42/config.yaml
+
+acquisition:
+  source_name: CC3M as distributed by pixparse/cc3m-wds
+  repo_id: pixparse/cc3m-wds
+  revision: 46f3d69f840e59d77d52e8decfe5baec97e94c7f
+  mirror_train_shards: 576
+  mirror_validation_shards: 16
+  mirror_train_samples: 2905954
+  original_cc3m_urls: 3318333
+  download_train_shards: 298
+  shuffle_seed: 20260729
+  target_usable_pairs: 1351680
+  heterogeneity_shards: 20
+  heterogeneity_distribution_range_fraction: 0.10
+  heterogeneity_rejection_rate_difference_pp: 1.0
+  minimum_short_side: 256
+  maximum_pixels: 100000000
+  minimum_aspect_ratio: 0.5
+  maximum_aspect_ratio: 2.0
+  caption_minimum_whitespace_tokens: 3
+  caption_maximum_whitespace_tokens: 40
+  caption_maximum_characters: 512
+  semantic_filtering: false
+  similarity_filtering: false
+  quality_filtering: false
+  near_duplicate_filtering: false
+  exclusion_csvs:
+    - data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+    - data/splits/alignment_v3_recovery/coco_dev_5000.csv
+    - data/val_all_captions.csv
+    - data/flickr30k/validation.csv
+    - data/flickr30k/test.csv
+
+retention:
+  interval_days: 7
+  scheduled_weeks: 12
+  policy_warning_days: 23
+  policy_deletion_days: 28
+  refresh_all_downloaded_tars: true
+  refresh_metadata_globs:
+    - data/cc3m_v1_1/manifests/**/*
+    - data/cc3m_v1_1/ledgers/**/*
+    - data/cc3m_v1_1/feature_cache/**/*
+    - configs/cc3m_scale/**/*
+    - results/cc3m_scale/manifests/**/*
+    - results/cc3m_scale/ledgers/**/*
+
+training:
+  dataset_csv: data/cc3m_v1_1/manifests/cc3m_usable_1351680.csv
+  seeds: [42, 43, 44]
+  batch_size: 1024
+  dataloader_workers: 12
+  checkpoint_interval_steps: 100
+  resolved_lr: 0.002545584412271571
+  lr_tuned_for_cc3m: false
+  queue_mode: none
+  loss_type: infonce_no_queue
+  captions_per_image: 1
+  arm_a:
+    id: matched_compute
+    max_optimizer_steps: 1320
+    select_on_dev: false
+    early_stopping: false
+  arm_b:
+    id: converged
+    max_optimizer_steps: 5280
+    selection_dataset: data/flickr30k/validation.csv
+    evaluation_interval: epoch
+    early_stopping_patience_evaluations: 3
+    selection_influenced: true
+  sealed_test_dataset: data/flickr30k/test.csv
+
+resources:
+  acquisition:
+    partition: teaching
+    cpus_per_task: 4
+    host_memory: 16G
+    wall_time: "24:00:00"
+    array_concurrency: 8
+  retention:
+    partition: teaching
+    cpus_per_task: 1
+    host_memory: 2G
+    wall_time: "00:30:00"
+  training:
+    partition: teaching
+    gpu_type: NVIDIA RTX PRO 6000 Blackwell
+    gpu_per_task: 1
+    cpus_per_task: 12
+    host_memory: 96G
+    wall_time: "08:00:00"
+    native_bf16_required: true
+
+post_training_feature_cache:
+  blocked_until_both_arms_complete: true
+  used_by_arm_a: false
+  used_by_arm_b: false
+  dtype: float16
+  image_encoder: dinov3_vits16
+  text_encoder: all_minilm_l6_v2
+  transform:
+    deterministic: true
+    image:
+      resize_short_side: 256
+      center_crop: [256, 256]
+      interpolation: bicubic
+      random_augmentation: false
+      normalization: imagenet_default
+    text:
+      tokenizer: sentence-transformers/all-MiniLM-L6-v2
+      padding: dynamic_per_cache_batch
+      truncation: true
+      pooling: checkpoint_native_mean_pooling
+      normalization: false
+  output: data/cc3m_v1_1/feature_cache

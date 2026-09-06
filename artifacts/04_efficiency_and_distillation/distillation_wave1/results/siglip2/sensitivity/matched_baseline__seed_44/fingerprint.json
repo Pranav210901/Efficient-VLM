@@ -1,0 +1,11 @@
+{
+  "cache_version": "alignment-wave1-siglip2-b32-corrected-recipe-v1",
+  "code_version": "a05b86575109b00ebeabfe1109c3277e2beef177ae55728b1d4d30917cac4565",
+  "config_hash": "8eb4cbaac68c94e757ab1e69aa3bb4f6f592e1ef90dc9343a596f8a55b40775c",
+  "dataset_split_hash": "4d3b716d143b748b70c9125d177552c298b1a6ccf617d5bc000792ef17fb18d8",
+  "digest": "d8ad00055f42d159e3ac122f1096cd0ee17adf9f9db878c824d39c91e7b2ff0e",
+  "model_checkpoint_id": "vit_small_patch16_dinov3.lvd1689m+sentence-transformers/all-MiniLM-L6-v2",
+  "preprocessing_hash": "57a4dd03145131e87359ad6a9b99339117241efb997e1ec1984a517bd4f9c681",
+  "schema_version": 1,
+  "seed": 44
+}

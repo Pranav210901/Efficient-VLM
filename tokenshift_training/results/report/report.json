@@ -1,0 +1,101 @@
+{
+  "status": "COMPLETE_AWAITING_FROZEN_DECISION",
+  "automatic_promotion": false,
+  "selection_status": "NOT_SELECTED_BY_CODE",
+  "existing_no_merge_baselines": {
+    "frozen_no_merge": {
+      "validation_mean_R1": 0.5448717921972275,
+      "validation_sd": 0.0032826951640160516,
+      "latency_q3_mean_ms": 9.141486627049744
+    },
+    "dual_lora_no_merge": {
+      "validation_mean_R1": 0.6341551641623179,
+      "validation_sd": 0.0055370507858064485,
+      "latency_q3_mean_ms": 9.136509732343256
+    }
+  },
+  "rows": [
+    {
+      "arm": "frozen_block8",
+      "parent": "frozen_no_merge",
+      "merge_after_block": 8,
+      "validation_mean_R1": 0.4190664043029149,
+      "validation_sd": 0.0036185885324078594,
+      "validation_min": 0.4148915112018585,
+      "validation_max": 0.42130178213119507,
+      "gain_vs_no_merge_parent_pp": -12.580538789431255,
+      "pooled_sd_vs_parent_pp": 0.34547265091992474,
+      "inference_trainable_parameters": 2896389,
+      "added_tokenshift_parameters": 0,
+      "latency_q3_mean_ms": 8.20412051398307,
+      "paired_latency_delta_vs_parent_ms": -0.9373661130666733,
+      "latency_classification_vs_openclip": "FASTER",
+      "flickr_test_used": false
+    },
+    {
+      "arm": "frozen_block6",
+      "parent": "frozen_no_merge",
+      "merge_after_block": 6,
+      "validation_mean_R1": 0.385371466477712,
+      "validation_sd": 0.004848759129799672,
+      "validation_min": 0.379783034324646,
+      "validation_max": 0.38846154510974884,
+      "gain_vs_no_merge_parent_pp": -15.95003257195155,
+      "pooled_sd_vs_parent_pp": 0.41404439761135553,
+      "inference_trainable_parameters": 2896389,
+      "added_tokenshift_parameters": 0,
+      "latency_q3_mean_ms": 7.573016476817429,
+      "paired_latency_delta_vs_parent_ms": -1.568470150232315,
+      "latency_classification_vs_openclip": "FASTER",
+      "flickr_test_used": false
+    },
+    {
+      "arm": "dual_block8",
+      "parent": "dual_lora_no_merge",
+      "merge_after_block": 8,
+      "validation_mean_R1": 0.577251801888148,
+      "validation_sd": 0.0063188264616190265,
+      "validation_min": 0.570216953754425,
+      "validation_max": 0.5824457556009293,
+      "gain_vs_no_merge_parent_pp": -5.690336227416992,
+      "pooled_sd_vs_parent_pp": 0.5940812202748738,
+      "inference_trainable_parameters": 4862469,
+      "added_tokenshift_parameters": 0,
+      "latency_q3_mean_ms": 8.20269794203341,
+      "paired_latency_delta_vs_parent_ms": -0.9338117903098464,
+      "latency_classification_vs_openclip": "FASTER",
+      "flickr_test_used": false
+    },
+    {
+      "arm": "dual_block6",
+      "parent": "dual_lora_no_merge",
+      "merge_after_block": 6,
+      "validation_mean_R1": 0.5255424082279205,
+      "validation_sd": 0.008134753396648736,
+      "validation_min": 0.5166666656732559,
+      "validation_max": 0.5326430052518845,
+      "gain_vs_no_merge_parent_pp": -10.861275593439734,
+      "pooled_sd_vs_parent_pp": 0.6958201787419216,
+      "inference_trainable_parameters": 4862469,
+      "added_tokenshift_parameters": 0,
+      "latency_q3_mean_ms": 7.555533852428198,
+      "paired_latency_delta_vs_parent_ms": -1.5809758799150586,
+      "latency_classification_vs_openclip": "FASTER",
+      "flickr_test_used": false
+    }
+  ],
+  "matched_parent_comparisons": [
+    {
+      "merge_after_block": 8,
+      "dual_minus_frozen_validation_pp": 15.818539758523304,
+      "dual_minus_frozen_parameters": 1966080
+    },
+    {
+      "merge_after_block": 6,
+      "dual_minus_frozen_validation_pp": 14.017094175020855,
+      "dual_minus_frozen_parameters": 1966080
+    }
+  ],
+  "interpretation_guard": "Frozen-weight and dual-LoRA TokenShift results are reported separately. The dual-LoRA arm is a parameter-efficient adaptation extension and must not be relabelled as a strictly frozen encoder result.",
+  "flickr_test_used": false
+}

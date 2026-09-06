@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "display_seed": 20260801,
+  "source_files_unchanged": true,
+  "audit_unblinded": false,
+  "files_read": [
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/audit_sample_blinded.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/failure_sample.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/audit_key.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/report.json"
+  ],
+  "files_written": [
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/audit_sample_annotation_template.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/failure_sample_annotation_template.csv",
+    "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/preparation_report.md"
+  ],
+  "source_sha256": {
+    "audit_sample_blinded.csv": "d93fe93cc84bbff18b6b9fb551b6340320ad840fa1ff1d606873c03459218ece",
+    "failure_sample.csv": "991ee92c44c7d7958cc2d1535ec5cc4ccf7fd7b281e1034d5497fe92c4847c50",
+    "audit_key.csv": "3108102bc7e22bf5e4ab9b5e1bfd6e5057db1d4c78f1cba3dbc122393fb74ae1",
+    "report.json": "56f113a92f9090b8beb077e3d13aeb4300d031aece506a73c74204a4254dbccb"
+  },
+  "row_counts": {
+    "audit": 100,
+    "failure": 50
+  }
+}

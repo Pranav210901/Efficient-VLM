@@ -1,0 +1,26 @@
+{
+  "study": "tokenshift_training",
+  "written_before_any_tokenshift_training_runs": true,
+  "written_after_latency_profile": true,
+  "primary_metric": "Flickr30k Karpathy validation mean bidirectional R@1",
+  "accuracy_hypotheses": [
+    {
+      "id": "merge_location",
+      "statement": "Within each parent architecture, merging after block 8 will retain at least as much validation retrieval accuracy as merging after block 6.",
+      "confidence": "medium"
+    },
+    {
+      "id": "adaptation_complementarity",
+      "statement": "At each matched merge location, dual LoRA will outperform the strictly frozen-weight parent on validation retrieval accuracy.",
+      "confidence": "medium"
+    },
+    {
+      "id": "no_merge_comparison",
+      "statement": "No prior is assigned to whether either TokenShift location will match its corresponding existing no-merge parent in validation retrieval accuracy.",
+      "confidence": "none"
+    }
+  ],
+  "selection_rule": "No candidate is promoted automatically. All four three-seed results, their paired parent comparisons, parameter counts and same-allocation latency measurements are reported for a separate frozen decision.",
+  "flickr_test_sealed": true
+}
+

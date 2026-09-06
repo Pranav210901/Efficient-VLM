@@ -1,0 +1,2 @@
+array_index,experiment_id,model_name,pretrained,config
+0,openclip_vit_b32_quickgelu_openai,ViT-B-32-quickgelu,openai,configs/alignment_v2/reference_openclip_vit_b32_quickgelu.yaml

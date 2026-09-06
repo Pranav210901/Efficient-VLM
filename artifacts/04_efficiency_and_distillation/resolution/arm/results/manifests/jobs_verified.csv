@@ -1,0 +1,7 @@
+experiment_id,run_id,image_size,seed,image_resolution,patch_size,patch_tokens,prefix_tokens,total_transformer_tokens,resolved_lr
+resolution_224,resolution_224__seed_42,224,42,224,16,196,5,201,0.002545584412271571
+resolution_224,resolution_224__seed_43,224,43,224,16,196,5,201,0.002545584412271571
+resolution_224,resolution_224__seed_44,224,44,224,16,196,5,201,0.002545584412271571
+resolution_192,resolution_192__seed_42,192,42,192,16,144,5,149,0.002545584412271571
+resolution_192,resolution_192__seed_43,192,43,192,16,144,5,149,0.002545584412271571
+resolution_192,resolution_192__seed_44,192,44,192,16,144,5,149,0.002545584412271571

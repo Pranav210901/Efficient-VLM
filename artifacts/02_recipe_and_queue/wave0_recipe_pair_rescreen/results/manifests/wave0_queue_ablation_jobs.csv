@@ -1,0 +1,4 @@
+array_index,question,loss_type,captions_per_image,batch_size,sweep_multiplier,seed,memory_queue_size,experiment_id,run_id
+0,How does retrieval change as stale cross-batch memory capacity increases?,infonce_queue,,1024,1.0,42,1024,infonce_queue__captions_all__b1024__queue_1024,infonce_queue__captions_all__b1024__queue_1024__seed_42
+1,How does retrieval change as stale cross-batch memory capacity increases?,infonce_queue,,1024,1.0,42,4096,infonce_queue__captions_all__b1024__queue_4096,infonce_queue__captions_all__b1024__queue_4096__seed_42
+2,How does retrieval change as stale cross-batch memory capacity increases?,infonce_queue,,1024,1.0,42,8192,infonce_queue__captions_all__b1024__queue_8192,infonce_queue__captions_all__b1024__queue_8192__seed_42

@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE",
+  "version": "alignment-v4-capture-probe-1.0",
+  "main_dissertation_question": "Can modern frozen SSL vision encoders, combined with compatibility-based pair selection and sub-5M-parameter adaptation, approach compact jointly pretrained vision-language models under a fixed inference budget?",
+  "overall_probe_decision": "INCONCLUSIVE",
+  "claim_status": "DIAGNOSTIC_ONLY: this capture probe decides the next methodology; it does not by itself answer the dissertation question.",
+  "teachers": [
+    {
+      "teacher_label": "MobileCLIP2-S0",
+      "status": "COMPLETE",
+      "proceed": false,
+      "teacher_id": "mobileclip2_s0_dfndr2b",
+      "teacher_R@1": 0.5298200398683548,
+      "teacher_anchor_split": "sealed_coco_val_5000",
+      "probe_split": "coco_dev_5000",
+      "baseline_R@1": 0.1330356765538454,
+      "baseline_seed_values": [
+        0.13321583718061447,
+        0.13285551592707634
+      ],
+      "baseline_seed_std": 0.0002547856017824502,
+      "distilled_R@1": 0.22357820346951485,
+      "distilled_seed_values": [
+        0.2234780713915825,
+        0.2236783355474472
+      ],
+      "distilled_seed_std": 0.00014160814264054008,
+      "delta_R@1": 0.09054252691566944,
+      "capture_fraction": 0.22819076376732442,
+      "distillation_strength": 1.0,
+      "viable_threshold_R@1": 0.3,
+      "nonviable_threshold_R@1": 0.22,
+      "decision": "INCONCLUSIVE_MIDDLE",
+      "caveat": "Teacher anchor is measured on sealed COCO-val while the probe is evaluated on COCO-dev-5000."
+    },
+    {
+      "teacher_label": "SigLIP2-B/32",
+      "status": "COMPLETE",
+      "proceed": false,
+      "teacher_id": "siglip2_vit_b32_256_webli",
+      "teacher_R@1": 0.5688067078590393,
+      "teacher_anchor_split": "sealed_coco_val_5000",
+      "probe_split": "coco_dev_5000",
+      "baseline_R@1": 0.1330356765538454,
+      "baseline_seed_values": [
+        0.13321583718061447,
+        0.13285551592707634
+      ],
+      "baseline_seed_std": 0.0002547856017824502,
+      "distilled_R@1": 0.2329157032072544,
+      "distilled_seed_values": [
+        0.23415570706129074,
+        0.23167569935321808
+      ],
+      "distilled_seed_std": 0.0017536302677730873,
+      "delta_R@1": 0.099880026653409,
+      "capture_fraction": 0.22920299762527732,
+      "distillation_strength": 1.0,
+      "viable_threshold_R@1": 0.3,
+      "nonviable_threshold_R@1": 0.22,
+      "decision": "INCONCLUSIVE_MIDDLE",
+      "caveat": "Teacher anchor is measured on sealed COCO-val while the probe is evaluated on COCO-dev-5000."
+    }
+  ]
+}

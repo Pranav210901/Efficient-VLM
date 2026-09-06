@@ -1,0 +1,53 @@
+status: FROZEN_FOR_DATA_STAGE
+frozen_before_flickr_test: true
+flickr_test_used_for_selection: false
+selected_candidate: C4
+selected_config: configs/token_aggregator_scale_training/base_c4.yaml
+architecture:
+  image_token_aggregation: transformer_block
+  hidden_dim: 256
+  attention_heads: 8
+  blocks: 2
+  ffn_dim: 512
+  input_projection: true
+  output_projection: true
+training_context:
+  image_resolution: 224
+  teacher: mobileclip2_s0_dfndr2b
+  epochs: 24
+  memory_queue_enabled: false
+selection_metric: Flickr30k Karpathy validation mean bidirectional R@1
+selected_result:
+  three_seed_mean: 0.5386587729056677
+  sd: 0.003076241018621627
+  min: 0.5351084619760513
+  max: 0.5405325591564178
+  inference_trainable_parameters: 2730628
+  latency_median_ms: 8.986582513898611
+  latency_q1_ms: 8.977224817499518
+  latency_q3_ms: 9.16695361956954
+constraints:
+  maximum_inference_trainable_parameters: 5000000
+  maximum_latency_ms: 9.48
+  parameter_constraint_passed: true
+  latency_q3_constraint_passed: true
+paired_selection_check:
+  next_best_candidate: C2
+  c4_minus_c2_pp_by_seed:
+    seed_42: 0.8777111768722534
+    seed_43: 1.1735707521438599
+    seed_44: 0.6311625242233276
+  c4_leads_all_three_seeds: true
+  mean_difference_pp: 0.894148151079833
+  pooled_sd_pp: 0.3527862013697808
+  mean_difference_exceeds_one_pooled_sd: true
+  tie_break_required: false
+selection_reason: >-
+  C4 is eligible under both frozen constraints, has the highest three-seed
+  Flickr30k-validation mean, leads the next-best C2 arm at every matched seed,
+  and its mean paired advantage exceeds one pooled standard deviation.
+  Therefore the predeclared tie-break is not invoked.
+next_stage_scope: >-
+  Use this frozen token-projection architecture for the approved mixed
+  COCO-plus-CC3M-mirror and CC3M-only data-training study. Flickr30k test
+  remains sealed.

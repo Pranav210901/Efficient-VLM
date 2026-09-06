@@ -1,0 +1,81 @@
+{
+  "status": "READY",
+  "acquisition_sha256": "00968f7a7d017ff9ca5338fc46b0c806f0fcd7945224c79c32882d7df8c437dd",
+  "selected_key_manifest_sha256": "ccf14041fbc8527fdbad0554c6964d9b7f06e5d870ce0c1963b6b461d9d301d1",
+  "tar_index_sha256": "2e92c0507e1ab705f634bf0511ea6dc2d3dcb1d2b53b7aa4947c911f302c5b8b",
+  "training_jobs": [
+    {
+      "index": 0,
+      "arm": "arm_a",
+      "arm_id": "matched_compute",
+      "seed": 42,
+      "run_id": "matched_compute__seed_42",
+      "max_optimizer_steps": 1320,
+      "passes": 1,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "1c073d5fa718dbb61bd49eaa6a4a5e21e20a63a143ca866ff5e952b0fb12ed70"
+    },
+    {
+      "index": 1,
+      "arm": "arm_a",
+      "arm_id": "matched_compute",
+      "seed": 43,
+      "run_id": "matched_compute__seed_43",
+      "max_optimizer_steps": 1320,
+      "passes": 1,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "733928d52cb0faf8c65ed51d8e20f8181c8ac782db46242920db96c2975dd469"
+    },
+    {
+      "index": 2,
+      "arm": "arm_a",
+      "arm_id": "matched_compute",
+      "seed": 44,
+      "run_id": "matched_compute__seed_44",
+      "max_optimizer_steps": 1320,
+      "passes": 1,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "c712ccb6f9fac642abf5c5b8dcad18fdf9bfe3ebc86a02e1f648b1d3e81635f1"
+    },
+    {
+      "index": 3,
+      "arm": "arm_b",
+      "arm_id": "converged",
+      "seed": 42,
+      "run_id": "converged__seed_42",
+      "max_optimizer_steps": 5280,
+      "passes": 4,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "367f14f68248fdae0dc4d3b563582f6fedcf0098388219fc6772e9451c4add47"
+    },
+    {
+      "index": 4,
+      "arm": "arm_b",
+      "arm_id": "converged",
+      "seed": 43,
+      "run_id": "converged__seed_43",
+      "max_optimizer_steps": 5280,
+      "passes": 4,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "20bd718eacdb8700c70990e7434d3d914880123d9f6c280f8b8d6543996c1d2a"
+    },
+    {
+      "index": 5,
+      "arm": "arm_b",
+      "arm_id": "converged",
+      "seed": 44,
+      "run_id": "converged__seed_44",
+      "max_optimizer_steps": 5280,
+      "passes": 4,
+      "resolved_lr": 0.002545584412271571,
+      "queue_mode": "none",
+      "config_hash": "849bbcb695c63db9da56065e08d262756918ebb4b2d85947da09be2dccb42763"
+    }
+  ],
+  "flickr_test_evaluation_jobs": 0
+}

@@ -1,0 +1,29 @@
+extends: base.yaml
+
+data:
+  train_csv: tmp_sanity/train.csv
+  val_csv: tmp_sanity/val.csv
+  image_root: .
+  num_workers: 0
+  pin_memory: false
+
+model:
+  vision_encoder: efficientnet_b0
+  text_encoder: minilm_l6
+  shared_dim: 128
+  fusion_dim: 256
+  local_dim: 64
+  global_dim: 64
+  use_local_blf: true
+  use_global_blf: true
+  fusion_type: concat_mlp
+  freeze_vision: true
+  freeze_text: true
+
+training:
+  batch_size: 4
+  epochs: 1
+  lr: 0.0001
+  amp: false
+  save_dir: checkpoints/sanity
+

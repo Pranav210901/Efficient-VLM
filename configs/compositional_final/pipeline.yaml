@@ -1,0 +1,32 @@
+extends: ../final_zero_shot/pipeline.yaml
+version: compositional-final-1.0
+name: untouched_compositional_evaluation
+output_root: artifacts/07_final_evaluation/compositional
+
+evaluation:
+  batch_size: 128
+  primary_dataset: sugarcrepe
+  primary_metric: overall_accuracy
+  secondary_dataset: winoground
+  secondary_metric: group_score
+
+datasets:
+  sugarcrepe:
+    required: true
+    annotation_root: data/multitask/sugarcrepe/annotations
+    image_root: data/coco/val2017
+    categories: [add_att, add_obj, replace_att, replace_obj, replace_rel, swap_att, swap_obj]
+    official_raw_base: https://raw.githubusercontent.com/RAIVNLab/sugar-crepe/main/data
+  winoground:
+    required: false
+    repository: facebook/winoground
+    parquet: data/multitask/winoground/data/test-00000-of-00001.parquet
+    repository_file: data/test-00000-of-00001.parquet
+    license_url: https://huggingface.co/datasets/facebook/winoground
+
+disclosures:
+  - No optimizer, training step, prompt tuning, threshold tuning, or parameter update is permitted.
+  - SugarCrepe overall accuracy is the sole primary compositional metric; category accuracies are diagnostics.
+  - Winoground group score is secondary and is evaluated only if access was obtained before the data manifest was frozen.
+  - The student/reference roster is inherited unchanged from the completed final zero-shot evaluation.
+  - Dataset identities and the exact evaluated task set are frozen before any model is scored.

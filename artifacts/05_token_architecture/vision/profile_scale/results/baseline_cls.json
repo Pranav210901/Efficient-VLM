@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETE",
+  "id": "baseline_cls",
+  "aggregation": "cls",
+  "random_aggregator_seed": null,
+  "training_performed": false,
+  "batch_size": 64,
+  "warmup_iterations": 20,
+  "timed_repeats": 100,
+  "synchronize_each_repeat": true,
+  "precision": "native_bf16",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "node": "aisurrey38.surrey.ac.uk",
+  "checkpoint_fingerprint": "4b60977c8ddfa45984c00562d542494dc5d29bc59cd829c944cd1ca9fe661911",
+  "register_tokens_included": false,
+  "patch_tokens": 196,
+  "added_inference_parameters": 0,
+  "total_inference_trainable_parameters": 1478403,
+  "full_stack_inference_parameters": 45778563,
+  "query_side_inference_parameters": 23452417,
+  "image_flops": 9397685376.0,
+  "caption_flops": 690685056.0,
+  "normalization_flops_added_per_embedding": 1152.0,
+  "multiply_add_flops": 2,
+  "flop_source": "torch.utils.flop_counter.FlopCounterMode operator-level counts plus explicit L2-normalization accounting",
+  "flop_measurement_version": "operator_level_v2",
+  "flop_measurement_status": "COMPLETE",
+  "flop_measurement_error": null,
+  "full_stack_neural_latency_ms": {
+    "median": 8.645359892398119,
+    "q1": 8.507938589900732,
+    "q3": 8.656910853460431,
+    "iqr": 0.14897226355969906
+  },
+  "image_neural_latency_ms": {
+    "median": 7.167864590883255,
+    "q1": 7.161515997722745,
+    "q3": 7.172668818384409,
+    "iqr": 0.011152820661664009
+  },
+  "text_neural_latency_ms": {
+    "median": 1.4986093156039715,
+    "q1": 1.4912269543856382,
+    "q3": 1.505743945017457,
+    "iqr": 0.014516990631818771
+  },
+  "historical_baseline_median_ms": 8.546178694814444,
+  "openclip_ceiling_ms": 9.48,
+  "median_below_ceiling": true,
+  "upper_quartile_below_ceiling": true
+}

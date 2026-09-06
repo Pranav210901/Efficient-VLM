@@ -1,0 +1,81 @@
+{
+  "status": "READY",
+  "job_count": 9,
+  "student_jobs": 6,
+  "reference_jobs": 3,
+  "checkpoints": [
+    {
+      "kind": "student",
+      "id": "mt1_strict_frozen",
+      "label": "M_T1 strict-frozen C4",
+      "builder": "alignment_v3",
+      "seed": 42,
+      "selected_epoch": 22,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_42/inference.pt",
+      "expected_inference_trainable_parameters": 2896389,
+      "sha256": "398c716d2dc4172bc5d62dc07d929a1e38d3b01d10c7bca477c7a0af99cde3bb",
+      "fingerprint": "41f565332685997df5ec99356a431a863b892b7a6a131ec894c159bb86e68d92"
+    },
+    {
+      "kind": "student",
+      "id": "mt1_strict_frozen",
+      "label": "M_T1 strict-frozen C4",
+      "builder": "alignment_v3",
+      "seed": 43,
+      "selected_epoch": 22,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_43/inference.pt",
+      "expected_inference_trainable_parameters": 2896389,
+      "sha256": "9573a616772c12877447726aec5e47309e283d2757ae409120d162a1f1a5a5f2",
+      "fingerprint": "da0ec3367ef776e61eb15adbbe839e771e3b1f9ab86b50e3a86428600bd1c819"
+    },
+    {
+      "kind": "student",
+      "id": "mt1_strict_frozen",
+      "label": "M_T1 strict-frozen C4",
+      "builder": "alignment_v3",
+      "seed": 44,
+      "selected_epoch": 20,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_44/inference.pt",
+      "expected_inference_trainable_parameters": 2896389,
+      "sha256": "d55761380cd60922d58e68b6eb596dabba968c0672a6fe5372505eb6b1c7fa1b",
+      "fingerprint": "22a40fedac1eb6dae760275db41fc254ecda50da8873ef936ee549ed822b7374"
+    },
+    {
+      "kind": "student",
+      "id": "mt1_dual_lora",
+      "label": "M_T1 C4 dual-LoRA PEFT",
+      "builder": "freezeshift",
+      "seed": 42,
+      "selected_epoch": 20,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_42/inference.pt",
+      "expected_inference_trainable_parameters": 4862469,
+      "sha256": "f5360dac89eb48b8dee8de13a4824aa3322a98145cf58b309cce98d3cff8384f",
+      "fingerprint": "a501cd106bae3a74a3c3e584c0d620ee044e36005697a901482048dbb31bb8e3"
+    },
+    {
+      "kind": "student",
+      "id": "mt1_dual_lora",
+      "label": "M_T1 C4 dual-LoRA PEFT",
+      "builder": "freezeshift",
+      "seed": 43,
+      "selected_epoch": 23,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_43/inference.pt",
+      "expected_inference_trainable_parameters": 4862469,
+      "sha256": "6fef8282604fbfa3ee4977568febdf594fe8271cd6991eb36187cf3186a6f131",
+      "fingerprint": "9464f26c1951ef3c8c203ccf15b6181a4af9c1912093c7701c121c3cdc16a32d"
+    },
+    {
+      "kind": "student",
+      "id": "mt1_dual_lora",
+      "label": "M_T1 C4 dual-LoRA PEFT",
+      "builder": "freezeshift",
+      "seed": 44,
+      "selected_epoch": 22,
+      "checkpoint": "quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_44/inference.pt",
+      "expected_inference_trainable_parameters": 4862469,
+      "sha256": "e5f31aba9b124beedefc8ae9a18f4de9a2c3022c8a6fecd49453603b38a94d03",
+      "fingerprint": "98bc20d4cdcee0ae4d9c4ecb33ee80ca25dc51825ef2a4f435361295179b5104"
+    }
+  ],
+  "no_optimizer_code_path": true
+}

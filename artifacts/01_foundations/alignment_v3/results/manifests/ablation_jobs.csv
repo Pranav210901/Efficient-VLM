@@ -1,0 +1,15 @@
+array_index,id,adapter,distillation,lora,experiment_id,run_id,seed,batch_size
+0,baseline,False,False,False,baseline,baseline__seed_42,42,
+1,baseline,False,False,False,baseline,baseline__seed_43,43,
+2,baseline_batch128,False,False,False,baseline_batch128,baseline_batch128__seed_42,42,128.0
+3,baseline_batch128,False,False,False,baseline_batch128,baseline_batch128__seed_43,43,128.0
+4,distillation,False,True,False,distillation,distillation__seed_42,42,
+5,distillation,False,True,False,distillation,distillation__seed_43,43,
+6,adapter,True,False,False,adapter,adapter__seed_42,42,
+7,adapter,True,False,False,adapter,adapter__seed_43,43,
+8,lora,False,False,True,lora,lora__seed_42,42,
+9,lora,False,False,True,lora,lora__seed_43,43,
+10,adapter_distillation,True,True,False,adapter_distillation,adapter_distillation__seed_42,42,
+11,adapter_distillation,True,True,False,adapter_distillation,adapter_distillation__seed_43,43,
+12,adapter_distillation_lora,True,True,True,adapter_distillation_lora,adapter_distillation_lora__seed_42,42,
+13,adapter_distillation_lora,True,True,True,adapter_distillation_lora,adapter_distillation_lora__seed_43,43,

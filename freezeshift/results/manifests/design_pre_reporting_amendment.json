@@ -1,0 +1,65 @@
+{
+  "baseline_validation_mean_R1": 0.5448717921972275,
+  "flickr_test_sealed": true,
+  "frozen_training_signature": {
+    "batch": 1024,
+    "epochs": 24,
+    "image_size": 224,
+    "loss": "infonce_no_queue",
+    "lr": 0.002545584412271571,
+    "queue": 0,
+    "teacher": "mobileclip2_s0_dfndr2b",
+    "text": "all_minilm_l6_v2",
+    "text_aggregation": "learned_query_attention",
+    "vision": "dinov3_vits16",
+    "vision_aggregation": "transformer_128"
+  },
+  "latency_ceiling_q3_ms": 9.48,
+  "new_training_runs": 9,
+  "openclip_validation_mean_R1": 0.6994082840236686,
+  "package_sha256": "613084e24aa468925506a6fd38f3e527da3155a7ce6cda4cc1b1a1669b192988",
+  "rows": [
+    {
+      "arm": "vision",
+      "base_encoder_weights_frozen": true,
+      "lora_parameters": 1179648,
+      "lora_targets": 8,
+      "params_total_inference": 48376197,
+      "params_total_training": 48769413,
+      "params_trainable_inference": 4076037,
+      "params_trainable_training": 4469253,
+      "params_training_only": 393216,
+      "pipeline": "freezeshift/configs/pipeline_vision.yaml"
+    },
+    {
+      "arm": "text",
+      "base_encoder_weights_frozen": true,
+      "lora_parameters": 786432,
+      "lora_targets": 8,
+      "params_total_inference": 47982981,
+      "params_total_training": 48376197,
+      "params_trainable_inference": 3682821,
+      "params_trainable_training": 4076037,
+      "params_training_only": 393216,
+      "pipeline": "freezeshift/configs/pipeline_text.yaml"
+    },
+    {
+      "arm": "dual",
+      "base_encoder_weights_frozen": true,
+      "lora_parameters": 1966080,
+      "lora_targets": 16,
+      "params_total_inference": 49162629,
+      "params_total_training": 49555845,
+      "params_trainable_inference": 4862469,
+      "params_trainable_training": 5255685,
+      "params_training_only": 393216,
+      "pipeline": "freezeshift/configs/pipeline_dual.yaml"
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "status": "READY"
+}

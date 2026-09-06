@@ -1,0 +1,33 @@
+# Abstract
+
+**Efficient Vision-Language Alignment in VLMs**
+
+Contrastive vision–language models acquire their capability by jointly training two large
+towers on web-scale paired data, at costs incompatible with many research and deployment
+settings. This dissertation asks whether independently pretrained encoders can instead be
+aligned while frozen, using fewer than five million trainable inference parameters within a
+measured latency budget, against MobileCLIP2-S0 as the compact jointly pretrained reference
+and OpenCLIP ViT-B/32 as a locally reconstructed field anchor.
+
+Early results were weak for an unexpected reason, and the principal contribution is
+consequently diagnostic. Decomposing the training recipe isolated the cross-batch memory
+queue: although the encoders were frozen, queued embeddings sat downstream of a rapidly
+changing projector and fell out of correspondence with the current model. Removing it
+recovered roughly 19 percentage points of retrieval R@1, and a preregistered factorial
+(22 conditions, 66 runs, three seeds) found harm beginning after a single optimizer step with
+no safe non-zero age. Conditions matched on measured drift differed in damage by up to 4.74
+percentage points, and the text tower degraded approximately 7.2 times more steeply than the
+image tower. Drift is associated with damage but does not determine it: a boundary condition
+on the slow-drift justification for memory queues, reported without a claim to the complete
+causal mechanism.
+
+With the recipe repaired, learned-query aggregation over frozen token sequences produced the
+strongest strictly frozen model at 54.487% validation mean bidirectional R@1 with 2.896M
+trainable inference parameters, and a preregistered bounded low-rank relaxation of the final
+encoder blocks reached 63.416% with 4.862M, inside the latency budget. On the sealed one-shot
+Flickr30k test these reached 52.90 ± 0.87% and 62.20 ± 0.45% across three seeds, a measured
+9.30-point cost of strict freezing, retaining approximately 91.2% of the field anchor but only
+79.5% of the compact reference. Zero-shot classification did not transfer: on Oxford-IIIT Pets
+the aligned models reach 8–10% against MobileCLIP2-S0's 89.2%. This work therefore does not
+beat CLIP or reach compact-reference parity. It quantifies how far frozen alignment reaches
+under a stated budget, and surfaces a training failure that is not specific to it.

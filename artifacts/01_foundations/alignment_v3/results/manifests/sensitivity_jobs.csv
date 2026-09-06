@@ -1,0 +1,9 @@
+array_index,experiment_id,run_id,strength,distillation,seed
+0,matched_baseline,matched_baseline__seed_42,0.0,False,42
+1,matched_baseline,matched_baseline__seed_43,0.0,False,43
+2,distill_strength_0p5,distill_strength_0p5__seed_42,0.5,True,42
+3,distill_strength_0p5,distill_strength_0p5__seed_43,0.5,True,43
+4,distill_strength_1p0,distill_strength_1p0__seed_42,1.0,True,42
+5,distill_strength_1p0,distill_strength_1p0__seed_43,1.0,True,43
+6,distill_strength_2p0,distill_strength_2p0__seed_42,2.0,True,42
+7,distill_strength_2p0,distill_strength_2p0__seed_43,2.0,True,43

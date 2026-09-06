@@ -1,0 +1,4093 @@
+{
+  "status": "COMPLETE",
+  "source": "cached nlphuji/flickr30k Arrow shards",
+  "network_used": false,
+  "cache_shards": [
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00000-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00001-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00002-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00003-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00004-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00005-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00006-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00007-of-00009.arrow",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00008-of-00009.arrow"
+  ],
+  "cache_shard_sha256": {
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00000-of-00009.arrow": "c689a09592d7b9537af9af480f90f0d2538ab90a39c082c19a4fafd1b1eaccc5",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00001-of-00009.arrow": "380606187a81932934759eddd9e6ff7fab75d780e9701189a9c0eaa1d54d18e3",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00002-of-00009.arrow": "f6f15b5e04ec26000d0a9e41fe8102bef02d29333cbdecf8c207fb5f2a56cc52",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00003-of-00009.arrow": "9777474675b2d55dfa5734007dce72e12b81d6b2b40d37f567db862223655450",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00004-of-00009.arrow": "a1538f9584307d2f8b62bab007132490948828b936063c280c952474bbf8fd17",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00005-of-00009.arrow": "63240eaefee515eaa9ce32e13ce996f7e9b22d9812c4d1be61b2915642354f41",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00006-of-00009.arrow": "57943590d546dcfdb41cfe99e02c0c24a347bb689d2ddd5756957b8d6dfc58e5",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00007-of-00009.arrow": "f2f247b17819ac5eff0131344115bdcac19f10bf70ffff305fc2ab9770b9bed6",
+    ".cache/huggingface/datasets/nlphuji___flickr30k/TEST/1.1.0/2b239befc81b6e3f035ce6bd52f5f4d60f5625f7/flickr30k-test-00008-of-00009.arrow": "c472349c37262e34e3f6626e7c79d3ca9b29160d0397cd2bfa78bf978fa32e8f"
+  },
+  "split_field": "val",
+  "csv": "data/flickr30k/validation.csv",
+  "csv_sha256": "e91235461839ab4237f02cfc9c88fc7117615e503a0266d601df01bd2b8196ad",
+  "images": 1014,
+  "captions": 5070,
+  "test_overlap_images": 0,
+  "decision_bearing": true,
+  "test_sealed": true,
+  "image_hashes": [
+    {
+      "path": "data/flickr30k/validation_images/67.jpg",
+      "sha256": "cd1533679b4b15e33f4ca60ff59bbce17d9e2e0804e82b29e7e902d71bab38aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/99.jpg",
+      "sha256": "1fa905c7ed6ed4ef051784cd779418fe873ed5292e22e0c3a327af3507e3574b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/100.jpg",
+      "sha256": "1a63481abde6f0922f01b37e67c86d41867194a78e7c98b4ece09c5db6941fd2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/109.jpg",
+      "sha256": "3874942359fc350181875e85e4c374bbda78ee1c43856a1a6ebf2d6fe89dba8d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/118.jpg",
+      "sha256": "b42930b0691f43b491ba4712ec34b6ed39f83c94b388d84bb1d5126516f1f071"
+    },
+    {
+      "path": "data/flickr30k/validation_images/161.jpg",
+      "sha256": "21e561d55fe22855b7d26828f6d7961db01396f01cda793d6ee21bf35195f7e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/170.jpg",
+      "sha256": "2887ff0429980cec8a39b5c1d57bb4113c76b827ec9b5b3f656dd40f443ac3ee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/200.jpg",
+      "sha256": "f0013522ec2931a8fbefbb407a0497dc15fa353b0aa9ef3f5c77b3c46b6e3f62"
+    },
+    {
+      "path": "data/flickr30k/validation_images/203.jpg",
+      "sha256": "fa27297eb45b37da710ee06bd924ca12ecd96e631479c387e5ed22da4d0b00c0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/257.jpg",
+      "sha256": "d63b3f7f95a0753a454c167168102d329ecd1c35e35f03444c24e64be37a8787"
+    },
+    {
+      "path": "data/flickr30k/validation_images/280.jpg",
+      "sha256": "38414fe9bdc0b64b0151c4a9ce68bc43408e521566457bf180bce623f05e6cb3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/282.jpg",
+      "sha256": "48fde380f8c0333af0e9bd3aa50d2f38188a1f667ff4ced9a9ec427f42350f8e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/293.jpg",
+      "sha256": "ae16e4b36fe3d31612b21e112fbcf060d264f11fdf3b4b43f69523c84dd9f447"
+    },
+    {
+      "path": "data/flickr30k/validation_images/301.jpg",
+      "sha256": "688f929ac0469d1286d2f8eab5412e1725272342e5e67cc1fe3d3160aed58d49"
+    },
+    {
+      "path": "data/flickr30k/validation_images/322.jpg",
+      "sha256": "b44cc864c7948b5d5f47d4aac168207c2388273f8151fa7895237e3a33cacbfa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/370.jpg",
+      "sha256": "23d096e139290b2305a20864360f6fefecd2e0fcfb9f068a5a5f41364b63f211"
+    },
+    {
+      "path": "data/flickr30k/validation_images/377.jpg",
+      "sha256": "5f862f78709235a951bc28aa5fc7bcacdb0711f815296fb3491f5954c9204c31"
+    },
+    {
+      "path": "data/flickr30k/validation_images/382.jpg",
+      "sha256": "6ad60df36393d8dcfe62e4de0a170c9acbbe3740a0c40606ffb5b09bc8006837"
+    },
+    {
+      "path": "data/flickr30k/validation_images/387.jpg",
+      "sha256": "18b190f448e436edc4f0cb76507d746437b29a96701ea190f964aa41c8a398b3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/390.jpg",
+      "sha256": "2549e2b6f483529c3838bf27932e0d8d4a34ce9128e4f745b148fe266c127293"
+    },
+    {
+      "path": "data/flickr30k/validation_images/419.jpg",
+      "sha256": "42fb45480e5c4b96b6c433ebaed15587cc9d5c74b0659bf71f06f4be03c7bf7e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/422.jpg",
+      "sha256": "044d592b5ad4a973abd4011b7ec2e2540e1b9a2f0e562e3adc9784f3f19be3b7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/462.jpg",
+      "sha256": "dd7c226f6358202f144ab589baf4752e2762e5a623b671b6795279c8d465d7d4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/478.jpg",
+      "sha256": "c66417679752feb508f64a0a09702e743946d2fb1e7fd9b53711a799e1aac2f6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/511.jpg",
+      "sha256": "0737343c5eca44bdeb9a891b1294a50b78073865022f47aecb186926a4af7c92"
+    },
+    {
+      "path": "data/flickr30k/validation_images/608.jpg",
+      "sha256": "c1ec61d4685c9c9fbdfe2752653f2cffcb2857c592e5c911b4e5eb9e2605a2be"
+    },
+    {
+      "path": "data/flickr30k/validation_images/610.jpg",
+      "sha256": "37df6737da37b1b622a8fbc5014949216c312acb6d30a5276114468ca72582c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/628.jpg",
+      "sha256": "c3aa74fafb32c9c24ddc745c96a10a13a415b86e5822e89449ae33d6a62afa47"
+    },
+    {
+      "path": "data/flickr30k/validation_images/630.jpg",
+      "sha256": "69f8408475acd8c6893b7bb3dc2400b43f86f8a10a8c92c459691da7fb089c7d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/669.jpg",
+      "sha256": "e7f8d36adb2c368b894cebf9d209641deada4d4c595a45ad2a5020ac5e10f993"
+    },
+    {
+      "path": "data/flickr30k/validation_images/681.jpg",
+      "sha256": "bfe1a24df3192c18ca28d560268d9c0f9b7020bbeb626ee9a85709b36bffbdb5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/694.jpg",
+      "sha256": "760db969a00e29296dc48933e88ea0574fb99dfb4affe7fa7bdb403d0abb8806"
+    },
+    {
+      "path": "data/flickr30k/validation_images/762.jpg",
+      "sha256": "c0c01defb57539200663658411412741c1dd2bff6c3a8f41b613b4b3ccb87131"
+    },
+    {
+      "path": "data/flickr30k/validation_images/816.jpg",
+      "sha256": "c0b8c48629f37dab4cd20d6e0950198cbd2b3fc7558eda05085cc8094ff3f16d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/843.jpg",
+      "sha256": "d35d3cf694d7a303a1c4ecb8718fdb9f3f9f2e80816ae8a92972fbdefef08a69"
+    },
+    {
+      "path": "data/flickr30k/validation_images/900.jpg",
+      "sha256": "7fd6e61bf76a90a22c48497d5d7616da86afcbe2658c553486ed2d7f205db3a5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/949.jpg",
+      "sha256": "361215941c87543fa0dd9c83fc554443f7fa91dc80649bc7df496880a4a71d9c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1052.jpg",
+      "sha256": "b6b6791921061a26cdb46f4fc0f9b41d76383600a323ed9c14fea6d2b6ec0de1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1074.jpg",
+      "sha256": "f7f818c109783c1d778c86b7828e83705f369559d4cd44d89ecc07b81643e4a2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1081.jpg",
+      "sha256": "4833014ab7a2af463128b4a1b6ac73a45860af00af73b9425da2a3e8b91535c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1089.jpg",
+      "sha256": "531fd864ce27087193847c352760278aa8165d97e7bb242ea46f11579c8f158e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1102.jpg",
+      "sha256": "a0df6fb7c5c4dd0890d326d4a20a384d6128e911d6120a969aa967279f704d8d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1103.jpg",
+      "sha256": "5cd2a628e4e6b5518f20eb797da916d08c8add9e5eaa3ced9de73eb2e50f6ad0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1107.jpg",
+      "sha256": "54564c09f367a3b488b216883cdfdb1825b8f5b2f28b5f46434ed69236ff9cf7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1144.jpg",
+      "sha256": "25b88210011a69d053dc56497d9fe214d22024ab2d083c47933276aa9d9b9171"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1145.jpg",
+      "sha256": "b436ec70aacb372d70dfcc629e8214bb55a17f5fba2266ae8ce879a7d0cfec9e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1155.jpg",
+      "sha256": "d7eed39007ea5a8c7ac1c43205bb34172e82b1cc43163b7ed23b72d65e3840aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1162.jpg",
+      "sha256": "840f17446f2eed6ac15acc502dec92c186a6a842af9ff044410fa0882e341b05"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1168.jpg",
+      "sha256": "2cafdd3d1e722805fa2229135e49dddfb25d90c89474cf38212b3e498cbc642d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1182.jpg",
+      "sha256": "893285fe71fec418ba1941963511365ddee8ee281225bb061076e843d91183df"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1209.jpg",
+      "sha256": "6b273f3d030b54349ddec183493a16b3ca8f408ea109eb75a6392caec0795e30"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1212.jpg",
+      "sha256": "bc8d9abdf454942720229d1f1e707996ff4c274ac167024aa19201da01322433"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1271.jpg",
+      "sha256": "34f1daf3d3c25a3c5fb86e76235d40079d8588b785ddb90eeadcd0fa8d15533d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1286.jpg",
+      "sha256": "086ecffd6dbd124b8ec839317851332103599c378a691119de48688fa3ace8df"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1293.jpg",
+      "sha256": "56611dd27e795ca2e71085efba0237c7196d5a9a29bb755d1c4f701039289c6a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1351.jpg",
+      "sha256": "a6085da97a2c617f7ecc7fa80b7f5d7977edf14364b1fb5e3ee94ccc4e38e1b2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1365.jpg",
+      "sha256": "e2f64e9350972aa4f48a117b004360b0610f46dc9d410034486cd685020e119b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1371.jpg",
+      "sha256": "56581dfffbb83832843ef23bbb51c607ba5eb8534372e110f98aeb0ced4f4c51"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1378.jpg",
+      "sha256": "289f81a0b6d29ea2e7b87b26f7040422fc3a3c2e35ac48102869c9a260457496"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1382.jpg",
+      "sha256": "5f54a7572d637895da7e96822233799694e27cde7bb6cbf601c8de235a455b19"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1478.jpg",
+      "sha256": "6082bad0cda08b1a8c20a1260d47a46650147f1a57608786dac680412605d145"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1513.jpg",
+      "sha256": "4dfa0e4e8fe147751e02d5e66411a017cfb39a37ce3a75e3619a866aa6324dc6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1516.jpg",
+      "sha256": "469f39b997577cffb2df1cd113e707edb9c70e7b9dc815c98a3ffbd5bd2a51a2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1520.jpg",
+      "sha256": "55bcb9e321c0ab58412ecf136d77b54a1808d902af1f6e4d5899a685c24adc10"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1523.jpg",
+      "sha256": "18fd892e2c9063a8e22857c4d04a24a4bb55cf8fea5ad21147088f2712281c5d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1532.jpg",
+      "sha256": "e373d2c9ade332150d75977e73037cdab4b3deccba1569f5a594bb314e410b74"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1616.jpg",
+      "sha256": "51922ef1a2ba57f953e86c6670eb5e20162e7bd9bcab504f2567d5e5018e3074"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1636.jpg",
+      "sha256": "0217a9b8dac3ca76d5a0611ecfa31025bfe102b92e728b6b9496ec79a05a3af0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1716.jpg",
+      "sha256": "6b97e6ac1852b92f2371415624c0a7988ce9a639e46ec846ff15002c5a13957a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1727.jpg",
+      "sha256": "ad1bcc6a817db7a2c03aff90d7d3caa08522ec15d3e7dbf9642f26ceaf564f54"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1740.jpg",
+      "sha256": "44769de89e39f2c0ac01598720eafc8a9971266edce84bcc5da2bf5f650b5f9d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1746.jpg",
+      "sha256": "634751522bda07468883b1e8f1ac13b4f13e5a2984c0092ec8bcb4e3513833ed"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1754.jpg",
+      "sha256": "bed87dfede05daa3b63274895b0f6472addbc9e35d1b1e5898dd14cebf46898b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1782.jpg",
+      "sha256": "008acc02fd9787afc8e4cbe89a071dd8ca6171ed419d65efe72ce485d5e4bd6f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1892.jpg",
+      "sha256": "c1dee31285d4300fe10479370f9e62ab941cdda245fdfa61c34363231ddebbcf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1902.jpg",
+      "sha256": "cd44dda2be755ad2fb1ff890d94cb3beca48e28beca955a3ba39d19a09507b68"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1933.jpg",
+      "sha256": "89c1f3333b7c5dff3afdfafd28988ae9c9cd2c98b500a2020baa5162cde2528f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1943.jpg",
+      "sha256": "008f69cd4ea28a7bf9357dab80631916d2259b3d834455a180a5de579a22a544"
+    },
+    {
+      "path": "data/flickr30k/validation_images/1995.jpg",
+      "sha256": "0ea207262dc209428db93938f39da215168a8526cc37de51d84c83ab84d9ec9d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2006.jpg",
+      "sha256": "7138368ab8fc4d43ff92ab4cb67528851efb4a6237efcbeb013e369f725205f7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2089.jpg",
+      "sha256": "84bc7d09d4209c8d285558d0d36c4b8c45141bd8fb78d34acad5508ee0baebf0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2145.jpg",
+      "sha256": "800949bfb901dd34279d61e55ead0ef14e37812f52ce5ef20cf87e6cf6d18383"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2147.jpg",
+      "sha256": "3970264d1a1280ceaed9bbb044749039caf57c58c8a2222ea9aa59028777e5b0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2177.jpg",
+      "sha256": "e8e0ab757222cba22660ed34d7edb74f0fe55c4a66a7e83cbdd9e2d0e57a4ba9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2179.jpg",
+      "sha256": "56252eaba894a4df8295a168454e4432f6f5fd5ad834324862bb4b14a2322970"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2256.jpg",
+      "sha256": "6e5a7ebf8f0c297310632b2c993ad48093232077ffd93f8f87790cc6103f0ec2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2274.jpg",
+      "sha256": "92ad8558201af92c5dbf85cb7ab28999e5e4bbf6a27b2aced34c21991937ffbf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2283.jpg",
+      "sha256": "3d7fff9b685b00d88f6a64caec99e54514c60b76f15eea577c139e2faf1f78d8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2312.jpg",
+      "sha256": "7c9de0e7460aa1a7d5d2282754d0fa332e08fa390eb6919631d4a094ac0ee4ca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2324.jpg",
+      "sha256": "b98b07df7e5d4ccaa4366c4206e0fc65a7d5280c53951794909bb328a4997f01"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2326.jpg",
+      "sha256": "1e810b8ac618d7daedf62a4f0fdfb09c033940a69f320f87f8a2a15db48c9e92"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2388.jpg",
+      "sha256": "a58af4abdbd2b788e17358a735b99c314cd0c30ecd6b6fb1c34386927ce90109"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2434.jpg",
+      "sha256": "def793c564d1a5ce6b5ea3454988dccdfb2a4853d906e4d97dc3a1682d5e88e0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2476.jpg",
+      "sha256": "8e0e416788840db08ceee348ae260015d7be1c044f5582172e71f9015e2c0aa8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2522.jpg",
+      "sha256": "ee5749c139b58ce92bd609bafbfce42053ce769caf28f53a2656827486bac1fe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2527.jpg",
+      "sha256": "dc2519ebb43f89ba2a1c2d8043e21cf64642aa101fbfd4ff8272fe8c2e0121b0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2605.jpg",
+      "sha256": "18cf2b7b01e8790e36c2e1fbe089905b224b321202c646c11dabf924dc3905a6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2662.jpg",
+      "sha256": "d9bd2ec97e5109f9b7540e32fda13a8cc7aab3683fe8bb5898606cfd29cce808"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2737.jpg",
+      "sha256": "c2acb0c37b50f25f54cb9059fce342611c343be93b7744da4372bf94be260332"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2749.jpg",
+      "sha256": "f0f4bad2082d64986b875ea989843a96bbc4c2fea7a8998f685fd17c8c3aea1e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/2968.jpg",
+      "sha256": "91a1ed1a5bd77e5611524888519dae1ae108a36b0ca23a89e78478e0173501df"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3032.jpg",
+      "sha256": "c335ad5b174d710900c4e059799b16670b3536e26d40ee2994a63523dd69cc35"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3085.jpg",
+      "sha256": "747ec36ff573df7d1c7fa265b9ffdfe44e74321a36a8c420820e6dfd6f9de882"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3096.jpg",
+      "sha256": "e9fc9cb96cf3cc35e1bafb6afbdde822d831d5b0b9d2e0dd4f2ad5c545461c1f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3104.jpg",
+      "sha256": "d5eea3f0474c3a3446a4c4a12ffb653d57ec3dcaf25d13c04d8ea541ffe5787f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3105.jpg",
+      "sha256": "1bb534b68201880acd778a4468b339c5c85a673afa41959a298bdf8e929cb28f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3115.jpg",
+      "sha256": "e4e232f707a9ece4f9ec5add65981a537a47563b6d74b0656435807b0325617d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3175.jpg",
+      "sha256": "f644de7972613637c842274a7ce56e2a46f576d797fb3fcdda9e635682adbd57"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3180.jpg",
+      "sha256": "3b73d3dd5ad5cf857212e005a2bc188ce2475f7019f43d37754d9630224e7b2c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3197.jpg",
+      "sha256": "34c0f439e5e32e9cbe145a900b0fde5d6e4353f4aea32914dcb5082704842430"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3203.jpg",
+      "sha256": "6f4a88eb6a5dc797e1e929f903210c7daf0fc7ee381b1b6f848d6b785996e25a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3204.jpg",
+      "sha256": "fa18e142536b80a94ab765fd2b3986e46fa814f98ac690cec2584b63282fe0cd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3304.jpg",
+      "sha256": "9abfe68cf4b0ebf4e1407cc8bd0040603bac8cae04dbda583e810403dce2afe7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3375.jpg",
+      "sha256": "bcca40d36755dd72b92587e59dc47f25ee6dfea9f181bb7d7e3017dfbe394df6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3393.jpg",
+      "sha256": "eadc34d51e953f7aa90a3a719c2f843b47039cc97ebc74721d3afd55ce4ccd5e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3410.jpg",
+      "sha256": "c99a75eaef1652cf112185d085e29c01d80de4debf9bcb4e40c5d5bb7d1bd6a3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3423.jpg",
+      "sha256": "8c721205da7727fc9058daa35eb83ea7f4fdd9d4350c4d812651da425a2ba608"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3425.jpg",
+      "sha256": "10b772ccfdea3f2d69c8cd4e9b63623497804248c18b62f8eea6c917fdf5e376"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3434.jpg",
+      "sha256": "20524258fbc1f5dc8781ace5b6b98468347f73e49bedd7da18948dc96d091e01"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3461.jpg",
+      "sha256": "7d77b9639829ec809aba2ce0ca5314064e53bb8ee7c292b0c8ad9fd4322e3589"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3493.jpg",
+      "sha256": "433a276108d6e084a25a6cce9544135af365a89749925441ea2ae03200ee50d0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3498.jpg",
+      "sha256": "a42045600f918ad27624d33ea0860b1df5e106745c88f59c036edfeb06b3e851"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3510.jpg",
+      "sha256": "c3beb698009e3233f76acb5fc6c45da7f1119c88ba2c61342f5167cf07e76d78"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3529.jpg",
+      "sha256": "28fd98e46a42f894e7a78f31866598157afd6066b84664cb48b3025e7af55a0d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3547.jpg",
+      "sha256": "d8b59604541f2dd60dd2b6dbd44480331bfee9bd69062afbc32804bd96754dfd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3566.jpg",
+      "sha256": "e4d403a20a605f7733b18817eb73f4728e6d0776fe383fe526ac10783e19cae8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3631.jpg",
+      "sha256": "b335dc7b9c78a0ce7620fc71157e1935d408746113e2f1782f1d2a0147fde78f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3681.jpg",
+      "sha256": "bf00e5689f147b56010f6b4151639b4e87b5e206c6cd479e137adc53bf341ee6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3756.jpg",
+      "sha256": "6a99b78904b9a06fc042ee5dec86c405fe792086ad7eda69fdfab1b76684a5b9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3821.jpg",
+      "sha256": "f95479234efddc81b033e5e86708ede9ed05c1c584d906c971800b23d3b9af84"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3836.jpg",
+      "sha256": "89a8c40d6258b8af941d49512e87b6d4f1a23dd56bc0e7e44c65a5aa950ead33"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3848.jpg",
+      "sha256": "f59136c7b980a1d2b81ca4bd349229eeebef8bc75fc43f0d6f4ba4fe2b294ea3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3953.jpg",
+      "sha256": "905a68029315cea816662b1e6341783f929245e0e0ff5916fec5ed9297df2ba4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3960.jpg",
+      "sha256": "4b45e9dfa382a2b8c9979f5ef9fe44ba2b49245ec6818d32d960e1eda56a4657"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3969.jpg",
+      "sha256": "40bd913e842db99adafcdddd2019c4aee9772f8e8a1e45d35952075116f4db2d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3975.jpg",
+      "sha256": "3522685976a1b09389afdb801ae4ab471c195f46d3bd6449e427406863c8c913"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3977.jpg",
+      "sha256": "5cfbada7c4bdb2b2b54e78e0ed831597f986f3770250a15733573051fd728755"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3979.jpg",
+      "sha256": "e2176ea9f23ca6b51da03a97e1a92c29e0625746058a39cb9d2fbc602e9ea5d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/3995.jpg",
+      "sha256": "9b9d8905415f0469c53cd35c430441b056cdc5c345ce4cf29d19ebdd504a7b05"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4011.jpg",
+      "sha256": "5e27348f7f7a1f4f5ec93c6d0508133295107e0cd37043724a65c228a2de17c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4053.jpg",
+      "sha256": "4249806e24d53747a6cf54c5ec4fa0652fc0c792c11b5b89ce3e7de59d6b87fb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4054.jpg",
+      "sha256": "382b2c8b86f2f078c3bba7d5e7f4e47006b6c7322cdd82ff0af176d32a2b09e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4072.jpg",
+      "sha256": "c95df898fe5715dab353a31fe411649512101f2d68f77c442d4a45dfe09d92bf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4077.jpg",
+      "sha256": "a40fffffb30b2e51d81bd7a0467615b89b9450b6846fada8c3162418eb7bd82e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4141.jpg",
+      "sha256": "949a509fb0739290b6601fa955691589d0c2ae5473da439ee9c81d52b7625dc6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4271.jpg",
+      "sha256": "9f2b0ece2b7448283ed02664289dc35a9d9f1145bc3fc3e641558e24ad864712"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4280.jpg",
+      "sha256": "7858195c87e8d8d1109571a6eea13f542f47eca80ea626b4ffc10a69b034517f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4351.jpg",
+      "sha256": "1bf40f5dac2fc3f37ae6324a4cf17cdddd697eb7b241f3ab9db31139cb79a1a6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4463.jpg",
+      "sha256": "1743540678d43d47dc2b16ae2b976c00472948262bfd01beb252563afefa9eff"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4480.jpg",
+      "sha256": "280a92cab96b7599788adc64c07949acc7c845799d19d7a3ab6b827a5d4762e1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4486.jpg",
+      "sha256": "0fd58a900ea3e5598871d9172911d141326d06d5b9c0038dd087b32ac6be6f87"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4494.jpg",
+      "sha256": "1429fde734cd799d242ad1b05935b87a5248ea1cffa703da40726671018b18e1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4561.jpg",
+      "sha256": "0ed88c446c980090ddc2181bec940c49a1c6fb4c30f8b1146865d2e47e8f836e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4605.jpg",
+      "sha256": "d969565e4c57928e4a163533cd76c17b1a2ad3284e3f2ca2d80effae960a8abd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4616.jpg",
+      "sha256": "8710100b58b2a9bab2dc9e641a6c71f1cb7858587cbe0e135ff0128d461e0fd7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4641.jpg",
+      "sha256": "e2cf463247d69ebca7136236449c0384e5aa599b8eec90308e30ce909af97a6d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4734.jpg",
+      "sha256": "3d7f020285ae9be38aa7b6f92eb2375e6a34c60ce4b4bd3d0393d7291b10a5b5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4743.jpg",
+      "sha256": "5c33a23c2deea4c8b28096882e953ae23400ebf5754e28c1855e9566521b85d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4768.jpg",
+      "sha256": "bdbbdbe88af538c9afa370fa43cdd212e3d92e4a5e44bd3673ac71615c812779"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4808.jpg",
+      "sha256": "dfeae8055479bc1e176a8fb66e68241628c63d63ffaec05494801374763bc63b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4840.jpg",
+      "sha256": "d228f180c835f1bba2e67c63354b5e0a34c3647bd7e6e253be48bb0b70cc920d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4860.jpg",
+      "sha256": "e7c8fe8e85f05dde2c27be612028e2ed130afa36da1e336b6a3394f23b372280"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4906.jpg",
+      "sha256": "ff1ecceccdee27bc9ca35fbc6afe7e4e8f5bdda2536aafb5b013fa20ff57b945"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4917.jpg",
+      "sha256": "51f0d1b229021b9e74b22c72598059297c9a1082ccf6533b46b684f2d3579fd0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/4960.jpg",
+      "sha256": "77935f8d06d4337c12c901a64e48e5f973e6cf27b0b01b431b1acd94b38214cd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5013.jpg",
+      "sha256": "e96f4b193f639de229b05d61911c9b16262f7945d1a0530f60b8f2de8f45c8fd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5062.jpg",
+      "sha256": "e540f6c6dff7b0cbf94a7d6ada96e30a778e500a09f44ce123c776f3abd91f79"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5073.jpg",
+      "sha256": "be4586c45dd1b60dbe6940a4b27828281950c590687532baceeec27a99f623ce"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5108.jpg",
+      "sha256": "496d3092723963e5cb28a9f4c1e5e63987127fd9962ea50b9707938a99cd4e2f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5162.jpg",
+      "sha256": "ba574d1372563a3ca9e5fb5cb6136fe2be9a22ebff56d16d41a04b6f3bdbde33"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5204.jpg",
+      "sha256": "32d750feb807179801e48a0de6f0056fc844cd95845000b63ec2c29cbb5290da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5214.jpg",
+      "sha256": "26757e6fee15aba1c9afd170830df514c8ab9d4825f3361c0ed05f39bdc0c876"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5224.jpg",
+      "sha256": "f8db306b3b2254b958f4c3bf2461cdb73f77846418545c4e291d0ca39eeae8aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5270.jpg",
+      "sha256": "088e9d5f5fb06ccb3311bf2f9170be33e66a125bb4601b6cd3c7baf1b741d3d1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5274.jpg",
+      "sha256": "493e45931046261c8d6227ad2b033c301b9b1a5a16b29da7ecda4678cc6a0a28"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5300.jpg",
+      "sha256": "6965fc9f0486b2e83bc8f2329d35f344b83f82bb315105e076bb2fb7277fd4bf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5304.jpg",
+      "sha256": "381e47ca9cdc9d2c6bc4b402fd13a4fffd52b6c1fd3fe21d8d4899b61f6d45b1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5371.jpg",
+      "sha256": "09611db76c8cfa757f17d565fd146eace22e0497e38b9c493911d8276774fe04"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5387.jpg",
+      "sha256": "0ff6172b527674a2d0987a6e267c8d7fbd7ac73c5ae6649720603fe0c6a9331b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5447.jpg",
+      "sha256": "23898f836fc5eddf407ef605774569b7754e655e8c69c0becea8f2bfe5055e34"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5477.jpg",
+      "sha256": "585dc1efe8bbe760ce3c490cd7997439a25494e7890da2efe5b9a0c7cdd6c192"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5479.jpg",
+      "sha256": "a6b1451b64801d4e45048ff03588616f2d1cb7c45fd386155eb818e1f55b3f99"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5515.jpg",
+      "sha256": "50e42387982709ec0cfe627c2cefb17dc3be2c7db0c65585c7291141699386a3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5516.jpg",
+      "sha256": "23d7a25f50bc49e868edba8c851cc8df495c019886f42cd83081f955b7762c22"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5522.jpg",
+      "sha256": "34b68c96535a0ddbe03dcaf2f288767e034efd5a393ec3c416a9bda45b56ce08"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5550.jpg",
+      "sha256": "2b7dd2bfe121c27933599caf3040ad6fdaa331613f340daf3a04e6f2937cb793"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5553.jpg",
+      "sha256": "23f162f7a18f52cefd61f180951779d2a2ca2e81cc1c2a67bcb1a5b45208ab4f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5576.jpg",
+      "sha256": "5c3706321c24709a2fd951730514a951312c070584a90b7068a59e47f4271bfc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5680.jpg",
+      "sha256": "454a932b4506cbe5b7c3f71788ae43cbd07936bd47d57b4e9e166937877dbd26"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5711.jpg",
+      "sha256": "1540188922ab878c02e9ec59d4376955e393e0dc77d43d95bffdf0eb3dceae3e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5752.jpg",
+      "sha256": "6b1667c55466f0d0b3a0f7afdc5f8e29c79ceee04a463beba21bac1eef71caeb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5808.jpg",
+      "sha256": "01cff626e4a3fac36b9296cc97ff3bb465c46becdc0d59236ad376f2d377d5a4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/5950.jpg",
+      "sha256": "db620211854dd51ae3cd74f78776cc7aa2652d69b78a95892156fedde9069031"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6043.jpg",
+      "sha256": "1594fc4d83bb3e71f8101e72371eb446de7befcd75943e7a4b1e7f1f59136e88"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6049.jpg",
+      "sha256": "7af35ef4e2d934845db06cf94cc3d6c8509120c5d935eff1a12dc3e33930a990"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6055.jpg",
+      "sha256": "44377a9eb1ea866f198aef48abb847e1317894cdcdcf668170800f6dcb291a8d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6063.jpg",
+      "sha256": "7f76faf6a933f209b4c4db2a9e1434135147460a2c99d230433104789c50ff21"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6089.jpg",
+      "sha256": "d0ad749d5d1d04a3c8192168cca58acacf048aa5e5dcde22ae0c29be0d35755a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6110.jpg",
+      "sha256": "c1227897d4b294468832dfc5d7f991319f68950377ec6a0d107758fac702ed1f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6143.jpg",
+      "sha256": "c030ce3a8e0ea2426150ef7043d92a289bea953d7bdfdb2e361f14d60dc919a2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6151.jpg",
+      "sha256": "d25c3b8f032bce07194ea95c8a804f4c87b2da27fc732f1672190db7b6dc5487"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6167.jpg",
+      "sha256": "c4cba526f2536c38fe193f5d84b4b19992f7c5066e457c7609fe8455ec45299d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6171.jpg",
+      "sha256": "2879880e7b82b716bddabe376341154d145f27a587fcf0fed06a6207fd95f08c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6209.jpg",
+      "sha256": "43f8e9855214abd2d6b6f0e162bc7c0493867a81a1142848859f908eedc6562e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6230.jpg",
+      "sha256": "3aab5595194e1b7f2796e7c5fe2af6fb998c3d46d61a4a80c2181aacdbf8c01b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6248.jpg",
+      "sha256": "139ecdfa7ba15bd4383ed8078891bda4dd6f5a4198aa526cfb6b9bdae91c0120"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6257.jpg",
+      "sha256": "4c87da1268eae4896f4cf86d57a05d1433ab93ceee4b8343b871d6659705b6d8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6278.jpg",
+      "sha256": "e4cf25290c347aee8cad7d8e4ccb30d5702d6cfed00519030590cb17c764961e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6282.jpg",
+      "sha256": "4db9abd1fe3b1ff67925f9951cfaba6e0b172f50b4d4a99c8bc62fbb3138851d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6304.jpg",
+      "sha256": "6aa61aea4805feba93fdada6b21a86af5d4bda9fa3876d4518918f210d1f5233"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6318.jpg",
+      "sha256": "ab785eb06d4001ce07a358b75b974e12eeeca3876212452425fc0d01ec8150d5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6377.jpg",
+      "sha256": "ff2a549bf62a487c6cf256b2d3ee95cf08b622c195f8888a03c685f2e3410b53"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6425.jpg",
+      "sha256": "6dba88b603099f8d81705727be950fe7370ce537cdfd68e0086bcb54fd6314d4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6505.jpg",
+      "sha256": "7287ce6c9f9fada4ceb6b755edba9a0715228bc60f6cf3fe597b68b5c1c7a6d6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6533.jpg",
+      "sha256": "ec069e1d847b9a2bda984f7f27ada44c9b92412b34919fc47c39ccd411a265ee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6542.jpg",
+      "sha256": "1b37dbef05b749dfa326a8c421e4819903b75ec8e8c8d69ede852dcd76b820f3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6554.jpg",
+      "sha256": "3086543d77c4caa0ef04575a4382d2598eb4da5b861ed7999ddbca3cebe5d294"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6557.jpg",
+      "sha256": "f16b2ac23b007d8a44cac266b9f63eb51dff479a3f6b9de4eb7560ccbdded182"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6582.jpg",
+      "sha256": "cf9c8030a5f0418c0735e0dcb4ba06542667c1cd37c9dea593cb8f3220321ae9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6586.jpg",
+      "sha256": "7d458f544909bc10c88fb839f05cf9dab5631f82a2a3e055d24ef58c83249036"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6666.jpg",
+      "sha256": "fa20cf0751fd573a96c360e800dae0e0434be7ff3ec2117f91e439943751c968"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6767.jpg",
+      "sha256": "f843f5b9cd51de00b9d73825eb1323d6e0e876f4fe6a568494401f68f5a75b52"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6791.jpg",
+      "sha256": "107eb9123c990907bd74a221ad7ea49d4e417740383ce8a6983a1b601bab2743"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6890.jpg",
+      "sha256": "009de483d7a172dc132b97e38b38ef024b8707e2c30461d342399e629d3a2f40"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6896.jpg",
+      "sha256": "556d5b2c8c57335480be20e4172423bebaaecf567b6e04f3dfa75f6c20af5ec7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6902.jpg",
+      "sha256": "847f1e80c6ddc74b8f2835879958a3c0bf769450840141a25ab57e1e0285e466"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6977.jpg",
+      "sha256": "febd1d4074437a344d9db64ee808739433d659388a750db382442c967538d56f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6990.jpg",
+      "sha256": "da9221604f42fb8a2f918786728469ed37e36133865eea5bee61be41463b5ccc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/6992.jpg",
+      "sha256": "265a6d683f57b776e9d503ac1be9e69bbb199a1af793f3ff0836a1df65978de2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7016.jpg",
+      "sha256": "db52770587f68f6c5e66a4c73d73c581841279e9a135237f4dece22d457fa647"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7044.jpg",
+      "sha256": "a8992b804b9e8b8e8674e426dc0c60a9c3767757b1a03407623d057c2dca0b1d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7151.jpg",
+      "sha256": "0e83629758c5f6e0a231018c54d8733f070c8efd7a178d0b59b2711d2f280b9a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7156.jpg",
+      "sha256": "46fea09d4693a2c4181d1507b6b3b95650958a5401d5dc2c80014b7f30faa842"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7203.jpg",
+      "sha256": "bfa16b6e2d0c587fca54742de5be1a019df89a5eec7f683ab578ed189f67c58d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7228.jpg",
+      "sha256": "4fd8f8f0668b51383667e69a282ec98b3923abd276cf65400d227ebc9a659ad8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7283.jpg",
+      "sha256": "166babe7f4f44e76a0216fdd7ec66041500a946aad4eacba27d3e1185db0d60a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7317.jpg",
+      "sha256": "d4c8959853f003493f57a782104d8c1db1ab97e7ad10c8a466e911107d09a924"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7330.jpg",
+      "sha256": "b4bd01a0d3d8143924721881a177f3f9e085e7024aa95853022c5eb503cf7dd8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7355.jpg",
+      "sha256": "aba806dcb7e9daa72fcecb86a1c7070135ec6ed182c4b3740f7d6a6173a3ea7d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7376.jpg",
+      "sha256": "13e669c2fc9762d0ae317de96d826eaee276dc16c3cc9ec509b0114bb31c813a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7382.jpg",
+      "sha256": "027b353170764ca386775bdd398db8aa61e15cd48139e4b3631793d5990cea58"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7409.jpg",
+      "sha256": "105aac4c471df851924044df9caf1b710a5ea1a8c93426e52c18b4e8d1ab0c97"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7414.jpg",
+      "sha256": "5ab5c0b29e3748b7edf6e5d27819dede45239d22d511bf54e397c19e3cf2ed0c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7421.jpg",
+      "sha256": "ad99ab86a5363987bd2a899420fd14bd6e9f5601515e82722d50a5483681795c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7454.jpg",
+      "sha256": "b28736d22a8dcd94e28a22c2771d8e23aa7a2df1196fcbd4b3cb7003dd4b030d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7575.jpg",
+      "sha256": "14832b5c233c8c0c1b0bb204a112b095827150489d7b96814f0361fb47fbc61d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7608.jpg",
+      "sha256": "e64a659f9d19e956ee835ec39667f4f72b22023c30c034afedb0af46cd0b60da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7610.jpg",
+      "sha256": "2c49e02d1f332129ae9686f012b7cb40be1c7916fe7ac629a8e2f0e01dc25fe7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7646.jpg",
+      "sha256": "99acb120dd27b5c95558249b97359e645008491d48f2fdd0f24bfd0090c07aff"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7723.jpg",
+      "sha256": "2b7defd8000bcd38bcebdb398e9a600c95a2262194ef85ecad11b45f8285bad6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7843.jpg",
+      "sha256": "f840e543dcad1153ea18e5dab80d00eca6627f8210d3d8ad319b05ad2be161a4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7900.jpg",
+      "sha256": "b953cdcb3c76b27e26f3e974de459d6aa64c18cc7c4ef3c521b44e30141972d4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7974.jpg",
+      "sha256": "26c17200211a3055cd16d5d53e114766b7e1da1a3ae1df471d2646650fc41258"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7978.jpg",
+      "sha256": "96a62ba07eb0c3fea003c078437e69d8514031f8acd94688afbda4dc4803261e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/7979.jpg",
+      "sha256": "5131a1c5c672095be11892685de0257c8fe5c316a4c9e12fe6a99ad1f68f258e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8039.jpg",
+      "sha256": "1a5b0a286515566e101d075439f9f647d7d1365caac634f69c2d58a8c72e606d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8107.jpg",
+      "sha256": "58a96795704df22e1788e575f0eef23a52a27e42176d6a58df02912316ef6aac"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8115.jpg",
+      "sha256": "1d8c41bda76e1db6c9996d5cb20dbe22003481a9d87e8a66771256d6f03914fd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8117.jpg",
+      "sha256": "8dffa2542bb65000fe949fd0a023cde469cc5267a52e860af02e8c599d6bfb5f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8194.jpg",
+      "sha256": "7f201ad42685c52e3f5c5f4f7f1401afdc005c2a91e338fbd2b57cf2eb6006d1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8238.jpg",
+      "sha256": "30d197554ac43f5d11b84774921962305d334ae7efb03fd95c60f105002d989c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8268.jpg",
+      "sha256": "bf34ec38a7672adafb4d78e6f4d1ce8206ddea78edfd1cbb10aba833b3bda744"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8303.jpg",
+      "sha256": "ad6ff65ea445b9a228ff3eeca86a3a650fab0dc0129ebb26c039c5d64547493e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8339.jpg",
+      "sha256": "bb8434342933646683655aec0cce32b35ae8b4b3668fa4496676bd25bd2b61f3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8371.jpg",
+      "sha256": "b4831cf73052e879e12c3daa1f561c19034fc78c8e93c97199f1052511dd05a9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8375.jpg",
+      "sha256": "4c2800c04436d860cafe40c34228b2bf890fdc17f7ba80d068ad8c4dcdae8367"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8405.jpg",
+      "sha256": "abafa22c386eac9657961e2c30abf7ecedf1e3a820a9a5fe2449e0ba1f79977d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8507.jpg",
+      "sha256": "204db425d3b80b60a471e6515cc5d87d784ad461584836d2b9a93edf3f158181"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8555.jpg",
+      "sha256": "cb6996afec8847143e7e0ca87886db3c4eb621cce3e3976bf0aeccdebc0cb998"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8605.jpg",
+      "sha256": "8e943e7c745e329c5dfd173b99ef3fa659ccb01a4f86a1a7c6ef93c5753df1f0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8777.jpg",
+      "sha256": "2878a73a0402006cc12ad4d90d2135cd969dbf591f6bfe6755b43fe4d37ea8fa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/8913.jpg",
+      "sha256": "0fc59425b50e017c2c3646c0b372c6ba01a528d047ce82de140cc0f3e0ca47cd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9017.jpg",
+      "sha256": "6f78bbc09f72597b8a54571ff7b2763c9dba59560ae865bc57d97b72eaf5bab1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9038.jpg",
+      "sha256": "50386790767dc1f6b304e15d2a2c02d4fb7e1979ae7a5ab24f73e8d9fa467255"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9079.jpg",
+      "sha256": "e1234e945c0064fdbd65729453af4d26ce77cbb298e8e60abbad01e1ce7e2d13"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9137.jpg",
+      "sha256": "ef55c0b410685dca62ee0b8fa0f9c75cb60ee1c5de63e99570ad794cf5daafe2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9151.jpg",
+      "sha256": "32a854bdde105028260ac50c40be45fd83f4ff3f07165b483dd9605d9243b5df"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9154.jpg",
+      "sha256": "197dc9c9df71133126dd108fffd9f20b4476e24001f529c396f8daea2b68c7bc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9174.jpg",
+      "sha256": "e7bee3df54f0856ec821e3076fd4f27d9a18cefeaef1249135aedeabd9c814ba"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9272.jpg",
+      "sha256": "96d0990b5cf4d2c985bcb156e520b5ab513122e19228a4c71135d9ff8a08c467"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9273.jpg",
+      "sha256": "0db050c1ea78ba58c77b9e1c4428ecbb1ac7ae58d3260e38097954bea35b0874"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9280.jpg",
+      "sha256": "e8cd9c8cf412de45c7650df403c0e56b5c43b04de10cdeeeff366fa62723e951"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9291.jpg",
+      "sha256": "34f71da7a04fd1ee87fed115056ba765750ad91d8676ac0b69ab2eff50c903b5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9380.jpg",
+      "sha256": "8a4295062b894aeedc77058c4c7f09c278897a9028c42b6061e82bb9c379a526"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9451.jpg",
+      "sha256": "d45e361f7f043e60ef9374e1162679542d0c5694a1191f7b2f1dcc8f8868f678"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9488.jpg",
+      "sha256": "038d988659f0f08728c9b408658204ad94100f89e94ea9a1ce453458496075bd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9496.jpg",
+      "sha256": "84957a6140e78b9daca18e444f3e780d906b39b77282df5d73887000c1d90f97"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9578.jpg",
+      "sha256": "e89e87f12557f96cf764da6ced987acadd89941fc616ff7ed121363419ed783e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9724.jpg",
+      "sha256": "5e1ebbca095d912960a054aee1e8f18dfad769ea4dc66d9c9a967925af07b5dc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9734.jpg",
+      "sha256": "1782c2d77a70f099e5d02a05e1acb7705145428fa188915d1ac10a8d1bd09ad1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9747.jpg",
+      "sha256": "e5d43de9df5de276004434db602768b88c8325bb5b40ed827bf5febcbd98c152"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9758.jpg",
+      "sha256": "a07e75938c85fcc05e5a29f6f35febf9bf3484934b14bee3435a01c805baf050"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9774.jpg",
+      "sha256": "b406242edd73e1e93785c0b063d91993f6edb2e8c0171de2feba6ff343b339fa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9778.jpg",
+      "sha256": "0d7aad1ea78b2737ec77e8fb26173e48dfb1c3dc20c6fbf40d1b588eaeaa5f38"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9819.jpg",
+      "sha256": "4be4824149078f43cdf7522aa02c2fd8f5f0044f37c8180e609b0ba6cb2fc09b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9858.jpg",
+      "sha256": "4bcca5f9ecc41acfb27f057c8c117aab44819a529572756cf2b18a0a948e879c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9862.jpg",
+      "sha256": "820857f9832fa79fbda7ea05864d343008d1213cb2c69b7f15c46657c1de640a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9895.jpg",
+      "sha256": "abb1bf5171d942535e1d051b487df9c004d1df860cc9b99f56800e01a5d3afa0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9896.jpg",
+      "sha256": "4fbc8feb3b2f1cd1f1fe3368af341e807ae706d7cbbfead7773540aaea1322c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9907.jpg",
+      "sha256": "5f21da57fd5a38fb5399198851881d065fc9bc66791b9f03329b04f8ad685f03"
+    },
+    {
+      "path": "data/flickr30k/validation_images/9985.jpg",
+      "sha256": "029b8254591ee586ebbf0b79256c49ab33b4978d21887eb7dd6cfd6dc104015e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10014.jpg",
+      "sha256": "bc8527c4ca1818d935456d897b7e5b35ba3dc858745fa70216a757d0012c3836"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10033.jpg",
+      "sha256": "ff8b92365252c247797ecbafdad4694992a933ba2ab69879be4185fc0c3ff85d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10061.jpg",
+      "sha256": "eee51d08d1fbbd438cf43d6dd411c4ba921081c6f1871e7263f44e11932be500"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10078.jpg",
+      "sha256": "cff5cfce5e50e78c640b995fe91848e3a38dc5bd2b49e98abd54a8c92d9026e9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10081.jpg",
+      "sha256": "f866cbb976e31047ba2b5852274dd48f005eb7093ee4c08b4c5acc7e67d0c5f7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10084.jpg",
+      "sha256": "64a66ad57b2a974a701bfbbd5be92ffbed13a3794705499b1165cd02853142fc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10133.jpg",
+      "sha256": "5ed2dbd4da375b0028007ae9faa61efe96eb064b363bd988a702e195d0489474"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10164.jpg",
+      "sha256": "8413e0e2731d580f5e35409508fcf8f5c935409d7494503aea34dd16a26521cd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10214.jpg",
+      "sha256": "d29ec05c44eaf060cbdc9e2cb5247db1c7b7faccd0fd9a7ba4c04b6305f71597"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10219.jpg",
+      "sha256": "65a4301bf95780e2ccb5dcf6ba755973867d7a5c57652a79f441f2ecb9892db1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10221.jpg",
+      "sha256": "4a5e9e77d97ee950f45b5194538cd6d35d4b56bc2f3f19bd8bc6eceec2c45c00"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10244.jpg",
+      "sha256": "9d5cbe3939cca2780707f5b57346211882452d61703560c7b87532acf41e17a1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10266.jpg",
+      "sha256": "bf3f7194eb49dcf61c1f7849df5fd886d656d54efca386b09cb42e927532e7cd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10291.jpg",
+      "sha256": "0e3b289edd82d7c82c6c7b2b41b05d0c1be9bffb46eef5e9d9e10b2a5b50d35b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10321.jpg",
+      "sha256": "8230ff18078534af932121f14b90aa69a24ed093d5b3ee5f029718a4390c3f0f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10356.jpg",
+      "sha256": "57684313ed6e2fbc1e921dbf446c7e088f7f43183d53c96ccb7bcbd98785dc88"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10363.jpg",
+      "sha256": "4847d7ae6c953825998d26618bf6952c4162be5a2ae88adc42e334b873d07b94"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10364.jpg",
+      "sha256": "5395d5984f0f5692e83bb0c8ca11105faac67bed97cc908274c03e75af163607"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10392.jpg",
+      "sha256": "c7005c076ec1a54412eeb682d2a3ec7e3c7cae185078098f361f5dccf4738cf6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10436.jpg",
+      "sha256": "bc29bb1d1ef85428f786e1e3e59f02726c7b9ee82a6f4eeaa5dbeda287efc7ca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10449.jpg",
+      "sha256": "31f73d367f3617cc28bed90850cad0d36151ba7a47508c087416ac7fcb2162da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10458.jpg",
+      "sha256": "14cdfeaeddd02cfd5aff79dfc23baf7afa5e970cb20c05116d3986390cea825c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10479.jpg",
+      "sha256": "d19039175f1e2578798af5891bdd6126b7a1ff2138096bbc2ae3bbcc8c4b4024"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10497.jpg",
+      "sha256": "cf9a650b41da22208e3cdb8a56940f991cdee6082d16a18cd7f3d491ee455264"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10530.jpg",
+      "sha256": "14af9217e13b07c0ea43ce8a1b3e40e9aa4a477ea3f268dc9d97e9c1fba5048c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10557.jpg",
+      "sha256": "b64bb8389c28e9e733fdb9a1245ea53b90a7a2330d06a604f6d11d1875fcc3db"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10724.jpg",
+      "sha256": "60b6b3c8af40c8369bc536b289c7d156d72cfb1a2b6eb3a93e2bd569fd23f556"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10741.jpg",
+      "sha256": "d4be3e15df41b8bbc18a008c8b667edbd7fde199ed2a1118ad18599171520f3d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10746.jpg",
+      "sha256": "7b38bb791c938545925265f44188f62d66148b3db6176aca2e5879b28aaf4c8b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10752.jpg",
+      "sha256": "bc8f09b4844b14ba46a9633102a09137c110ce22939e86d5c7e20b25ba2614ba"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10792.jpg",
+      "sha256": "8f9b9bca8174314475af7a4f39c62507dc870d14072e30182bbed699b6bf77ac"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10793.jpg",
+      "sha256": "748dd843d9e719ab0922f0f6713826db438cbb3008e1223db679178d1736cb7f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10801.jpg",
+      "sha256": "17fb9193268a0c44ed43a70d5f5b5ae8b1c4ee73df314aacccf7755beb7f7057"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10810.jpg",
+      "sha256": "04cc7713e546ec02c79fcc1c59d8b57e16187e33e1cc06ccbb166d751d89cefb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10871.jpg",
+      "sha256": "ff36f8022e1aec4786c37765a3a8cc6469e716c9252feb8cf9bc36fe1d2dc54b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10885.jpg",
+      "sha256": "45e6c0d95b19efe70fbb467330f9ea3fc3b1c46c8c9c5ccfaa9af18f7597f015"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10923.jpg",
+      "sha256": "7a3f1248b14242ae7c5bb5a3870defad4650f4991ca462255bb5bab05019bd2c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10932.jpg",
+      "sha256": "b243d27069f3917a68bcc725581d9ece2905e39df426423cdb6160c355271275"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10947.jpg",
+      "sha256": "9f6961a796e429ee0b84f49f33ecee95ca33a7e197c6bad7c93fc1af291f0c3b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10963.jpg",
+      "sha256": "7eb2128110935b76f81a770d0077e23f80e6d60c8b4359de0086006c82bbe9f2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/10982.jpg",
+      "sha256": "f89d14a245b5007477962ed2450a970d13944437be3d1ee8e4072ac79cf6df6f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11032.jpg",
+      "sha256": "95d0c8f4e02978ee8e666b36b1d7cd406f502fa63e6ffdc6e52a2451efc84dcc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11036.jpg",
+      "sha256": "d095a4191bb7bf511111a0066b7c1280998c9334b740d3ac43ee654aa0fd2396"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11056.jpg",
+      "sha256": "244c4d9d0795f78f86cda1e84191cfce26f9a89d023d9c0ac7a350f7cd6aa369"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11076.jpg",
+      "sha256": "677178b5bc5cb9e56aad1bc455e1aeae5c08d485db2d32b8bef8c67d4a417c84"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11162.jpg",
+      "sha256": "063d54215c6c400740f1849d7ce3c61e266aba836df44b63e3b561100108ff31"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11190.jpg",
+      "sha256": "3830bccc51b832709b5222ec1e5ac5ee8c0cc0b1c41caa690b0e91e931b2a31d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11208.jpg",
+      "sha256": "1976474e0c01107b458f21bb8af2503ec4f60948269917864747382614df794e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11218.jpg",
+      "sha256": "038c8cb33d54ee4023fd5258763130536bf47c21ff1839bfdb61b28319bb020e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11244.jpg",
+      "sha256": "04693aa2b76453ad929f9eb8650b3a79970734236177a7bbd4134df162d7a099"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11293.jpg",
+      "sha256": "f780addfa449a36fa62227a20f140e96268c354255a82e9da72b958340458a78"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11401.jpg",
+      "sha256": "eee0012c2b3aafb34c37a5aa4f74fe521d85acb7b06e79f4bac2b2b438c08ee4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11424.jpg",
+      "sha256": "7e0126231b483169b25126d80bc4d1ca976ad382aed615e49e76b4b5651a2c3f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11437.jpg",
+      "sha256": "91b9025278c726f98295998a2d22d49c9d8c8f0e46c11f2dee4485f9f5547082"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11497.jpg",
+      "sha256": "a7b1ca9d7644721b7b70c35a3e130b3c7a6fbbaf69da056bd34bcb8d30343a3c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11539.jpg",
+      "sha256": "388bee3c8c476e22b3a7e52b07f94ba19e3678d7979f40fd2d7a448999ec5fad"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11541.jpg",
+      "sha256": "6c0f8d424d2875050ab6ce1b8f1a60623cb936e12d9b24e1a528941a8d542938"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11561.jpg",
+      "sha256": "0e4d99c5d504e88d8377d064de170e43bfcd6d6583a9775429e9eee626392a5b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11564.jpg",
+      "sha256": "ed3904adc2ef86c0af1f361438e77a2b0ff011399e2e4ead96cb7bc7feedbed3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11570.jpg",
+      "sha256": "bca98ac52eae0f0bd2b1f0a057ef39d66c493bcb35c6367aa58217a694c7f516"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11680.jpg",
+      "sha256": "0c4fb7e66963b212e575c1016f05ad6d682a2dcc3993f65eb631ac602ab95809"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11710.jpg",
+      "sha256": "df5f9a2a32d0b0eb3481a9b4ba371e91fd1a576fb9f69f9ccd5f0205b9e2f197"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11727.jpg",
+      "sha256": "6d98963fe70f4ea69e7562f7d4c97944a9432dd31fab37ec7b4eb74906267c89"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11827.jpg",
+      "sha256": "eb58661ea265b551a07d568480e9061d6028617c777fcf03a7dd61e2bff4c93d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11838.jpg",
+      "sha256": "92cf5ebafa005e24a0d63d8aa83742b2997b727753d01de1395d7497c67dbbbe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11911.jpg",
+      "sha256": "f52d13070311eb1c98a9a4ca552b70b534762d519f5512b79dc0535196a8c6ac"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11929.jpg",
+      "sha256": "a5fdf3523012d7d33ce7e7edc64ecf5fce01d93e97c29f017cecb4e743292e51"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11945.jpg",
+      "sha256": "3f878d5ac57df403b2058ca8b35b305d7df3d8e8e0509325e31dc4da7b1c1d61"
+    },
+    {
+      "path": "data/flickr30k/validation_images/11960.jpg",
+      "sha256": "7ccd797bd1fde0d45145c93a850896ae97db6c6531cc4ce9e856f86a4f0e7408"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12004.jpg",
+      "sha256": "9b2122da8fcd9987a2cc9a25ae9da9b91afba8c68996308f9438d2b4875130a8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12018.jpg",
+      "sha256": "3f01252f481b9dbc944c6931dd6f29b6e946a93d960f29bef2a15c672bf7c2c4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12075.jpg",
+      "sha256": "6400e139512c24bd71f74750557d0e5503aebec24c7d7df5986b0e1910b22a04"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12137.jpg",
+      "sha256": "a057fa10873239e01a03ac9b982e33fb2413758356c8240e79c30aa585934dcd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12202.jpg",
+      "sha256": "9629ab25e234e617efe83f3c1f9bbc27f238348ac06911313f2b5ba368cdd578"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12275.jpg",
+      "sha256": "3f10b7ce0672567ef57dde7f30deacf6443f4ece3ee633b452d61f95614a88aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12280.jpg",
+      "sha256": "f4a2e64261a42acd75329d6aacbe294f5103823fd925afc506a403182d6ca157"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12386.jpg",
+      "sha256": "1335ad5e9e1693ed30b36416d01fb386508032ec367ab5b877d970703431d60f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12399.jpg",
+      "sha256": "1cec4ddab15641a93319fd081c3ca13acbc4a0ae639ac3eaca323554855575f4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12446.jpg",
+      "sha256": "e1b12c4eb46a80bfec50f5cccae66dde34847e09c85accfecaaf3d27817ba94b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12449.jpg",
+      "sha256": "8c42d4323c40b10c0990a2cbed4d03d4f80008db180486cb40f0c32edb1afe61"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12467.jpg",
+      "sha256": "afa80551ea56c5002de8fc01e436ab1b6457fa7dabd987f2fb352d5110d8472a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12483.jpg",
+      "sha256": "a32f305110bdea884d02c99ece0c14e10e8e3ccebb6d1e7d6aa0334bdb085ed4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12507.jpg",
+      "sha256": "4468476aa223037f5615ad2c864eba7089c0e86c19612cf5b4ae62ae492ff668"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12509.jpg",
+      "sha256": "683ee3b2a63e485ae3a16fface1ee498fd5ec92c7f2958390d135870d47fd95b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12521.jpg",
+      "sha256": "bb6ab38bcdd195ab982b99b0723d92c0129dfb32aee534828960c92a4471b77a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12554.jpg",
+      "sha256": "6b7b1696ba8c3f1ba7c458ff1d5597f6a6b4b28e04ef6cf6eeea389c784bf5ab"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12559.jpg",
+      "sha256": "e573ef311449be907bc88b4fcb8dbe1bf03b88f831c1ab911995a61bc87e9427"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12595.jpg",
+      "sha256": "71382c81f503f0a478fd23c88af55496560fc785c7f38afbdfaf2d334ffe05a0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12614.jpg",
+      "sha256": "3f9277a8e7eb4024fbb85a973dc9845823a4cd3e9ff550d7c68abae878175152"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12684.jpg",
+      "sha256": "9b76f72656347513b068b59f17c52988d594763b05d2e2d5dd8be79567d3e771"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12708.jpg",
+      "sha256": "8744f6703da158f69528d77327b48619bad5b703e7bfecce435353a6d9070773"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12714.jpg",
+      "sha256": "737b3f5e087e0acee1f3a0021f815c03403630a74d67731cb2c8d7ced1871987"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12718.jpg",
+      "sha256": "48a3891173a855eb8cf7abc3c960764a31b3166b5bcaa0efcc14f6619d31f115"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12719.jpg",
+      "sha256": "6f024a9b2f7f5732c70cbc0642319f17fce2a53682795ca984798c4328684d4f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12784.jpg",
+      "sha256": "3cc77374bbac991167ded473e35041c427be9f11db6c4a6c2c49dc9533ea52dd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12801.jpg",
+      "sha256": "07aac90899cbdf7524cf7f94433fdd44af7b693cd0558ab1f0e4d6fa499efa07"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12811.jpg",
+      "sha256": "0e6f3958f28199833353baf7c3883eb51eb081d1c28187dc197f964ef1e78918"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12812.jpg",
+      "sha256": "d9ac9bb2d144627711473726a9f727a064449e93873bc33afb2bf30c100e86a2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12846.jpg",
+      "sha256": "a2c4315595eb418edb4913b0ce8410187caaf48ee7dafd6c2e16ea2562d32c3a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12861.jpg",
+      "sha256": "120e948b005195dbc5f9c7ebaa01329634a321125e0790cc806e83bbb6574497"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12879.jpg",
+      "sha256": "2c76d2b8b730ac64d35e00ed77154645ea09edf52c22d721a40ab5e6e8ab5555"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12895.jpg",
+      "sha256": "b5e0db6a64aaf39ab250d43f4b61ec421ddea8eb0da930087f0391146da1f74b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12903.jpg",
+      "sha256": "0ce396d250cc99cad23c605e739653a2cfa907be3dbfdd2be889daaa7d0c0289"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12906.jpg",
+      "sha256": "1004686847cf2854f38265f330ca4663ff0078962c568a2a603d7c7379368e33"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12931.jpg",
+      "sha256": "57568cbc10285c8b2a5189ac7fc4ee1e4e1485d02d3d3fd879914793c3bdeacf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12968.jpg",
+      "sha256": "836d800017f2c0e2f3cf4326b99eb4d382e49ac9c0de61453c48019089d7b9bf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12984.jpg",
+      "sha256": "33851639e72dc8d841070af744f02545c7388f63444f926d9d08c68ac02807fd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/12993.jpg",
+      "sha256": "f351bd3d658845ce61529ccc86794c49d9920b419e06f3d825f5489b13929e3e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13059.jpg",
+      "sha256": "ffc7313b15a62bca323cec24e45aae9b5ee02759c4889417256e6ef828409723"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13094.jpg",
+      "sha256": "dc1e3e53f8251b9376faacfe060769322b37efcbf38a5a579f5cac3e9182f2c3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13114.jpg",
+      "sha256": "ee7a4bbdabd1c9e3f835a37fc44eb5065a0dfa66a8a3608d364d80c31743888a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13136.jpg",
+      "sha256": "fb62b91536c7792ca535c57ceb5f594c7341e634f9f445b16bfbc78ba7a3fb92"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13261.jpg",
+      "sha256": "65aec62e9a06c81b7e424c4b2c594fcd444ed6ca6e848a5077a47ed498b82f71"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13265.jpg",
+      "sha256": "24361251871af46cb8d0a2fde40c99434a08db02b777e1f73cce65d0b02c8ecf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13278.jpg",
+      "sha256": "31d2bc886bbf6c4b183629b030ea799503e7b3537f6be7d24d7407cc83f1e4af"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13285.jpg",
+      "sha256": "4fdfd0917d1bca3073419b21bdfec00f0c72fb022c0b1517b0d4edea31029b5e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13311.jpg",
+      "sha256": "dda880f703fe721bf02a9939dcfd76d1e1e5818c0ef21d5ecbc97a59722ab2c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13323.jpg",
+      "sha256": "827a09d94d784c2c3ab75946ed327eb290c6814c7446b559cf99920d3c986f2a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13325.jpg",
+      "sha256": "d0ebb12ae1672a08e90c28ea1010e20f74acd3cb2d6c3a82114626318586f978"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13332.jpg",
+      "sha256": "f2d06ef1a11b1ebbdb66ead726b6987551554db2d0a1fdaf77fb11253d5cebe3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13347.jpg",
+      "sha256": "f0b6336dc873e0081e26038cf3db9d8fbb4c9b3dc993001f537e150ac338003d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13351.jpg",
+      "sha256": "75686e80246eb716132c6abeea590ef46624e0c776208b9d3912b45dc13a94f1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13420.jpg",
+      "sha256": "687587043a9c767f6e5ab8b38ea5aaf604a28884bb5c143728b96bda129d031c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13447.jpg",
+      "sha256": "b9b1060758c019afc9038078d3ce7dc1a51e3caa84b1f4362a9109b1c62027ca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13477.jpg",
+      "sha256": "8ccc371331fb26d874fe67582b81d0524515cc7a48b6cbbcb02aea2b40d0856b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13495.jpg",
+      "sha256": "d271c2301eeb1c4d4f7ae2c6468c528fca628f444c65418857c56054db3e2cee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13583.jpg",
+      "sha256": "fa452a6a01e6fe6ce8fca1ec43b9afa5ba78923020ae9d05ea25c0dd938ab298"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13597.jpg",
+      "sha256": "0fa6840f54f33048b0a925f8e2bc41e5df1a4ade575fd711f9de8ceb55868f58"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13654.jpg",
+      "sha256": "4800e5c1571bffedab6de743c93dc48e2fac06f453afe8c9483e9ff223c8c01f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13668.jpg",
+      "sha256": "edf071218a252b6e90ae7af4411ba5a7654c10f6c3588f4b8bb1cc7a70481897"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13670.jpg",
+      "sha256": "94a458db8b3c58d20a2b8a34404ae1985d1d1ab078932d9adc733a10971e6f10"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13671.jpg",
+      "sha256": "41f673bd250deef1f6848caeea4304174e37bbbf2e23be1591d4d5b177d20ecc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13673.jpg",
+      "sha256": "ccaa5bea270ac240f35f63ce17d256af3e81a3c0aca97c7931510fc77da1e6f1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13760.jpg",
+      "sha256": "5c0bf3f105c4eabd2c88197e1120f7d807519b04b7a37b5cf3207b12f063a850"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13779.jpg",
+      "sha256": "746098287f2a3d90a9c3f31f98cb05d654bd3dd1dd668abc9c7dc81e8ddd1d97"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13788.jpg",
+      "sha256": "834c00178d1f9ff8fdb49ba1ea7549bd48d26b63723512d118bd9618678163e1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13796.jpg",
+      "sha256": "77358a83d240875180e6010340a97badc634aefe967d56daf64dfa1c45432d05"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13861.jpg",
+      "sha256": "1a95d9ba0359394e2c829d2c4d63418aa6892b20c0d303225bc04af34e63d06c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13876.jpg",
+      "sha256": "2474b90a4409dc21b994c82d6f4ee5f79ffef8c22e542d2698d81a51de773e10"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13892.jpg",
+      "sha256": "c96916748c95d758eca23f8fcba79ebe351e90f0d7a21cb34bb6c470d8b2ba45"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13895.jpg",
+      "sha256": "a03a653a2bbac0f96aeffaa5c6d12e65b334ca942b22b135ff7152857ecdba4d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13943.jpg",
+      "sha256": "a1b2ea048f9054a57512ac35e109640698e4637c71e8c8ecb8a15888fd571e3d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13956.jpg",
+      "sha256": "92b1050613296131c58e1519674cb3f1193c4a3cee9636c8ca635ba1330c7c2b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/13978.jpg",
+      "sha256": "6cdd4f62b74b5e5cfb3410cdfa84d6eb3ed532451c65d20ee525ad9de29d21da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14001.jpg",
+      "sha256": "c93d33153f6a7c8dea7050f176f4dc80e6f4e15a8dacf03b7f52c54c94c764d5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14029.jpg",
+      "sha256": "04e3889c7d360d8e78562fb98d2f8435cfbbb8cb4dfe1194893701a8ce631894"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14059.jpg",
+      "sha256": "c3f92721880b9a06beb00f5a64dc6830be01adeb8a440a8d2b7639703e218505"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14065.jpg",
+      "sha256": "3f63df03a03b299441c0c2cdf708247e12eafe3d2fcdfa48f11b234a714eeb9d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14098.jpg",
+      "sha256": "4d74c6af7ffed193006afcd654d2209f281f1901312769398b966d925285484f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14118.jpg",
+      "sha256": "85e6640cb1cc4692995de8c9438e74bd02d5f5c40ece816dd62ff26b2053cf6c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14199.jpg",
+      "sha256": "b421252607b68ff20c2dc3c84db461c45055a1150d6a6a7db9b565edf1ec2283"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14210.jpg",
+      "sha256": "b6c4ae40c8f39bc20226f57d7914501eb78ae7a33feb43ccd63ffa63adce7647"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14222.jpg",
+      "sha256": "d00b5e3c18b53497a86daa86dce4be5cd653c43be42a71252ce9fc3f2ceb5bcf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14247.jpg",
+      "sha256": "7250af2447ee4e2fa1740e33268fee35a3f21ab196f1152c92545ca5d88bb8ec"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14258.jpg",
+      "sha256": "e061164bd62715fe833e9cd47c7a4309016ba3416e08d8fd6e906310f6d1f333"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14275.jpg",
+      "sha256": "d8bc0bdfa844647aeed82583e4c3238574740cc9871f1ad80b9f29a034e220cf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14291.jpg",
+      "sha256": "099faf08f8e4f8ea5870443e84b439d5b096de252a7c21bf1b1002cf3bb6e103"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14303.jpg",
+      "sha256": "1345239d8c9a93fa1bf399772ade7a18c9357067fb085c595b5eda5f53bcba58"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14388.jpg",
+      "sha256": "a0637840636ceb0f107be3438131ed7b8970a2b42b55c592b710413e136dc962"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14392.jpg",
+      "sha256": "83506c8089b1f9fda498055065652f0b88841b9bea24924ba06f818a11d64b1e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14430.jpg",
+      "sha256": "db8edec72472f17fdc58ac91038390c219352e17b7656f2f4a1033b7c730f07f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14585.jpg",
+      "sha256": "01019d29e4ff7d58ef4a2f9820c048beb1f0c3d81f626b98b4b229bf666ee2e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14686.jpg",
+      "sha256": "8be38bdcdf356ab8452449b4918d1893e8e98219e2a777ca16829c2cc33b0f76"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14743.jpg",
+      "sha256": "9809695e9a0f3d60c0cc2746f0cf455fca6ba9407252f4ba9c3df527a18bba86"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14763.jpg",
+      "sha256": "633ea1099e6935824cf7d4117bbcde53424aed6fc01a92088e13670bcb8388f2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14766.jpg",
+      "sha256": "cbb24e10edc80f4c2e878dc5f237bb87321e9a9bdc3ad6f67579c12c11bbe292"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14821.jpg",
+      "sha256": "d5eae470a4874e9dcbe6509114d3a6a76356fdb21e1aa80657e8d04c43739601"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14824.jpg",
+      "sha256": "b6b80f9f27c508453906335d7959dcef74785e883600189555f830fc7a3fa80e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14836.jpg",
+      "sha256": "43d05bf5789630e74ad467f5f831e8f644625af916830defb9dae54114d6db72"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14842.jpg",
+      "sha256": "8da5f7c746e5b5d844f565750c638d8db51d655d83f488bc0a9cdd93a07af620"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14861.jpg",
+      "sha256": "7fcbb55ba6946600faf63ce95d143b113e780d089f987a90fec74fb7d3d9ca26"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14887.jpg",
+      "sha256": "650a1991a28d3df64063cfd94805fca9838edd89174f22e96638ecd6d62af972"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14896.jpg",
+      "sha256": "1298e76f92504b9afa2fd3ae7138cd2148b76f90005713e493b76e2be0e84297"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14898.jpg",
+      "sha256": "3dfb9fc48d83717f143c5db13dd696742bbad462762f20c5e763497a96611de8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14904.jpg",
+      "sha256": "d32e743101ca8302e6774b72096aa1b28f0fe77828f0ba96ff7a573c3e1b2a56"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14913.jpg",
+      "sha256": "0ffe2e186d88d12f60441412903a3903c9af8ad9db23728e0bbedc371ab1363d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14918.jpg",
+      "sha256": "bec746214457d9c4340b53a072f002c0c628bf91b580bdbbf3b6f3a5c4119ac7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14938.jpg",
+      "sha256": "b29609d95af6a1a460dbf0ebb34c8a10d3ca65688e04d6efa1db542a566ac720"
+    },
+    {
+      "path": "data/flickr30k/validation_images/14998.jpg",
+      "sha256": "13d149c1c2a401ee3e2564ddfb445b3f10dbc839845b61df8da346dea3937760"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15037.jpg",
+      "sha256": "bb8e2305fbead6d891b913f8d3c55243638ed5711df555187bd0a28ce2d8ca8e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15129.jpg",
+      "sha256": "31891638ad9ba82ae79253879f7192a05abb02ebaf809f1798cab4cad0675472"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15136.jpg",
+      "sha256": "df2a7e534aefd44a557e36196c3ce71e5cdef400d2a72d69150990be2272ed0f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15159.jpg",
+      "sha256": "5f7ddd8b78cc5fa96379296a5ff5738fbe195b939369aff50338ec0ef9e26302"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15204.jpg",
+      "sha256": "cd454a9a23e62106bd9534fce904c7b3a8967913b7ca3f85c2399aacfefa9371"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15223.jpg",
+      "sha256": "c7f2e6e56aac5952cad936db43172db23137fcd5134aeaa1419d956ff0ddda6e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15246.jpg",
+      "sha256": "aef6d1c4d99ea7d865fa28750d8af9f8531069e13a5e40cc27d94233b3765203"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15291.jpg",
+      "sha256": "061042bb4b5a628f3288e8977662232b1b6324f161e2a9f4af017c335446e3c6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15296.jpg",
+      "sha256": "1936a6753e35f0873082751eeb117d5fd4cf9d345f2d5280d181504552bf466f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15329.jpg",
+      "sha256": "6c3db8e7295282d7470e3366805cf291a0659bb92e36435a4f95cccc0265a8d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15465.jpg",
+      "sha256": "f2841a31b17b3b45d393ea5e2d3d7c4939ea89098749d2ac4ef7f3e4520e3268"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15481.jpg",
+      "sha256": "0a826a18cb70a0a94fb89808399c8b60b446ebc53479698a13241254a9817c25"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15506.jpg",
+      "sha256": "ce339c94c9d517abf3a1406037e775e78837034bb7508e7add0c4a222b63c323"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15547.jpg",
+      "sha256": "7f8961d9ea14e2f8b01199b0bb5fcd37710d8c1a3faffead11a90b8fad714983"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15574.jpg",
+      "sha256": "900ab1d70d57e91e069d8e180778cbdde6becf1289ad6f81349f2ccd1509c334"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15582.jpg",
+      "sha256": "e2ef8fe619c859d53304b9e29bc9a1c52c52274b206e281ce2cff800a69a2a3e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15596.jpg",
+      "sha256": "66b2699e14389b239d528a08c89aed00ab61895588232607b6a79dceb93d7bbe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15610.jpg",
+      "sha256": "df1cd9ebe153e069734428183a6345851e906666301a64a132d61ab6c6278399"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15616.jpg",
+      "sha256": "6d94fc11037bbe9b9d093cdfb2e620ab3ba60e58fb89d61bb161ac75aa04b9c3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15633.jpg",
+      "sha256": "99fe1b0b7847f7069d48fd2bd588baa2e6c5b5e1d1087e95a406859c73fa329b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15636.jpg",
+      "sha256": "3bf9478240847c6c68862d6003e8177d31e55356e29502b71e3fd52ab8584b88"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15638.jpg",
+      "sha256": "c8b4770f853f6b8f31ee43fd55cf5bf8898edd5c2a30c2bed7ea9cba94831058"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15693.jpg",
+      "sha256": "a0a5c1b74cb8404fa1b8402b004cbefe2757cefd16000a2a1fc1f13542d523bd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15701.jpg",
+      "sha256": "4180921e00301dab88e1e42d180ef153f698b6a487ebea8887244a4698f4e6ce"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15710.jpg",
+      "sha256": "abaff8ad9309b9569a01f4342c7ddd63060ec4b7fc8ed0a3121b26a3cc23a48a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15716.jpg",
+      "sha256": "889b2597392ee7de576764fdf50652fbf8f506c4775e64958eabdd1999111e7c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15733.jpg",
+      "sha256": "6dafdbceeffae61642782c485d7c94eec5a37a87c9f28dd5a7063c70f211dc54"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15795.jpg",
+      "sha256": "6880e63ecb82e5f193c92b36f25871634da6283da745faca6305b6da3c5d068c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15800.jpg",
+      "sha256": "293dfa47a3c48c24be59d8b0d805fe6a59304616843aac2347f7d62fd7a703f9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15825.jpg",
+      "sha256": "b33cc707c3ff7b486fbe917b59fa686adc6f61d415e0830e2fc091391eeedf1f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15851.jpg",
+      "sha256": "5990b6514e559e8be7330f9e1c1570b417d716952e4f871d3a5411da2abd25eb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15889.jpg",
+      "sha256": "420b6b80d78bb80ecddde7f4d131faa1b3cf74f80a70734a4774f3b5cea489a4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15967.jpg",
+      "sha256": "95ee08e1a80131f1570601386ff5081d2c7c8ea49cba8052eca1e6592c41e8dc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15975.jpg",
+      "sha256": "ca59be6d73e745f1bce4a5579bc54d6bcdf8b73c6279c2d8b0253098b3044540"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15989.jpg",
+      "sha256": "03a38bfd5d3aaefaaa9fa35520cfaf1f359ab109c0ab0581738553149bf235ab"
+    },
+    {
+      "path": "data/flickr30k/validation_images/15994.jpg",
+      "sha256": "9fde17fbeb3519e78f8e75b101aebdf56a4177d9aa9adcc5ab514b89861a0423"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16001.jpg",
+      "sha256": "d779f619941d9c55f86ddca37a6d01b1e7da55589b5ed9707a1a72210edb4388"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16042.jpg",
+      "sha256": "73367815626a8d6e00204209ec29a50b120a8e4f4083b2ad79ad76cde12fc6e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16103.jpg",
+      "sha256": "eccb751510c2a19e091abdd72cb3cfaa2ce52e8a1c393d3685f02b9fc821efca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16134.jpg",
+      "sha256": "6532973f1e81a7430cd2c94ce4936f3d9ef69eec8efd201f69ae64422437d6ae"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16175.jpg",
+      "sha256": "77b996cb75cbb7cdd7ac22f924493530227145031325f7c8c89d5a1496e9aa24"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16208.jpg",
+      "sha256": "a02b57a34d89f29869b0d892ee3412b211ca3f23a217379f4fad53b49f1988d6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16220.jpg",
+      "sha256": "a67716150bf3b03d81928f95961b5a7d0549f88966a66bc8f934de4e80947445"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16221.jpg",
+      "sha256": "8418894c3d8b03ab8797a3abb494a891d53588d1c32cbdfdfdaafbfc5a8f6705"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16296.jpg",
+      "sha256": "a5a270e6c23e80c037954649427a0fc9db3ac7b885c8e98aca8d0a40879ef8c7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16353.jpg",
+      "sha256": "9faab748ac4f5393f7d1b81cd0033e9ac70d27648aa62a1aff6c6713b655c511"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16365.jpg",
+      "sha256": "3094d0543fd94bf4faeb7449683f8640e02fc0a0cad3f5ada2bf75669c5620fe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16376.jpg",
+      "sha256": "f8c8e24e54d47387ed21b8f4c48f14f37ef93ac38cd25e11d6e84e263658a491"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16394.jpg",
+      "sha256": "a6d881c39c9d0590f987b3c0fc1e007e36fd4013169b141629aa619124ec39c7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16412.jpg",
+      "sha256": "e3337fc0b745031696ce4aa6bed336671e056b3266747ae1fcdf9c408d45ab0e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16414.jpg",
+      "sha256": "833d0e6502390942a15e42dcd6e61c792d68a36d996145ad9ae536134a2c4b26"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16434.jpg",
+      "sha256": "620c83491f2ed7a091c49b7f0c9a00f0a024116d241f14e7467d3731460a705a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16469.jpg",
+      "sha256": "e69869be664cb9af4d5043b87f27b305cb77a389e29d734760aac86149e0ee98"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16511.jpg",
+      "sha256": "f30424d2c8a2e802e309a6804f35de8022f3159380d1830b12f24745ee372eb2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16526.jpg",
+      "sha256": "27e908da859613ae39223d035420da40d94e670d5ac256a2b79ca587c26d98f9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16531.jpg",
+      "sha256": "5309e5a881a6f72362db0670b32ea2e0c53a80853b543fd8b9820ec4bafd4857"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16541.jpg",
+      "sha256": "31a9ccb49b39f6ced4fd52414225a69bc96c05084b22b9633a36785bf50f715a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16552.jpg",
+      "sha256": "81d61cf16cb08107473dbf9c0ea3f2862fdbd942664e0e5f0d5023e7d67e6c69"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16590.jpg",
+      "sha256": "d11500a26e796802643aabca2adf8f9a266352d35dfa5bda4999b8b85453ef9d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16632.jpg",
+      "sha256": "d99224f4c578363a2f62864cd94065068b37af2b227174e7ada0b63135918676"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16650.jpg",
+      "sha256": "2f3d282363222ee85a8f0b7936b69c692f0c6663f347f89ba801167bd8ed2027"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16653.jpg",
+      "sha256": "e2e6b60be5bfc102c9fc6ac086d427070d31899cd2410bffa8dac73212ddacfe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16655.jpg",
+      "sha256": "3a41385c2aba999f6af0c5a3b50e9ea9f1bbbf2bca0847d9a3c2e8254dc1a238"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16664.jpg",
+      "sha256": "7f49600e334583d171e785ea12a5b5adf4ebf57e50718db2837356179c228cca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16679.jpg",
+      "sha256": "a3e05f4ea2dff5722962531cb4157ad17e93ab94cbd5f63b89e428bf35ce1c05"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16695.jpg",
+      "sha256": "9765bd916e5f56ae02b2580cda76e7b9c49446aaa6836b299bebb92ff6388ccc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16709.jpg",
+      "sha256": "7b6f71689bde6cb32a6224c1871c5b3930f6336538d65eb856d84a2a58542336"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16726.jpg",
+      "sha256": "a57d4f895885519118e302eac1032ad45be4815b0636ca646ea27b8df91831da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16775.jpg",
+      "sha256": "070b5b7dfc225c0d9566678113f59fc864b8f1ed80648a2d4c7323cfa2e38227"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16799.jpg",
+      "sha256": "9ee4686929cf5d2b2674b2739a7256f80dec2bbaa85dfe704a9a7e44db4ef541"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16808.jpg",
+      "sha256": "47cb7fcdf6c5f1d4fc5480d3706dc2121b138a4ff4b225f243871b954063eee9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16811.jpg",
+      "sha256": "d7a906837dacee85b6870929702cf3f494314aafb3335357f8c22760baeac1e1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16819.jpg",
+      "sha256": "804d632d91f8b7ff9b212103fed0a5f247e666a56776b3b2c4a122c912852ea0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16917.jpg",
+      "sha256": "c0b6c8afa43a4a0fa9c08ea0f496b4e1d84167f2039b4cb5b804159848eeac93"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16923.jpg",
+      "sha256": "293788c7d4592a87901081682ae5b8f7439ecc8aa8437bf907acfc7d06a4ea4c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16933.jpg",
+      "sha256": "04975ed51c9a3b18ca45b0b8cf427aad069983f46155a6f46e746ae72b73cead"
+    },
+    {
+      "path": "data/flickr30k/validation_images/16972.jpg",
+      "sha256": "f11892287fa84d22d208fe9a2b8e131c8d73db25219d2fd9d66e02997050500c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17003.jpg",
+      "sha256": "68e382f6a967a4b7b187d1d23aa5117d22e363bcd7bddcb238af9aff94461ff7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17027.jpg",
+      "sha256": "44654420b145f71a05cfbc396121a6a64fd150bc98cbbebe64d051000b67a910"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17030.jpg",
+      "sha256": "7017262014b18edaf6d4e33105d265524987386756fc0e4a672a5df6df620ba9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17041.jpg",
+      "sha256": "a82d694a0f4fbd2d471b835c180b573d800866989d1995bd71605deb59f61960"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17095.jpg",
+      "sha256": "3a95ea31da7302b621c76f33737ad34cf8c7137bded6f6d817a7aadbe5d3d37c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17114.jpg",
+      "sha256": "6547a81c85f456264f36d8c6364fbc6c0f0f6ab1d99d1a6dce248e1d13a94397"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17212.jpg",
+      "sha256": "3b5c61226df2d9268693a9edc331e4df3a37c5bf3e2a2449b00a7cf1b53a49cc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17216.jpg",
+      "sha256": "63b462f829b276ad7dfcb225a814206d50a799165fdbd3efa2d01846af840655"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17243.jpg",
+      "sha256": "ee6849f53a041d624019326649e058631a05a4c7a48376d07bc4d0043f4a0aca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17264.jpg",
+      "sha256": "d2e1f9cfafd297ba902b993ad58ab068353a09e51463f7dfeed47de52fc3c878"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17267.jpg",
+      "sha256": "59ea90ed7bff33c92eded9f7f2f2c5394ed2636d2ba5de2bfb412b37da5bdcc1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17302.jpg",
+      "sha256": "d7256706ac918d1077d38264df96c776fc452e03c112e02ae7661c5e444596bc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17309.jpg",
+      "sha256": "e3b5147cb301052a7d545c2a7acf53e4e7653499d4962dd5802423d4b4cceab8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17337.jpg",
+      "sha256": "877de68981784dd52d688218191bb816fefe858166c1196ea4776a3d2a1fc308"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17410.jpg",
+      "sha256": "cb385c76987134f243b29e9ed0630eb023cb2d4163f86e69ac809e55a7097c47"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17475.jpg",
+      "sha256": "ea41ec3a662645f1372dbdad17417a1c2b1f4a24a082d5cf853f2af4d3180e2c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17561.jpg",
+      "sha256": "bcbe15b0c48a0e1554d28b6b82bd796d9c271cd81dea64213c1a424bd3d1e8c5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17592.jpg",
+      "sha256": "16b3142471db5ac4a50b4d6cbe20813dc3a228dcbfe13628ab62797d97d6dc14"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17598.jpg",
+      "sha256": "d0e05ebd7fd97c81b2da75e5aa7b22b784c353d74e1f02fccc5c98c10f242804"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17645.jpg",
+      "sha256": "6b1816079453a42c7dac1f0225d15a14555461e06cbd75a450cc18c708d0269b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17683.jpg",
+      "sha256": "7a90d14308b376ff489207aef2a96767d90b9fc95cc495fce18669119e087b11"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17686.jpg",
+      "sha256": "91fce7945e8c8e989e449d6613c9b56198b6a7419b89dbcb525d37fb151ab0f6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17713.jpg",
+      "sha256": "0cda3d79f4738311aff352d78f37f7c68a15cd53cdbda74683e29bad569864aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17749.jpg",
+      "sha256": "5b3094df998e0eec506bfb2855f622a35761c6e67218564f7880cd242ab6ccd9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17828.jpg",
+      "sha256": "ad05db6991187edaaaaaafcd7b73647eb5f839660c2f907407809faad4c9068e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17835.jpg",
+      "sha256": "871061bbc74e68e5ac716179cabdbfb34c60ffe6717ab29e3ecd8104b203e0db"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17885.jpg",
+      "sha256": "02839c746865da9b7b5f20bca627127a85d3b9de1c072b1985f3e25745c67350"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17892.jpg",
+      "sha256": "1525db929ea7b7c246fc4a494b4a39e664819c1f31825406d798287ac0a2a414"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17914.jpg",
+      "sha256": "75e7f2d2d98a92bdac8c0c1b9dffba5b0dec73fbdb75f758e94f2566766efa29"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17926.jpg",
+      "sha256": "675cff8a155466903fcefa9bea3bef4552cd8ebacde254c567adccca1fadfc46"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17929.jpg",
+      "sha256": "9f41010df19b80591829f6652698ac39559583cf19cd198ab6ab451f12701a2a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/17956.jpg",
+      "sha256": "9772412787e85e8f1db4f74b5600e3d9e73f10f591417d5aff360c36b77a1885"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18024.jpg",
+      "sha256": "438d9619b54c76e2d0e940b23a9bf492884c7ccb383f1faed634b38a0f8639e7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18031.jpg",
+      "sha256": "e1d9d85def67497f901fbaf87b25fe95be3e89fabb76fd621646858a9412b04c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18047.jpg",
+      "sha256": "b959a0ada70a9e941007c75ab7d71efdb9ddcca6bddadb4be1519ff319697f60"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18085.jpg",
+      "sha256": "d6c01f0f878ddcf70f433c27a06de967000e3ec6624e186cb3d793c130c77e4c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18126.jpg",
+      "sha256": "43eebe0f3d92d7eeac245d1b7c1efb573d588f6befff30e27a505e6e606ce172"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18127.jpg",
+      "sha256": "545d918f9536132a03d03525b3f28d56b6bf5deccaed60fb033fcd6b9896d827"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18182.jpg",
+      "sha256": "fb671820ea6da804fbeaeef6108c44ac54893874097bf09f2436a57d0479f52b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18384.jpg",
+      "sha256": "ca412b2281b7d265d24e942fa604598b1a23eee54123b148e51a8ddf8b23ae1e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18440.jpg",
+      "sha256": "df7f4148e77dfed384afd2fce6f83e205817b3818eccff06b3fb87f216f6e2ec"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18464.jpg",
+      "sha256": "c71a338331333797da59ea5f77ceb78b7a9a7a2d4a7a78f77aaf0109fa5bc10d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18504.jpg",
+      "sha256": "f9c664be94fdcaa79843f96cd050b75460ab90758863d64afa682c6b30c10a77"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18576.jpg",
+      "sha256": "113ae9786b96f0fa77d477a2442ff65aa61f4f95c84304532b68de041ac806b6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18599.jpg",
+      "sha256": "3f6e50b8b235420250bb75df32340422ba5bbfcc3bffc299fced28eddd13cc7f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18618.jpg",
+      "sha256": "a97207d0bbd619adca0473f5ee24bd5b8b6305f8c15d213a8617db266338d6ae"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18622.jpg",
+      "sha256": "c4dded70a08ca37667fc2be9a0a0fae38d1a64494c8219bd4080ad78534b2eee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18630.jpg",
+      "sha256": "98f03d78585908a2358c4e6d0698bc31301ccb1aeddea96f92d0e27b13e7eb95"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18692.jpg",
+      "sha256": "58874bb68f3db73431d22cdda0e3799149cf177da54f3b45e2e8ce17a0dab102"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18700.jpg",
+      "sha256": "74576fbfd18ce3a907947655bc6f3cccc237bf82ea42db498fea836beb95168d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18740.jpg",
+      "sha256": "d1c1993ddd389300636abf292963d1c3f0fb502807f83153d28525a7ac387628"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18760.jpg",
+      "sha256": "6f5b1040affb231a9d9afa092f8908aa1612959857975d3c01e594958e906a24"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18813.jpg",
+      "sha256": "e8c454ef60ed9346ac85030354bf2dcd1543885259a225c0866a17bcdd9ba2ef"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18849.jpg",
+      "sha256": "9774010e45df740faf690832221ef7c370a45edf841dfd730457b1fd498a71ae"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18854.jpg",
+      "sha256": "7f4b96a71e7c7c5b4a5b88d4f96851e877f126a6f42a1216df18f9e78b43b26a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18890.jpg",
+      "sha256": "87574755c15dc573110ef8ec447081516dea0fee4c3e0ec56d486567a231b2b9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18905.jpg",
+      "sha256": "f4afced8f6ee0a6b260db72d9220a9edab8241dbeb448a5a1414cb4982538f32"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18916.jpg",
+      "sha256": "26ccd6b05b55a95137239d878a4e9e93f17a9ebd0431d86aacdded0a3b545348"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18952.jpg",
+      "sha256": "f0db95dfb9d969e6848af8ccfa43ab8a89409bd2a7e54cefcc3e91214c8ce13e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18956.jpg",
+      "sha256": "9820070925f339bfd972fe13399a04d742b1a4b372e0ef2d2ebb260dc1b435b8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18959.jpg",
+      "sha256": "a039e5d085f3d455b6a5feae59b83f0af713102d27dfa1e9a4dce9996c97aae4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18974.jpg",
+      "sha256": "0de234ab4272616ceb090efbf5cb1b841ce86584135deb639b836d7153df9a0a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/18983.jpg",
+      "sha256": "c706d70f205f0332d160dbd711c78c2faf43e15771f1792cc6ff6be255a6c878"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19063.jpg",
+      "sha256": "54b1ae41fe139f82ebee13df618a620ee3865290b391f48aeac2f41577bef8d3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19070.jpg",
+      "sha256": "09efed0928977acb9b8f6f52aff2caa55179a75135bc8da884b50106ef39e2ee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19141.jpg",
+      "sha256": "a40fc2ca440ebe759e2db2d0205d54baf3bae4ef3da39aacbd184d78208c4740"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19163.jpg",
+      "sha256": "083a2577c88c222cc10a47c1ca23253fc5e8bfd7b0abe8f6e9f05d13df020265"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19165.jpg",
+      "sha256": "1f7cdc8ab1462363c213987f4f8e28c8836dcd3448bc67d00863311e8fee323c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19170.jpg",
+      "sha256": "e07c416969deac68808ed4d94197e59f2976d31a4092c0121eb05b76542df202"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19175.jpg",
+      "sha256": "c75b2f1a0bb0456a08f5b7472a2d58fcbdd9dc4e3422e9d6cf5667299fc7203c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19180.jpg",
+      "sha256": "af082adbb9e6e945f070c623541fc58541a0bf4cfe9aeb295e5ff0074dd87af1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19253.jpg",
+      "sha256": "5edb73798ab9ca205252643d9b4f721815d4119bf9ab6079576fb5bae0303286"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19273.jpg",
+      "sha256": "de062b12b82f4aa16313fd508aab82c4cc32aadf5ce0826d9bcdb2e98762e362"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19441.jpg",
+      "sha256": "2b7a9753992e46e58f60097b18c82c8239c5ca13b33b948cb0daf1f6367cf24b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19485.jpg",
+      "sha256": "e790a44bc45cbf2e9b9b414c2eaa3ad720433c7d5d002a25e84b1d1baa56bca2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19486.jpg",
+      "sha256": "63491cff8e6a7322ae7eb42b4c982a5c8887d714eb0cf44353410620b4a6f24c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19530.jpg",
+      "sha256": "3fe7d0f5ffba690b97ac98129b1078805bfb2e34fc26a12c3ce042ee76b5074d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19541.jpg",
+      "sha256": "aed5b8b2ab87a8006621fa368743041f7d56c29e7ee99a8331e0128f04659de3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19544.jpg",
+      "sha256": "4bad3fb3300e3aafcf5cbc0cd7da06003c633148e303fd4f78d48f824449360c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19548.jpg",
+      "sha256": "e2dcead50e95a1d86dfb2db99a6c30f38d00fdcbaf50651178f1c1a6d28e5b86"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19558.jpg",
+      "sha256": "e2f224a5ccfa5e96ada3728338e5f2b3ecc3bbd674dd8054624466f990248ff2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19618.jpg",
+      "sha256": "e57846b65226d0b9998c7fa51c0318d7a85c4796ee6a70b6474e65c7df46c070"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19629.jpg",
+      "sha256": "c393cdbb83186f6ab168ab10648ac785f6f150b07ca1258987dd93775edfcb07"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19645.jpg",
+      "sha256": "4097b2f592109e61e19b666573a687f16ac1b0370db73245481dc86e2a771975"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19652.jpg",
+      "sha256": "4419c46f99b5bc67753cb61132931495cf306cf5c9fd52b49945f7796d2d3441"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19688.jpg",
+      "sha256": "9d4f235fd68749c21f7f7c79a5e3da7ac990d8c6e2c5adb990c10130d5308820"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19731.jpg",
+      "sha256": "b1353698c9496bee92e0aed5d641c65ea636aa19141cb6b497ca64574e78cf00"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19739.jpg",
+      "sha256": "ff37e08ac2351364e0e537b8b56af464b39ce81be77b6b040893d76859fa7f4f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19743.jpg",
+      "sha256": "96ee372e95a5aa8269a675be5ecedf240130381e47ae6796310570964e498d9e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19804.jpg",
+      "sha256": "0b7785e93d768bbaea7dc9f863dad8c7e25bfc4f2ef702ab3d1daa113f112971"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19824.jpg",
+      "sha256": "9a15dad1b3fbd2e5fc81629a1cab849ead90b9042f8483eb4cce875989dd8aa1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19875.jpg",
+      "sha256": "9319642fa821d8f88cd99429d97daed5559fbe837278870fb3596e4c33a6f042"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19882.jpg",
+      "sha256": "50b47b2d88830349e0f94e91e14bd6b1a83adf04f214a7cf32aa4d352c46d158"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19905.jpg",
+      "sha256": "66711c013d5b8d32413ef5aeb6a1cb8ace0fe627c928c0e431198ce8aaedc587"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19915.jpg",
+      "sha256": "be93cbfa9a59f7fa84972ee83bcced07c1728579e2e7bd599e9f909d05503257"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19925.jpg",
+      "sha256": "1d30bf9da6fedc22f6d454914b5166044b6f0ceca871b94be853998b72d08751"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19942.jpg",
+      "sha256": "c6fc97d1e9c5aebf08442bdfba96c3abaf9a32994db397cddfa2e1eaf41b32ce"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19956.jpg",
+      "sha256": "57d30156388267883a3db48f58cb13ef4ffe276c148fd4c8f721db4b2ba1cfc5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/19969.jpg",
+      "sha256": "1403fbf972a18a4fa560a15fdec890cffcfbd052e6baf4964e50f35c88ebdc63"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20040.jpg",
+      "sha256": "cc69bbf5655243ce8e5cef523d3440f6c0bc1ae38bcba6b0afeb5fe9a9c9357d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20058.jpg",
+      "sha256": "e1135721bbf6e5d77786e2bfcf27cd27413c455b26e99d296e95c71011496a1f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20098.jpg",
+      "sha256": "48c6e6eea600de063df10c79f4b9e0a0c9c0c92db5eb480884208a1c876cb0de"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20109.jpg",
+      "sha256": "da730c55f211a8bd2bfb6eac3ac7a366d90248f7105f92863459aabd8ba39b9a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20129.jpg",
+      "sha256": "5daa333f80e1192ec508248a6f1ec477d8dbe770f0ed9ef12a1cfdf5708821e6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20138.jpg",
+      "sha256": "f9f22fe6c4450d84a47af33f6bb4c01bb2a2c2de849ab5f8a89d8e1dbc539c1b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20146.jpg",
+      "sha256": "b34f6301d8b913fb9fcfe1e76925e03acd0840fbfef83da131e7c0457a7d4648"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20165.jpg",
+      "sha256": "803987c9896c323c157986f0b041b76cb8bd28c429c26251209ed86eafd037a1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20166.jpg",
+      "sha256": "14c8405f4f7dabe37f71ec2e6bca2fe734c251f4cafd09068d9e218657013e6d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20171.jpg",
+      "sha256": "bd1b7e4b0c4c2cb79de480fdb298dd54da7d8bc92f4a78d8fb8ee4e4bc6c7510"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20198.jpg",
+      "sha256": "996d769727df98299953f23cdd01153f0e8f30006facb93a3d4df56e239e2734"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20284.jpg",
+      "sha256": "f96fc37971a291e13bfb6f4d40aea3c91f3f11d83f7d91c3dbb603c43872fff8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20361.jpg",
+      "sha256": "dac82b146be6c338ad1095eee1dad64ebd4c512278d3db8ec62a6d386bd8f961"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20382.jpg",
+      "sha256": "0c486634efb01ce8a024d68066940b13cb3ff9850979288526b44b2173b494d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20401.jpg",
+      "sha256": "05cd19635be390e39ed3bffdfe6b6598034811712185a30fd04de6c82c9e77b1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20402.jpg",
+      "sha256": "80349fc7d028de9b2d6e71a7e81e1609deb023993d5a139dbe93987fa3aa683b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20439.jpg",
+      "sha256": "ef1fddbeb9ff9c4b7a2b657ec7215b3c06df5263738a6196fd4e840bd1fb95f3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20478.jpg",
+      "sha256": "c2dfd6ac9ea1526c8c46d9c19cb979d63d286c2fd0f5418e6dbda7dd0071cf1a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20483.jpg",
+      "sha256": "4f45d436bd6fc51199edbbf28ff20fb391a15e1914ce934ceed350b57ec4b978"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20495.jpg",
+      "sha256": "b3eaed724578d37f578da8113cd30275edc5ff145531e719c598b5287a1a9675"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20550.jpg",
+      "sha256": "50e7cc5b7c08bacdf8978a474c4875f6f5d1887d444207c8bec0f73bc06b046c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20598.jpg",
+      "sha256": "5d3cec7696083a295c152eeb9b92728403cf2f2094e9a2f9b9a6469f895084d5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20711.jpg",
+      "sha256": "f2097c435561554289d49ac959d9fb44a214f29a58aff4de6746c255fd60b7d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20720.jpg",
+      "sha256": "9494759bd797ad1afa29b53c1932ce4d2179ef2519cf2578519c8f91b0aaadfb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20736.jpg",
+      "sha256": "c5ac0dc4fa139ebc2200341973d27e8264f1aa0858d13ad9290504b977d7dc24"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20838.jpg",
+      "sha256": "43e1c2d730001bc12b5cc090da47cb13f8a2ae99907637a5d6b9d91e375a4b42"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20853.jpg",
+      "sha256": "c976b619ae198ddd76bc03169d3540b3a21397c39a78dfacb05be0d78344ecb8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20878.jpg",
+      "sha256": "c5a58053a235d80250ad77b768179a5a27b59f16321bfe073ab59bfdb30d10f4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/20920.jpg",
+      "sha256": "2158ba43d17906c3009e068babb3db29ba0e8ea51ceb4f96a04fb468c8618c89"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21091.jpg",
+      "sha256": "2c2ba6242b1dcb1037ff51d9af030eee4d1d2f3a9e3b74a21de2907045255545"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21128.jpg",
+      "sha256": "9e8fbb94195eb4a6c6dc3d354b67c66e1f8445413f87648ab6c3906838b6a105"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21130.jpg",
+      "sha256": "ed55ca22438ab4cc98945532ee3cfee0678cd85fbbbde7244dbf95bcccd2c035"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21147.jpg",
+      "sha256": "054c163fcec5e2315b80c9584f2b141a59154639214db266fe044177e2c2a33a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21179.jpg",
+      "sha256": "f24bde750442a10e58a2e920c8587ef4263fe3391de033b797899e2a3e3a2aa5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21221.jpg",
+      "sha256": "00e90d7f844e319102bb5fd4870c3b11e40d0f4a45c89ce3ff1c70f505c84d71"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21237.jpg",
+      "sha256": "00b33a5f22ea29636b35db41b7ea3fd0f118b8002f8cc37fba3d9d15213cb242"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21260.jpg",
+      "sha256": "185f7bd2ee4d5de9e73e6d4e0c472895f0b7a4fb7e741696d2555520fe391710"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21267.jpg",
+      "sha256": "d25cfd5181c0f4831ba59e48c6a1b73da551aa3cf629385df4b5ef55751569a3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21295.jpg",
+      "sha256": "90f2304deea118273b8512a75545aec4ab85cbad4ca97d5f8d83f06f657467ee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21308.jpg",
+      "sha256": "4a3bd4b2ba71ba26527fd5c68604acd203e0768473c704796208e87500f8d919"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21336.jpg",
+      "sha256": "7032c3f9b736b6177637fcf1ed407e86beca00d19326bad62161f8019a76479c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21371.jpg",
+      "sha256": "3a35a6df950807592e2e0493e81dc093322fe396bd3b8d1aeaefcbe79f2bdaf0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21377.jpg",
+      "sha256": "53685a5d9cd9d811135d83e3c5c6aca3f44e436d58d9afe33829ab5af7b5b1ef"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21414.jpg",
+      "sha256": "fb822d79d1cd0bfe52f8bf9752e0f739a8027007595e58717250555f76f17487"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21441.jpg",
+      "sha256": "32f01e68d43f555fb4f78decb40ec634b75c663ab0b6eab1989c537899ed4952"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21478.jpg",
+      "sha256": "c3b4fc39ad566acc1e8d46dec5d823b068559f762f3c05e473547c4779d683c6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21482.jpg",
+      "sha256": "dec1e0cdc6befac236f1e2a5f4c1cb063157f089dc672f9f0d4feebaac57d9fe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21484.jpg",
+      "sha256": "1e1b1672fde023f582acfe9bbe0e826363836c17103b959a869dc99cd2cb61f1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21513.jpg",
+      "sha256": "fe57b613dfec3d96e2af7ceef026572e5923c5e6cec33a3d95612dea4b17fe0b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21545.jpg",
+      "sha256": "286d095749dfcc40eb585f4ef9d4816a5d0b2a548d08a98bbf504cc7d15d7293"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21565.jpg",
+      "sha256": "e967e2ba5fd07047393b02396d370cc48ff76173d0dc58c93ec4d5fcf40c3676"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21575.jpg",
+      "sha256": "b2d2b9f3da818fa0c8d7fa8fbd7d928a2363e318b0fa50595252deec7d5bd709"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21612.jpg",
+      "sha256": "c6a0ef0192eadc7b525eec16cb1e0265bf73eb2e9a391df4aade497ce3b7df36"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21625.jpg",
+      "sha256": "5ece30cb57127dbc61137ca0c099b6745e556072055f18def744765e9d020dcf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21639.jpg",
+      "sha256": "a71acb44f5b062ddeedddb1aaa6e99a80256d1d776c55a308b9b367e942c48d6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21653.jpg",
+      "sha256": "f7dbfdc5d69f16c18f12bcee574edfa7b91154b17c5e3538bda2e98dccbbf8b1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21671.jpg",
+      "sha256": "55c72f84edbfe71f57771515d6edb5edc99b4e04ef7f6419f7d04554d62fb526"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21678.jpg",
+      "sha256": "5e4efe7cd992919104f1fe62441ca2639da0411612109753a0c5ccbb345c473f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21687.jpg",
+      "sha256": "9e83de8dd39677d23c7ec4501d4ee93ea9a1c8bbaf25190737c8898ce9439882"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21717.jpg",
+      "sha256": "f3d1f6548dd9eb2dd8a1989c71f8bbf33697cb06014ccb59c795ccdc6facfa25"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21727.jpg",
+      "sha256": "8cfe3ea0a8af867d4ae98086bc3da50419d401ec5c518eff39634759bde1f432"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21913.jpg",
+      "sha256": "728df6d4f8cbe1bbceae16f81374b22b7ba3d83481f5e2a525dbe2373fda7b61"
+    },
+    {
+      "path": "data/flickr30k/validation_images/21951.jpg",
+      "sha256": "a5793817446ede42a48c2914c14c8932d28eee6d351e8c2f5634b5da582929aa"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22003.jpg",
+      "sha256": "32b93c93b7496d29fdfe18282ada913180f21d0a09d6d3b903804634f27f7403"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22038.jpg",
+      "sha256": "731b408090962529f35bb2bb1cb2403132d24c44eb003ab5b7e822438450eede"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22099.jpg",
+      "sha256": "abfb12a5eb81c3e135d7209b39b3f337a2d9ae930b4eb71b4fe51e7ad5a7735c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22152.jpg",
+      "sha256": "9cd79b5e1f2f40b01d78b0304589e3097c8d0bb816834b0e4f8d803a30b86bbe"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22182.jpg",
+      "sha256": "924a49df1e2fa6de2908143b8558a7d83228baa93808722e83f0bb186b94fbc8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22185.jpg",
+      "sha256": "6904a50f0dd8370380b79703c093d4faa0fd4e6b7b310166b097a0050d1c704c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22186.jpg",
+      "sha256": "36ae19b5a29b3ab901b8e08ec4123adecad694dbeab6ce15d2b86c22e987ded3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22187.jpg",
+      "sha256": "24b1842e8e382ad3a6677c6f9060ec012a4598c7f4953753f114bf6fdf5b58d0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22213.jpg",
+      "sha256": "7d02ffed145fac4947bb9d0c940842e2a2d1e37603caeb67af67867c8a754595"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22216.jpg",
+      "sha256": "a67d48ec3a0efd6855270e1ef39cd85b31a667f1868b70379de9ecac84014a37"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22228.jpg",
+      "sha256": "0d63f73340d3fd87ed3f73f1c688dc4262f31ac8af08673b0883de1d7b3bb0ea"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22261.jpg",
+      "sha256": "c216856d1e0a215f59e107fd6d93b78ce0a6b6155a3c2d56b90058aa69ec7b2a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22291.jpg",
+      "sha256": "5c9bcbe0ed45828cd0f529980d5fb4a7c3d748831e7018c81707d5afa65e5057"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22295.jpg",
+      "sha256": "c519122a289b672d1886b9ab2594e1ea51869fa1423bef6be82c0efbe3ca3fc8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22326.jpg",
+      "sha256": "1d3d5adef5fd1e8b32db469529047d3303d39e1183a131592ea6c79a34c3e993"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22455.jpg",
+      "sha256": "e709b54736d42e86ca38f0bec3d2af918309d9f9ce3521f5c89ec75e94c68b6e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22477.jpg",
+      "sha256": "18d9a9dfd6e3d06d1508f1e8e26b4b940dcc755f2a1b7cd1f4611cf4c8a97348"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22638.jpg",
+      "sha256": "bb6a8e358266956974b0dbc4f524424e5f0ca9238da8225670d535ec91d16825"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22639.jpg",
+      "sha256": "8a8ce4ba4244aaedbafd214f25c03c3db0f1ec51541eecc5b680668358b20c25"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22642.jpg",
+      "sha256": "3678b99b51d9b82ca0e1d34f52ee52e101790ea8e09aaf06850b2822b8ab56c4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22712.jpg",
+      "sha256": "224f8d540614577c2843473c0b7986f3ef7aa1d7cfb8cd732c584ea80f4e1fbc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22736.jpg",
+      "sha256": "9d6c6cc477e1474036d0c8b6eab5dcf21d50bcd6ac0250ecd1c5c82402f8a6d0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22738.jpg",
+      "sha256": "fed12382a4bb3f740d56496ceb5b0dcd1ee288f4b53b479fa85e5fa0404a7a32"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22747.jpg",
+      "sha256": "912a69dad11a02c54cd119a52b258448a07f3f84e3abd6e3cd126aca34c29af4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22772.jpg",
+      "sha256": "ed2655140e26995bbab8127657cb6f7da8c15dd019fe8da741dc0d1bba206348"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22811.jpg",
+      "sha256": "fb94647ac5e3c4cb5661c111f64f286bbdbd18206a548e3fde539b7114789e1a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22818.jpg",
+      "sha256": "355034c7dc9633f6f5c65375297301116b4d99170aa488103c15455492183c9f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22827.jpg",
+      "sha256": "ec4851d7d3b557d9db3b6ec86319bbf2aacfcacc0b9859ed3eb098a6787161bf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22834.jpg",
+      "sha256": "2ad459c2d1cdd91ae41b135116dfe087adf225e367144571d28522aaf7e21d63"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22859.jpg",
+      "sha256": "1903c2fcf4fa48c83d34b43c0721e4c92ffa2fe99b02113494e342b0d8575220"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22872.jpg",
+      "sha256": "c2ba27c9c35731d74b0a67ad748b8dffb786132641f1c9f98fa6294035dfcd89"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22880.jpg",
+      "sha256": "1c63524f0125a54f108395c2d15e6f899752b66bff0e2264347ad0035abc4dd9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22889.jpg",
+      "sha256": "c6b2377428867619f0843cc5374aa659bab2cc68f408608f28e3bb6bd728ed16"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22916.jpg",
+      "sha256": "f814b2d71308c91cd4bbdf38fa33ff856aaf9e82bcc549e8d24822db5736bb03"
+    },
+    {
+      "path": "data/flickr30k/validation_images/22936.jpg",
+      "sha256": "c4bf51d5234ea4f8e105af20ec780bc9e803ac8e9645059b677deb1b0fd40ca2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23038.jpg",
+      "sha256": "d373d71930de983a3197abd1ebafa888cdcde478a42c3350630280c141dbe2a1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23093.jpg",
+      "sha256": "17590a22d5e4c5b9787fd40445b0ddb658a4a3f2dede43cbd9590a214ca3e67a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23151.jpg",
+      "sha256": "23d120721c600b2452509b2a6e44c37d4ff8940fd33ecd93b181cb943c355e8a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23194.jpg",
+      "sha256": "8387799cc51e139157a6f0fd4273a9405d1d49bfa8e29af6bd6bc07705bee9d6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23219.jpg",
+      "sha256": "2cec37b1c7a71c4a7300d25bc69a48a9dea6ae28da4d481ece01bf1ae89b51ad"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23238.jpg",
+      "sha256": "1b3f0a1ca8090ce2ea9ebb14558a7d9bc0879f336052e3879e629fa2f501c7b0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23283.jpg",
+      "sha256": "8542bbb78780f274f006ef0aab4369f1b069752419039ee3a55713dc9b6e9e8d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23322.jpg",
+      "sha256": "dc2b57acb6b310b2650f79350dfc0fc954149829346833382b3cc4892d210789"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23372.jpg",
+      "sha256": "a198819271f1c6563d814439065b68c1fdc7f57c948a9849fb4d4da326e59945"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23476.jpg",
+      "sha256": "272b1f9f05db818219685e31beafff6bff22aaa53b2bb97efab5895571240aaf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23499.jpg",
+      "sha256": "9efb58ee13cad0a6bf45ab6f7408e45d6bc57a4c54cecbffc560bd1a81c7473a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23531.jpg",
+      "sha256": "4a4694f8bd52e7b437c20cda5f4fe40243d5b04071ebb33243530192fa7165e2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23598.jpg",
+      "sha256": "b7a94cb0e11ac94fce46fcc136fb4b91ade8bc7d097f9cc0da8b0669b9ea0f13"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23606.jpg",
+      "sha256": "1412e57e26d7850012a6d9ef75647a2401877f7a993d7f3051a05f7ad6d37ef6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23657.jpg",
+      "sha256": "b205b4fde3a0b7907ddb5bf9281bfa21d9e255b30d905a6081521f42ec5c1f0a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23693.jpg",
+      "sha256": "3586cb4596dbb2501e2ca08836a562d6c6e393680fed7bedcd686a6ee807da27"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23721.jpg",
+      "sha256": "2bc7e827f840f010f85648353a03ed4b116d41286cd104e804b487ce0610032f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23745.jpg",
+      "sha256": "37e5ba2f5fae86daba81655eaca041c89d760351523cb00ff335052be83d0fa6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23785.jpg",
+      "sha256": "3d315a5fab750da3a3d6b7a902a59c929a13b64132c197ff0fae43e4178a7ae6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23868.jpg",
+      "sha256": "ab6208c6a58ccdb046aaf57f4080846e5ed79a144c1ebf8a42e13e6e98be3350"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23882.jpg",
+      "sha256": "ba53407136c1bfad64d726c919fbb2c4c43adb9d56115c8ee096afef4149eaeb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23889.jpg",
+      "sha256": "5ace00953b7f0cafaa279d93563821251ba263e8359622f7affb3cc57c0dec56"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23918.jpg",
+      "sha256": "d01c121a13fa5da8dd602cb718a9cb3d4d44eebe4eea82bb454427c9d0c2bb53"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23945.jpg",
+      "sha256": "3eda2398c3dd973f3c90468069c938a3140e6ebcd77c02914b33577f41742564"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23953.jpg",
+      "sha256": "0df54afe4b96e650bb024ca784ecd4e4fac3c9bab1cacd02976d251ac2cbaaf9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23968.jpg",
+      "sha256": "c75e73665a71e305c7cde510080e163ebb9e6403a65989495539ca206be43c99"
+    },
+    {
+      "path": "data/flickr30k/validation_images/23998.jpg",
+      "sha256": "a5f9d0c248b53f7d833b0991bda0b7a17926f0bc4ddfd4103616a9cc774d4c9e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24041.jpg",
+      "sha256": "9a6cf1ee30cfd14594b7d04718652b06f9f3aa0665cb0e921303152db729e527"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24045.jpg",
+      "sha256": "30a498e078f9dcf0c02d5578a64da10ec85395eac398054f0ea74203a6f57941"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24106.jpg",
+      "sha256": "c1c4b5a4ce239773eb64e1e6694e8bae71048b419fee27b00144c0a072397a1c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24150.jpg",
+      "sha256": "ddbae6ad9384ede8892c281a63a82ca2921c4bfb2ec7fba331bcbb0c66448a75"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24152.jpg",
+      "sha256": "543b83f1f860598f45dc21095cd178e52b55626921fddf7a2c8266ded52e4f43"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24217.jpg",
+      "sha256": "610d86732b043a49e1e2b1a3064e2d4eaa5238e8d982987ec20d9ef5164504d7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24232.jpg",
+      "sha256": "73f73cb887daefb5caaeafab34b6ae62d0b0e274570b2e6265e8a2126078a654"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24251.jpg",
+      "sha256": "4c531328e0f17d9218a81190fd7fe10dfb90890c0e842c0be79b77ab0d1441c7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24307.jpg",
+      "sha256": "d3c4d272db13c864bffaa12ecb7f196ca077e72be5d3892bf6cfff908638f0d9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24314.jpg",
+      "sha256": "e3baec198fb6e1576c84c9b69830c3f447edb64eeb1ca114069096241e8c9d35"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24341.jpg",
+      "sha256": "6d2ff3babd2cd2f25f09b4902f0288727ff6267a5b129732e58758afcce90742"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24365.jpg",
+      "sha256": "9618c9119c087798e8f1addc7b5e2202d0da91efe3d769e108ca13d3c481245c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24370.jpg",
+      "sha256": "26f2efa54695d4a2e71e6d262d99bdfaf3144900a37787a179043d96b3569253"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24395.jpg",
+      "sha256": "77a4727d90a5494a32dafd1fea8d1829fbdebe2c52584be360bad4b77e62f3bc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24443.jpg",
+      "sha256": "a0982c142436c5b166b8de6c5cf491e572b6fd25dc0b6f4df3af0be740f25875"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24490.jpg",
+      "sha256": "b1d23a721081f35961c595dcb351d4a0fe34115e6a16977a21a201d96e5d6a6e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24520.jpg",
+      "sha256": "6612722a6f671d40e43c36b7276f58d6b0a542dd5110b27b475793186f2f5913"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24568.jpg",
+      "sha256": "8d081fa6df4fead8b1ad0e99a0da49e34cd1ed3a9e92623141cfaffad65f4728"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24574.jpg",
+      "sha256": "79366d45ad3780e6adca48c3d52abc4c737bcbb5356a7d0b9021e96539185575"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24614.jpg",
+      "sha256": "a6a9f35e5b4cdbcba612e68e7228fac6081064a86dd246919c37bb90e8e3c71f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24642.jpg",
+      "sha256": "827b81264f3b4559d0aa2ab03b021cd2fe74f6ad710e59021ab182f4dcd7f2e4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24649.jpg",
+      "sha256": "ea50a7ad05b78fce19981045ef367bb896f40d951e53be297367429a540d6aa2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24666.jpg",
+      "sha256": "00a9b99b567ead54bbd30a41b2a842c1f4e314f4ea55ed5f2436d6737d1da127"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24706.jpg",
+      "sha256": "99f44e6728fefa705409000c0031e2bd230fc7b27c224f431b2ec75e25d3a6ca"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24755.jpg",
+      "sha256": "cc3c6e22a8d5aa6aa381d14e5ff3f9055f934a9980ab93c7ff528c3073c1f26b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24808.jpg",
+      "sha256": "79f7d0ef81d14f09168f02087a1d2534b9719cde314ae8cbcdfc39ae2fd0f9f8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24819.jpg",
+      "sha256": "2f618d2a000fff6ff20b44f4c8207f088b5c712d9cfbda41a8fd1c4f6a4b277c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24877.jpg",
+      "sha256": "6428f4465d991d3611b5e49963a315d4ec699d09be45cf4b6ab473df7343402c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24885.jpg",
+      "sha256": "045a672c602c5eb588491408bf18cf03caa29aae3f7f21ba64b3f8dcac5c70e9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24905.jpg",
+      "sha256": "cdb904f3449dd8b2592cec2bf5688c606c049c76b2c155cb1202ad83413587d2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24925.jpg",
+      "sha256": "6da57fbe5dc6a3d9283c47a7b5f52248fa8bed455d5fdc589666b3fa2e9e71ab"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24960.jpg",
+      "sha256": "cac55c17a08e4c878aa37387279eceeeb465f04805fa8c3417869ca6fb8e23e2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/24966.jpg",
+      "sha256": "a9a0fb2009e964f5d365c50d2b07135576df602bc90a33d506fdc5dbaf8d49ab"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25006.jpg",
+      "sha256": "089d64cd08c5a5743e788be4f645094a70799a7d782a00e61e52065ba70dd766"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25007.jpg",
+      "sha256": "4899c8063ab71e90df165d5f75a9454096d9a3933f453e34f84b6c40fa83d5c0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25023.jpg",
+      "sha256": "19901c5e87f955faa434448a176a9026a8bd0bd7452a1e7707636a195b094fd7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25033.jpg",
+      "sha256": "cd4e973bc91c2dda50588616d54bfdeec9bb43429825eb4b38d3f3d403a02188"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25077.jpg",
+      "sha256": "a0fadac520825ef2e69622ec216ca418cde9c3cdeb2cb6cf70643bee22868982"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25142.jpg",
+      "sha256": "ee2292b0493e0a4718c108efe72ca9b18b7a2ebcaee14f1e3f3ba1359c159bf0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25154.jpg",
+      "sha256": "eec53a057df287d9e8d7cdc7c2bbddc8c65d72b4aceab23a1245e3086b18011c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25165.jpg",
+      "sha256": "721bcbaed38a617f6e5b3e30ae47554d6e1780a59cb6730f4b56391abed98703"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25194.jpg",
+      "sha256": "5657fd87b0c630df6ea0fcd9328e24f395117fda8862ebd95778ae331287dd6f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25199.jpg",
+      "sha256": "3e49197dbfd292cfcaa1303c920ffe7a61cc10da1fd19fa2efdb35785ef83d07"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25205.jpg",
+      "sha256": "f9c7e4b70292881d8d7a83873608e21c746bdeb5b79b33c20824e2fa74012ed2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25208.jpg",
+      "sha256": "bbaa82ada8e2cd82d259fdc19ebf715bb9025c91522165a79c770d229c215f14"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25226.jpg",
+      "sha256": "2987cb6852531332d7a69e68f83e0f25f443272dcc51b30c0bde1516333ade42"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25295.jpg",
+      "sha256": "52d9544325184e21075ac8b27482bfd40997dc8c52932c04f3c3b2592c969682"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25355.jpg",
+      "sha256": "7f4a1032dac9ae2151d894f33b3efa312eee2da9f46d45a9dbd9ea2ce4f58c9b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25363.jpg",
+      "sha256": "94d611dc278db218a70f65ae871f7708fb2355e7116fe996bd35e9218b8b1277"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25368.jpg",
+      "sha256": "18b9c623ee39f3456f2f57020367c5d2cbe7de05739895f32753e6806af3f50c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25458.jpg",
+      "sha256": "9f3178c1308a62b2d9ab94c7fd77d356689b86ebae529b847e9b332770953303"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25547.jpg",
+      "sha256": "99ae287cb9c7b6c87e5409db0d11d6919f0b86bb4f3b34e93d87400671f94660"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25552.jpg",
+      "sha256": "621067ff60efd25373bd1dccb58c4517f6d126b8474db504986ba15d040c4262"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25571.jpg",
+      "sha256": "d86da1dbb9ceb26c0e4572c2af7b77369a5d97946711e799bb72610ba151787c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25585.jpg",
+      "sha256": "e7c98b6c0700fc2262c4185a94a51ed38de56df3a3d5c41330c38786524f3235"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25652.jpg",
+      "sha256": "da579475aa016c84ab27949e0633ff3df9ab0a7b84ffb8f625adcfdb05723a4d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25731.jpg",
+      "sha256": "e5d2cf6f3235a8064ac5ca33a47cd48bd44b07bdbee19b4e5a2d553a04e8a390"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25732.jpg",
+      "sha256": "18fd6baf4cd5d3c3c3d24a985df5ed28be1e3231b0bd0487cd559eb33fd1cf0e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25757.jpg",
+      "sha256": "174d462553133ea17cf7b3942c8da7ddb60df6de70d2ad352fdc3a2ffe99d7e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25762.jpg",
+      "sha256": "12715a1692901a44f8ec620b13d4134e16432c96884c00e75afbf0a5f841170e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25778.jpg",
+      "sha256": "96cf567b0c3a0563d77ae41f9bf0de1954bedfa80b34a33c0aa237af744bf5db"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25802.jpg",
+      "sha256": "8da71759ad36ed6f72d6e4c35969e5e3acf3e6e7e67ea4348d4e147ab7804654"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25811.jpg",
+      "sha256": "8b19015380a6ef41e72e7d33a54f06443f33be710c3916f61a4bde1e00bd3f36"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25866.jpg",
+      "sha256": "59bdb99522c5f2e6487ff8c7e2b1dd3d108246498eae943fb557e01677216ed4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25883.jpg",
+      "sha256": "5bdc322d1d90a286e6abe794f44993d33684481b9b1a039e0e06a5bcd8f0caea"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25902.jpg",
+      "sha256": "623204d225f66a9085e2f92d2831aab3c1fb6d7f14c9e6f659090aefc76f55fb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25903.jpg",
+      "sha256": "1f879898873974d9cfa8a5d771a90cdf9adb8a2e4a84b831f715a2ee1290ddcc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25907.jpg",
+      "sha256": "7021f2ffec2c755a1f51216a793d81376d33a3c42152dbbc4c11ecf999d0a3d6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25942.jpg",
+      "sha256": "b071e815982e4760d04b667c9ef071d4ea231948efe89ad54094b651b3a40e4e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/25993.jpg",
+      "sha256": "08bb43b3542ae4c0e667d76a51a19f985cc7b07206488d2c1b9f9b4e62127165"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26019.jpg",
+      "sha256": "d2f50cef2fd1740db0562b62455a045cb961e137d8572afffe904979dd231a82"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26074.jpg",
+      "sha256": "70284eb146f0aa65f884db73c28605db33eaeb23cd3a34e2ef9827c38df4382a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26141.jpg",
+      "sha256": "3ea992f745f1cd0c9a5435b0effd954a7f942386d62ed154f80ab44f56bbb960"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26161.jpg",
+      "sha256": "ddefd45894cfbeab0b9688df179876af7e4f0286c3a488ea7e730359f172b9de"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26186.jpg",
+      "sha256": "52706284508d208614b6712408a958ce1e47b07a379fcd02f51a5a701ba39cef"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26253.jpg",
+      "sha256": "a6e0cf12fb43432ef297a2ba4a51594b570cebd98ff1e8bc8caaf27156b3250c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26268.jpg",
+      "sha256": "eb8e21fbc9ae8fcb07ca5bc898374e44d5f05aada1e62837d83a55301ed4d306"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26295.jpg",
+      "sha256": "bfbf27cf1bd45dbbf0a991313ad30b4299b79a6d430abea8367e757605360e06"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26316.jpg",
+      "sha256": "5b1b7299d524a0f1ccc8e997c561d07f977af71562591b2255ccd1f607725809"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26335.jpg",
+      "sha256": "ff292c40745fab40c6bf64cdc2f948512ba58c0d4f56c08e37b51d9edcf64c1d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26389.jpg",
+      "sha256": "6ffbdb91dabb97c24a39b4b6f676bb509e8643de385c36221f524e0ba73171b5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26416.jpg",
+      "sha256": "8edb54bd89f3e6a677fdef83edf5f216206c3de13f870d06454683e38e7b9049"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26450.jpg",
+      "sha256": "0389261f55da45ce83438012f1a8d639366a3c573f6e8e6112f1414d226e8529"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26463.jpg",
+      "sha256": "66721583baeddcdbb77e08e49f943ab0bc3819a926572eb77f7c7c660b85fe8d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26483.jpg",
+      "sha256": "60f8ea5cdca1b5f7d922aa6474288174bf406a09c35c49add9570ecdfc801a1b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26578.jpg",
+      "sha256": "0cf036c40f798a945560339aa2d05582d292521f1a516cac03d479fa419d894d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26609.jpg",
+      "sha256": "f614552481ad67f510b525ecd4c53a7dacf18726b8d0d1e547b8b70005f14a47"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26632.jpg",
+      "sha256": "a544964a7b3f274dc1aec51d6cbe37395113b24966c5d6256bbdaa9e88f3d43a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26673.jpg",
+      "sha256": "724c0b5a719b516d254fd9bb0c7d5d2911c5b9e70318efd630f390a50ec19ef6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26756.jpg",
+      "sha256": "13bec815688def08afec2f27da0f10fc3844d1271e9a901549cbe4e0c68b2eb7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26781.jpg",
+      "sha256": "dfc5210e36ec3879ada54e7d10a79201a53102b5990c9c30071074db7476e3c8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26791.jpg",
+      "sha256": "fe24cbd5449d8f57187c7f245305bde55470aefc7ed0786b5b85036d759f1c92"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26798.jpg",
+      "sha256": "aed833a9d777c40a9dd6f091725708c9dd8ba227feb058e4667a9179ddc5b45b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26811.jpg",
+      "sha256": "3191e3388b13c607a448f396260ab35b3925f7a51d3385d0e11e25c1371c34bf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26841.jpg",
+      "sha256": "ba5934bfc80fce476c455da37b78d75f6695b1fd5ed16147b3302d1d995f0bb5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/26923.jpg",
+      "sha256": "a0f938fd0beb0107ccb3f1f92b20f2824ff2a1d2b55175de488ad426dd39c2a0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27001.jpg",
+      "sha256": "5eba1c2b54fc8ea364039079672084f2a7719a1107488c95ba6d37eef7eaddb3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27101.jpg",
+      "sha256": "ae39df1c307f62f963a6fc5554fb1cdd311bb79b7c17486dc4302db1a2062785"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27106.jpg",
+      "sha256": "ce996d07acaffdcd50ad4072be2f205b62109d4aedb398cceab81af93ddaadf2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27126.jpg",
+      "sha256": "2f3cfd1a58328647df228794171950df7e5c0a999b2221e7df649528d989df86"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27171.jpg",
+      "sha256": "16ec3032c9fe281e8eb78140358047c8c9a47511df4a8e0fb6550ef4d86d2ef0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27204.jpg",
+      "sha256": "fa48c5d328f6992f29f9e933b078bee9f496c245e04b7b77a755ebe405c6dd37"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27217.jpg",
+      "sha256": "32205e013c2a3ca730f009e900bd504b1d190a54f6ecb7c675bf12c36fe2c617"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27246.jpg",
+      "sha256": "5827a26c2c22f446ff61bb5c95ad2feb6824f1a52657ad3fd57eae5a8178faa5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27306.jpg",
+      "sha256": "f27ed5444e62e9c9837946a5d95a8e0d31dd4264e989bc8fb845074705d11d48"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27310.jpg",
+      "sha256": "9dad97c0effee7933b6d71adcd7b569bd86caea623bc85939a2c23dd51bcfa20"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27357.jpg",
+      "sha256": "177304509685f414d78423ffd5aa097e362ed1fbd6224382bd451426f99eb58f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27362.jpg",
+      "sha256": "df3af28a008cd79ac7f645bb6d850ed80b241cf1e77131d9da4266cbc4117363"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27381.jpg",
+      "sha256": "1a8a6241296b2db489461961964e12aac9cd75792dd2fc478fc58825bd002822"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27394.jpg",
+      "sha256": "213fac7c554618f44af117faf8c54e0834ec8a34d86eab7d17390fef63606405"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27399.jpg",
+      "sha256": "e4e90409a2873275b45677932c3f1ad69a7f20dc97a790352e228106d118cb11"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27478.jpg",
+      "sha256": "c66d7bdeefbc1abc668c4e0812886889be8c32a46c52d8318eefcd31439947b1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27508.jpg",
+      "sha256": "0e94d35f4460f8861cb7370f1bdcfface41852c2c9ece5008b90ba64576f7356"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27518.jpg",
+      "sha256": "73832514465fec75a5e3a19a145ffc5d559510e978175a22a5fcaa17b816b245"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27536.jpg",
+      "sha256": "a7b57785655c45d596ba6a8c1403f2e56d3cb9c83a51d0c82f4a0a311dc14bae"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27543.jpg",
+      "sha256": "8e475d35d404efe10fd4552e4b07d54adf519bbd8b63a6300fccf48921a59527"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27554.jpg",
+      "sha256": "11dda0913ab3c85fbe52d731f0aa412d798e47b54c848d0a76ab60866354ee5d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27558.jpg",
+      "sha256": "d3b0faf706654e5e75bd2a6cf90266d0eb4765fc3c2a96842302f6a6e3344393"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27560.jpg",
+      "sha256": "705fbf6c0e4b471c965fab01b724788e2ad1b6b6a851a5f7179063c8b4b4fc94"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27571.jpg",
+      "sha256": "f002fe41fa81a9300841f15f8dff7c59f5598c600e7d858196edf7ed6101a31a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27606.jpg",
+      "sha256": "a0dc3cc491637c4882077c63b2780b298da392fb48195814ae7f05332f5533cc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27630.jpg",
+      "sha256": "33a644316c461cd26a57fbd2c12502c6e357964fbc63af8b116f10f7cf93ff57"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27643.jpg",
+      "sha256": "7e18953e2887adc1102abb879919e1629288229dacdb02ac059f3a621c97870d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27655.jpg",
+      "sha256": "97be254f895cbb7deb8ab5f7b5d540c58ab355865c4914dd9c5ed4e93937125d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27697.jpg",
+      "sha256": "6890eb27c3e46efe26df94bc1eba693b53517424035e4dd8774758800443160e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27707.jpg",
+      "sha256": "075a163bac22919aac0c4ee4c96db77cf5fd9463696302d20cac2870ff25b6cf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27717.jpg",
+      "sha256": "8702d40385045d19de01699b3fc39a1c19416747b1e777874beca4284dda4a03"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27721.jpg",
+      "sha256": "68bc715778c90313d2cc51d945f07c8aca1b4c266bad1e7d2a51b39ac44926f4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27731.jpg",
+      "sha256": "9186f412480eacef850d7aaca839c8a033f0475ec70307dbbd671b698916c91b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27732.jpg",
+      "sha256": "455240049a13bed16ff34f9a3ddb777c54f3ce740ee031aa8b385091ff24d9a8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27834.jpg",
+      "sha256": "8d5971fbd251a3db990550d4dfff20519bc479ed8e4b5368b0dbf38453228bc0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27887.jpg",
+      "sha256": "b485d0161d447489b6762f471ebd6127137ae61ca7b82a9d9528c89fb4189360"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27921.jpg",
+      "sha256": "b9f2a35468733023cdc922b895a2bcb5bca5fe9c9d98405f340b4899b6cb9e4a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27930.jpg",
+      "sha256": "894ce90ddb7233b0ba73046719b8c0d3c724d9c4ae627dce4f0a2db95093ccd9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27937.jpg",
+      "sha256": "57907ef4f0f9dfff19c11dcbf7127aed1c9ca5e9133d180a8a0bcd702e064720"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27963.jpg",
+      "sha256": "699ea2261036d987e00601405ee02a12e7978cf44b7b3afef4916762630ccd59"
+    },
+    {
+      "path": "data/flickr30k/validation_images/27987.jpg",
+      "sha256": "25ee42d877d42db4bb198d8eeeb025f3b1ba5f098292a7797d9b0826a400c41d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28007.jpg",
+      "sha256": "5c2bc0b0c329e821184b9dcd4e4b02df22573ffb7866e73dad20a9b467a13aee"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28009.jpg",
+      "sha256": "ac0aaa648c1eaae1b58dc07ac5907b3db1aa1cc0619b1e2532370c72885a38f2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28046.jpg",
+      "sha256": "24e9c0505c05e08efe579dd0a0959ca8069c8cda1b657e588c6231dc71cb8c2d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28058.jpg",
+      "sha256": "94cfa0508869159acc09815e54d5b9c67212721028db3f88109a9f76da401047"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28076.jpg",
+      "sha256": "f7320e906da9396fe5cdba99cc1187ecf5aec89aea7c38fa0987be968ffafce5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28084.jpg",
+      "sha256": "3a0a63f51b487f1189cade9198e8d33ae248d0015665171e3d35d0a313a69cfc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28087.jpg",
+      "sha256": "01343ccdefc25b572a8ecb6b5cbe7ddd3e584bf2adca53a37c6011adcd3dd2bc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28121.jpg",
+      "sha256": "2ddb4439f051f1c95e98aa8e38afc9532671573c6f98e8e2586dda4740227b68"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28126.jpg",
+      "sha256": "951e0692ec02babe480aa1d42306d93daa417637cd6e7059ac8c991eaf3a6bc9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28169.jpg",
+      "sha256": "86824ffc4a9d1f02f40fb810974a8f8d0bf01f4e5699392881a25a319526c9e5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28190.jpg",
+      "sha256": "0f8c72850e37d540bbc836ab1d85966c3a81c589afb003d274b56ae6cba22267"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28191.jpg",
+      "sha256": "c8fc4849dec4fdbaae34f7393ce1900dfffdcb9a48d4d84fe0f8229a144c0d31"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28209.jpg",
+      "sha256": "e097a106c0b4d0a97ab76b667d43d8b75f6fc688714d661ea7cdaf9fc10a3687"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28215.jpg",
+      "sha256": "6722dd945f841a023511adbf35a263278663f6132ba71dbf63dc14a51e1deda0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28233.jpg",
+      "sha256": "8ddced4d0825605592abf456a691d76784b755d02d319140070e58908d09ca01"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28286.jpg",
+      "sha256": "c3ab1142e9300d1500c69dba186fd78a7fb830666c9e6a3ef24bcc89a6e4b016"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28292.jpg",
+      "sha256": "4ca3e731f1ce1b38ccc847698d9fa2ce18e1ddfa23fe3cc148f9d7f9d217807a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28352.jpg",
+      "sha256": "5e9d0129c0d7e8160da2324d7938626c77eaf9de0007f641d6a9457f91ba4dcb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28366.jpg",
+      "sha256": "2a25caeb82b80fc7a535afc8e19a314e732d485c0bbb47e9920a45b63c2724e3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28410.jpg",
+      "sha256": "9e4720d3b56ed86522e43307be7dadedfe8e474bafef097561ff938f07a62a54"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28430.jpg",
+      "sha256": "78b80c922145ce87e70ce9cfbbc04c415c500a764898694fe7be2fccb57dd999"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28431.jpg",
+      "sha256": "76d911ccc1d0e966aaffe8101ff283c649284c024643bc1f26fe010a29bff64e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28435.jpg",
+      "sha256": "1b3e1738f2118bcc6498d09247b1dd6d6f6b2200aeef0c6e7099fbcc5b79e79b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28539.jpg",
+      "sha256": "d692c94fe6cfc242d24b8584f8386c9925e220a044ac9e56d0487ce811cae9db"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28590.jpg",
+      "sha256": "46d329f2e2c5a7c57dc26db558bb423558fe1a21ad260e0196f554e82282a6cc"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28683.jpg",
+      "sha256": "0da41e29ba85b2a81cd3b5469cf2c6a2d84d66298905f8d45a9954878240e2ec"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28721.jpg",
+      "sha256": "a7ddce0dfb7dad6aa7f9d2bb66dfd5b2af9545ca645de47a227edd95b7bc6b88"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28787.jpg",
+      "sha256": "999b177ab6432e6206000f1f88759885c2b1628a750ccdc086f223214b2b92c7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28796.jpg",
+      "sha256": "a6f291bffd28ad41195b84fa3d0cc7a04010c95bf976e85fc0e22f0d02177a9b"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28800.jpg",
+      "sha256": "9b885f3681483e814e1a829a24508b29df094945ab02f8dde4f9eb6902dafe58"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28836.jpg",
+      "sha256": "8bcf3b9cd825e5aa590168c0c89b899b624a72d88ccc735a4e555c66ae231a89"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28918.jpg",
+      "sha256": "2a4acbc02eaa8d5433168513ec07f4056f7cf2aeb4e92cc58b2e70783d70b642"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28990.jpg",
+      "sha256": "e97e493d8fdecf266518ec332a1f5148d5142400d380ecc50b3e51b4b3f92fa5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/28995.jpg",
+      "sha256": "74bae68e9decdcb57c4bbaf6da6fd6afa65bb3b00a87905a0b93a88cfbeb7a28"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29086.jpg",
+      "sha256": "73db36d1d4ebdbb5f3e08d8bd7e0eb3ceeabfbc4e230d1194f83cb201940b223"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29095.jpg",
+      "sha256": "1653aca6de197dec495f1030b6e1d7a747ece5a0fa2ed15904b423131bd8bf67"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29105.jpg",
+      "sha256": "61c44db49f4cefebdfe9cf7a65e49c9dbad1292337849274f3120866df378963"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29111.jpg",
+      "sha256": "a1aac44d4992470f6971312edc03a92658016b0368bb6372a3ed009aca268ae4"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29156.jpg",
+      "sha256": "c9c152404a74dc84fce34014f755f1f6b05195bad90a745b2853b574baabd012"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29215.jpg",
+      "sha256": "0e392673f9afc79d8c1de08d36eadedfc6d2f7af367c721d85b5c3e220bff6a0"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29272.jpg",
+      "sha256": "c669e06044e6510b85644f36d789a78f0a3d3d21176fce736bada9d34cddea7d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29277.jpg",
+      "sha256": "c9c3d82d94c67a99963424937de2d924da79a07759f87963f91da3ade99f1205"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29281.jpg",
+      "sha256": "f6648dcf40e12342bdd73b2b9700e1e5d802e36661248448c2f918fbc00c545e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29289.jpg",
+      "sha256": "7a4c3c0b55f67bae7abb97c0883cb1d7ee432dc80017c28058bd93bca04bd99a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29365.jpg",
+      "sha256": "880cf5e6396146f2e566856693a2be554b394aa4cb1acf21c863c56df9ce3c52"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29427.jpg",
+      "sha256": "d0bf7c31869db9097da360db63c38ee45f38bd8ce7e8286bcdd720a2fd2d1899"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29436.jpg",
+      "sha256": "9061ac9acf9e634ea443d63efbfcf9b0b4ca30c0e718e2763ffab0af1e504dbb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29467.jpg",
+      "sha256": "e7fad98912f8b5435f97adc4784f467a22a2dc12099927d50b96aaba15960702"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29492.jpg",
+      "sha256": "822237eb8b542594853e0fabc44fe86cfb46ecdf38be54057a568c95b4e97d11"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29505.jpg",
+      "sha256": "a213daa8ee05a07819f4d7224f2cce2db2240e5728d3020dd3052f2c6ab5be24"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29509.jpg",
+      "sha256": "6a6f825ae1dc7fef96a5354946ab5ad09d6b868a99f99fe2f156002327a0e02a"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29571.jpg",
+      "sha256": "074395e301f2e38429bc623f975d5dba15ef12bbd61b34f4d1640c71916f27f6"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29574.jpg",
+      "sha256": "50830f5fe86583b5a01146dc6fd33f169cb946fa23ebc34c0c6602edbef2700e"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29589.jpg",
+      "sha256": "dacc990b09dbad52c29bbc65e6160db772cdbbfc75ccd5d87b5ae4f4e4c91791"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29598.jpg",
+      "sha256": "82bc65ff7988ca0cd2414af52a660fd3b741d6fe080edd1b0443366124bab653"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29609.jpg",
+      "sha256": "145ef27a0489846633e89298f87abc4e881c4eed726ff171cc335a9f839a65e3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29614.jpg",
+      "sha256": "13ded3ba248ed937d5e31d56711908f02f8344da24a962b9c94f834b83e5cdbd"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29637.jpg",
+      "sha256": "4b01c4c389f08d03c1d85dae7c404a31be814a0185e40ec329d6e04a2ab719e2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29640.jpg",
+      "sha256": "c8e77200b66f27a1bccd1036b4e54961e0674d729e01b44dcdf4589c8663a5b9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29735.jpg",
+      "sha256": "9e33ecc99f1ad901692df83f032ab718a2d2662393eb2dd339cbdbfa512e03bb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29745.jpg",
+      "sha256": "48e0e1d85377c31451a6f8afcd5827281f2a6f76e0545200cb7378ab067c112f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29789.jpg",
+      "sha256": "9bce08fef634e8e92209981377d9de6fe5b5430571c214dd12e60e7820077588"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29803.jpg",
+      "sha256": "0d8e07d562c0c19bf89719e440ae4d7372e94530f67e26ef7dc203270266cddf"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29839.jpg",
+      "sha256": "6e71335cfe208c3b342b1321bbff19fb08e4b541a074d93a7a7c5d024e45abc3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29843.jpg",
+      "sha256": "1b0a81954e5c27446f598c7225f4dde31d4a7094e554de7d9f542161e5a400a1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29872.jpg",
+      "sha256": "b064353d7e461ec954fc22b06cbf6f8a1a5cd3a15065d4b1030a144e6dfc7c04"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29884.jpg",
+      "sha256": "cfa57b97bc4a96937884db11b9a87dfa83a771373657c6998c2eb3d35443488c"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29887.jpg",
+      "sha256": "0ef6fc9f71a9c16070a318e681cc778f96b5b072e7c83b5682c7fd56edfb904f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29964.jpg",
+      "sha256": "3cc34a5c851fdcb43cec1ce7d658f71b94547a44ce41afc7c91f149fb98ac402"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29976.jpg",
+      "sha256": "2cc0803fb47d557d396c9d1b2d83e30f9a64eadfda2fa8f97767659afdf16781"
+    },
+    {
+      "path": "data/flickr30k/validation_images/29979.jpg",
+      "sha256": "76eb1d03a6929db0a2b94e1e592c0a3bd76cdd0ad0166e2cf5920b6836798ac7"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30040.jpg",
+      "sha256": "66802fe7efd77aeb43d96359090ee727cb135dfc5d58a618a739a9753e826aa1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30089.jpg",
+      "sha256": "eb3f088a9de8c95a273cb0f2c3977456bb55f5e461e3483bf3c6e8aa5040cff2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30149.jpg",
+      "sha256": "dda560ae6e3fe826e613a1870467b459c780c93718deed5c4649575178ae2268"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30177.jpg",
+      "sha256": "f7f5a63b2071a8bb0061ef09cf1b36ec683168738b494333ad757f314f7c04c9"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30188.jpg",
+      "sha256": "cc5a840eec46e1e21c99f99576bb9e0adcae4964aee80107fb82a06319ba49fb"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30199.jpg",
+      "sha256": "bb2fad33f032fb6f9b061a194ecb8957d6eab0fe9883068711133e4a7b2f2aa3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30256.jpg",
+      "sha256": "e7c84a83ef75fdbfac10a337987bca3d704026f677a750ed7b160e219eb74a08"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30276.jpg",
+      "sha256": "b74cd916b37c18faac4e5a9e9223c0ce5b9aa03ad251186484bc93e9a2eca48f"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30310.jpg",
+      "sha256": "1e0a73506378737da5667afa1e232de896a3c74e696b59e3b15a9f91555c55d1"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30369.jpg",
+      "sha256": "d6584942403e18feffae9bed4a6945bf2ff8dc5454cb9ddc6c394ee00d8023c3"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30385.jpg",
+      "sha256": "05b628480eee84f13190eadfc1463b9e00da55de988372102703a4b0718f0937"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30420.jpg",
+      "sha256": "3828a9679f57c1787d7c9786a2ceb74864533f6b687cdcdbd71a84a8ab2ca1da"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30437.jpg",
+      "sha256": "04afe029da01d560c19ed74f499e882ee79841afe2855183b05756c869ad7897"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30479.jpg",
+      "sha256": "3dcfe4aa1a150ac2be578de588fc01907b8453be8fa41dfdaf41777a4f59b32d"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30485.jpg",
+      "sha256": "3de70148b0049737cafdc624eb66ef2824a81f0e78099fe2198eb792b34c3645"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30528.jpg",
+      "sha256": "53cef4af86247a29f5f8ac58a0a31f671d290fda95e22c9311b8772f88292af5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30533.jpg",
+      "sha256": "b2af0089b28e189328aad6807f7e3818a281fb9596448a71efdd06e6effb3b75"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30572.jpg",
+      "sha256": "4a5f584e9d8deabf86fe1b4d934323f0d3db7fcff37017e1a93b8a82820578c5"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30581.jpg",
+      "sha256": "8a96b8dfae1cf400f69e3afd068eddd25bf808fe8c6b3ff7d02b02a364eab016"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30632.jpg",
+      "sha256": "8b878730c87486e1cf76ca188cc293228b01e4fe361c603c3f632c5897234ba8"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30644.jpg",
+      "sha256": "bf80409664fd9e50b4ff7a4618a4a2842e5c91d134ad625f2b48069d851c9971"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30658.jpg",
+      "sha256": "ed1da64e1b365aeccdfc6c14e01549b0084e35645f9dbf2236c50a129cb67bc2"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30810.jpg",
+      "sha256": "14655566d12c655077b37527d6b6ac87132b4899ef342245e89a3ac684915293"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30971.jpg",
+      "sha256": "e454d9922bf7627e44772d7b65d9492f7420888b0b1bc0ca83ecffd3bb9b5326"
+    },
+    {
+      "path": "data/flickr30k/validation_images/30999.jpg",
+      "sha256": "d5594ec7c81ddb3c8860ae7556e5e387142abbf08b2f748e044c52260b66827c"
+    }
+  ]
+}

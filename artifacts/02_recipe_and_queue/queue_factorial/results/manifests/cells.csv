@@ -1,0 +1,67 @@
+index,run_id,experiment_id,batch_size,target_age_steps,memory_queue_size,queue_mode,seed,memberships
+0,b512__age_0__none__seed_42,queue_factorial,512,0,0,none,42,"['grid1_matched_age', 'control_batch']"
+1,b512__age_0__none__seed_43,queue_factorial,512,0,0,none,43,"['grid1_matched_age', 'control_batch']"
+2,b512__age_0__none__seed_44,queue_factorial,512,0,0,none,44,"['grid1_matched_age', 'control_batch']"
+3,b512__age_1__both__seed_42,queue_factorial,512,1,512,both,42,['grid1_matched_age']
+4,b512__age_1__both__seed_43,queue_factorial,512,1,512,both,43,['grid1_matched_age']
+5,b512__age_1__both__seed_44,queue_factorial,512,1,512,both,44,['grid1_matched_age']
+6,b512__age_2__both__seed_42,queue_factorial,512,2,1024,both,42,['grid1_matched_age']
+7,b512__age_2__both__seed_43,queue_factorial,512,2,1024,both,43,['grid1_matched_age']
+8,b512__age_2__both__seed_44,queue_factorial,512,2,1024,both,44,['grid1_matched_age']
+9,b512__age_4__both__seed_42,queue_factorial,512,4,2048,both,42,['grid1_matched_age']
+10,b512__age_4__both__seed_43,queue_factorial,512,4,2048,both,43,['grid1_matched_age']
+11,b512__age_4__both__seed_44,queue_factorial,512,4,2048,both,44,['grid1_matched_age']
+12,b512__age_8__both__seed_42,queue_factorial,512,8,4096,both,42,['grid1_matched_age']
+13,b512__age_8__both__seed_43,queue_factorial,512,8,4096,both,43,['grid1_matched_age']
+14,b512__age_8__both__seed_44,queue_factorial,512,8,4096,both,44,['grid1_matched_age']
+15,b512__age_16__both__seed_42,queue_factorial,512,16,8192,both,42,['grid1_matched_age']
+16,b512__age_16__both__seed_43,queue_factorial,512,16,8192,both,43,['grid1_matched_age']
+17,b512__age_16__both__seed_44,queue_factorial,512,16,8192,both,44,['grid1_matched_age']
+18,b512__age_32__both__seed_42,queue_factorial,512,32,16384,both,42,['grid1_matched_age']
+19,b512__age_32__both__seed_43,queue_factorial,512,32,16384,both,43,['grid1_matched_age']
+20,b512__age_32__both__seed_44,queue_factorial,512,32,16384,both,44,['grid1_matched_age']
+21,b512__age_64__both__seed_42,queue_factorial,512,64,32768,both,42,['grid1_matched_age']
+22,b512__age_64__both__seed_43,queue_factorial,512,64,32768,both,43,['grid1_matched_age']
+23,b512__age_64__both__seed_44,queue_factorial,512,64,32768,both,44,['grid1_matched_age']
+24,b1024__age_0__none__seed_42,queue_factorial,1024,0,0,none,42,"['grid1_matched_age', 'grid2_modality', 'control_batch']"
+25,b1024__age_0__none__seed_43,queue_factorial,1024,0,0,none,43,"['grid1_matched_age', 'grid2_modality', 'control_batch']"
+26,b1024__age_0__none__seed_44,queue_factorial,1024,0,0,none,44,"['grid1_matched_age', 'grid2_modality', 'control_batch']"
+27,b1024__age_1__both__seed_42,queue_factorial,1024,1,1024,both,42,['grid1_matched_age']
+28,b1024__age_1__both__seed_43,queue_factorial,1024,1,1024,both,43,['grid1_matched_age']
+29,b1024__age_1__both__seed_44,queue_factorial,1024,1,1024,both,44,['grid1_matched_age']
+30,b1024__age_2__both__seed_42,queue_factorial,1024,2,2048,both,42,['grid1_matched_age']
+31,b1024__age_2__both__seed_43,queue_factorial,1024,2,2048,both,43,['grid1_matched_age']
+32,b1024__age_2__both__seed_44,queue_factorial,1024,2,2048,both,44,['grid1_matched_age']
+33,b1024__age_4__both__seed_42,queue_factorial,1024,4,4096,both,42,"['grid1_matched_age', 'grid2_modality']"
+34,b1024__age_4__both__seed_43,queue_factorial,1024,4,4096,both,43,"['grid1_matched_age', 'grid2_modality']"
+35,b1024__age_4__both__seed_44,queue_factorial,1024,4,4096,both,44,"['grid1_matched_age', 'grid2_modality']"
+36,b1024__age_4__image_only__seed_42,queue_factorial,1024,4,4096,image_only,42,['grid2_modality']
+37,b1024__age_4__image_only__seed_43,queue_factorial,1024,4,4096,image_only,43,['grid2_modality']
+38,b1024__age_4__image_only__seed_44,queue_factorial,1024,4,4096,image_only,44,['grid2_modality']
+39,b1024__age_4__text_only__seed_42,queue_factorial,1024,4,4096,text_only,42,['grid2_modality']
+40,b1024__age_4__text_only__seed_43,queue_factorial,1024,4,4096,text_only,43,['grid2_modality']
+41,b1024__age_4__text_only__seed_44,queue_factorial,1024,4,4096,text_only,44,['grid2_modality']
+42,b1024__age_8__both__seed_42,queue_factorial,1024,8,8192,both,42,['grid1_matched_age']
+43,b1024__age_8__both__seed_43,queue_factorial,1024,8,8192,both,43,['grid1_matched_age']
+44,b1024__age_8__both__seed_44,queue_factorial,1024,8,8192,both,44,['grid1_matched_age']
+45,b1024__age_16__both__seed_42,queue_factorial,1024,16,16384,both,42,"['grid1_matched_age', 'grid2_modality']"
+46,b1024__age_16__both__seed_43,queue_factorial,1024,16,16384,both,43,"['grid1_matched_age', 'grid2_modality']"
+47,b1024__age_16__both__seed_44,queue_factorial,1024,16,16384,both,44,"['grid1_matched_age', 'grid2_modality']"
+48,b1024__age_16__image_only__seed_42,queue_factorial,1024,16,16384,image_only,42,['grid2_modality']
+49,b1024__age_16__image_only__seed_43,queue_factorial,1024,16,16384,image_only,43,['grid2_modality']
+50,b1024__age_16__image_only__seed_44,queue_factorial,1024,16,16384,image_only,44,['grid2_modality']
+51,b1024__age_16__text_only__seed_42,queue_factorial,1024,16,16384,text_only,42,['grid2_modality']
+52,b1024__age_16__text_only__seed_43,queue_factorial,1024,16,16384,text_only,43,['grid2_modality']
+53,b1024__age_16__text_only__seed_44,queue_factorial,1024,16,16384,text_only,44,['grid2_modality']
+54,b1024__age_32__both__seed_42,queue_factorial,1024,32,32768,both,42,['grid1_matched_age']
+55,b1024__age_32__both__seed_43,queue_factorial,1024,32,32768,both,43,['grid1_matched_age']
+56,b1024__age_32__both__seed_44,queue_factorial,1024,32,32768,both,44,['grid1_matched_age']
+57,b1024__age_64__both__seed_42,queue_factorial,1024,64,65536,both,42,"['grid1_matched_age', 'grid2_modality']"
+58,b1024__age_64__both__seed_43,queue_factorial,1024,64,65536,both,43,"['grid1_matched_age', 'grid2_modality']"
+59,b1024__age_64__both__seed_44,queue_factorial,1024,64,65536,both,44,"['grid1_matched_age', 'grid2_modality']"
+60,b1024__age_64__image_only__seed_42,queue_factorial,1024,64,65536,image_only,42,['grid2_modality']
+61,b1024__age_64__image_only__seed_43,queue_factorial,1024,64,65536,image_only,43,['grid2_modality']
+62,b1024__age_64__image_only__seed_44,queue_factorial,1024,64,65536,image_only,44,['grid2_modality']
+63,b1024__age_64__text_only__seed_42,queue_factorial,1024,64,65536,text_only,42,['grid2_modality']
+64,b1024__age_64__text_only__seed_43,queue_factorial,1024,64,65536,text_only,43,['grid2_modality']
+65,b1024__age_64__text_only__seed_44,queue_factorial,1024,64,65536,text_only,44,['grid2_modality']

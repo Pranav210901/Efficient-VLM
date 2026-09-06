@@ -1,0 +1,4 @@
+arm,pipeline,lora_parameters,params_total_training,params_total_inference,params_trainable_training,params_trainable_inference,params_training_only,lora_targets,base_encoder_weights_frozen
+vision,freezeshift/configs/pipeline_vision.yaml,1179648,48769413,48376197,4469253,4076037,393216,8,True
+text,freezeshift/configs/pipeline_text.yaml,786432,48376197,47982981,4076037,3682821,393216,8,True
+dual,freezeshift/configs/pipeline_dual.yaml,1966080,49555845,49162629,5255685,4862469,393216,16,True

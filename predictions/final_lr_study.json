@@ -1,0 +1,16 @@
+{
+  "study": "final_lr_study",
+  "written_at": "2026-08-06T22:08:47Z",
+  "written_before_any_new_runs": true,
+  "architecture": "M_T1: DINOv3 ViT-S/16 + C4 vision aggregation + MiniLM learned-query text aggregation",
+  "primary_metric": "Flickr30k Karpathy validation mean bidirectional R@1",
+  "screen_seed": 42,
+  "candidate_factors_vs_current_lr": [0.5, 0.75, 1.0, 1.25, 1.5],
+  "current_resolved_lr": 0.002545584412271571,
+  "statement": "The projection-only learning rate is not assumed optimal for M_T1; a bounded symmetric screen may improve validation retrieval without changing inference architecture.",
+  "selection_rule": "Select the highest seed-42 Flickr-validation peak across the five candidates; exact ties prefer factor 1.0, then the factor closest to 1.0.",
+  "confirmation_rule": "Promote a non-current candidate only if its three-seed mean exceeds the current three-seed mean by more than one pooled SD, sqrt((SD_current^2 + SD_candidate^2)/2).",
+  "decision_rule_limitation": "The pooled-SD rule is a practical heuristic at n=3, not a significance test.",
+  "hard_stop": "No further training or hyperparameter tuning follows this study, regardless of outcome.",
+  "flickr_test_sealed": true
+}

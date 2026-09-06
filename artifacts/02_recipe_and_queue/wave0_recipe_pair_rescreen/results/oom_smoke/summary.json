@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETE",
+  "jobs": [
+    {
+      "status": "COMPLETE",
+      "loss_type": "infonce_queue",
+      "batch_size": 1024,
+      "captions_per_image": "all",
+      "unique_images": 1024,
+      "text_rows": 5122,
+      "loss": 7.1495184898376465,
+      "peak_gpu_memory_bytes": 4182756864,
+      "peak_gpu_reserved_bytes": 5089787904,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    {
+      "status": "COMPLETE",
+      "loss_type": "infonce_queue",
+      "batch_size": 2048,
+      "captions_per_image": "all",
+      "unique_images": 2048,
+      "text_rows": 10246,
+      "loss": 7.871471405029297,
+      "peak_gpu_memory_bytes": 9768116224,
+      "peak_gpu_reserved_bytes": 13220446208,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    {
+      "status": "COMPLETE",
+      "loss_type": "infonce_no_queue",
+      "batch_size": 1024,
+      "captions_per_image": "all",
+      "unique_images": 1024,
+      "text_rows": 5122,
+      "loss": 7.081892490386963,
+      "peak_gpu_memory_bytes": 3870704128,
+      "peak_gpu_reserved_bytes": 4481613824,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    {
+      "status": "COMPLETE",
+      "loss_type": "infonce_no_queue",
+      "batch_size": 2048,
+      "captions_per_image": "all",
+      "unique_images": 2048,
+      "text_rows": 10248,
+      "loss": 7.83290958404541,
+      "peak_gpu_memory_bytes": 8908962304,
+      "peak_gpu_reserved_bytes": 11647582208,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    {
+      "status": "COMPLETE",
+      "loss_type": "sigmoid",
+      "batch_size": 1024,
+      "captions_per_image": "all",
+      "unique_images": 1024,
+      "text_rows": 5125,
+      "loss": 50.421348571777344,
+      "peak_gpu_memory_bytes": 4062279168,
+      "peak_gpu_reserved_bytes": 4963958784,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    },
+    {
+      "status": "COMPLETE",
+      "loss_type": "sigmoid",
+      "batch_size": 2048,
+      "captions_per_image": "all",
+      "unique_images": 2048,
+      "text_rows": 10247,
+      "loss": 51.02638244628906,
+      "peak_gpu_memory_bytes": 10385886208,
+      "peak_gpu_reserved_bytes": 14038335488,
+      "gpu_total_memory_bytes": 102016548864,
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+    }
+  ],
+  "maximum_peak_gpu_memory_bytes": 10385886208
+}

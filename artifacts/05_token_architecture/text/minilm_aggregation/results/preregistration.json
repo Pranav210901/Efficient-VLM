@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_BEFORE_PROFILING",
+  "written_at": "2026-07-31T23:27:45Z",
+  "study": "text_side_token_aggregation_with_e5_extension",
+  "flickr_test_sealed": true,
+  "primary_metric": "Flickr30k Karpathy validation mean bidirectional R@1",
+  "context": {
+    "probe1_conclusion": "C4 has no excess directional asymmetry relative to OpenCLIP; text aggregation is a symmetry and fine-ranking mechanism probe, not a response to an established text-tower bottleneck.",
+    "probe1_stable_baseline_mean": 0.5383629191,
+    "probe1_stable_baseline_sd": 0.0028394832,
+    "historical_c4_mean": 0.5386587729,
+    "historical_c4_sd": 0.0030762410
+  },
+  "profile_cells": [
+    "M-T0: MiniLM masked mean",
+    "M-T1: MiniLM learned query 128d/4h",
+    "M-T1-small: MiniLM learned query 96d/3h",
+    "E-T0: E5 masked mean",
+    "E-T1: E5 learned query 128d/4h",
+    "E-T1-small: E5 learned query 96d/3h"
+  ],
+  "efficiency_gate": {
+    "latency": "full-stack latency Q3 strictly below 9.48 ms",
+    "parameters": "inference-trainable parameters strictly below 5000000",
+    "mini_and_e5_gates_are_independent": true
+  },
+  "hierarchy": {
+    "per_encoder": "Select T1 if it passes; otherwise select T1-small if it passes; otherwise retain T0. Never train both aggregation variants.",
+    "minilm": "Reuse existing C4 T0 checkpoints; train the selected aggregation for seeds 42/43/44 only if one passes.",
+    "e5": "Train E-T0 for seeds 42/43/44 if it passes. Train the selected E aggregation for seeds 42/43/44 only if one passes. If E-T0 passes but neither aggregation passes, E-T0 is diagnostic and cannot be promoted."
+  },
+  "promotion": {
+    "within_encoder": "The aggregation replaces T0 only when its three-seed primary-metric gain is greater than sqrt((SD_T0^2 + SD_Tagg^2)/2) and it passed the efficiency gate.",
+    "between_encoders": "E5 can displace MiniLM only when its selected eligible candidate exceeds MiniLM's selected eligible candidate by more than sqrt((SD_selected_M^2 + SD_selected_E^2)/2). Otherwise MiniLM wins by continuity.",
+    "directional_metrics": "i2t R@1, t2i R@1, MRR and ranking efficiency are diagnostic; directional regressions must be reported but do not silently veto or enable promotion."
+  },
+  "hypothesis": "Learned text-token selection may improve fine ranking, but captions are short and MiniLM was pretrained with mean pooling, so a smaller gain than vision-token aggregation is expected.",
+  "expected_gain_pp": [0.3, 1.0],
+  "diagnostics_not_used_for_selection": [
+    "systematic-failure recovery",
+    "ambiguity-stratified performance",
+    "directional R@1 and MRR"
+  ],
+  "selection_pressure_disclosure": "This is an additional Flickr-validation-selected branch; Flickr test remains sealed until the final configuration is frozen."
+}

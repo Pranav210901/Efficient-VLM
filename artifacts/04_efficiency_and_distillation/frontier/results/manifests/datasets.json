@@ -1,0 +1,24 @@
+{
+  "primary": {
+    "id": "flickr30k_karpathy_test",
+    "csv": "data/flickr30k/test.csv",
+    "csv_sha256": "23fe04490cfd2fe43ad7b741440a6c4bc5381bfbecb523612971dc17ff8f34e7",
+    "caption_count": 5000,
+    "image_count": 1000,
+    "semantic_image_hash": "390737e711449c88fddd4516b21cfaabbcd5dd2f680a38370c78e3e1524c6ae5",
+    "missing_image_count": 0,
+    "missing_images": []
+  },
+  "supplementary": {
+    "id": "coco_validation_contaminated",
+    "csv": "data/val_all_captions.csv",
+    "csv_sha256": "b7ac13c58c4bb2fcc0285fa7373f6c5a3a01b68daeed998fe2fc93a4282ac3d0",
+    "caption_count": 25014,
+    "image_count": 5000,
+    "semantic_image_hash": "2315b82c1336d6957cc25bc55c07975f28043151638ee53cb44631ccc8a4f70b",
+    "missing_image_count": 0,
+    "missing_images": []
+  },
+  "coco_status": "COCO validation was used for model selection in earlier project phases; it is not an independent test set.",
+  "untouched_coco_test_available": false
+}

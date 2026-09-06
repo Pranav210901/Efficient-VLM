@@ -1,0 +1,25 @@
+extends: ../../configs/text_aggregation_study/pipeline_m_t1.yaml
+version: freezeshift-dual-r128-1.0
+name: freezeshift_dual
+output_root: freezeshift/results/dual
+checkpoint_root: freezeshift/checkpoints/dual
+log_root: freezeshift/logs
+base_config: freezeshift/configs/base_dual.yaml
+teacher_extension:
+  arm_id: dual
+  label: M_T1 plus dual-tower LoRA r128 final four blocks
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+freezeshift:
+  arm: dual
+  expected_lora_parameters: 1966080
+  expected_inference_trainable_parameters: 4862469
+reporting:
+  peak_tie_break: earliest_epoch
+  tie_break_status: post_observation_reporting_amendment
+  tie_break_disclosure: >-
+    Exact validation ties select the earliest epoch. This deterministic
+    reporting rule was added after a tied maximum was observed for dual seed
+    43; it does not alter training, evaluation metrics, or the test seal.
+  baseline_to_beat:
+    flickr_validation_mean_R1: 0.5448717921972275
+    full_stack_latency_ms: 8.99804092478007

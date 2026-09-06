@@ -1,0 +1,72 @@
+version: alignment-v3.0
+output_root: results/alignment_v3
+checkpoint_root: checkpoints/alignment_v3
+log_root: logs/alignment_v3
+base_config: configs/alignment_v3/base.yaml
+
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v3/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+
+references:
+  - openclip_vit_b32_quickgelu_openai
+  - mobileclip2_s0_dfndr2b
+  - siglip2_vit_b32_256_webli
+
+pair_matrix:
+  vision_encoders: [dinov3_convnext_tiny, dinov3_vits16]
+  text_encoders: [all_minilm_l6_v2, e5_small_v2, bge_small_en]
+  seeds: [42]
+
+batch_probe:
+  candidates: [256, 512, 768, 1024, 1536, 2048]
+  memory_fraction_limit: 0.88
+  throughput_tolerance: 0.03
+  warmup: 2
+  iterations: 5
+
+selection:
+  practical_equivalence_margin: 0.005
+  pair_minimum_mean_r1: 0.20
+  pair_minimum_gain_over_v2: 0.03
+  v2_best_mean_r1: 0.1560
+  distillation_minimum_gain: 0.02
+  distillation_minimum_mean_r1: 0.30
+  router_minimum_unique_oracle_gain: 0.02
+  router_minimum_openclip_fraction: 0.90
+
+distillation_sensitivity:
+  strengths: [0.5, 1.0, 2.0]
+  seeds: [42, 43]
+  include_matched_baseline: true
+
+ablations:
+  seeds: [42, 43]
+  recipes:
+    - {id: baseline, adapter: false, distillation: false, lora: false}
+    - {id: baseline_batch128, adapter: false, distillation: false, lora: false, batch_size: 128}
+    - {id: distillation, adapter: false, distillation: true, lora: false}
+    - {id: adapter, adapter: true, distillation: false, lora: false}
+    - {id: lora, adapter: false, distillation: false, lora: true}
+    - {id: adapter_distillation, adapter: true, distillation: true, lora: false}
+    - {id: adapter_distillation_lora, adapter: true, distillation: true, lora: true}
+
+final:
+  seeds: [42, 43, 44]
+  epochs: 12
+  retrain_on_full_coco_train: true
+
+optional_transfer:
+  flickr30k_csv: data/flickr30k/test.csv
+  required: false
+
+literature_context:
+  # Literature-only rows never enter locally measured tables.
+  - id: dinov2_large_all_roberta_large
+    source: literature
+    note: cited ceiling; never represented as locally evaluated

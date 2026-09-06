@@ -1,0 +1,9 @@
+extends: ../alignment_v3/base.yaml
+
+# Recovery jobs inherit the single batch-128 reference LR (3e-4), capped-sqrt
+# scaling rule, 12-epoch schedule, and all model/data settings from v3. Batch
+# size is supplied only by the recovery job manifest.
+distillation:
+  cache_path: results/alignment_v3_recovery/teacher_cache/mobileclip2_s0_dfndr2b.pt
+  cache_version: mobileclip2-s0-recovery-v1
+

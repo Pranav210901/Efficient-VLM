@@ -1,0 +1,67 @@
+version: final-zero-shot-1.0
+name: final_zero_shot_evaluation
+output_root: artifacts/07_final_evaluation/zero_shot
+hardware:
+  partition: teaching
+  gpu_substring: RTX PRO 6000
+  require_blackwell: true
+  precision: native_bf16
+evaluation:
+  retrieval_batch_size: 128
+  classification_batch_size: 128
+  k_values: [1, 5, 10]
+  prompt_templates:
+    - "a photo of a {class_name}"
+    - "an image of a {class_name}"
+    - "a picture of a {class_name}"
+  classification_split_role: final_test
+datasets:
+  flickr30k_test:
+    csv: data/flickr30k/test.csv
+    expected_images: 1000
+    expected_captions: 5000
+  classification:
+    - cifar100_zeroshot
+    - pets_zeroshot
+    - eurosat_zeroshot
+students:
+  - id: mt1_strict_frozen
+    label: M_T1 strict-frozen C4
+    builder: alignment_v3
+    expected_inference_trainable_parameters: 2896389
+    validation_mean_r1: 0.5448717921972275
+    seeds:
+      42:
+        selected_epoch: 22
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_42/inference.pt
+      43:
+        selected_epoch: 22
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_43/inference.pt
+      44:
+        selected_epoch: 20
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/artifacts/05_token_architecture/text/minilm_aggregation/checkpoints/M_T1/sensitivity/distill_strength_1p0__seed_44/inference.pt
+  - id: mt1_dual_lora
+    label: M_T1 C4 dual-LoRA PEFT
+    builder: freezeshift
+    expected_inference_trainable_parameters: 4862469
+    validation_mean_r1: 0.6341551641623179
+    seeds:
+      42:
+        selected_epoch: 20
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_42/inference.pt
+      43:
+        selected_epoch: 23
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_43/inference.pt
+      44:
+        selected_epoch: 22
+        checkpoint: quarantine/github_submission_cleanup_20260810/original_paths/freezeshift/checkpoints/dual/sensitivity/distill_strength_1p0__seed_44/inference.pt
+references:
+  - openclip_vit_b32_quickgelu_openai
+  - mobileclip2_s0_dfndr2b
+  - siglip2_vit_b32_256_webli
+disclosures:
+  - No optimizer, training step, or parameter update is permitted in this package.
+  - Flickr30k test is the primary final transfer evaluation for the selected students.
+  - Classification benchmarks are external zero-shot diagnostics and were used historically in earlier project phases; they are not described as pristine confirmatory tests.
+  - Student configurations and epochs were selected on Flickr30k validation, so validation results are selection-influenced; test is reported only after this roster was frozen.
+  - Reference checkpoints use their checkpoint-native preprocessing and tokenization.

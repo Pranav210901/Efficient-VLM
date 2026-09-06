@@ -1,0 +1,9 @@
+array_index,id,adapter,distillation,lora,experiment_id,run_id,seed
+0,baseline,False,False,False,baseline,baseline__seed_42,42
+1,baseline,False,False,False,baseline,baseline__seed_43,43
+2,distillation,False,True,False,distillation,distillation__seed_42,42
+3,distillation,False,True,False,distillation,distillation__seed_43,43
+4,lora,False,False,True,lora,lora__seed_42,42
+5,lora,False,False,True,lora,lora__seed_43,43
+6,distillation_lora,False,True,True,distillation_lora,distillation_lora__seed_42,42
+7,distillation_lora,False,True,True,distillation_lora,distillation_lora__seed_43,43

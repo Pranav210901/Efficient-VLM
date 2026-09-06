@@ -1,0 +1,878 @@
+[
+  {
+    "index": 0,
+    "run_id": "b512__age_0__none__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 1,
+    "run_id": "b512__age_0__none__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 2,
+    "run_id": "b512__age_0__none__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 3,
+    "run_id": "b512__age_1__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 1,
+    "memory_queue_size": 512,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 4,
+    "run_id": "b512__age_1__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 1,
+    "memory_queue_size": 512,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 5,
+    "run_id": "b512__age_1__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 1,
+    "memory_queue_size": 512,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 6,
+    "run_id": "b512__age_2__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 2,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 7,
+    "run_id": "b512__age_2__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 2,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 8,
+    "run_id": "b512__age_2__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 2,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 9,
+    "run_id": "b512__age_4__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 4,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 10,
+    "run_id": "b512__age_4__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 4,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 11,
+    "run_id": "b512__age_4__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 4,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 12,
+    "run_id": "b512__age_8__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 8,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 13,
+    "run_id": "b512__age_8__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 8,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 14,
+    "run_id": "b512__age_8__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 8,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 15,
+    "run_id": "b512__age_16__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 16,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 16,
+    "run_id": "b512__age_16__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 16,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 17,
+    "run_id": "b512__age_16__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 16,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 18,
+    "run_id": "b512__age_32__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 32,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 19,
+    "run_id": "b512__age_32__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 32,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 20,
+    "run_id": "b512__age_32__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 32,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 21,
+    "run_id": "b512__age_64__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 64,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 22,
+    "run_id": "b512__age_64__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 64,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 23,
+    "run_id": "b512__age_64__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 512,
+    "target_age_steps": 64,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 24,
+    "run_id": "b1024__age_0__none__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 25,
+    "run_id": "b1024__age_0__none__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 26,
+    "run_id": "b1024__age_0__none__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 0,
+    "memory_queue_size": 0,
+    "queue_mode": "none",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality",
+      "control_batch"
+    ]
+  },
+  {
+    "index": 27,
+    "run_id": "b1024__age_1__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 1,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 28,
+    "run_id": "b1024__age_1__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 1,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 29,
+    "run_id": "b1024__age_1__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 1,
+    "memory_queue_size": 1024,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 30,
+    "run_id": "b1024__age_2__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 2,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 31,
+    "run_id": "b1024__age_2__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 2,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 32,
+    "run_id": "b1024__age_2__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 2,
+    "memory_queue_size": 2048,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 33,
+    "run_id": "b1024__age_4__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 34,
+    "run_id": "b1024__age_4__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 35,
+    "run_id": "b1024__age_4__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 36,
+    "run_id": "b1024__age_4__image_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "image_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 37,
+    "run_id": "b1024__age_4__image_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "image_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 38,
+    "run_id": "b1024__age_4__image_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "image_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 39,
+    "run_id": "b1024__age_4__text_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "text_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 40,
+    "run_id": "b1024__age_4__text_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "text_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 41,
+    "run_id": "b1024__age_4__text_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 4,
+    "memory_queue_size": 4096,
+    "queue_mode": "text_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 42,
+    "run_id": "b1024__age_8__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 8,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 43,
+    "run_id": "b1024__age_8__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 8,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 44,
+    "run_id": "b1024__age_8__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 8,
+    "memory_queue_size": 8192,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 45,
+    "run_id": "b1024__age_16__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 46,
+    "run_id": "b1024__age_16__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 47,
+    "run_id": "b1024__age_16__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 48,
+    "run_id": "b1024__age_16__image_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "image_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 49,
+    "run_id": "b1024__age_16__image_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "image_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 50,
+    "run_id": "b1024__age_16__image_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "image_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 51,
+    "run_id": "b1024__age_16__text_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "text_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 52,
+    "run_id": "b1024__age_16__text_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "text_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 53,
+    "run_id": "b1024__age_16__text_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 16,
+    "memory_queue_size": 16384,
+    "queue_mode": "text_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 54,
+    "run_id": "b1024__age_32__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 32,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 55,
+    "run_id": "b1024__age_32__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 32,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 56,
+    "run_id": "b1024__age_32__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 32,
+    "memory_queue_size": 32768,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age"
+    ]
+  },
+  {
+    "index": 57,
+    "run_id": "b1024__age_64__both__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "both",
+    "seed": 42,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 58,
+    "run_id": "b1024__age_64__both__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "both",
+    "seed": 43,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 59,
+    "run_id": "b1024__age_64__both__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "both",
+    "seed": 44,
+    "memberships": [
+      "grid1_matched_age",
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 60,
+    "run_id": "b1024__age_64__image_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "image_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 61,
+    "run_id": "b1024__age_64__image_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "image_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 62,
+    "run_id": "b1024__age_64__image_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "image_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 63,
+    "run_id": "b1024__age_64__text_only__seed_42",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "text_only",
+    "seed": 42,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 64,
+    "run_id": "b1024__age_64__text_only__seed_43",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "text_only",
+    "seed": 43,
+    "memberships": [
+      "grid2_modality"
+    ]
+  },
+  {
+    "index": 65,
+    "run_id": "b1024__age_64__text_only__seed_44",
+    "experiment_id": "queue_factorial",
+    "batch_size": 1024,
+    "target_age_steps": 64,
+    "memory_queue_size": 65536,
+    "queue_mode": "text_only",
+    "seed": 44,
+    "memberships": [
+      "grid2_modality"
+    ]
+  }
+]

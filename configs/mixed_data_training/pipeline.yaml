@@ -1,0 +1,100 @@
+version: mixed-data-c4-1.0
+name: mixed_data_c4
+output_root: results/mixed_data_training
+checkpoint_root: checkpoints/mixed_data_training
+log_root: logs/mixed_data_training
+base_config: configs/token_aggregator_scale_training/base_c4.yaml
+frozen_selection: configs/token_aggregator_scale_training/selection.yaml
+
+question: >-
+  Does 24-pass training on the CC3M mirror, or a uniformly image-sampled
+  COCO-plus-CC3M-mirror mixture, improve transfer for the frozen C4 student?
+
+data:
+  coco_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  coco_unique_images: 113287
+  coco_caption_policy: all_available_positive_captions_per_image
+  cc3m_index: data/cc3m_v1_1/manifests/selected_tar_index.parquet
+  cc3m_unique_images: 1351680
+  sampling_unit: image
+  mixture_sampling: uniform_without_replacement_over_concatenated_images_per_pass
+  pass_definition: one exposure of every image in the selected arm
+  final_partial_batch_allowed: true
+  image_size: 224
+  flickr_validation_csv: data/flickr30k/validation.csv
+  flickr_test_csv: data/flickr30k/test.csv
+  flickr_test_sealed: true
+
+teacher:
+  id: mobileclip2_s0_dfndr2b
+  registry_tag: MobileCLIP2-S0
+  pretrained: dfndr2b
+  open_clip_version: 3.3.0
+  coco_cache: results/alignment_wave1/mobileclip2/teacher_cache/mobileclip2_s0_dfndr2b.pt
+  cc3m_cache: data/cc3m_v1_1/teacher_cache/mobileclip2_s0_dfndr2b.pt
+  cc3m_cache_rows: 1351680
+  training_only: true
+
+training:
+  seeds: [42, 43, 44]
+  passes: 24
+  batch_size: 1024
+  dataloader_workers: 12
+  resolved_lr: 0.002545584412271571
+  lr_tuned_for_mixture: false
+  queue_mode: none
+  loss_type: infonce_no_queue
+  warmup_fraction: 0.05
+  schedule: single_cosine_over_full_arm_steps
+  early_stopping: false
+  checkpoint_interval_steps: 100
+  immutable_pass_checkpoints: true
+  arms:
+    - id: mixed_coco_cc3m
+      sources: [coco, cc3m]
+      images_per_pass: 1464967
+      optimizer_steps_per_pass: 1431
+      total_optimizer_steps: 34344
+    - id: cc3m_only
+      sources: [cc3m]
+      images_per_pass: 1351680
+      optimizer_steps_per_pass: 1320
+      total_optimizer_steps: 31680
+
+resources:
+  teacher_cache:
+    partition: teaching
+    gpu_per_task: 1
+    cpus_per_task: 12
+    host_memory: 96G
+    wall_time: "12:00:00"
+  training:
+    partition: teaching
+    gpu_type: NVIDIA RTX PRO 6000 Blackwell
+    gpu_per_task: 1
+    cpus_per_task: 12
+    host_memory: 96G
+    wall_time: "72:00:00"
+    native_bf16_required: true
+  array_concurrency: dynamic_teaching_capacity_up_to_6
+
+reporting:
+  evaluate_each_pass:
+    - coco_dev
+    - flickr30k_validation
+  selection_rules:
+    - coco_dev
+    - flickr30k_validation
+  report_selection_gain: true
+  report_seed_mean_sd_range: true
+  report_final_pass_ceiling_status: true
+  evaluate_flickr_test: false
+  latency_unchanged_by_data_training: true
+
+disclosures:
+  - The learning rate is pinned from COCO projection training and is untuned for both new arms.
+  - A pass is defined over images, not image-caption rows.
+  - COCO images contribute all available captions as positives within their image sample; CC3M contributes one caption.
+  - Uniform image sampling gives a COCO image and a CC3M image equal sampling probability per pass, irrespective of caption count.
+  - Flickr30k validation is used for model selection; Flickr30k test remains sealed.
+  - The CC3M source is pixparse/cc3m-wds at revision 46f3d69f840e59d77d52e8decfe5baec97e94c7f, not an unqualified copy of CC3M.

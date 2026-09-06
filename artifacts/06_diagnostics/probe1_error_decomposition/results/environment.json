@@ -1,0 +1,211 @@
+{
+  "status": "COMPLETE",
+  "git_sha": null,
+  "runtime_versions": {
+    "python": "3.9.25",
+    "platform": "Linux-5.14.0-570.58.1.el9_6.x86_64-x86_64-with-glibc2.34",
+    "torch": "2.8.0+cu128",
+    "timm": "1.0.27",
+    "transformers": "4.57.6",
+    "open_clip": "3.3.0"
+  },
+  "numpy": "2.0.2",
+  "pandas": "2.3.3",
+  "sklearn": "1.6.1",
+  "platform": "Linux-5.14.0-570.58.1.el9_6.x86_64-x86_64-with-glibc2.34",
+  "gallery_manifest_sha256": "b02b5af17347407279755aac36e0e1d03241f4fa0adbc101f49f57782bf03a6b",
+  "ambiguity_bins_sha256": "416ed65c03cb36bc6fbf6668e41962e7c328487656dee324bb1dfb0b29be35e7",
+  "ranking": {
+    "similarity": "cosine_l2_normalized",
+    "dtype": "float32_cpu",
+    "tie_break": "similarity_descending_then_frozen_gallery_index_ascending",
+    "k_values": [
+      1,
+      5,
+      10
+    ]
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260731,
+    "interval_percent": 95
+  },
+  "random_seeds": {
+    "bootstrap": 20260731,
+    "audit": 20260731,
+    "failure": 20260732
+  },
+  "model_metadata": {
+    "c4_seed_42": {
+      "status": "COMPLETE",
+      "model": "c4",
+      "seed": 42,
+      "epoch": 14,
+      "id": "c4_seed_42",
+      "checkpoint": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_42/epoch_14.pt",
+      "checkpoint_sha256": "e65a7ed575f09582b95f26691692e59a04a840198dcd4c39d108289569282235",
+      "fingerprint": "06bb7f851e4a3389ead7b6b987112bf1de52a684326d7d40940e55260251b004",
+      "image_resolution": 224,
+      "image_preprocessing": {
+        "image_size": 224,
+        "mean": null,
+        "std": null,
+        "interpolation": "bicubic",
+        "source": "selected C4 checkpoint config.yaml"
+      },
+      "tokenizer_policy": "dynamic_padding_per_batch",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16",
+      "content_token_lengths": {
+        "count": 5070,
+        "min": 6.0,
+        "p5": 9.0,
+        "median": 15.0,
+        "mean": 16.192504930966468,
+        "sd": 5.911278879030822,
+        "p95": 27.0,
+        "max": 70.0
+      },
+      "padded_batch_widths": {
+        "count": 5070,
+        "min": 39.0,
+        "p5": 39.0,
+        "median": 51.0,
+        "mean": 53.980276134122285,
+        "sd": 9.262744060868906,
+        "p95": 70.0,
+        "max": 70.0
+      },
+      "fixed_vs_dynamic_tokenizer_asymmetry": "OpenCLIP fixed context and MiniLM dynamic padding are checkpoint-native; no latency is compared in Probe 1."
+    },
+    "c4_seed_43": {
+      "status": "COMPLETE",
+      "model": "c4",
+      "seed": 43,
+      "epoch": 22,
+      "id": "c4_seed_43",
+      "checkpoint": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_43/epoch_22.pt",
+      "checkpoint_sha256": "508cbce6e2393c034580127a6a4cd21f390b8fc2af40086b99229c3aad244187",
+      "fingerprint": "520c6d2cdb3fda7272f37f75b7cab5ddfc012d5398c6f356fa7e7b803f55cc3d",
+      "image_resolution": 224,
+      "image_preprocessing": {
+        "image_size": 224,
+        "mean": null,
+        "std": null,
+        "interpolation": "bicubic",
+        "source": "selected C4 checkpoint config.yaml"
+      },
+      "tokenizer_policy": "dynamic_padding_per_batch",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16",
+      "content_token_lengths": {
+        "count": 5070,
+        "min": 6.0,
+        "p5": 9.0,
+        "median": 15.0,
+        "mean": 16.192504930966468,
+        "sd": 5.911278879030822,
+        "p95": 27.0,
+        "max": 70.0
+      },
+      "padded_batch_widths": {
+        "count": 5070,
+        "min": 39.0,
+        "p5": 39.0,
+        "median": 51.0,
+        "mean": 53.980276134122285,
+        "sd": 9.262744060868906,
+        "p95": 70.0,
+        "max": 70.0
+      },
+      "fixed_vs_dynamic_tokenizer_asymmetry": "OpenCLIP fixed context and MiniLM dynamic padding are checkpoint-native; no latency is compared in Probe 1."
+    },
+    "c4_seed_44": {
+      "status": "COMPLETE",
+      "model": "c4",
+      "seed": 44,
+      "epoch": 20,
+      "id": "c4_seed_44",
+      "checkpoint": "checkpoints/token_aggregator_scale_training/C4_d256_h8_b2_ff512/sensitivity/distill_strength_1p0__seed_44/epoch_20.pt",
+      "checkpoint_sha256": "42b449db1497d55c6dca3c154c86cb64ce615093f556347379de21a463d2f19a",
+      "fingerprint": "1739107d6c4a5856b6c4b3321613acdb2100933ede5c390126127d93403e6c90",
+      "image_resolution": 224,
+      "image_preprocessing": {
+        "image_size": 224,
+        "mean": null,
+        "std": null,
+        "interpolation": "bicubic",
+        "source": "selected C4 checkpoint config.yaml"
+      },
+      "tokenizer_policy": "dynamic_padding_per_batch",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16",
+      "content_token_lengths": {
+        "count": 5070,
+        "min": 6.0,
+        "p5": 9.0,
+        "median": 15.0,
+        "mean": 16.192504930966468,
+        "sd": 5.911278879030822,
+        "p95": 27.0,
+        "max": 70.0
+      },
+      "padded_batch_widths": {
+        "count": 5070,
+        "min": 39.0,
+        "p5": 39.0,
+        "median": 51.0,
+        "mean": 53.980276134122285,
+        "sd": 9.262744060868906,
+        "p95": 70.0,
+        "max": 70.0
+      },
+      "fixed_vs_dynamic_tokenizer_asymmetry": "OpenCLIP fixed context and MiniLM dynamic padding are checkpoint-native; no latency is compared in Probe 1."
+    },
+    "openclip": {
+      "status": "COMPLETE",
+      "model": "openclip",
+      "seed": null,
+      "epoch": null,
+      "id": "openclip",
+      "reference_id": "openclip_vit_b32_quickgelu_openai",
+      "model_name": "ViT-B-32-quickgelu",
+      "pretrained": "openai",
+      "image_resolution": 224,
+      "image_preprocessing": {
+        "transform": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    MaybeConvertMode()\n    MaybeToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "source": "checkpoint-native open_clip transform"
+      },
+      "tokenizer_policy": "checkpoint_native_fixed_context",
+      "native_context_length": 77,
+      "expected_weight_sha256": "e6d1bd7789aa45192b3bf90570a789b478bae1b74ebcce7eddd908e83a2b7c31",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "node": "aisurrey38.surrey.ac.uk",
+      "precision": "native_bf16",
+      "content_token_lengths": {
+        "count": 5070,
+        "min": 6.0,
+        "p5": 9.0,
+        "median": 15.0,
+        "mean": 15.988560157790927,
+        "sd": 5.805821340491157,
+        "p95": 27.0,
+        "max": 70.0
+      },
+      "padded_batch_widths": {
+        "count": 5070,
+        "min": 77.0,
+        "p5": 77.0,
+        "median": 77.0,
+        "mean": 77.0,
+        "sd": 0.0,
+        "p95": 77.0,
+        "max": 77.0
+      },
+      "fixed_vs_dynamic_tokenizer_asymmetry": "OpenCLIP fixed context and MiniLM dynamic padding are checkpoint-native; no latency is compared in Probe 1."
+    }
+  }
+}

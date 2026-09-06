@@ -1,0 +1,7 @@
+{
+  "dataset": "nlphuji/flickr30k",
+  "revision": "2b239befc81b6e3f035ce6bd52f5f4d60f5625f7",
+  "image_count": 1000,
+  "caption_count": 5000,
+  "split": "karpathy_test"
+}

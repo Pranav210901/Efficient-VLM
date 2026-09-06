@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "arm": "no_merge",
+      "merge_after_block": null,
+      "patch_tokens": 196,
+      "total_tokens": 201,
+      "embedding_shape": [
+        2,
+        384
+      ],
+      "baseline_feature_shape": [
+        2,
+        196,
+        384
+      ]
+    },
+    {
+      "arm": "merge_after_block_8",
+      "merge_after_block": 8,
+      "patch_tokens": 49,
+      "total_tokens": 54,
+      "embedding_shape": [
+        2,
+        384
+      ],
+      "baseline_feature_shape": [
+        2,
+        196,
+        384
+      ]
+    },
+    {
+      "arm": "merge_after_block_6",
+      "merge_after_block": 6,
+      "patch_tokens": 49,
+      "total_tokens": 54,
+      "embedding_shape": [
+        2,
+        384
+      ],
+      "baseline_feature_shape": [
+        2,
+        196,
+        384
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+pipeline_index,pipeline,arm,parent,merge_after_block,new_training_runs,lora_parameters,inference_trainable_parameters,patch_tokens_after,base_encoder_weights_frozen
+0,tokenshift_training/configs/pipeline_frozen_block8.yaml,frozen_block8,frozen,8,3,0,2896389,49,True
+1,tokenshift_training/configs/pipeline_frozen_block6.yaml,frozen_block6,frozen,6,3,0,2896389,49,True
+2,tokenshift_training/configs/pipeline_dual_block8.yaml,dual_block8,dual_lora,8,3,1966080,4862469,49,True
+3,tokenshift_training/configs/pipeline_dual_block6.yaml,dual_block6,dual_lora,6,3,1966080,4862469,49,True

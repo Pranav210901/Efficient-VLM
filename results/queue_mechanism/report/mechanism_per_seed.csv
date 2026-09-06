@@ -1,0 +1,13 @@
+arm,seed,value,source
+unweighted_fresh_control,42,0.20979846268892288,reused
+semantic_filter,42,0.26506760716438293,new
+matched_random_filter,42,0.20997846871614456,new
+mass_normalized,42,0.2694082111120224,new
+unweighted_fresh_control,43,0.20775870233774185,reused
+semantic_filter,43,0.26000799238681793,new
+matched_random_filter,43,0.20781859010457993,new
+mass_normalized,43,0.2739687040448189,new
+unweighted_fresh_control,44,0.20943836122751236,reused
+semantic_filter,44,0.2608684003353119,new
+matched_random_filter,44,0.2100181058049202,new
+mass_normalized,44,0.26992814987897873,new

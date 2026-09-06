@@ -1,0 +1,63 @@
+{
+  "status": "READY",
+  "training_jobs": 12,
+  "epoch_evaluation_jobs": 288,
+  "trained_weight_profiles": 5,
+  "c1_reused_not_retrained": true,
+  "flickr_test_sealed": true,
+  "latency_finding_before_training": "C4 added 1,252,225 parameters and only 0.204 ms over the contemporaneous CLS baseline. At these scales the frozen image tower dominates full-stack latency; the binding declared aggregator constraint is the 5M parameter budget, not latency.",
+  "rows": [
+    {
+      "candidate": "C2",
+      "pipeline": "configs/token_aggregator_scale_training/pipeline_c2.yaml",
+      "dim": 256,
+      "heads": 8,
+      "blocks": 1,
+      "ff_dim": 512,
+      "native_width_identity": false,
+      "inference_trainable_parameters": 2203524,
+      "training_jobs": 3,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    },
+    {
+      "candidate": "C3",
+      "pipeline": "configs/token_aggregator_scale_training/pipeline_c3.yaml",
+      "dim": 128,
+      "heads": 4,
+      "blocks": 2,
+      "ff_dim": 256,
+      "native_width_identity": false,
+      "inference_trainable_parameters": 1842948,
+      "training_jobs": 3,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    },
+    {
+      "candidate": "C4",
+      "pipeline": "configs/token_aggregator_scale_training/pipeline_c4.yaml",
+      "dim": 256,
+      "heads": 8,
+      "blocks": 2,
+      "ff_dim": 512,
+      "native_width_identity": false,
+      "inference_trainable_parameters": 2730628,
+      "training_jobs": 3,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    },
+    {
+      "candidate": "C5",
+      "pipeline": "configs/token_aggregator_scale_training/pipeline_c5.yaml",
+      "dim": 384,
+      "heads": 6,
+      "blocks": 1,
+      "ff_dim": 768,
+      "native_width_identity": true,
+      "inference_trainable_parameters": 2663044,
+      "training_jobs": 3,
+      "lr_tuned_for_aggregator": false,
+      "flickr_test_sealed": true
+    }
+  ]
+}

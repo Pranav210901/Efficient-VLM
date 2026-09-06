@@ -1,0 +1,11 @@
+{
+  "dataset_split_id": "cifar100_official_test_reserved",
+  "split": "reserved official test split",
+  "top1_accuracy": 0.645799994468689,
+  "top5_accuracy": 0.8848999738693237,
+  "macro_f1": 0.6358026123801769,
+  "balanced_accuracy": 0.6458000000000002,
+  "mean_confidence": 0.010647140443325043,
+  "classification_margin": 0.00010456809832248837,
+  "top1_margin": 0.00018485203327145427
+}

@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "audit_sheets": 100,
+  "failure_sheets": 50,
+  "protocol_sha256": "a7c28664b7db2b7fa78174a92bf1700e268b08a3fdbc652890cc6bb63a0e7955",
+  "audit_key_used": false,
+  "audit_dir": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/contact_sheets/ambiguity_blinded",
+  "failure_dir": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/results/probe1_error_decomposition/annotation_scaffolding/contact_sheets/failure"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "READY",
+  "unique_cells": 66,
+  "verified_reuse": 3,
+  "expected_new_runs": 63,
+  "prediction_ids": [
+    "age_vs_count",
+    "modality_asymmetry",
+    "harm_threshold",
+    "seed_replication"
+  ],
+  "pinned_resolved_lr": 0.002545584412271571
+}

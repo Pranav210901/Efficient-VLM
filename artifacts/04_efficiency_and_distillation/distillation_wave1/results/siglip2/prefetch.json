@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "siglip2_vit_b32_256_webli",
+    "dinov3_vits16+all_minilm_l6_v2"
+  ]
+}

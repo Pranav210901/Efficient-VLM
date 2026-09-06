@@ -1,0 +1,70 @@
+{
+  "status": "COMPLETE",
+  "arm_id": "openclip_single",
+  "teacher_ids": [
+    "openclip_vit_b32_quickgelu_openai"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "schedule": {
+    "type": "single 24-epoch cosine",
+    "warmup_fraction": 0.05,
+    "early_stopping": false
+  },
+  "old_12epoch_complete_run_flickr_validation_mean_R1": 0.4378698269526164,
+  "new_24epoch_complete_run_comparable_to_old_complete_run": true,
+  "intermediate_epochs_comparable_between_schedules": false,
+  "comparability_boundary": "The complete 24-epoch run is comparable with the complete prior 12-epoch run. Epoch-number-matched intermediate checkpoints are not comparable because their learning rates differ.",
+  "flickr_mean_under_coco_dev_epoch_selection": 0.4362590362628301,
+  "flickr_mean_under_flickr_validation_epoch_selection": 0.43951346973578137,
+  "selection_gain_pp": 0.325443347295129,
+  "double_selection_disclosure": "The 224px teacher-distilled configuration and checkpoint epochs were selected using Flickr30k validation. The validation figure is therefore optimistically influenced by configuration and checkpoint selection; the measured epoch-selection gain is reported explicitly.",
+  "seeds_with_coco_peak_at_epoch24": 0,
+  "seeds_with_flickr_peak_at_epoch24": 0,
+  "ceiling_reached_not_converged": false,
+  "flickr_test_used": false,
+  "per_seed": [
+    {
+      "seed": 42,
+      "coco_selected_epoch": 16,
+      "coco_peak_R1": 0.3722119778394699,
+      "flickr_at_coco_selected_epoch_R1": 0.4397435784339905,
+      "flickr_selected_epoch": 16,
+      "flickr_peak_R1": 0.4397435784339905,
+      "coco_at_flickr_selected_epoch_R1": 0.3722119778394699,
+      "epoch24_coco_dev_R1": 0.3717713803052902,
+      "epoch24_flickr_validation_R1": 0.43530572950839996,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    },
+    {
+      "seed": 43,
+      "coco_selected_epoch": 17,
+      "coco_peak_R1": 0.37977075576782227,
+      "flickr_at_coco_selected_epoch_R1": 0.4390532523393631,
+      "flickr_selected_epoch": 8,
+      "flickr_peak_R1": 0.44329386949539185,
+      "coco_at_flickr_selected_epoch_R1": 0.36163441836833954,
+      "epoch24_coco_dev_R1": 0.3791307806968689,
+      "epoch24_flickr_validation_R1": 0.4378698319196701,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    },
+    {
+      "seed": 44,
+      "coco_selected_epoch": 21,
+      "coco_peak_R1": 0.3755902647972107,
+      "flickr_at_coco_selected_epoch_R1": 0.4299802780151367,
+      "flickr_selected_epoch": 16,
+      "flickr_peak_R1": 0.43550296127796173,
+      "coco_at_flickr_selected_epoch_R1": 0.36961139738559723,
+      "epoch24_coco_dev_R1": 0.37485018372535706,
+      "epoch24_flickr_validation_R1": 0.4280078858137131,
+      "coco_peak_at_epoch24": false,
+      "flickr_peak_at_epoch24": false
+    }
+  ]
+}

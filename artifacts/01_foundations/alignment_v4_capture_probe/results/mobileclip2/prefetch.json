@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "mobileclip2_s0_dfndr2b",
+    "dinov3_vits16+all_minilm_l6_v2"
+  ]
+}

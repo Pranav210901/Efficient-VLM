@@ -1,0 +1,23 @@
+{
+  "artifact_scope": "HISTORICAL_SIGMOID_LR_SWEEP",
+  "authoritative_for_locked_recipe": false,
+  "superseded_by": "selection/recipe.json",
+  "status": "SELECTED",
+  "per_batch": {
+    "512": {
+      "sweep_multiplier": 3.0,
+      "mean_R@1": 0.3564539849758148,
+      "run_id": "sigmoid__captions_2__b512__lr_3p0__seed_42"
+    },
+    "1024": {
+      "sweep_multiplier": 3.0,
+      "mean_R@1": 0.3605337291955948,
+      "run_id": "sigmoid__captions_2__b1024__lr_3p0__seed_42"
+    },
+    "2048": {
+      "sweep_multiplier": 3.0,
+      "mean_R@1": 0.3620144724845886,
+      "run_id": "sigmoid__captions_2__b2048__lr_3p0__seed_42"
+    }
+  }
+}

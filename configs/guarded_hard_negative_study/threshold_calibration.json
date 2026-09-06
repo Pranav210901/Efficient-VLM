@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_INPUT_CALIBRATION",
+  "computed_before_hard_negative_mining": true,
+  "source_cache": "results/alignment_wave1/mobileclip2/teacher_cache/mobileclip2_s0_dfndr2b.pt",
+  "source_cache_sha256": "cdcdd73354ad26cc7487bbe30ef1e5a8805a826a6bda24b37216a8f2e661a131",
+  "source_split": "data/splits/alignment_v3_recovery/coco_train_minus_dev.csv",
+  "sampling": {
+    "seed": 20260801,
+    "pairs": 1000000,
+    "constraint": "different_image_owner",
+    "quantile_used": 0.99
+  },
+  "teacher_image_text": {
+    "mean": 0.057063,
+    "q90": 0.125366,
+    "q95": 0.154242,
+    "q97_5": 0.183818,
+    "q99": 0.222935,
+    "q99_5": 0.248042,
+    "q99_9": 0.287354,
+    "frozen_threshold": 0.222935
+  },
+  "teacher_text_text": {
+    "mean": 0.535367,
+    "q90": 0.647594,
+    "q95": 0.684057,
+    "q97_5": 0.718560,
+    "q99": 0.765541,
+    "q99_5": 0.801561,
+    "q99_9": 0.879478,
+    "frozen_threshold": 0.765541
+  },
+  "selection_rationale": "The 99th percentile rejects only similarities exceptional under different-owner sampling. It is outcome-independent and was fixed without inspecting mined-neighbour exclusion rates."
+}

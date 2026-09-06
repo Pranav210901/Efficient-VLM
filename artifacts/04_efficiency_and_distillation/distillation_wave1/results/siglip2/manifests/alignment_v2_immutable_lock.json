@@ -1,0 +1,66 @@
+{
+  "status": "LOCKED",
+  "files": [
+    {
+      "path": "results/alignment_v2/report.json",
+      "size": 65,
+      "sha256": "fb0f87d7ef37292c16092abbadda88a5c528b2e7e2c05e9018256dc02704c390"
+    },
+    {
+      "path": "results/alignment_v2/results_long.csv",
+      "size": 4815,
+      "sha256": "a8455f2b6bd14f2259fb10a0963b2598b581ae42623fc61bc58a9d763e47fa0a"
+    },
+    {
+      "path": "results/alignment_v2/manifests/unimodal_jobs.csv",
+      "size": 1672,
+      "sha256": "30894dbe527331469e0ac748ab28e04d578d9af20aa2536d16530d1fdb817f7e"
+    },
+    {
+      "path": "checkpoints/alignment_v2/convnext_minilm_residual_mp__seed_42/best.pt",
+      "size": 229671066,
+      "sha256": "bc83a8282f5532f55b2deb4820c0ed717e6d5095bd8c883ac142bc058e3b90f2"
+    },
+    {
+      "path": "checkpoints/alignment_v2/convnext_minilm_residual_mp__seed_43/best.pt",
+      "size": 229671066,
+      "sha256": "58c9499f6972d008a2f1fdace8d68b9289c7585ecfb8a3d2fcdbd3bd71ddb45c"
+    },
+    {
+      "path": "checkpoints/alignment_v2/convnext_minilm_residual_mp__seed_44/best.pt",
+      "size": 229671066,
+      "sha256": "b0938a3a6fff598608140758d73285f06ee2833af054f98e486bbba3551a6662"
+    },
+    {
+      "path": "checkpoints/alignment_v2/dinov2_minilm_residual_mp__seed_42/best.pt",
+      "size": 204270851,
+      "sha256": "607b4cdd1403d179fa29a0c53eba3f160f6d32d5986a87550c31a6499f8071ac"
+    },
+    {
+      "path": "checkpoints/alignment_v2/dinov2_minilm_residual_mp__seed_43/best.pt",
+      "size": 204270851,
+      "sha256": "a4c174c746e0ce0d80389b8c855d3981ee2da2414a26e3eaa09dc836362af11e"
+    },
+    {
+      "path": "checkpoints/alignment_v2/dinov2_minilm_residual_mp__seed_44/best.pt",
+      "size": 204270851,
+      "sha256": "9be19506a979fb2f465fa38f0618c92966fff9bc535aba75f5c8eefd06d61a42"
+    },
+    {
+      "path": "checkpoints/alignment_v2/efficientnet_bge_residual_mp__seed_42/best.pt",
+      "size": 180414592,
+      "sha256": "e4b408b2a0a739b379a10ed9f650e56dadb0cf17618e6629490fc714d17d5808"
+    },
+    {
+      "path": "checkpoints/alignment_v2/efficientnet_bge_residual_mp__seed_43/best.pt",
+      "size": 180414592,
+      "sha256": "b9710a6b458ef60a633bc95bc5b43ece01bd4ea74fc58e20feac67bb06e44fa7"
+    },
+    {
+      "path": "checkpoints/alignment_v2/efficientnet_bge_residual_mp__seed_44/best.pt",
+      "size": 180414592,
+      "sha256": "a6e5f34b6917aa6e3c274b1ecb7e5012539770bc8caa8b033236ea1f7e5208a6"
+    }
+  ],
+  "digest": "3a1a32d4017034a3fef7f60d1c5b1e93a1ec162179d5bfd5287f8267f0b05e79"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "SELECTED_WAVE0_RECIPE",
+  "proceed": true,
+  "recipe": {
+    "adapter": false,
+    "distillation": false,
+    "lora": false,
+    "loss_type": "infonce_no_queue",
+    "captions_per_image": null,
+    "memory_queue_size": 0,
+    "batch_size": 1024,
+    "sweep_multiplier": 3.0
+  },
+  "experiment_id": "infonce_no_queue__captions_all__b1024__lr_3p0",
+  "mean_3seed": 0.37321177621682483,
+  "mean_2seed": 0.37183182686567307,
+  "mean_2seed_seed_order": [
+    43,
+    44
+  ],
+  "mean_2seed_semantics": "Confirmation mean over seeds 43 and 44 only. This is not a winner's-curse correction: the corrected queue-free configuration was not selected from the original 18-cell screening ranking.",
+  "winner_curse_correction_applicable": false,
+  "seed_values": [
+    0.3759716749191284,
+    0.37063227593898773,
+    0.3730313777923584
+  ],
+  "seed_order": [
+    42,
+    43,
+    44
+  ],
+  "sigmoid_mean_3seed": 0.3652395159006119,
+  "corrected_minus_sigmoid_mean_3seed": 0.007972260316212954,
+  "practical_equivalence_margin": 0.005,
+  "winner_on_mean_3seed": true,
+  "tie_break_triggered": false,
+  "tie_break_rule": "fewer_changes_from_v4_recipe",
+  "tie_break_outcome_if_needed": "infonce_no_queue",
+  "selection_basis": "Higher three-seed mean; the difference exceeded the practical equivalence margin, so the tie-break was not needed.",
+  "historical_wave0_screen": {},
+  "prior_selection_artifact": "selection/finalists.json",
+  "prior_selection_superseded": true,
+  "locked_student": "dinov3_vits16__all_minilm_l6_v2",
+  "student_pair_changed": false,
+  "student_pair_decision": "KEEP_MINILM_FOR_MAIN_STUDY",
+  "student_pair_decision_permanent_for_study": true,
+  "student_pair_decision_rationale": [
+    "The queue study, 18-cell screen, dose-response curve, v4 teacher caches, and all 31 claim-bearing runs use MiniLM; switching would disconnect the factorial from the pair on which the measured queue curve was established.",
+    "E5's 1.56pp corrected-recipe gain carries no headline claim: it does not reach OpenCLIP, alter the queue mechanism, or change the pair-ranking finding.",
+    "E5 is retained as evidence that the recipe correction generalises across text encoders and that the queue effect is not a MiniLM-specific artifact."
+  ],
+  "deferred_best_available_configuration": {
+    "pair": "dinov3_vits16__e5_small_v2",
+    "purpose": "efficiency_frontier_plot_only",
+    "timing": "end_of_project",
+    "part_of_main_study": false,
+    "run_now": false
+  },
+  "loss_family_finding": false,
+  "dominant_finding": "memory_queue_staleness",
+  "wave1_unblocked": true
+}

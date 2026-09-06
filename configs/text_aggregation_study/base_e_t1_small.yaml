@@ -1,0 +1,10 @@
+extends: base_e_t0.yaml
+recipe:
+  text_token_aggregation: learned_query_attention
+  text_pooler_dim: 96
+  text_pooler_heads: 3
+provenance:
+  parameter_contract:
+    params_trainable_inference: 2842949
+    params_trainable_training: 3236165
+    params_training_only: 393216

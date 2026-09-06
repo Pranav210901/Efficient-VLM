@@ -1,0 +1,8 @@
+stage: token_interfaces
+bridge_dim: 256
+attention_heads: 4
+image_size: 224
+batch_size: 1
+selected_role: primary
+cache_path: results/phase2/token_cache
+resources: {partition: teaching, gpus: 1, cpus: 8, memory: 64G, wall_time: "02:00:00"}

@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_BEFORE_EVALUATION",
+  "written_at": "2026-08-28",
+  "primary": {
+    "dataset": "sugarcrepe",
+    "metric": "overall_accuracy",
+    "hypothesis": "The dual-LoRA endpoint will exceed the strict-frozen endpoint on compositional caption discrimination.",
+    "minimum_practical_effect_pp": 2.0
+  },
+  "secondary": {
+    "dataset": "winoground",
+    "metric": "group_score",
+    "hypothesis": "The dual-LoRA endpoint will not lose more than 2 percentage points relative to the strict-frozen endpoint."
+  },
+  "diagnostics": [
+    "SugarCrepe accuracy by perturbation category",
+    "Winoground text score",
+    "Winoground image score",
+    "per-example paired score margins"
+  ],
+  "roster": [
+    "M_T1 strict-frozen seeds 42, 43, 44",
+    "M_T1 dual-LoRA seeds 42, 43, 44",
+    "OpenCLIP ViT-B/32 quickgelu openai",
+    "MobileCLIP2-S0 dfndr2b",
+    "SigLIP2 ViT-B/32 256 webli"
+  ],
+  "stopping_rule": "Each frozen checkpoint is evaluated once. No prompt, checkpoint, task, threshold, category, or metric is changed in response to results.",
+  "multiplicity": "Only SugarCrepe overall accuracy is primary. All other values are secondary or diagnostic and are labelled accordingly."
+}

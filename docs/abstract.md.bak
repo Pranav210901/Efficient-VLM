@@ -1,0 +1,72 @@
+# Abstract
+
+**Efficient Alignment of Frozen Vision and Language Encoders Under Tight Adaptation and Latency Budgets**
+
+Contrastive vision–language models acquire their capability from jointly
+training two large towers on web-scale paired data, at compute and data costs
+incompatible with many research and deployment settings. This dissertation asks
+whether independently pretrained vision and language encoders can instead be
+aligned while frozen, using only a small trainable module under a budget of
+fewer than five million trainable inference parameters and a measured latency
+constraint. MobileCLIP2-S0 is the compact jointly pretrained reference;
+OpenCLIP ViT-B/32 is the field anchor and same-allocation latency control, both
+reconstructed locally so that checkpoints, transforms, splits and hardware are
+matched rather than imported.
+
+Early results were unexpectedly weak, so the first contribution is diagnostic
+rather than architectural. Decomposing the training recipe isolated the
+cross-batch memory queue — included to supply additional negatives — as the
+dominant cause: although the encoders were frozen, queued embeddings were
+stored downstream of a rapidly changing trainable projector, so historical
+entries fell out of correspondence with the current model. Removing the queue
+recovered roughly 19 percentage points of retrieval R@1 and motivated a
+preregistered factorial over queue age, size and modality (22 conditions, 66
+runs, three seeds). Harm began after a single optimizer step, no tested
+non-zero age was safe, and matched-age comparisons excluded entry count as the
+dominant explanation. Decisively, conditions with near-identical measured
+projector drift differed in damage by up to 4.74 percentage points, and the
+text tower's degradation response was approximately 7.2 times steeper than the
+image tower's over the shared drift range. Drift is associated with damage but
+does not determine it. This is the dissertation's principal scientific finding:
+a boundary condition on the slow-drift justification for memory queues in
+frozen cross-modal alignment, reported without a claim to the complete causal
+mechanism.
+
+With the recipe repaired, the remaining work asked how much performance was
+recoverable under the efficiency constraint. Encoder-pair screening selected the
+frozen towers; data experiments showed that unique in-domain coverage helped but
+that added web data was not automatically beneficial, the bounded CC3M arm
+failing to converge within its compute ceiling. Distillation transferred
+information from MobileCLIP2-S0 at training time only. Architecturally,
+learned-query aggregation over frozen token sequences substantially outperformed
+mean pooling, showing that access to patch tokens is insufficient without
+learned selection, and yielded M_T1, the strongest strictly frozen model at
+54.487% validation mean bidirectional R@1 with 2.896M trainable inference
+parameters. Internal token merging reduced latency but cost 5.69–15.95 points
+across all configurations and was rejected rather than promoted. Guarded
+hard-negative mining was likewise terminated before training when its
+preregistered feasibility rule declared the candidate set infeasible, rather
+than weakening the criterion after seeing the result.
+
+The residual gap indicated a limit in the alignment head's reach rather than its
+capacity: fully fixed encoders cannot adapt their representations to one
+another. FreezeShift, a preregistered bounded relaxation applying low-rank
+adaptation to the final encoder blocks, tested this. Adapting both towers was
+strongest, raising validation R@1 from 54.49% to 63.42% with 4.862M trainable
+inference parameters, and a corrected same-allocation latency study — replacing
+measurements that had mixed padding regimes and profiling sessions, and had
+wrongly rejected an unchanged control — confirmed the result stayed inside the
+latency budget.
+
+On the sealed one-shot Flickr30k test, evaluated after the roster was frozen,
+strictly frozen M_T1 reached 52.90 ± 0.87% and dual FreezeShift 62.20 ± 0.45%
+mean bidirectional R@1 across three seeds, giving a measured 9.30-point cost of
+strict freezing. FreezeShift retained approximately 91.2% of OpenCLIP
+ViT-B/32's retrieval performance at 32.5% of its total parameters, but only
+79.5% of MobileCLIP2-S0's at 65.7% of its size. The conclusion is
+correspondingly bounded: this work does not beat CLIP or reach compact-reference
+parity. It establishes how far efficient alignment of independently pretrained
+encoders can be pushed, identifies strict freezing as a measurable and
+quantified bottleneck, and surfaces a more general training failure — stale
+negatives can become harmful immediately, and in modality-dependent ways that
+embedding drift alone does not explain.

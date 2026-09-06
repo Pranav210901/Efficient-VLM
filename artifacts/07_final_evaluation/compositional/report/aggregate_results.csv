@@ -1,0 +1,56 @@
+model_id,label,kind,dataset,metric,n,mean,sd,min,max
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,overall_accuracy,3,0.7700705528259277,0.0023403671802268156,0.7674077749252319,0.7718013525009155
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,positive_score,3,0.5564237967823262,0.0005046716770028201,0.5558818238995044,0.5568802355013807
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,negative_score,3,0.5191003966911049,0.00042372318537043686,0.5187006581164505,0.5195445980102462
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,score_margin,3,0.037323400091221336,0.0001365275586322917,0.037181165783053916,0.03745339699947569
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/add_att,3,0.6454720695813497,0.01545183385738938,0.6358381509780884,0.663294792175293
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/add_obj,3,0.7919495701789856,0.004310485724259922,0.7885547876358032,0.7967992424964905
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/replace_att,3,0.7939932346343994,0.011087432947962387,0.7817258834838867,0.8032994866371155
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/replace_obj,3,0.917070229848226,0.006319793712295098,0.9098063111305237,0.9213075041770935
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/replace_rel,3,0.723565677801768,0.009255225464115672,0.7140824794769287,0.7325747013092041
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/swap_att,3,0.59809809923172,0.006251245521611136,0.5930930972099304,0.6051051020622253
+mt1_strict_frozen,M_T1 strict-frozen C4,student,sugarcrepe,accuracy/swap_obj,3,0.6040816108385721,0.014716533760236242,0.5877550840377808,0.6163265109062195
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,overall_accuracy,3,0.7838281790415446,0.0007686777688794535,0.783384382724762,0.7847157716751099
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,positive_score,3,0.5773146944764884,0.001744953977616723,0.5753943769040779,0.5788031994558464
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,negative_score,3,0.5346247812957319,0.0017172213392565128,0.532685193165119,0.5359514332328683
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,score_margin,3,0.042689913180756545,0.00017229846244275847,0.04250878958033271,0.042851766222978045
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/add_att,3,0.6136801441510519,0.005840257935804711,0.6069363951683044,0.6170520186424255
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/add_obj,3,0.8037503957748413,0.0019599786151465854,0.8026188015937805,0.8060135841369629
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/replace_att,3,0.8231810530026754,0.006387346171644961,0.817258894443512,0.8299492597579956
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/replace_obj,3,0.9279661178588867,0.0024213194847106934,0.925544798374176,0.9303874373435974
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/replace_rel,3,0.7271218697230021,0.004841304270218825,0.7233285903930664,0.7325747013092041
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/swap_att,3,0.6656656662623087,0.021305121262132357,0.642642617225647,0.684684693813324
+mt1_dual_lora,M_T1 C4 dual-LoRA PEFT,student,sugarcrepe,accuracy/swap_obj,3,0.6448979576428732,0.03893628849047135,0.6040816307067871,0.6816326379776001
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,overall_accuracy,1,0.7655438780784607,0.0,0.7655438780784607,0.7655438780784607
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,positive_score,1,0.30906181941692973,0.0,0.30906181941692973,0.30906181941692973
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,negative_score,1,0.29232622131124,0.0,0.29232622131124,0.29232622131124
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,score_margin,1,0.01673559810568975,0.0,0.01673559810568975,0.01673559810568975
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/add_att,1,0.6835260391235352,0.0,0.6835260391235352,0.6835260391235352
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/add_obj,1,0.770611047744751,0.0,0.770611047744751,0.770611047744751
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/replace_att,1,0.8007614016532898,0.0,0.8007614016532898,0.8007614016532898
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/replace_obj,1,0.9098063111305237,0.0,0.9098063111305237,0.9098063111305237
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/replace_rel,1,0.6970127820968628,0.0,0.6970127820968628,0.6970127820968628
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/swap_att,1,0.6366366147994995,0.0,0.6366366147994995,0.6366366147994995
+openclip_vit_b32_quickgelu_openai,openclip_vit_b32_quickgelu_openai,reference,sugarcrepe,accuracy/swap_obj,1,0.6122449040412903,0.0,0.6122449040412903,0.6122449040412903
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,overall_accuracy,1,0.8242577314376831,0.0,0.8242577314376831,0.8242577314376831
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,positive_score,1,0.3013154529833616,0.0,0.3013154529833616,0.3013154529833616
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,negative_score,1,0.27462081100100794,0.0,0.27462081100100794,0.27462081100100794
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,score_margin,1,0.026694641982353634,0.0,0.026694641982353634,0.026694641982353634
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/add_att,1,0.7861271500587463,0.0,0.7861271500587463,0.7861271500587463
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/add_obj,1,0.8724539279937744,0.0,0.8724539279937744,0.8724539279937744
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/replace_att,1,0.8553299307823181,0.0,0.8553299307823181,0.8553299307823181
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/replace_obj,1,0.9437046051025391,0.0,0.9437046051025391,0.9437046051025391
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/replace_rel,1,0.7019914388656616,0.0,0.7019914388656616,0.7019914388656616
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/swap_att,1,0.7147147059440613,0.0,0.7147147059440613,0.7147147059440613
+mobileclip2_s0_dfndr2b,mobileclip2_s0_dfndr2b,reference,sugarcrepe,accuracy/swap_obj,1,0.6204081773757935,0.0,0.6204081773757935,0.6204081773757935
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,overall_accuracy,1,0.8503528237342834,0.0,0.8503528237342834,0.8503528237342834
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,positive_score,1,0.1441819581580478,0.0,0.1441819581580478,0.1441819581580478
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,negative_score,1,0.12231905029243723,0.0,0.12231905029243723,0.12231905029243723
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,score_margin,1,0.021862907865610567,0.0,0.021862907865610567,0.021862907865610567
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/add_att,1,0.8265895843505859,0.0,0.8265895843505859,0.8265895843505859
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/add_obj,1,0.9010668992996216,0.0,0.9010668992996216,0.9010668992996216
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/replace_att,1,0.8604061007499695,0.0,0.8604061007499695,0.8604061007499695
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/replace_obj,1,0.9521791934967041,0.0,0.9521791934967041,0.9521791934967041
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/replace_rel,1,0.7375533580780029,0.0,0.7375533580780029,0.7375533580780029
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/swap_att,1,0.7657657861709595,0.0,0.7657657861709595,0.7657657861709595
+siglip2_vit_b32_256_webli,siglip2_vit_b32_256_webli,reference,sugarcrepe,accuracy/swap_obj,1,0.6489796042442322,0.0,0.6489796042442322,0.6489796042442322

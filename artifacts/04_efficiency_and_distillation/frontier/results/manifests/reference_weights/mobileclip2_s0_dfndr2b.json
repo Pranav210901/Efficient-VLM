@@ -1,0 +1,15 @@
+{
+  "reference_id": "mobileclip2_s0_dfndr2b",
+  "model_name": "MobileCLIP2-S0",
+  "pretrained": "dfndr2b",
+  "open_clip_version": "3.3.0",
+  "upstream_revision_recorded_at_fetch": false,
+  "files": [
+    {
+      "path": "/mnt/fast/nobackup/scratch4weeks/pp01184/alignment_vlm/.cache/huggingface/models--timm--MobileCLIP2-S0-OpenCLIP/snapshots/095906d28bf54d7584dc411e8ffe448f34289e05/open_clip_model.safetensors",
+      "bytes": 299663092,
+      "sha256": "ab91a1a0c4330d6b1913e24d5035dfdea15423316aaec649610c6b1c6ddd0e95"
+    }
+  ],
+  "aggregate_sha256": "0b40265ebbe2bf7720248d68ae4d573494de3bbb529c4164fdb0824310879df4"
+}

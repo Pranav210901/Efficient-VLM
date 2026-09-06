@@ -1,0 +1,55 @@
+version: resolution-arm-1.0
+output_root: results/resolution_arm
+checkpoint_root: checkpoints/resolution_arm
+log_root: logs/resolution_arm
+base_config: configs/resolution_arm/base.yaml
+
+resolution_arm:
+  enabled: true
+  question: How does DINOv3 spatial token count trade retrieval accuracy for measured latency?
+  image_sizes: [224, 192]
+  seeds: [42, 43, 44]
+  locked_recipe:
+    loss_type: infonce_no_queue
+    captions_per_image: null
+    memory_queue_size: 0
+    batch_size: 1024
+    sweep_multiplier: 3.0
+
+split:
+  source_csv: data/splits/coco_train_all_captions.csv
+  train_csv: data/splits/alignment_v3_recovery/coco_train_minus_dev.csv
+  dev_csv: data/splits/alignment_v3_recovery/coco_dev_5000.csv
+  final_csv: data/val_all_captions.csv
+  manifest: results/alignment_v4_wave0/manifests/split.json
+  dev_images: 5000
+  seed: 3103
+
+references: []
+pair_matrix:
+  vision_encoders: [dinov3_vits16]
+  text_encoders: [all_minilm_l6_v2]
+  seeds: [42]
+  batch_sizes: [1024]
+batch_probe:
+  enabled: false
+  candidates: [1024]
+probe:
+  enabled: false
+selection: {}
+distillation_sensitivity:
+  strengths: []
+  seeds: []
+  include_matched_baseline: false
+ablations:
+  seeds: []
+  recipes: []
+final:
+  seeds: []
+  epochs: 12
+  retrain_on_full_coco_train: false
+optional_transfer:
+  flickr30k_csv: data/flickr30k/validation.csv
+  required: true
+literature_context: []
+

@@ -1,0 +1,41 @@
+seed: 42
+deterministic: false
+device: auto
+
+data:
+  train_csv: data/train.csv
+  val_csv: data/val.csv
+  image_root: .
+  image_size: 224
+  num_workers: 4
+  pin_memory: true
+
+model:
+  vision_encoder: efficientnet_b0
+  text_encoder: minilm_l6
+  shared_dim: 256
+  fusion_dim: 512
+  projection_hidden_dim: 512
+  projection_dropout: 0.1
+  use_local_blf: true
+  use_global_blf: true
+  fusion_type: concat_mlp
+  local_dim: 128
+  global_dim: 128
+  freeze_vision: true
+  freeze_text: true
+  pretrained_vision: true
+  pretrained_text: true
+  # For e5_small_v2, null uses the standard "passage: " prefix; set "" to disable.
+  text_prefix:
+
+training:
+  batch_size: 32
+  epochs: 5
+  lr: 0.0001
+  weight_decay: 0.0001
+  amp: true
+  save_dir: checkpoints
+
+evaluation:
+  k_values: [1, 5, 10]

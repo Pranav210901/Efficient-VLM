@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETE",
+  "baseline": {
+    "flickr_validation_mean_R1": 0.44714,
+    "full_stack_latency_ms": 8.546178694814444
+  },
+  "latency_claim": "no measurable latency cost",
+  "latency_ordering_claimed": false,
+  "lr_disclosure": "The LR was pinned from projection-only training and was not tuned for any aggregator.",
+  "flickr_test_used": false,
+  "arms": [
+    {
+      "candidate": "A",
+      "aggregation": "cls_mean_concat",
+      "flickr_mean_coco_selected": 0.4527942091226578,
+      "flickr_mean_flickr_selected": 0.46042077740033466,
+      "selection_gain_pp": 0.7626568277676882,
+      "sd": 0.008723395052247554,
+      "min": 0.45039448142051697,
+      "max": 0.46627217531204224,
+      "seeds_peaking_at_epoch24": 0,
+      "trained_full_stack_latency_median_ms": 8.637805003672838,
+      "trained_full_stack_latency_q1_ms": 8.629701798781753,
+      "trained_full_stack_latency_q3_ms": 8.64566839300096,
+      "inference_trainable_parameters": 1773699,
+      "teacher_heads_excluded": true,
+      "lr_tuned_for_aggregator": false
+    },
+    {
+      "candidate": "B",
+      "aggregation": "learned_query_attention",
+      "flickr_mean_coco_selected": 0.5056541711091995,
+      "flickr_mean_flickr_selected": 0.5079552928606669,
+      "selection_gain_pp": 0.230112175146735,
+      "sd": 0.00516443294134649,
+      "min": 0.5046350955963135,
+      "max": 0.513905331492424,
+      "seeds_peaking_at_epoch24": 1,
+      "trained_full_stack_latency_median_ms": 8.755122311413288,
+      "trained_full_stack_latency_q1_ms": 8.746998384594917,
+      "trained_full_stack_latency_q3_ms": 8.762385230511427,
+      "inference_trainable_parameters": 1644164,
+      "teacher_heads_excluded": true,
+      "lr_tuned_for_aggregator": false
+    },
+    {
+      "candidate": "C",
+      "aggregation": "transformer_128",
+      "flickr_mean_coco_selected": 0.5132478624582291,
+      "flickr_mean_flickr_selected": 0.5162064383427302,
+      "selection_gain_pp": 0.29585758845011023,
+      "sd": 0.00640063368939891,
+      "min": 0.5102564096450806,
+      "max": 0.5229782909154892,
+      "seeds_peaking_at_epoch24": 0,
+      "trained_full_stack_latency_median_ms": 8.846658281981945,
+      "trained_full_stack_latency_q1_ms": 8.836937369778752,
+      "trained_full_stack_latency_q3_ms": 8.85497685521841,
+      "inference_trainable_parameters": 1710468,
+      "teacher_heads_excluded": true,
+      "lr_tuned_for_aggregator": false
+    }
+  ]
+}

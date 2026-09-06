@@ -1,0 +1,65 @@
+{
+  "status": "RANKING_CHANGED_STOP_FOR_DECISION",
+  "recipe_status": "SELECTED_WAVE0_RECIPE",
+  "wave1_unblocked": false,
+  "ranking_changed": true,
+  "v3_winner": "dinov3_vits16__all_minilm_l6_v2",
+  "corrected_recipe_winner": "dinov3_vits16__e5_small_v2",
+  "v3_ranking": [
+    "dinov3_vits16__all_minilm_l6_v2",
+    "dinov3_vits16__bge_small_en",
+    "dinov3_vits16__e5_small_v2",
+    "dinov3_convnext_tiny__all_minilm_l6_v2",
+    "dinov3_convnext_tiny__e5_small_v2",
+    "dinov3_convnext_tiny__bge_small_en"
+  ],
+  "corrected_recipe_ranking": [
+    "dinov3_vits16__e5_small_v2",
+    "dinov3_vits16__bge_small_en",
+    "dinov3_vits16__all_minilm_l6_v2",
+    "dinov3_convnext_tiny__e5_small_v2",
+    "dinov3_convnext_tiny__bge_small_en",
+    "dinov3_convnext_tiny__all_minilm_l6_v2"
+  ],
+  "locked_student": "dinov3_vits16__all_minilm_l6_v2",
+  "student_pair_changed": false,
+  "pair_adoption_status": "DECIDED_KEEP_MINILM",
+  "student_pair_decision_permanent_for_study": true,
+  "vision_ranking_stable": true,
+  "vision_ranking": "dinov3_vits16 > dinov3_convnext_tiny",
+  "queued_text_rankings": {
+    "dinov3_convnext_tiny": [
+      "all_minilm_l6_v2",
+      "e5_small_v2",
+      "bge_small_en"
+    ],
+    "dinov3_vits16": [
+      "all_minilm_l6_v2",
+      "bge_small_en",
+      "e5_small_v2"
+    ]
+  },
+  "corrected_text_rankings": {
+    "dinov3_convnext_tiny": [
+      "e5_small_v2",
+      "bge_small_en",
+      "all_minilm_l6_v2"
+    ],
+    "dinov3_vits16": [
+      "e5_small_v2",
+      "bge_small_en",
+      "all_minilm_l6_v2"
+    ]
+  },
+  "text_ranking_inverted": true,
+  "modality_specific_confound": "text_encoder_selection_changed_vision_encoder_selection_stable",
+  "text_rows_per_image_row_ratio": 5.0,
+  "mean_i2t_gain_after_queue_removal": 0.26279999564091366,
+  "mean_t2i_gain_after_queue_removal": 0.17258406430482864,
+  "i2t_extra_gain_over_t2i": 0.09021593133608502,
+  "queued_six_pair_spread": 0.028216034173965454,
+  "corrected_six_pair_spread": 0.02987702190876007,
+  "queue_spread_is_directionally_smaller": true,
+  "material_spread_compression_supported": false,
+  "spread_note": "The queue-era scores occupied a low 14.20\u201317.02% band and the corrected scores span 35.91\u201338.90%. Both max\u2013min ranges are about 3pp, so the exact data support severe level suppression and ranking flattening/inversion, not a materially narrower total max\u2013min range."
+}

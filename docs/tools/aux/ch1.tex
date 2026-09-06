@@ -1,0 +1,30 @@
+\chapter{Introduction}
+\section{Motivation}
+Contrastive vision-language models map images and text into a shared embedding space, and from that single construction they inherit retrieval, zero-shot classification and a great deal else. The construction is also expensive. Model quality is coupled to large paired datasets, long training schedules and two towers optimised together, which places the method out of reach of most research settings and many deployment ones.
+
+There is an obvious alternative. Strong vision encoders and strong sentence encoders already exist, trained separately and at someone else's expense; if the representations they have learned are compatible enough, aligning them should require only a small trainable module rather than a second round of web-scale pretraining. The expensive part has already happened. What remains is a bridge.
+
+Whether that bridge can be built cheaply is not obvious, and this dissertation takes the question seriously enough to let it fail. Encoders trained independently need not expose compatible geometry at all. A training recipe that is dependable when both towers learn can behave quite differently when most parameters are held fixed, because the assumptions that justified it no longer hold. Efficiency claimed from parameter counts need not survive end-to-end measurement on real hardware. And model selection quietly breaks when baselines are imported from other checkpoints, other splits or other profiling sessions, which is common enough in this literature to be worth guarding against explicitly. Comparability and measurement are therefore treated here as part of the research problem rather than as reporting overhead.
+
+\section{Research question}
+\begin{quote}
+\itshape
+Can modern frozen self-supervised vision encoders, combined with compatibility-based pair selection and sub-five-million-parameter adaptation, approach compact jointly pretrained vision-language models under a fixed inference budget?
+\end{quote}
+The question is evaluated through a hierarchy rather than by relabelling one favourable baseline. MobileCLIP2-S0 is the primary compact jointly pretrained reference and also the distillation teacher. OpenCLIP~\cite{cherti2023scaling} ViT-B/32 is a widely used field anchor with a split-matched local validation score and same-allocation latency control; it is not described as compact. SigLIP2~\cite{tschannen2025siglip2} ViT-B/32 is an alternative-objective field reference. ``Approach'' means materially reducing a split-matched local accuracy gap while keeping locally trainable inference parameters below five million and satisfying a paired latency comparison. The dissertation reports a strictly frozen-backbone endpoint and a bounded LoRA~\cite{hu2021lora} adaptation endpoint. Both endpoints have since been evaluated once on the sealed Flickr30k~\cite{young2014flickr30k} test, so compact-reference retention is reported on matched splits rather than withheld as a cross-split comparison.
+
+\section{Contributions}
+The contributions are empirical and methodological rather than architectural.
+
+\begin{enumerate}
+\item A controlled reconstruction of the frozen-alignment problem that replaced mismatched historical baselines with local checkpoint- and protocol-matched references.
+\item A diagnosis showing that a cross-batch memory queue, rather than the loss family, caused the dominant early performance collapse.
+\item A batch, age, and modality factorial showing immediate stale-negative harm and demonstrating that drift magnitude alone does not determine the damage.
+\item A constrained alignment frontier showing that learned selection over frozen patch/token sequences contributes substantially more than access to those sequences through mean pooling alone.
+\item A bounded LoRA upper bound and a declared same-allocation timing amendment that separate model improvement from measurement-session variation.
+\item A reproducible negative-result record: failed compatibility screening, harmful memory, weak web-data transfer under the tested budget, non-monotonic teacher quality, unsuccessful LR retuning, and hard-negative mining stopped by its frozen guard.
+\item A closed speed--accuracy test showing that parameter-free internal token merging can improve measured latency while substantially damaging retrieval, so reduced token count is not by itself an efficiency-frontier improvement.
+\end{enumerate}
+\section{Thesis claim}
+The evidence supports the following bounded answer. Modern frozen unimodal encoders can recover a substantial portion of the split-matched OpenCLIP field anchor's retrieval performance with fewer than five million locally trainable inference parameters and comparable measured latency, but compact-reference parity is not demonstrated. Learned token aggregation is the most effective fully frozen-backbone intervention. Limited encoder adaptation closes more of the field-anchor gap, while training recipe and measurement validity matter enough to reverse model-selection conclusions.
+

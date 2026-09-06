@@ -1,0 +1,8 @@
+{
+  "status": "FROZEN",
+  "written_at_utc": "2026-07-31T22:46:08.770090+00:00",
+  "git_sha": null,
+  "gallery_manifest_sha256": "b02b5af17347407279755aac36e0e1d03241f4fa0adbc101f49f57782bf03a6b",
+  "ambiguity_bins_sha256": "416ed65c03cb36bc6fbf6668e41962e7c328487656dee324bb1dfb0b29be35e7",
+  "retrieval_artifacts_present_at_freeze": false
+}

@@ -1,0 +1,4 @@
+candidate,pipeline,aggregation,training_jobs,inference_trainable_parameters,lr,lr_tuned_for_aggregator,flickr_test_sealed
+A,configs/token_projection_training/pipeline_a.yaml,cls_mean_concat,3,1773699,0.002545584412271571,False,True
+B,configs/token_projection_training/pipeline_b.yaml,learned_query_attention,3,1644164,0.002545584412271571,False,True
+C,configs/token_projection_training/pipeline_c.yaml,transformer_128,3,1710468,0.002545584412271571,False,True

@@ -1,0 +1,35 @@
+{
+  "status": "READY",
+  "freeze_receipt_sha256": "19062d614e41866bf6411bc5e2e0d373948affecf3a59d55b6ecb91483a559ac",
+  "preregistration_sha256": "99571a6437cb78da5ae61f96ec041c74c96bced5a06463f75e85e145a1a30923",
+  "candidate_depth": 64,
+  "negatives_per_owner": 8,
+  "thresholds": {
+    "image_text": 0.222935,
+    "text_text": 0.765541
+  },
+  "seeds": [
+    {
+      "seed": 42,
+      "epoch": 22,
+      "checkpoint": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_42/epoch_22.pt",
+      "checkpoint_sha256": "15edf5155a034f474cf3be44c797e578a15af3d53463df96b0f19d96a689d4be",
+      "fingerprint_sha256": "07f934552b2f54f51c03a66790696919ffa6c094e09a81e0b4615238989dcacd"
+    },
+    {
+      "seed": 43,
+      "epoch": 22,
+      "checkpoint": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_43/epoch_22.pt",
+      "checkpoint_sha256": "a6b273972fb58e310dcd38ed24a648c7d0de568503090e480b9750190bd7bed2",
+      "fingerprint_sha256": "c978d94bc4a2f03f977f46db9197dd7db28018a2727d022750f17cf40bc07c2d"
+    },
+    {
+      "seed": 44,
+      "epoch": 20,
+      "checkpoint": "checkpoints/text_aggregation_study/M_T1/sensitivity/distill_strength_1p0__seed_44/epoch_20.pt",
+      "checkpoint_sha256": "b8872c31deaae3b0ecf71c0553f25d3cfbc29f894c30dbeb60e1c9c246a0fb0e",
+      "fingerprint_sha256": "64f3b9436e19a81e506ff561a2919f47091a05feb5fb815f23d1b5f993f15662"
+    }
+  ],
+  "flickr_test_used": false
+}

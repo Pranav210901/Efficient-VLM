@@ -1,0 +1,60 @@
+extends: ../token_aggregator_scale_training/pipeline_c4.yaml
+version: e5-c4-224-1.0
+name: e5_c4_224
+output_root: results/e5_c4_224
+checkpoint_root: checkpoints/e5_c4_224
+log_root: logs/e5_c4_224
+base_config: configs/e5_c4_224/base.yaml
+
+wave1:
+  enabled: true
+  # Reuse the runner's validated three-seed, distilled-only 224px manifest.
+  design: selected_resolution_distillation_only
+  extension_role: best_available_text_encoder_extension
+  question: >-
+    Does E5-Small-v2 improve transfer when substituted for MiniLM in the
+    selected 224px C4 frozen-student architecture under an otherwise
+    matched training and distillation protocol?
+
+pair_matrix:
+  vision_encoders: [dinov3_vits16]
+  text_encoders: [e5_small_v2]
+  seeds: [42]
+  batch_sizes: [1024]
+
+teacher_extension:
+  arm_id: e5_c4_224
+  label: "224px C4 MobileCLIP2-distilled student with frozen E5-Small-v2"
+  teacher_ids: [mobileclip2_s0_dfndr2b]
+
+token_projection:
+  candidate: C4
+  image_token_aggregation: transformer_128
+  pool_dim: 256
+  heads: 8
+  blocks: 2
+  ff_dim: 512
+  native_width_identity: false
+  register_tokens_included: false
+  expected_inference_trainable_parameters: 2730628
+  lr_tuned_for_aggregator: false
+
+trajectory:
+  epochs: 24
+  old_12epoch_flickr_validation_mean_R1: 0.0
+  schedule:
+    type: cosine
+    defined_over_epochs: 24
+    warmup_fraction: 0.05
+    early_stopping: false
+  reporting:
+    coco_dev_every_epoch: true
+    flickr_validation_every_epoch: true
+    flickr_test: prohibited
+
+disclosures:
+  - The locked main-study student remains DINOv3 ViT-S/16 plus MiniLM; this is a separately labelled best-available-text-encoder extension.
+  - E5-Small-v2 uses its registered passage prefix for every caption.
+  - The learning rate is inherited from the MiniLM projection recipe and is untuned for E5.
+  - Flickr30k validation is used for epoch selection; Flickr30k test remains sealed.
+  - Training proceeds regardless of whether the post-training latency profile lies below OpenCLIP's latency ceiling.
